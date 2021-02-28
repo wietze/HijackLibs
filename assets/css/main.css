@@ -1,0 +1,44 @@
+body {
+    font-family: Arial;
+    min-width: 350px;
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 0 10px;
+    margin-bottom: calc(20px + 2.5em);
+}
+
+a {
+    color: rgb(192, 61, 0);
+}
+
+
+code {
+    height: 300px;
+    overflow-y: scroll;
+    font-family: Consolas, monaco, monospace;
+    font-size: small;
+}
+
+figure { margin: 0; }
+div.metadata { display: flex; margin: 10px 0px; }
+div.metadata>div {margin-right: 5px;}
+div.key { font-weight: bold; min-width: 110px;}
+span.pill { background: rgb(230, 56, 4); color: white; padding: 2px 5px; border-radius: 3px; }
+section.description { background: #EEE; padding: 1px 10px; line-height: 1.3em; }
+
+footer {
+    position: fixed;
+    height: 2.5em;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background-color: #DDD;
+}
+
+footer > div {
+    position: relative;
+    min-width: 350px;
+    max-width: 800px;
+    margin: 9px auto;
+    padding: 0 10px;
+}

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>{% if page.title %}{{ page.title | markdownify | strip_html | smartify }}{% else %}{{ site.title }}{% endif %}</title>
+    {% assign og_url = site.url | append: site.baseurl %}
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="{{page.Author}}">
+
+    <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/main.css">
+    <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/code.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" />
+    <script src="{{ site.baseurl }}/assets/js/main.js"></script>
+
+    <link rel="icon" type="image/x-icon" href="{{ site.favicon_location }}">
+</head>
+
+<body>
+    {% capture DLL %}<code>{{ page.Name }}</code>{% endcapture %}
+    <h1>{{ page.Name }}</h1>
+    <article>
+        <section class="description">
+            {% if page.Description%}
+            <div class="metadata"><div class="key">Description</div><div>{{ page.Description }}</div></div>{% endif %}
+            <div class="metadata">
+                <div class="key">Type</div><div>{% capture TYPE %}<span style="font-weight: bold">{{ page.Type }} DLL Hijacking</span>{% endcapture %}
+                {% case page.Type %}
+                {% when 'Relative Path' %}
+                <span class="pill"><i class="fas fa-folder-open"></i> {{ TYPE }}</span><br />By copying (and optionally renaming) a vulnerable application to a user-writeable folder, alongside an evil {{DLL}}, arbitrary code can be executed through the legitimate application.
+                {% when 'Phantom' %}
+                <span class="pill"><i class="fas fa-ghost"></i> {{ TYPE }}</span><br />By copying an evil {{DLL}} to a specific location, a vulnerable application will execute the evil DLL's code upon normal execution.
+                {% when 'Search Order' %}
+                <span class="pill"><i class="fas fa-sort-amount-down-alt"></i> {{ TYPE }}</span><br />DLLs specified by an application without a path are searched for in fixed locations in a <a href="https://docs.microsoft.com/en-us/windows/win32/dlls/dynamic-link-library-search-order">specific order</a>. By putting an evil {{ DLL }} in a location that is searched in before the actual DLL, the legitimate application will execute arbitrary code upon normal execution.
+                {% endcase %}</div>
+            </div>
+            <div class="metadata">
+                <div class="key">Resources</div><div>{% for reference in page.Resources %}<a href="{{reference}}" class="reference">{{reference}}</a> {% if forloop.last == false %}<br />{% endif %}{% endfor %}</div>
+            </div>
+            <div class="metadata">
+                <div class="key">Acknowledgements</div><div>
+            {% if page.Acknowledgements %}Thanks to
+            {% for person in page.Acknowledgements %}
+            {% if person.Twitter %}<a href="https://twitter.com/{{person.Twitter}}">{{person.Twitter}}</a> ({{person.Name}}){% else %}{{person.Name}} {% endif %}{% assign calc = forloop.length | minus: 2 %}{% if forloop.index == calc %},{% endif %}{% if forloop.last == false %} and {%endif%}{% endfor %}{%endif%}</div></div>
+        </section>
+        <section>
+            <h2>Expected Locations</h2>
+            The file {{DLL}} is normally found in the following paths:
+            <ul>{% for loc in page.ExpectedLocations %}<li><code>{{loc}}</code></li>{% endfor %}</ul>
+        </section>
+        <section>
+            <h2>Vulnerable Executables</h2>
+            The following executables attempt to load {{DLL}}:
+            <ul>{% for loc in page.VulnerableExecutables %}<li><code>{{loc.Path}}</code></li>{% endfor %}</ul>
+        </section>
+        <section>
+            <h2>Detection</h2>
+            Below a sample <a href="https://github.com/Neo23x0/sigma">Sigma</a> rule that will find processes that loaded {{DLL}} located in a folder that is not one of the expected locations (see above).
+            {% highlight yml %}title: Possible DLL Hijacking of {{ page.Name }}
+status: experimental
+description: Detects possible DLL hijacking of {{ page.Name }} in unexpected locations.
+references:
+    - {{ page.url | absolute_url }}
+author: "{{ page.Author }}"
+date: {{ page.Created }}
+tags:
+    - attack.defense_evasion
+    - attack.T1574.001
+logsource:
+    product: windows
+    service: sysmon
+detection:
+    selection:
+        EventID: 7
+        ImageLoaded: {{ page.Name }}
+    filter:
+        EventID: 7
+        ImageLoaded:
+{% for loc in page.ExpectedLocations %}            - "{{ loc   | replace: "%SYSTEM32%", "c:\\windows\\system32"
+                                                                | replace: "%PROGRAMFILES%", "c:\\program files"
+                                                                | replace: "%PROGRAMFILES(X86)%", "C:\Program Files (x86)"
+                                                                | replace: "\", "\\\\" }}\\*"
+{% endfor %}
+    condition: selection and not filter{% endhighlight %}
+        </section>
+    </article>
+    <footer><div>Contribute to this project via <i class="fab fa-github fa-fw"></i> <a href="https://github.com/wietze/dll-hijacking">https://github.com/wietze/dll-hijacking</a></div></footer>
+</body>
+</html>

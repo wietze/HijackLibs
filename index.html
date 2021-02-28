@@ -1,0 +1,34 @@
+---
+title: Blog - Wietze
+layout:
+---
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>{% if page.title %}{{ page.title | markdownify | strip_html | smartify }}{% else %}{{ site.title }}{% endif %}</title>
+    {% assign og_url = site.url | append: site.baseurl %}
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="{{page.Author}}">
+
+    <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/main.css">
+    <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/code.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" />
+    <script src="{{ site.baseurl }}/assets/js/main.js"></script>
+
+    <link rel="icon" type="image/x-icon" href="{{ site.favicon_location }}">
+</head>
+<body>
+    <h1>Overview</h1>
+    <ul>
+        {% for entry in site.entries %}
+        <li>
+            <a href="{{ entry.url | absolute_url }}">
+            {{ entry.Name }}
+            </a>
+        </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
