@@ -9,6 +9,7 @@ ExpectedLocations:
 - "%SYSTEM32%"
 VulnerableExecutables:
 - Path: "%SYSTEM32%\\bthudtask.exe"
+  AutoElevate: True
 - Path: "%SYSTEM32%\\chkdsk.exe"
 - Path: "%SYSTEM32%\\chkntfs.exe"
 - Path: "%SYSTEM32%\\deviceenroller.exe"
@@ -16,9 +17,12 @@ VulnerableExecutables:
 - Path: "%SYSTEM32%\\dmomacpmo.exe"
 - Path: "%SYSTEM32%\\drvinst.exe"
 - Path: "%SYSTEM32%\\fsavailux.exe"
+  AutoElevate: True
 - Path: "%SYSTEM32%\\fsquirt.exe"
 - Path: "%SYSTEM32%\\immersivetpmvscmgrsvr.exe"
+  AutoElevate: True
 - Path: "%SYSTEM32%\\iscsicli.exe"
+  AutoElevate: True
 - Path: "%SYSTEM32%\\label.exe"
 - Path: "%SYSTEM32%\\mdmappinstaller.exe"
 - Path: "%SYSTEM32%\\mdmdiagnosticstool.exe"

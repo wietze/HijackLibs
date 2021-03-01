@@ -26,6 +26,7 @@ VulnerableExecutables:
 - Path: "%SYSTEM32%\\rwinsta.exe"
 - Path: "%SYSTEM32%\\spaceagent.exe"
 - Path: "%SYSTEM32%\\systempropertiesadvanced.exe"
+  AutoElevate: True
 - Path: "%SYSTEM32%\\taskkill.exe"
 - Path: "%SYSTEM32%\\tasklist.exe"
 - Path: "%SYSTEM32%\\tscon.exe"

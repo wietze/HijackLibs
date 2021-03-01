@@ -15,9 +15,11 @@ VulnerableExecutables:
 - Path: "%SYSTEM32%\\deviceenroller.exe"
 - Path: "%SYSTEM32%\\dpapimig.exe"
 - Path: "%SYSTEM32%\\easinvoker.exe"
+  AutoElevate: True
 - Path: "%SYSTEM32%\\net.exe"
 - Path: "%SYSTEM32%\\net1.exe"
 - Path: "%SYSTEM32%\\netplwiz.exe"
+  AutoElevate: True
 - Path: "%SYSTEM32%\\query.exe"
 - Path: "%SYSTEM32%\\quser.exe"
 - Path: "%SYSTEM32%\\qwinsta.exe"
@@ -25,6 +27,7 @@ VulnerableExecutables:
 - Path: "%SYSTEM32%\\reset.exe"
 - Path: "%SYSTEM32%\\rwinsta.exe"
 - Path: "%SYSTEM32%\\systemsettingsadminflows.exe"
+  AutoElevate: True
 - Path: "%SYSTEM32%\\tscon.exe"
 - Path: "%SYSTEM32%\\tskill.exe"
 - Path: "%SYSTEM32%\\wpcmon.exe"

@@ -9,6 +9,7 @@ ExpectedLocations:
 - "%SYSTEM32%"
 VulnerableExecutables:
 - Path: "%SYSTEM32%\\multidigimon.exe"
+  AutoElevate: True
 - Path: "%SYSTEM32%\\tabcal.exe"
 
 Resources:

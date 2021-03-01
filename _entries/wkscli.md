@@ -18,7 +18,9 @@ VulnerableExecutables:
 - Path: "%SYSTEM32%\\net.exe"
 - Path: "%SYSTEM32%\\net1.exe"
 - Path: "%SYSTEM32%\\systempropertiesadvanced.exe"
+  AutoElevate: True
 - Path: "%SYSTEM32%\\systemsettingsadminflows.exe"
+  AutoElevate: True
 - Path: "%SYSTEM32%\\whoami.exe"
 
 Resources:

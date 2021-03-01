@@ -18,6 +18,7 @@ VulnerableExecutables:
 - Path: "%SYSTEM32%\\pnpunattend.exe"
 - Path: "%SYSTEM32%\\setupugc.exe"
 - Path: "%SYSTEM32%\\systemreset.exe"
+  AutoElevate: True
 - Path: "%SYSTEM32%\\werfault.exe"
 - Path: "%SYSTEM32%\\werfaultsecure.exe"
 

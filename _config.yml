@@ -1,5 +1,6 @@
 title: "Wietze"
 subtitle: Test
+repo: wietze/windows-dll-hijacking
 sass:
   style: compressed
   sass_dir: _sass

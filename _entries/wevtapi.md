@@ -14,6 +14,7 @@ VulnerableExecutables:
 - Path: "%SYSTEM32%\\plasrv.exe"
 - Path: "%SYSTEM32%\\wecutil.exe"
 - Path: "%SYSTEM32%\\wsreset.exe"
+  AutoElevate: True
 
 Resources:
 - https://wietze.github.io/blog/hijacking-dlls-in-windows

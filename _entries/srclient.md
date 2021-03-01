@@ -9,9 +9,14 @@ ExpectedLocations:
 - "%SYSTEM32%"
 VulnerableExecutables:
 - Path: "%SYSTEM32%\\srtasks.exe"
+  Type: Relative Path
+- Path: "%SYSTEM32%\\tiworker.exe"
+  Type: Phantom
+  Condition: Windows Server 2012
 
 Resources:
 - https://wietze.github.io/blog/hijacking-dlls-in-windows
+- https://blog.vonahi.io/srclient-dll-hijacking/
 Acknowledgements:
 - Name: Wietze
   Twitter: "@wietze"

@@ -13,6 +13,7 @@ VulnerableExecutables:
 - Path: "%SYSTEM32%\\psr.exe"
 - Path: "%SYSTEM32%\\resmon.exe"
 - Path: "%SYSTEM32%\\sdclt.exe"
+  AutoElevate: True
 - Path: "%SYSTEM32%\\slui.exe"
 - Path: "%SYSTEM32%\\workfolders.exe"
 - Path: "%SYSTEM32%\\write.exe"

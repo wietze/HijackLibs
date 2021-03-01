@@ -13,8 +13,10 @@ VulnerableExecutables:
 - Path: "%SYSTEM32%\\efsui.exe"
 - Path: "%SYSTEM32%\\net1.exe"
 - Path: "%SYSTEM32%\\netplwiz.exe"
+  AutoElevate: True
 - Path: "%SYSTEM32%\\rekeywiz.exe"
 - Path: "%SYSTEM32%\\systempropertiesadvanced.exe"
+  AutoElevate: True
 - Path: "%SYSTEM32%\\winrs.exe"
 - Path: "%SYSTEM32%\\wsmanhttpconfig.exe"
 - Path: "%SYSTEM32%\\wsmprovhost.exe"

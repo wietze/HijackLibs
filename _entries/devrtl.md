@@ -11,6 +11,7 @@ VulnerableExecutables:
 - Path: "%SYSTEM32%\\drvinst.exe"
 - Path: "%SYSTEM32%\\pnpunattend.exe"
 - Path: "%SYSTEM32%\\systemsettingsadminflows.exe"
+  AutoElevate: True
 - Path: "%SYSTEM32%\\wowreg32.exe"
 
 Resources:

@@ -16,10 +16,13 @@ VulnerableExecutables:
 - Path: "%SYSTEM32%\\rdpshell.exe"
 - Path: "%SYSTEM32%\\rdvghelper.exe"
 - Path: "%SYSTEM32%\\sdclt.exe"
+  AutoElevate: True
 - Path: "%SYSTEM32%\\securityhealthservice.exe"
 - Path: "%SYSTEM32%\\slui.exe"
 - Path: "%SYSTEM32%\\systemsettingsadminflows.exe"
+  AutoElevate: True
 - Path: "%SYSTEM32%\\wusa.exe"
+  AutoElevate: True
 
 Resources:
 - https://wietze.github.io/blog/hijacking-dlls-in-windows

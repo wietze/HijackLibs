@@ -9,6 +9,7 @@ ExpectedLocations:
 - "%SYSTEM32%"
 VulnerableExecutables:
 - Path: "%SYSTEM32%\\fxsunatd.exe"
+  AutoElevate: True
 
 Resources:
 - https://wietze.github.io/blog/hijacking-dlls-in-windows

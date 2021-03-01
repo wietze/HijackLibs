@@ -11,6 +11,7 @@ VulnerableExecutables:
 - Path: "%SYSTEM32%\\dialer.exe"
 - Path: "%SYSTEM32%\\fxssvc.exe"
 - Path: "%SYSTEM32%\\tcmsetup.exe"
+  AutoElevate: True
 
 Resources:
 - https://wietze.github.io/blog/hijacking-dlls-in-windows

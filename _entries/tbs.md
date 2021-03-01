@@ -12,6 +12,7 @@ VulnerableExecutables:
 - Path: "%SYSTEM32%\\mdmdiagnosticstool.exe"
 - Path: "%SYSTEM32%\\resetengine.exe"
 - Path: "%SYSTEM32%\\systemreset.exe"
+  AutoElevate: True
 
 Resources:
 - https://wietze.github.io/blog/hijacking-dlls-in-windows

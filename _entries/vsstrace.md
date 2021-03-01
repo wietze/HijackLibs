@@ -11,9 +11,12 @@ VulnerableExecutables:
 - Path: "%SYSTEM32%\\bootim.exe"
 - Path: "%SYSTEM32%\\resetengine.exe"
 - Path: "%SYSTEM32%\\rstrui.exe"
+  AutoElevate: True
 - Path: "%SYSTEM32%\\sdclt.exe"
+  AutoElevate: True
 - Path: "%SYSTEM32%\\srtasks.exe"
 - Path: "%SYSTEM32%\\systemreset.exe"
+  AutoElevate: True
 - Path: "%SYSTEM32%\\vssadmin.exe"
 - Path: "%SYSTEM32%\\vssvc.exe"
 - Path: "%SYSTEM32%\\wbengine.exe"

@@ -9,9 +9,12 @@ ExpectedLocations:
 - "%SYSTEM32%"
 VulnerableExecutables:
 - Path: "%SYSTEM32%\\msconfig.exe"
+  AutoElevate: True
 - Path: "%SYSTEM32%\\msdt.exe"
+  AutoElevate: True
 - Path: "%SYSTEM32%\\msinfo32.exe"
 - Path: "%SYSTEM32%\\perfmon.exe"
+  AutoElevate: True
 - Path: "%SYSTEM32%\\quickassist.exe"
 - Path: "%SYSTEM32%\\vds.exe"
 - Path: "%SYSTEM32%\\vdsldr.exe"

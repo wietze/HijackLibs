@@ -27,7 +27,9 @@ VulnerableExecutables:
 - Path: "%SYSTEM32%\\reset.exe"
 - Path: "%SYSTEM32%\\rwinsta.exe"
 - Path: "%SYSTEM32%\\systempropertiesadvanced.exe"
+  AutoElevate: True
 - Path: "%SYSTEM32%\\systemsettingsadminflows.exe"
+  AutoElevate: True
 - Path: "%SYSTEM32%\\tscon.exe"
 - Path: "%SYSTEM32%\\tskill.exe"
 - Path: "%SYSTEM32%\\w32tm.exe"

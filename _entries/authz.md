@@ -9,6 +9,7 @@ ExpectedLocations:
 - "%SYSTEM32%"
 VulnerableExecutables:
 - Path: "%SYSTEM32%\\easinvoker.exe"
+  AutoElevate: True
 - Path: "%SYSTEM32%\\vssvc.exe"
 - Path: "%SYSTEM32%\\whoami.exe"
 

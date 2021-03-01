@@ -10,6 +10,7 @@ ExpectedLocations:
 VulnerableExecutables:
 - Path: "%SYSTEM32%\\displayswitch.exe"
 - Path: "%SYSTEM32%\\easpolicymanagerbrokerhost.exe"
+  AutoElevate: True
 - Path: "%SYSTEM32%\\edpcleanup.exe"
 - Path: "%SYSTEM32%\\eduprintprov.exe"
 - Path: "%SYSTEM32%\\hvsievaluator.exe"

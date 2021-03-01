@@ -9,6 +9,7 @@ ExpectedLocations:
 - "%SYSTEM32%"
 VulnerableExecutables:
 - Path: "%SYSTEM32%\\dccw.exe"
+  AutoElevate: True
 - Path: "%SYSTEM32%\\dispdiag.exe"
 
 Resources:

@@ -20,6 +20,7 @@ VulnerableExecutables:
 - Path: "%SYSTEM32%\\driverquery.exe"
 - Path: "%SYSTEM32%\\dsregcmd.exe"
 - Path: "%SYSTEM32%\\easinvoker.exe"
+  AutoElevate: True
 - Path: "%SYSTEM32%\\edpcleanup.exe"
 - Path: "%SYSTEM32%\\efsui.exe"
 - Path: "%SYSTEM32%\\eventcreate.exe"
@@ -32,6 +33,7 @@ VulnerableExecutables:
 - Path: "%SYSTEM32%\\net.exe"
 - Path: "%SYSTEM32%\\net1.exe"
 - Path: "%SYSTEM32%\\netplwiz.exe"
+  AutoElevate: True
 - Path: "%SYSTEM32%\\nltest.exe"
 - Path: "%SYSTEM32%\\openfiles.exe"
 - Path: "%SYSTEM32%\\query.exe"
@@ -43,7 +45,9 @@ VulnerableExecutables:
 - Path: "%SYSTEM32%\\rwinsta.exe"
 - Path: "%SYSTEM32%\\spaceagent.exe"
 - Path: "%SYSTEM32%\\systempropertiesadvanced.exe"
+  AutoElevate: True
 - Path: "%SYSTEM32%\\systemsettingsadminflows.exe"
+  AutoElevate: True
 - Path: "%SYSTEM32%\\taskkill.exe"
 - Path: "%SYSTEM32%\\tasklist.exe"
 - Path: "%SYSTEM32%\\tscon.exe"

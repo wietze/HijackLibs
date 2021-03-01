@@ -10,6 +10,7 @@ ExpectedLocations:
 VulnerableExecutables:
 - Path: "%SYSTEM32%\\slidetoshutdown.exe"
 - Path: "%SYSTEM32%\\systemreset.exe"
+  AutoElevate: True
 
 Resources:
 - https://wietze.github.io/blog/hijacking-dlls-in-windows

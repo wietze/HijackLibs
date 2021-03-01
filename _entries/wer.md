@@ -10,10 +10,13 @@ ExpectedLocations:
 VulnerableExecutables:
 - Path: "%SYSTEM32%\\dwwin.exe"
 - Path: "%SYSTEM32%\\msdt.exe"
+  AutoElevate: True
 - Path: "%SYSTEM32%\\pcalua.exe"
 - Path: "%SYSTEM32%\\relpost.exe"
 - Path: "%SYSTEM32%\\rstrui.exe"
+  AutoElevate: True
 - Path: "%SYSTEM32%\\sdclt.exe"
+  AutoElevate: True
 - Path: "%SYSTEM32%\\srtasks.exe"
 - Path: "%SYSTEM32%\\wbengine.exe"
 - Path: "%SYSTEM32%\\werfault.exe"

@@ -14,10 +14,13 @@ VulnerableExecutables:
 - Path: "%SYSTEM32%\\filehistory.exe"
 - Path: "%SYSTEM32%\\gamepanel.exe"
 - Path: "%SYSTEM32%\\msdt.exe"
+  AutoElevate: True
 - Path: "%SYSTEM32%\\msra.exe"
 - Path: "%SYSTEM32%\\quickassist.exe"
 - Path: "%SYSTEM32%\\sdclt.exe"
+  AutoElevate: True
 - Path: "%SYSTEM32%\\taskmgr.exe"
+  AutoElevate: True
 - Path: "%SYSTEM32%\\wfs.exe"
 - Path: "%SYSTEM32%\\wiaacmgr.exe"
 - Path: "%SYSTEM32%\\wiawow64.exe"

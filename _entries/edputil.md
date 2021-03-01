@@ -11,11 +11,14 @@ VulnerableExecutables:
 - Path: "%SYSTEM32%\\calc.exe"
 - Path: "%SYSTEM32%\\compmgmtlauncher.exe"
 - Path: "%SYSTEM32%\\computerdefaults.exe"
+  AutoElevate: True
 - Path: "%SYSTEM32%\\dpiscaling.exe"
 - Path: "%SYSTEM32%\\fodhelper.exe"
+  AutoElevate: True
 - Path: "%SYSTEM32%\\mobsync.exe"
 - Path: "%SYSTEM32%\\resmon.exe"
 - Path: "%SYSTEM32%\\sdclt.exe"
+  AutoElevate: True
 - Path: "%SYSTEM32%\\slui.exe"
 - Path: "%SYSTEM32%\\workfolders.exe"
 - Path: "%SYSTEM32%\\write.exe"

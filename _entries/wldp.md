@@ -11,6 +11,7 @@ VulnerableExecutables:
 - Path: "%SYSTEM32%\\mshta.exe"
 - Path: "%SYSTEM32%\\securityhealthservice.exe"
 - Path: "%SYSTEM32%\\systemsettingsadminflows.exe"
+  AutoElevate: True
 
 Resources:
 - https://wietze.github.io/blog/hijacking-dlls-in-windows

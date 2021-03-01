@@ -11,6 +11,7 @@ VulnerableExecutables:
 - Path: "%SYSTEM32%\\applytrustoffline.exe"
 - Path: "%SYSTEM32%\\lpremove.exe"
 - Path: "%SYSTEM32%\\systemsettingsadminflows.exe"
+  AutoElevate: True
 
 Resources:
 - https://wietze.github.io/blog/hijacking-dlls-in-windows

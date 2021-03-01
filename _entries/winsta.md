@@ -26,11 +26,17 @@ VulnerableExecutables:
 - Path: "%SYSTEM32%\\reset.exe"
 - Path: "%SYSTEM32%\\rwinsta.exe"
 - Path: "%SYSTEM32%\\systempropertiesadvanced.exe"
+  AutoElevate: True
 - Path: "%SYSTEM32%\\systempropertiescomputername.exe"
+  AutoElevate: True
 - Path: "%SYSTEM32%\\systempropertiesdataexecutionprevention.exe"
+  AutoElevate: True
 - Path: "%SYSTEM32%\\systempropertieshardware.exe"
+  AutoElevate: True
 - Path: "%SYSTEM32%\\systempropertiesprotection.exe"
+  AutoElevate: True
 - Path: "%SYSTEM32%\\systempropertiesremote.exe"
+  AutoElevate: True
 - Path: "%SYSTEM32%\\tscon.exe"
 - Path: "%SYSTEM32%\\tsdiscon.exe"
 - Path: "%SYSTEM32%\\tskill.exe"

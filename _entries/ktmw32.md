@@ -12,6 +12,7 @@ VulnerableExecutables:
 - Path: "%SYSTEM32%\\mstsc.exe"
 - Path: "%SYSTEM32%\\netsh.exe"
 - Path: "%SYSTEM32%\\rstrui.exe"
+  AutoElevate: True
 - Path: "%SYSTEM32%\\srtasks.exe"
 - Path: "%SYSTEM32%\\wkspbroker.exe"
 

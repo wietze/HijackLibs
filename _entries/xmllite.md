@@ -23,6 +23,7 @@ VulnerableExecutables:
 - Path: "%SYSTEM32%\\resetengine.exe"
 - Path: "%SYSTEM32%\\sppsvc.exe"
 - Path: "%SYSTEM32%\\systemreset.exe"
+  AutoElevate: True
 - Path: "%SYSTEM32%\\upfc.exe"
 - Path: "%SYSTEM32%\\usocoreworker.exe"
 - Path: "%SYSTEM32%\\wbengine.exe"

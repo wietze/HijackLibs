@@ -15,8 +15,11 @@ VulnerableExecutables:
 - Path: "%SYSTEM32%\\mdeserver.exe"
 - Path: "%SYSTEM32%\\quickassist.exe"
 - Path: "%SYSTEM32%\\systemreset.exe"
+  AutoElevate: True
 - Path: "%SYSTEM32%\\taskmgr.exe"
+  AutoElevate: True
 - Path: "%SYSTEM32%\\winsat.exe"
+  AutoElevate: True
 
 Resources:
 - https://wietze.github.io/blog/hijacking-dlls-in-windows

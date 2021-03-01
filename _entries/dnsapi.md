@@ -19,7 +19,9 @@ VulnerableExecutables:
 - Path: "%SYSTEM32%\\spoolsv.exe"
 - Path: "%SYSTEM32%\\sppextcomobj.exe"
 - Path: "%SYSTEM32%\\systempropertiesadvanced.exe"
+  AutoElevate: True
 - Path: "%SYSTEM32%\\systemsettingsadminflows.exe"
+  AutoElevate: True
 - Path: "%SYSTEM32%\\tieringengineservice.exe"
 - Path: "%SYSTEM32%\\wbengine.exe"
 - Path: "%SYSTEM32%\\wkspbroker.exe"

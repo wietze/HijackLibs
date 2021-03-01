@@ -11,6 +11,7 @@ VulnerableExecutables:
 - Path: "%SYSTEM32%\\bdeuisrv.exe"
 - Path: "%SYSTEM32%\\colorcpl.exe"
 - Path: "%SYSTEM32%\\dccw.exe"
+  AutoElevate: True
 - Path: "%SYSTEM32%\\deviceenroller.exe"
 - Path: "%SYSTEM32%\\dmomacpmo.exe"
 - Path: "%SYSTEM32%\\dsregcmd.exe"
@@ -29,6 +30,7 @@ VulnerableExecutables:
 - Path: "%SYSTEM32%\\securityhealthservice.exe"
 - Path: "%SYSTEM32%\\settingsynchost.exe"
 - Path: "%SYSTEM32%\\systemsettingsadminflows.exe"
+  AutoElevate: True
 - Path: "%SYSTEM32%\\tttracer.exe"
 - Path: "%SYSTEM32%\\utcdecoderhost.exe"
 - Path: "%SYSTEM32%\\workfolders.exe"

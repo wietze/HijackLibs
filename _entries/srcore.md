@@ -9,6 +9,7 @@ ExpectedLocations:
 - "%SYSTEM32%"
 VulnerableExecutables:
 - Path: "%SYSTEM32%\\rstrui.exe"
+  AutoElevate: True
 - Path: "%SYSTEM32%\\srtasks.exe"
 
 Resources:

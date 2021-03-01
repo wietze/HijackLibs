@@ -16,6 +16,7 @@ VulnerableExecutables:
 - Path: "%SYSTEM32%\\fxscover.exe"
 - Path: "%SYSTEM32%\\fxssvc.exe"
 - Path: "%SYSTEM32%\\fxsunatd.exe"
+  AutoElevate: True
 - Path: "%SYSTEM32%\\msra.exe"
 - Path: "%SYSTEM32%\\mstsc.exe"
 - Path: "%SYSTEM32%\\nbtstat.exe"
@@ -28,6 +29,7 @@ VulnerableExecutables:
 - Path: "%SYSTEM32%\\pathping.exe"
 - Path: "%SYSTEM32%\\printbrmui.exe"
 - Path: "%SYSTEM32%\\printui.exe"
+  AutoElevate: True
 - Path: "%SYSTEM32%\\rdpclip.exe"
 - Path: "%SYSTEM32%\\route.exe"
 - Path: "%SYSTEM32%\\tracert.exe"

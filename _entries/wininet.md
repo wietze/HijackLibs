@@ -11,8 +11,10 @@ VulnerableExecutables:
 - Path: "%SYSTEM32%\\calc.exe"
 - Path: "%SYSTEM32%\\certreq.exe"
 - Path: "%SYSTEM32%\\computerdefaults.exe"
+  AutoElevate: True
 - Path: "%SYSTEM32%\\dsregcmd.exe"
 - Path: "%SYSTEM32%\\fodhelper.exe"
+  AutoElevate: True
 - Path: "%SYSTEM32%\\ie4uinit.exe"
 - Path: "%SYSTEM32%\\mdmdiagnosticstool.exe"
 - Path: "%SYSTEM32%\\mstsc.exe"

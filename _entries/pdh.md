@@ -11,6 +11,7 @@ VulnerableExecutables:
 - Path: "%SYSTEM32%\\plasrv.exe"
 - Path: "%SYSTEM32%\\relog.exe"
 - Path: "%SYSTEM32%\\taskmgr.exe"
+  AutoElevate: True
 - Path: "%SYSTEM32%\\typeperf.exe"
 
 Resources:

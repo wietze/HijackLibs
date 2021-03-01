@@ -10,7 +10,9 @@ ExpectedLocations:
 VulnerableExecutables:
 - Path: "%SYSTEM32%\\dpapimig.exe"
 - Path: "%SYSTEM32%\\easinvoker.exe"
+  AutoElevate: True
 - Path: "%SYSTEM32%\\netplwiz.exe"
+  AutoElevate: True
 
 Resources:
 - https://wietze.github.io/blog/hijacking-dlls-in-windows

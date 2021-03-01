@@ -12,10 +12,13 @@ VulnerableExecutables:
 - Path: "%SYSTEM32%\\fxssvc.exe"
 - Path: "%SYSTEM32%\\mstsc.exe"
 - Path: "%SYSTEM32%\\perfmon.exe"
+  AutoElevate: True
 - Path: "%SYSTEM32%\\rekeywiz.exe"
 - Path: "%SYSTEM32%\\rpcping.exe"
 - Path: "%SYSTEM32%\\systempropertiesadvanced.exe"
+  AutoElevate: True
 - Path: "%SYSTEM32%\\taskmgr.exe"
+  AutoElevate: True
 - Path: "%SYSTEM32%\\wbadmin.exe"
 - Path: "%SYSTEM32%\\wfs.exe"
 - Path: "%SYSTEM32%\\wkspbroker.exe"

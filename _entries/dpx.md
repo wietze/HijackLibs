@@ -10,6 +10,7 @@ ExpectedLocations:
 VulnerableExecutables:
 - Path: "%SYSTEM32%\\lpksetup.exe"
 - Path: "%SYSTEM32%\\wusa.exe"
+  AutoElevate: True
 
 Resources:
 - https://wietze.github.io/blog/hijacking-dlls-in-windows

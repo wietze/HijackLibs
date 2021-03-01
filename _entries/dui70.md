@@ -10,6 +10,7 @@ ExpectedLocations:
 VulnerableExecutables:
 - Path: "%SYSTEM32%\\certreq.exe"
 - Path: "%SYSTEM32%\\optionalfeatures.exe"
+  AutoElevate: True
 
 Resources:
 - https://wietze.github.io/blog/hijacking-dlls-in-windows

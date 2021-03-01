@@ -10,6 +10,7 @@ ExpectedLocations:
 VulnerableExecutables:
 - Path: "%SYSTEM32%\\dispdiag.exe"
 - Path: "%SYSTEM32%\\iscsicli.exe"
+  AutoElevate: True
 
 Resources:
 - https://wietze.github.io/blog/hijacking-dlls-in-windows

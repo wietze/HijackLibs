@@ -14,6 +14,7 @@ VulnerableExecutables:
 - Path: "%SYSTEM32%\\dsregcmd.exe"
 - Path: "%SYSTEM32%\\mdmdiagnosticstool.exe"
 - Path: "%SYSTEM32%\\msdt.exe"
+  AutoElevate: True
 - Path: "%SYSTEM32%\\mshta.exe"
 - Path: "%SYSTEM32%\\mstsc.exe"
 - Path: "%SYSTEM32%\\musnotification.exe"
@@ -24,6 +25,7 @@ VulnerableExecutables:
 - Path: "%SYSTEM32%\\resetengine.exe"
 - Path: "%SYSTEM32%\\rpcping.exe"
 - Path: "%SYSTEM32%\\systemreset.exe"
+  AutoElevate: True
 - Path: "%SYSTEM32%\\wkspbroker.exe"
 
 Resources:

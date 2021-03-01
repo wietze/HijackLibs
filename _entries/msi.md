@@ -13,6 +13,7 @@ VulnerableExecutables:
 - Path: "%SYSTEM32%\\mdmappinstaller.exe"
 - Path: "%SYSTEM32%\\msiexec.exe"
 - Path: "%SYSTEM32%\\optionalfeatures.exe"
+  AutoElevate: True
 - Path: "%SYSTEM32%\\packageinspector.exe"
 
 Resources:

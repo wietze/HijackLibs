@@ -10,7 +10,9 @@ ExpectedLocations:
 VulnerableExecutables:
 - Path: "%SYSTEM32%\\slui.exe"
 - Path: "%SYSTEM32%\\systempropertiesadvanced.exe"
+  AutoElevate: True
 - Path: "%SYSTEM32%\\systemsettingsadminflows.exe"
+  AutoElevate: True
 
 Resources:
 - https://wietze.github.io/blog/hijacking-dlls-in-windows

@@ -7,6 +7,9 @@ body {
     margin-bottom: calc(20px + 2.5em);
 }
 
+h1 {
+    font-size: xx-large;
+}
 a {
     color: rgb(192, 61, 0);
 }
@@ -22,10 +25,15 @@ code {
 figure { margin: 0; }
 div.metadata { display: flex; margin: 10px 0px; }
 div.metadata>div {margin-right: 5px;}
-div.key { font-weight: bold; min-width: 110px;}
-span.pill { background: rgb(230, 56, 4); color: white; padding: 2px 5px; border-radius: 3px; }
+div.key { font-weight: bold; flex-basis: 110px; flex-shrink: 0;}
+.pill { font-size: x-small; background: rgb(230, 56, 4); color: white; padding: 2px 5px; border-radius: 3px; margin-right: 3px; }
+.pill:first-of-type { margin-right: 0px; }
+.pill.type { font-size: initial; }
+.pill.uac { background: #58b000; white-space: nowrap; float: right; }
+.pill.condition { background: #0081bd; white-space: nowrap; float: right; }
+.pill.privesc { background: #ff9900; white-space: nowrap; float: right; }
 section.description { background: #EEE; padding: 1px 10px; line-height: 1.3em; }
-
+.vulnerable_exe { display: flex; justify-content: space-between; }
 footer {
     position: fixed;
     height: 2.5em;

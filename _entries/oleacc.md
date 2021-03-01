@@ -15,6 +15,7 @@ VulnerableExecutables:
 - Path: "%SYSTEM32%\\fsquirt.exe"
 - Path: "%SYSTEM32%\\magnify.exe"
 - Path: "%SYSTEM32%\\optionalfeatures.exe"
+  AutoElevate: True
 - Path: "%SYSTEM32%\\osk.exe"
 - Path: "%SYSTEM32%\\psr.exe"
 - Path: "%SYSTEM32%\\utilman.exe"

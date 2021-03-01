@@ -10,7 +10,9 @@ ExpectedLocations:
 VulnerableExecutables:
 - Path: "%SYSTEM32%\\calc.exe"
 - Path: "%SYSTEM32%\\computerdefaults.exe"
+  AutoElevate: True
 - Path: "%SYSTEM32%\\fodhelper.exe"
+  AutoElevate: True
 - Path: "%SYSTEM32%\\ie4uinit.exe"
 
 Resources:

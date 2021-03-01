@@ -11,11 +11,13 @@ VulnerableExecutables:
 - Path: "%SYSTEM32%\\calc.exe"
 - Path: "%SYSTEM32%\\compmgmtlauncher.exe"
 - Path: "%SYSTEM32%\\computerdefaults.exe"
+  AutoElevate: True
 - Path: "%SYSTEM32%\\disksnapshot.exe"
 - Path: "%SYSTEM32%\\dpiscaling.exe"
 - Path: "%SYSTEM32%\\efsui.exe"
 - Path: "%SYSTEM32%\\filehistory.exe"
 - Path: "%SYSTEM32%\\fodhelper.exe"
+  AutoElevate: True
 - Path: "%SYSTEM32%\\ie4uinit.exe"
 - Path: "%SYSTEM32%\\lpksetup.exe"
 - Path: "%SYSTEM32%\\mfpmp.exe"
@@ -23,6 +25,7 @@ VulnerableExecutables:
 - Path: "%SYSTEM32%\\mstsc.exe"
 - Path: "%SYSTEM32%\\net1.exe"
 - Path: "%SYSTEM32%\\netplwiz.exe"
+  AutoElevate: True
 - Path: "%SYSTEM32%\\netsh.exe"
 - Path: "%SYSTEM32%\\presentationhost.exe"
 - Path: "%SYSTEM32%\\quickassist.exe"
@@ -32,6 +35,7 @@ VulnerableExecutables:
 - Path: "%SYSTEM32%\\rmactivate.exe"
 - Path: "%SYSTEM32%\\rmactivate_ssp_isv.exe"
 - Path: "%SYSTEM32%\\sdclt.exe"
+  AutoElevate: True
 - Path: "%SYSTEM32%\\slui.exe"
 - Path: "%SYSTEM32%\\sppextcomobj.exe"
 - Path: "%SYSTEM32%\\stordiag.exe"
