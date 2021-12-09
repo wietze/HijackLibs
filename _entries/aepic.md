@@ -9,10 +9,11 @@ ExpectedLocations:
 VulnerableExecutables:
 - Path: '%SYSTEM32%\psr.exe'
   Type: Sideloading
-  FakeKey: test
 Resources:
 - "https://wietze.github.io/blog/hijacking-dlls-in-windows"
 Acknowledgements:
 - Name: Wietze
   Twitter: '@wietze'
+
+---
 

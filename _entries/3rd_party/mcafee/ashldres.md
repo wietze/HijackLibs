@@ -12,3 +12,5 @@ VulnerableExecutables:
   Type: Sideloading
 Resources:
 - https://www.sophos.com/en-us/medialibrary/PDFs/technical%20papers/sophos-rotten-tomato-campaign.pdf
+---
+

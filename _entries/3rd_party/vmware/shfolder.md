@@ -11,3 +11,5 @@ VulnerableExecutables:
   Type: Sideloading
 Resources:
 - https://twitter.com/dissectmalware/status/978017957480628226
+---
+

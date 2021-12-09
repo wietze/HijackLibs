@@ -13,3 +13,5 @@ VulnerableExecutables:
   Type: Sideloading
 Resources:
 - https://blog.trendmicro.com/trendlabs-security-intelligence/new-wave-of-plugx-targets-legitimate-apps/
+---
+

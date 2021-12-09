@@ -13,3 +13,5 @@ VulnerableExecutables:
 
 Resources:
 - https://safebreach.com/blog/2019/trend-micro-security-16-dll-search-order-hijacking-and-potential-abuses/
+---
+

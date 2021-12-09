@@ -12,3 +12,5 @@ VulnerableExecutables:
   Condition: Windows 7
 Resources:
 - https://cofense.com/exploiting-unpatched-vulnerability-ave_maria-malware-not-full-grace/
+---
+
