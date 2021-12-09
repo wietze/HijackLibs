@@ -8,7 +8,7 @@ on:
       - "yml/**.yml"
 
 jobs:
-  build:
+  update:
     runs-on: ubuntu-latest
     if: github.event.repository.fork == false
     steps:

@@ -6,10 +6,15 @@ on:
       - "yml/**.yml"
 
 jobs:
-  build:
+  check:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
+
+      - name: Run YAML linter
+        uses: ibiqlik/action-yamllint@v3.1.0
+        with:
+          config_file: .github/.yamllint
 
       - uses: eliezio/action-pykwalify@v0.3
         name: Check schema
