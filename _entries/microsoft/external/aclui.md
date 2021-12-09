@@ -17,4 +17,3 @@ Acknowledgements:
   Twitter: '@hexacorn'
 - Name: Lampros Noutsos
   Twitter: '@lampnout'
----

@@ -13,4 +13,3 @@ VulnerableExecutables:
 Resources:
 - https://www.mcafee.com/blogs/other-blogs/mcafee-labs/revil-ransomware-uses-dll-sideloading/
 - https://news.sophos.com/en-us/2020/11/04/a-new-apt-uses-dll-side-loads-to-killlsomeone/
----

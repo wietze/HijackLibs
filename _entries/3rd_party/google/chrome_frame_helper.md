@@ -9,7 +9,7 @@ ExpectedLocations:
 - '%PROGRAMFILES(x86)%\Google\Chrome\Application'
 VulnerableExecutables:
 - Path: 'chrome_frame_helper.exe'
-  SHA256: 
+  SHA256:
     - f95d0ab23f95e169cd2c613a4b8dde731ca6031c5ae11ebf0bdc034db3cc30cd
   Type: Sideloading
 Resources:
@@ -17,4 +17,3 @@ Resources:
 Acknowledgements:
 - Name: Adam
   Twitter: '@hexacorn'
----

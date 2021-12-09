@@ -8,9 +8,8 @@ ExpectedLocations:
 - "%PROGRAMFILES(x86)%\\Lenovo\\Communications Utility"
 VulnerableExecutables:
 - Path: 'cammute.exe'
-  SHA256: 
+  SHA256:
     - 457b71d3effea8ec517277d17cf35a0b775103e549c0a779c81ba4eb125503ba
   Type: Sideloading
 Resources:
 - https://blog.trendmicro.com/trendlabs-security-intelligence/new-wave-of-plugx-targets-legitimate-apps/
----

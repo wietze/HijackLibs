@@ -7,9 +7,8 @@ ExpectedLocations:
 - "C:\\Program Files\\McAfee.com\\VSO"
 VulnerableExecutables:
 - Path: 'mcvsshld.exe'
-  SHA256: 
+  SHA256:
     - 4512d852cad65ab6bee423619ed32188e444ee5518f51adc5502961724af62e7
   Type: Sideloading
 Resources:
 - https://www.sophos.com/en-us/medialibrary/PDFs/technical%20papers/sophos-rotten-tomato-campaign.pdf
----

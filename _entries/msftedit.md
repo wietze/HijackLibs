@@ -14,7 +14,7 @@ VulnerableExecutables:
 - Path: '%SYSTEM32%\searchindexer.exe'
   Type: Phantom
 - Path: '%SYSTEM32%\searchprotocolhost.exe'
-  Type: Phantom  
+  Type: Phantom
 Resources:
 - https://www.hexacorn.com/blog/2015/02/23/beyond-good-ol-run-key-part-28/
 - https://wietze.github.io/blog/hijacking-dlls-in-windows
@@ -23,4 +23,3 @@ Acknowledgements:
   Twitter: '@hexacorn'
 - Name: Wietze
   Twitter: '@wietze'
----

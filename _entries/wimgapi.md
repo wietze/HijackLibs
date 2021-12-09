@@ -22,4 +22,3 @@ Acknowledgements:
   Twitter: '@wietze'
 - Name: Adam
   Twitter: '@hexacorn'
----
