@@ -17,8 +17,9 @@ jobs:
       - name: Change .yml to .md
         run:  for x in $(find yml/ -name '*.yml'); do mv "$x" "${x/%\.yml/.md}"; done
       - name: Push to gh-pages branch
-        uses: peaceiris/actions-gh-pages@v3
+        uses: peaceiris/actions-gh-pages@v3.7.3
         with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_branch: gh-pages
           publish_dir: yml
           destination_dir: _entries
