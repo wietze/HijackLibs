@@ -4,12 +4,12 @@ Author: Wietze Beukema
 Created: 2021-11-21
 Vendor: VMWare
 ExpectedLocations:
-- '%SYSTEM32%'
-- '%SYSWOW64%'
+  - "%SYSTEM32%"
+  - "%SYSWOW64%"
 VulnerableExecutables:
-- Path: '%SYSTEM32%\VMNat.exe'
-  Type: Sideloading
+  - Path: '%SYSTEM32%\VMNat.exe'
+    Type: Sideloading
 Resources:
-- https://twitter.com/dissectmalware/status/978017957480628226
+  - https://twitter.com/dissectmalware/status/978017957480628226
 ---
 

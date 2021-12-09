@@ -4,19 +4,19 @@ Author: Wietze Beukema
 Created: 2021-12-08
 Vendor: Microsoft
 ExpectedLocations:
-- '%SYSTEM32%'
-- '%PROGRAMFILES%\HTML Help Workshop'
-- '%PROGRAMFILES(x86)%\HTML Help Workshop'
+  - "%SYSTEM32%"
+  - '%PROGRAMFILES%\HTML Help Workshop'
+  - '%PROGRAMFILES(x86)%\HTML Help Workshop'
 VulnerableExecutables:
-- Path: '%PROGRAMFILES%\HTML Help Workshop\hhc.exe'
-  Type: Sideloading
-  SHA256:
-  - 3e96894609819ae3d595ff6e0fbe9ce6c9ac17bdeda256b994831992f668cb99
+  - Path: '%PROGRAMFILES%\HTML Help Workshop\hhc.exe'
+    Type: Sideloading
+    SHA256:
+      - 3e96894609819ae3d595ff6e0fbe9ce6c9ac17bdeda256b994831992f668cb99
 Resources:
-- https://blog.trendmicro.com/trendlabs-security-intelligence/new-wave-of-plugx-targets-legitimate-apps/
-- https://www.hexacorn.com/blog/2016/03/10/beyond-good-ol-run-key-part-36/
+  - https://blog.trendmicro.com/trendlabs-security-intelligence/new-wave-of-plugx-targets-legitimate-apps/
+  - https://www.hexacorn.com/blog/2016/03/10/beyond-good-ol-run-key-part-36/
 Acknowledgements:
-- Name: Adam
-  Twitter: '@hexacorn'
+  - Name: Adam
+    Twitter: "@hexacorn"
 ---
 

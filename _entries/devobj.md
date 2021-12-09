@@ -4,61 +4,61 @@ Author: Wietze Beukema
 Created: 2021-02-27
 Vendor: Microsoft
 ExpectedLocations:
-- '%SYSTEM32%'
-- '%SYSWOW64%'
+  - "%SYSTEM32%"
+  - "%SYSWOW64%"
 VulnerableExecutables:
-- Path: '%SYSTEM32%\bthudtask.exe'
-  Type: Sideloading
-  AutoElevate: true
-- Path: '%SYSTEM32%\chkdsk.exe'
-  Type: Sideloading
-- Path: '%SYSTEM32%\chkntfs.exe'
-  Type: Sideloading
-- Path: '%SYSTEM32%\deviceenroller.exe'
-  Type: Sideloading
-- Path: '%SYSTEM32%\dispdiag.exe'
-  Type: Sideloading
-- Path: '%SYSTEM32%\dmomacpmo.exe'
-  Type: Sideloading
-- Path: '%SYSTEM32%\drvinst.exe'
-  Type: Sideloading
-- Path: '%SYSTEM32%\fsavailux.exe'
-  Type: Sideloading
-  AutoElevate: true
-- Path: '%SYSTEM32%\fsquirt.exe'
-  Type: Sideloading
-- Path: '%SYSTEM32%\immersivetpmvscmgrsvr.exe'
-  Type: Sideloading
-  AutoElevate: true
-- Path: '%SYSTEM32%\iscsicli.exe'
-  Type: Sideloading
-  AutoElevate: true
-- Path: '%SYSTEM32%\label.exe'
-  Type: Sideloading
-- Path: '%SYSTEM32%\mdmappinstaller.exe'
-  Type: Sideloading
-- Path: '%SYSTEM32%\mdmdiagnosticstool.exe'
-  Type: Sideloading
-- Path: '%SYSTEM32%\omadmclient.exe'
-  Type: Sideloading
-- Path: '%SYSTEM32%\osk.exe'
-  Type: Sideloading
-- Path: '%SYSTEM32%\rdpclip.exe'
-  Type: Sideloading
-- Path: '%SYSTEM32%\recover.exe'
-  Type: Sideloading
-- Path: '%SYSTEM32%\rmttpmvscmgrsvr.exe'
-  Type: Sideloading
-- Path: '%SYSTEM32%\tabcal.exe'
-  Type: Sideloading
-- Path: '%SYSTEM32%\vssvc.exe'
-  Type: Sideloading
-- Path: '%SYSTEM32%\workfolders.exe'
-  Type: Sideloading
+  - Path: '%SYSTEM32%\bthudtask.exe'
+    Type: Sideloading
+    AutoElevate: true
+  - Path: '%SYSTEM32%\chkdsk.exe'
+    Type: Sideloading
+  - Path: '%SYSTEM32%\chkntfs.exe'
+    Type: Sideloading
+  - Path: '%SYSTEM32%\deviceenroller.exe'
+    Type: Sideloading
+  - Path: '%SYSTEM32%\dispdiag.exe'
+    Type: Sideloading
+  - Path: '%SYSTEM32%\dmomacpmo.exe'
+    Type: Sideloading
+  - Path: '%SYSTEM32%\drvinst.exe'
+    Type: Sideloading
+  - Path: '%SYSTEM32%\fsavailux.exe'
+    Type: Sideloading
+    AutoElevate: true
+  - Path: '%SYSTEM32%\fsquirt.exe'
+    Type: Sideloading
+  - Path: '%SYSTEM32%\immersivetpmvscmgrsvr.exe'
+    Type: Sideloading
+    AutoElevate: true
+  - Path: '%SYSTEM32%\iscsicli.exe'
+    Type: Sideloading
+    AutoElevate: true
+  - Path: '%SYSTEM32%\label.exe'
+    Type: Sideloading
+  - Path: '%SYSTEM32%\mdmappinstaller.exe'
+    Type: Sideloading
+  - Path: '%SYSTEM32%\mdmdiagnosticstool.exe'
+    Type: Sideloading
+  - Path: '%SYSTEM32%\omadmclient.exe'
+    Type: Sideloading
+  - Path: '%SYSTEM32%\osk.exe'
+    Type: Sideloading
+  - Path: '%SYSTEM32%\rdpclip.exe'
+    Type: Sideloading
+  - Path: '%SYSTEM32%\recover.exe'
+    Type: Sideloading
+  - Path: '%SYSTEM32%\rmttpmvscmgrsvr.exe'
+    Type: Sideloading
+  - Path: '%SYSTEM32%\tabcal.exe'
+    Type: Sideloading
+  - Path: '%SYSTEM32%\vssvc.exe'
+    Type: Sideloading
+  - Path: '%SYSTEM32%\workfolders.exe'
+    Type: Sideloading
 Resources:
-- https://wietze.github.io/blog/hijacking-dlls-in-windows
+  - https://wietze.github.io/blog/hijacking-dlls-in-windows
 Acknowledgements:
-- Name: Wietze
-  Twitter: '@wietze'
+  - Name: Wietze
+    Twitter: "@wietze"
 ---
 

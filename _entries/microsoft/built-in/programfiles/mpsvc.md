@@ -5,13 +5,13 @@ Created: 2021-12-07
 
 Vendor: Microsoft
 ExpectedLocations:
-- "%PROGRAMDATA%\\Microsoft\\Windows Defender\\Platform\\%VERSION%"
+  - "%PROGRAMDATA%\\Microsoft\\Windows Defender\\Platform\\%VERSION%"
 VulnerableExecutables:
-- Path: "%PROGRAMDATA%\\Microsoft\\Windows Defender\\Platform\\%VERSION%\\MsMpEng.exe"
-  Type: Sideloading
+  - Path: "%PROGRAMDATA%\\Microsoft\\Windows Defender\\Platform\\%VERSION%\\MsMpEng.exe"
+    Type: Sideloading
 
 Resources:
-- https://www.mcafee.com/blogs/other-blogs/mcafee-labs/revil-ransomware-uses-dll-sideloading/
-- https://news.sophos.com/en-us/2020/11/04/a-new-apt-uses-dll-side-loads-to-killlsomeone/
+  - https://www.mcafee.com/blogs/other-blogs/mcafee-labs/revil-ransomware-uses-dll-sideloading/
+  - https://news.sophos.com/en-us/2020/11/04/a-new-apt-uses-dll-side-loads-to-killlsomeone/
 ---
 
