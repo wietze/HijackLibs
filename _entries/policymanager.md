@@ -1,27 +1,34 @@
 ---
 Name: policymanager.dll
-Type: Relative Path
 Author: Wietze Beukema
 Created: 2021-02-27
-
 Vendor: Microsoft
 ExpectedLocations:
-- "%SYSTEM32%"
+- '%SYSTEM32%'
+- '%SYSWOW64%'
 VulnerableExecutables:
-- Path: "%SYSTEM32%\\displayswitch.exe"
-- Path: "%SYSTEM32%\\easpolicymanagerbrokerhost.exe"
-  AutoElevate: True
-- Path: "%SYSTEM32%\\edpcleanup.exe"
-- Path: "%SYSTEM32%\\eduprintprov.exe"
-- Path: "%SYSTEM32%\\hvsievaluator.exe"
-- Path: "%SYSTEM32%\\mdmdiagnosticstool.exe"
-- Path: "%SYSTEM32%\\omadmclient.exe"
-- Path: "%SYSTEM32%\\settingsynchost.exe"
-- Path: "%SYSTEM32%\\workfolders.exe"
-
+- Path: '%SYSTEM32%\displayswitch.exe'
+  Type: Sideloading
+- Path: '%SYSTEM32%\easpolicymanagerbrokerhost.exe'
+  Type: Sideloading
+  AutoElevate: true
+- Path: '%SYSTEM32%\edpcleanup.exe'
+  Type: Sideloading
+- Path: '%SYSTEM32%\eduprintprov.exe'
+  Type: Sideloading
+- Path: '%SYSTEM32%\hvsievaluator.exe'
+  Type: Sideloading
+- Path: '%SYSTEM32%\mdmdiagnosticstool.exe'
+  Type: Sideloading
+- Path: '%SYSTEM32%\omadmclient.exe'
+  Type: Sideloading
+- Path: '%SYSTEM32%\settingsynchost.exe'
+  Type: Sideloading
+- Path: '%SYSTEM32%\workfolders.exe'
+  Type: Sideloading
 Resources:
 - https://wietze.github.io/blog/hijacking-dlls-in-windows
 Acknowledgements:
 - Name: Wietze
-  Twitter: "@wietze"
+  Twitter: '@wietze'
 ---

@@ -1,20 +1,21 @@
 ---
 Name: dwrite.dll
-Type: Relative Path
 Author: Wietze Beukema
 Created: 2021-02-27
-
 Vendor: Microsoft
 ExpectedLocations:
-- "%SYSTEM32%"
+- '%SYSTEM32%'
+- '%SYSWOW64%'
 VulnerableExecutables:
-- Path: "%SYSTEM32%\\cttune.exe"
-- Path: "%SYSTEM32%\\dataexchangehost.exe"
-- Path: "%SYSTEM32%\\gamepanel.exe"
-
+- Path: '%SYSTEM32%\cttune.exe'
+  Type: Sideloading
+- Path: '%SYSTEM32%\dataexchangehost.exe'
+  Type: Sideloading
+- Path: '%SYSTEM32%\gamepanel.exe'
+  Type: Sideloading
 Resources:
 - https://wietze.github.io/blog/hijacking-dlls-in-windows
 Acknowledgements:
 - Name: Wietze
-  Twitter: "@wietze"
+  Twitter: '@wietze'
 ---

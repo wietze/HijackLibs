@@ -1,49 +1,73 @@
 ---
 Name: winsta.dll
-Type: Relative Path
 Author: Wietze Beukema
 Created: 2021-02-27
-
 Vendor: Microsoft
 ExpectedLocations:
-- "%SYSTEM32%"
+- '%SYSTEM32%'
+- '%SYSWOW64%'
 VulnerableExecutables:
-- Path: "%SYSTEM32%\\change.exe"
-- Path: "%SYSTEM32%\\chglogon.exe"
-- Path: "%SYSTEM32%\\chgport.exe"
-- Path: "%SYSTEM32%\\ctfmon.exe"
-- Path: "%SYSTEM32%\\displayswitch.exe"
-- Path: "%SYSTEM32%\\msg.exe"
-- Path: "%SYSTEM32%\\musnotification.exe"
-- Path: "%SYSTEM32%\\query.exe"
-- Path: "%SYSTEM32%\\quser.exe"
-- Path: "%SYSTEM32%\\qwinsta.exe"
-- Path: "%SYSTEM32%\\rdpclip.exe"
-- Path: "%SYSTEM32%\\rdpsa.exe"
-- Path: "%SYSTEM32%\\rdpsauachelper.exe"
-- Path: "%SYSTEM32%\\rdpshell.exe"
-- Path: "%SYSTEM32%\\rdvghelper.exe"
-- Path: "%SYSTEM32%\\reset.exe"
-- Path: "%SYSTEM32%\\rwinsta.exe"
-- Path: "%SYSTEM32%\\systempropertiesadvanced.exe"
-  AutoElevate: True
-- Path: "%SYSTEM32%\\systempropertiescomputername.exe"
-  AutoElevate: True
-- Path: "%SYSTEM32%\\systempropertiesdataexecutionprevention.exe"
-  AutoElevate: True
-- Path: "%SYSTEM32%\\systempropertieshardware.exe"
-  AutoElevate: True
-- Path: "%SYSTEM32%\\systempropertiesprotection.exe"
-  AutoElevate: True
-- Path: "%SYSTEM32%\\systempropertiesremote.exe"
-  AutoElevate: True
-- Path: "%SYSTEM32%\\tscon.exe"
-- Path: "%SYSTEM32%\\tsdiscon.exe"
-- Path: "%SYSTEM32%\\tskill.exe"
-
+- Path: '%SYSTEM32%\change.exe'
+  Type: Sideloading
+- Path: '%SYSTEM32%\chglogon.exe'
+  Type: Sideloading
+- Path: '%SYSTEM32%\chgport.exe'
+  Type: Sideloading
+- Path: '%SYSTEM32%\ctfmon.exe'
+  Type: Sideloading
+- Path: '%SYSTEM32%\displayswitch.exe'
+  Type: Sideloading
+- Path: '%SYSTEM32%\msg.exe'
+  Type: Sideloading
+- Path: '%SYSTEM32%\musnotification.exe'
+  Type: Sideloading
+- Path: '%SYSTEM32%\query.exe'
+  Type: Sideloading
+- Path: '%SYSTEM32%\quser.exe'
+  Type: Sideloading
+- Path: '%SYSTEM32%\qwinsta.exe'
+  Type: Sideloading
+- Path: '%SYSTEM32%\rdpclip.exe'
+  Type: Sideloading
+- Path: '%SYSTEM32%\rdpsa.exe'
+  Type: Sideloading
+- Path: '%SYSTEM32%\rdpsauachelper.exe'
+  Type: Sideloading
+- Path: '%SYSTEM32%\rdpshell.exe'
+  Type: Sideloading
+- Path: '%SYSTEM32%\rdvghelper.exe'
+  Type: Sideloading
+- Path: '%SYSTEM32%\reset.exe'
+  Type: Sideloading
+- Path: '%SYSTEM32%\rwinsta.exe'
+  Type: Sideloading
+- Path: '%SYSTEM32%\systempropertiesadvanced.exe'
+  Type: Sideloading
+  AutoElevate: true
+- Path: '%SYSTEM32%\systempropertiescomputername.exe'
+  Type: Sideloading
+  AutoElevate: true
+- Path: '%SYSTEM32%\systempropertiesdataexecutionprevention.exe'
+  Type: Sideloading
+  AutoElevate: true
+- Path: '%SYSTEM32%\systempropertieshardware.exe'
+  Type: Sideloading
+  AutoElevate: true
+- Path: '%SYSTEM32%\systempropertiesprotection.exe'
+  Type: Sideloading
+  AutoElevate: true
+- Path: '%SYSTEM32%\systempropertiesremote.exe'
+  Type: Sideloading
+  AutoElevate: true
+- Path: '%SYSTEM32%\tscon.exe'
+  Type: Sideloading
+- Path: '%SYSTEM32%\tsdiscon.exe'
+  Type: Sideloading
+- Path: '%SYSTEM32%\tskill.exe'
+  Type: Sideloading
 Resources:
 - https://wietze.github.io/blog/hijacking-dlls-in-windows
 Acknowledgements:
 - Name: Wietze
-  Twitter: "@wietze"
+  Twitter: '@wietze'
 ---

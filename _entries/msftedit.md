@@ -1,19 +1,26 @@
 ---
 Name: msftedit.dll
-Type: Relative Path
 Author: Wietze Beukema
 Created: 2021-02-27
-
 Vendor: Microsoft
 ExpectedLocations:
-- "%SYSTEM32%"
+- '%SYSTEM32%'
+- '%SYSWOW64%'
 VulnerableExecutables:
-- Path: "%SYSTEM32%\\charmap.exe"
-- Path: "%SYSTEM32%\\mspaint.exe"
-
+- Path: '%SYSTEM32%\charmap.exe'
+  Type: Sideloading
+- Path: '%SYSTEM32%\mspaint.exe'
+  Type: Sideloading
+- Path: '%SYSTEM32%\searchindexer.exe'
+  Type: Phantom
+- Path: '%SYSTEM32%\searchprotocolhost.exe'
+  Type: Phantom  
 Resources:
+- https://www.hexacorn.com/blog/2015/02/23/beyond-good-ol-run-key-part-28/
 - https://wietze.github.io/blog/hijacking-dlls-in-windows
 Acknowledgements:
+- Name: Adam
+  Twitter: '@hexacorn'
 - Name: Wietze
-  Twitter: "@wietze"
+  Twitter: '@wietze'
 ---

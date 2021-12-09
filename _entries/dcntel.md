@@ -1,18 +1,16 @@
 ---
 Name: dcntel.dll
-Type: Relative Path
 Author: Wietze Beukema
 Created: 2021-02-27
-
 Vendor: Microsoft
 ExpectedLocations:
-- "%SYSTEM32%"
+- '%SYSTEM32%'
 VulnerableExecutables:
-- Path: "%SYSTEM32%\\devicecensus.exe"
-
+- Path: '%SYSTEM32%\devicecensus.exe'
+  Type: Sideloading
 Resources:
 - https://wietze.github.io/blog/hijacking-dlls-in-windows
 Acknowledgements:
 - Name: Wietze
-  Twitter: "@wietze"
+  Twitter: '@wietze'
 ---

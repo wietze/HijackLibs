@@ -1,20 +1,21 @@
 ---
 Name: virtdisk.dll
-Type: Relative Path
 Author: Wietze Beukema
 Created: 2021-02-27
-
 Vendor: Microsoft
 ExpectedLocations:
-- "%SYSTEM32%"
+- '%SYSTEM32%'
+- '%SYSWOW64%'
 VulnerableExecutables:
-- Path: "%SYSTEM32%\\bootim.exe"
-- Path: "%SYSTEM32%\\vssvc.exe"
-- Path: "%SYSTEM32%\\wbengine.exe"
-
+- Path: '%SYSTEM32%\bootim.exe'
+  Type: Sideloading
+- Path: '%SYSTEM32%\vssvc.exe'
+  Type: Sideloading
+- Path: '%SYSTEM32%\wbengine.exe'
+  Type: Sideloading
 Resources:
 - https://wietze.github.io/blog/hijacking-dlls-in-windows
 Acknowledgements:
 - Name: Wietze
-  Twitter: "@wietze"
+  Twitter: '@wietze'
 ---

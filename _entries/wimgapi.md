@@ -1,20 +1,25 @@
 ---
 Name: wimgapi.dll
-Type: Relative Path
 Author: Wietze Beukema
 Created: 2021-02-27
-
 Vendor: Microsoft
 ExpectedLocations:
-- "%SYSTEM32%"
+- '%SYSTEM32%'
+- '%SYSWOW64%'
 VulnerableExecutables:
-- Path: "%SYSTEM32%\\resetengine.exe"
-- Path: "%SYSTEM32%\\systemreset.exe"
-  AutoElevate: True
-
+- Path: '%SYSTEM32%\resetengine.exe'
+  Type: Sideloading
+- Path: '%SYSTEM32%\systemreset.exe'
+  Type: Sideloading
+  AutoElevate: true
+- Path: '%SYSTEM32%\dism.exe'
+  Type: Phantom
 Resources:
+- https://www.hexacorn.com/blog/2015/02/23/beyond-good-ol-run-key-part-28/
 - https://wietze.github.io/blog/hijacking-dlls-in-windows
 Acknowledgements:
 - Name: Wietze
-  Twitter: "@wietze"
+  Twitter: '@wietze'
+- Name: Adam
+  Twitter: '@hexacorn'
 ---

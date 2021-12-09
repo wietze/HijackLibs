@@ -1,14 +1,13 @@
 ---
 Name: utiluniclient.dll
-Type: Phantom
 Author: Wietze Beukema
 Created: 2021-02-28
 
 Vendor: Trend Micro
 CVE: CVE-2019-15628
-ExpectedLocations:
 VulnerableExecutables:
 - Path: "%PROGRAMFILES%\\trend micro\\amsp\\coreserviceshell.exe"
+  Type: Phantom
   Condition: Trend Micro Maximum Security <=16.0.1221
   PrivilegeEscalation: True
 

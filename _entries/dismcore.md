@@ -1,16 +1,15 @@
 ---
 Name: dismcore.dll
-Type: Search Order
 Author: Wietze Beukema
 Created: 2021-02-28
-
 Vendor: Microsoft
 ExpectedLocations:
-- "%SYSTEM32%\\dism"
+- '%SYSTEM32%\dism'
+- '%SYSWOW64%\dism'
 VulnerableExecutables:
-- Path: "%SYSTEM32%\\dism.exe"
+- Path: '%SYSTEM32%\dism.exe'
+  Type: Search Order
   Condition: Windows 7
-
 Resources:
 - https://cofense.com/exploiting-unpatched-vulnerability-ave_maria-malware-not-full-grace/
 ---

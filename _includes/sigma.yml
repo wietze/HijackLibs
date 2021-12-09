@@ -1,0 +1,31 @@
+title: Possible DLL Hijacking of {{ include.page.Name }}
+status: experimental
+description: Detects possible DLL hijacking of {{ include.page.Name }} by looking for suspicious image loads, loading this DLL from unexpected locations.
+references:
+    - {{ include.page.url | absolute_url }}
+author: "{{ include.page.Author }}"
+date: {{ include.page.Created }}
+tags:
+    - attack.defense_evasion
+{% assign types = include.page.VulnerableExecutables | group_by:"Type"| sort:"name"  -%}
+{% for type in types %}    - attack.{{ site.mapping[type.name]['attack'] }}
+{% endfor -%}
+logsource:
+    product: windows
+    category: image_load
+detection:
+    selection:
+        ImageLoaded: "*\\{{ include.page.Name }}"
+{% if include.page.ExpectedLocations %}    filter:
+        ImageLoaded:
+{% for loc in include.page.ExpectedLocations %}            - "{{ loc    | replace: "%SYSTEM32%", "c:\\windows\\system32"
+                                                                | replace: "%SYSWOW64%", "c:\\windows\\syswow64"
+                                                                | replace: "%WINDIR%", "c:\\windows"
+                                                                | replace: "%PROGRAMFILES%", "c:\\program files"
+                                                                | replace: "%PROGRAMFILES(x86)%", "c:\\program files (x86)"
+                                                                | replace: "%PROGRAMDATA%", "c:\\programdata"
+                                                                | replace: "%VERSION%", "*"
+                                                                | replace: "%APPDATA%", "c:\\users\\*\\appdata"
+                                                                | replace: "\", "\\\\" }}\\*"
+{% endfor %}{% endif %}
+    condition: selection {% if include.page.ExpectedLocations %}and not filter{% endif %}

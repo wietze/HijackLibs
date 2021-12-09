@@ -1,34 +1,95 @@
 ---
-title: Blog - Wietze
-layout:
+title: DLL Hijacking
 ---
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
-    <title>{% if page.title %}{{ page.title | markdownify | strip_html | smartify }}{% else %}{{ site.title }}{% endif %}</title>
+    <title>{% if page.title %}{{ page.title | markdownify | strip_html | smartify }}{% else %}{{ site.title }}{% endif
+        %}</title>
     {% assign og_url = site.url | append: site.baseurl %}
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="author" content="{{page.Author}}">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
     <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/main.css">
     <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/code.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" />
-    <script src="{{ site.baseurl }}/assets/js/main.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
+        integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w=="
+        crossorigin="anonymous" />
+    <style>
+        #status {
+            margin-bottom: 20px;
+            margin-top: 5px;
+        }
+        #status .stats {
+            color: #555;
+            font-size: smaller;
+        }
+
+        .result-row {
+            display: flex;
+            flex-wrap: wrap;
+            margin-bottom: 3px;
+            padding: 0 5px;
+            align-items: center;
+            flex: 1;
+        }
+        #results ul {
+            list-style: none;
+            padding-left: 0;
+        }
+        #results li {
+            display: flex;
+        }
+        #results li::before {
+            content: '';
+            display: inline-block;
+            height: 16px;
+            width: 16px;
+            background-image: url(/assets/img/dll.png);
+            background-size: contain;
+        }
+
+        .result-row.odd {
+            background-color: #f7f7f7;
+        }
+
+        .result-row>a {
+            flex-grow: 1;
+        }
+
+        .result-row .exe {
+            background: #ff9d46;
+            color: black;
+        }
+    </style>
+    <script src="{{ '/assets/js/main.js' | relative_url }}"></script>
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.6.0.js"></script>
+    <script src="{{ '/assets/js/search.js' | relative_url }}"></script>
 
     <link rel="icon" type="image/x-icon" href="{{ site.favicon_location }}">
 </head>
+
 <body>
-    <h1>Overview</h1>
-    <ul>
-        {% for entry in site.entries %}
-        <li>
-            <a href="{{ entry.url | absolute_url }}">
-            {{ entry.Name }}
-            </a>
-        </li>
-        {% endfor %}
-    </ul>
+    <article>
+        <section>
+            <div class="head"><div class="back" style="visibility: hidden;"><i class="fas fa-arrow-left" onclick="triggerSearch('')"></i></div><h1>DLL Hijacking candidates</h1></div>
+            <input id="search" type="text" style="width: 100%" placeholder="Enter the name of a DLL or EXE here&hellip;" />
+            <div id="filters"></div>
+            <div id="status"></div>
+            <div id="results"></div>
+        </section>
+        <section id="intro" style="margin-top: 10em;">
+            <h2>What is DLL Hijacking?</h2>
+            <p>DLL Hijacking is, in the broadest sense, tricking a legitimate/trusted application into loading an arbitrary DLL. Defensive measures such as AV and EDR solutions may not pick up on this activity out of the box, and allow-list applications such as AppLocker may not block the execution of the untrusted code. There are numerous examples of threat actors that have been observed to leaverage DLL Hijacking to achieve their objectives.</p>
+            <p>There are various subtypes of DLL Hijacking, such as DLL Search Order Hijacking (<a href="https://attack.mitre.org/techniques/T1574/001/">T1574.001</a>) and DLL Sideloading (<a href="https://attack.mitre.org/techniques/T1574/002/">T1574.002</a>). An overview of useful resources explaining various aspects of DLL Hijacking can be found <a href="">here</a>.</p>
+            <h2>What is this project about?</h2>
+            <p>This project provides an curated list of DLL Hijacking candidates. A mapping between DLLs and vulnerable executables is kept and can be searched via this website. Additionally, further metadata such as resources provide more context.</p><p>For defenders, this project can provide valuable information when trying to detect DLL Hijacking attempts. Although detecting DLL Hijacking isn't always without challenge, it is certainly possible to monitor for behaviour that may be indicative of abuse. To further support defenders, out-of-the-box Sigma rules are provided through this website. A <span style="font-weight: bold; margin-right: 2px; font-size: larger;">σ</span><a href="/sigma_feed.yml">Sigma feed</a> containing detection rules for all entries part of this project is provided too. </p><p>For red teamers, this project can help identify DLLs that can be used to achieve DLL Hijacking. The aim of this project is not to make it easy to abuse the recorded vulnerabilities; as such, PoCs, code templates or tuturials are not provided.</p>
+
+            <h2>How do I get involved?</h2>
+            <p>This project is fully open source and is maintained by the community. Contributions are more then welcome - please head to this project's <i class="fab fa-github fa-fw"></i><a href="https://github.com/{{ site.repo }}">GitHub page</a> to find the contribution guide.
+            </p>
+        </section>
+    </article>
 </body>
 </html>

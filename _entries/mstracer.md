@@ -1,0 +1,19 @@
+---
+Name: msftedit.dll
+Author: Wietze Beukema
+Created: 2021-12-08
+Vendor: Microsoft
+ExpectedLocations:
+- '%SYSTEM32%'
+- '%SYSWOW64%'
+VulnerableExecutables:
+- Path: '%SYSTEM32%\searchindexer.exe'
+  Type: Phantom
+- Path: '%SYSTEM32%\searchprotocolhost.exe'
+  Type: Phantom
+Resources:
+- https://www.hexacorn.com/blog/2015/02/23/beyond-good-ol-run-key-part-28/
+Acknowledgements:
+- Name: Adam
+  Twitter: '@hexacorn'
+---

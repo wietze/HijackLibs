@@ -1,49 +1,67 @@
 ---
 Name: bcd.dll
-Type: Relative Path
 Author: Wietze Beukema
 Created: 2021-02-27
-
 Vendor: Microsoft
 ExpectedLocations:
-- "%SYSTEM32%"
+- '%SYSTEM32%'
+- '%SYSWOW64%'
 VulnerableExecutables:
-- Path: "%SYSTEM32%\\bootim.exe"
-- Path: "%SYSTEM32%\\genvalobj.exe"
-- Path: "%SYSTEM32%\\mdsched.exe"
-  AutoElevate: True
-- Path: "%SYSTEM32%\\msconfig.exe"
-  AutoElevate: True
-- Path: "%SYSTEM32%\\recdisc.exe"
-  AutoElevate: True
-- Path: "%SYSTEM32%\\resetengine.exe"
-- Path: "%SYSTEM32%\\rstrui.exe"
-  AutoElevate: True
-- Path: "%SYSTEM32%\\sdclt.exe"
-  AutoElevate: True
-- Path: "%SYSTEM32%\\srtasks.exe"
-- Path: "%SYSTEM32%\\systempropertiesadvanced.exe"
-  AutoElevate: True
-- Path: "%SYSTEM32%\\systempropertiescomputername.exe"
-  AutoElevate: True
-- Path: "%SYSTEM32%\\systempropertiesdataexecutionprevention.exe"
-  AutoElevate: True
-- Path: "%SYSTEM32%\\systempropertieshardware.exe"
-  AutoElevate: True
-- Path: "%SYSTEM32%\\systempropertiesprotection.exe"
-  AutoElevate: True
-- Path: "%SYSTEM32%\\systempropertiesremote.exe"
-  AutoElevate: True
-- Path: "%SYSTEM32%\\systemreset.exe"
-  AutoElevate: True
-- Path: "%SYSTEM32%\\vds.exe"
-- Path: "%SYSTEM32%\\vdsldr.exe"
-- Path: "%SYSTEM32%\\vssvc.exe"
-- Path: "%SYSTEM32%\\wbengine.exe"
-
+- Path: '%SYSTEM32%\bootim.exe'
+  Type: Sideloading
+- Path: '%SYSTEM32%\genvalobj.exe'
+  Type: Sideloading
+- Path: '%SYSTEM32%\mdsched.exe'
+  Type: Sideloading
+  AutoElevate: true
+- Path: '%SYSTEM32%\msconfig.exe'
+  Type: Sideloading
+  AutoElevate: true
+- Path: '%SYSTEM32%\recdisc.exe'
+  Type: Sideloading
+  AutoElevate: true
+- Path: '%SYSTEM32%\resetengine.exe'
+  Type: Sideloading
+- Path: '%SYSTEM32%\rstrui.exe'
+  Type: Sideloading
+  AutoElevate: true
+- Path: '%SYSTEM32%\sdclt.exe'
+  Type: Sideloading
+  AutoElevate: true
+- Path: '%SYSTEM32%\srtasks.exe'
+  Type: Sideloading
+- Path: '%SYSTEM32%\systempropertiesadvanced.exe'
+  Type: Sideloading
+  AutoElevate: true
+- Path: '%SYSTEM32%\systempropertiescomputername.exe'
+  Type: Sideloading
+  AutoElevate: true
+- Path: '%SYSTEM32%\systempropertiesdataexecutionprevention.exe'
+  Type: Sideloading
+  AutoElevate: true
+- Path: '%SYSTEM32%\systempropertieshardware.exe'
+  Type: Sideloading
+  AutoElevate: true
+- Path: '%SYSTEM32%\systempropertiesprotection.exe'
+  Type: Sideloading
+  AutoElevate: true
+- Path: '%SYSTEM32%\systempropertiesremote.exe'
+  Type: Sideloading
+  AutoElevate: true
+- Path: '%SYSTEM32%\systemreset.exe'
+  Type: Sideloading
+  AutoElevate: true
+- Path: '%SYSTEM32%\vds.exe'
+  Type: Sideloading
+- Path: '%SYSTEM32%\vdsldr.exe'
+  Type: Sideloading
+- Path: '%SYSTEM32%\vssvc.exe'
+  Type: Sideloading
+- Path: '%SYSTEM32%\wbengine.exe'
+  Type: Sideloading
 Resources:
 - https://wietze.github.io/blog/hijacking-dlls-in-windows
 Acknowledgements:
 - Name: Wietze
-  Twitter: "@wietze"
+  Twitter: '@wietze'
 ---
