@@ -1,6 +1,0 @@
----
-Note: Please use the rendered version of this file.
----
-{% assign entries = site.entries | sort: "Created" | reverse %}
-
-{ {% for entry in entries %}{% assign types = entry.VulnerableExecutables | group_by:"Type" %}"{{ entry.Name }}": {"url":"{{ entry.url }}", "vendor": "{{ entry.Vendor }}", "types": [{% for xx in types %}"{{ xx.name }}"{% if forloop.last != true %},{%endif%}{% endfor %}],"executables": [{% for xx in entry.VulnerableExecutables%}"{{ xx.Path | replace: "\", "\\\\" }}"{% if forloop.last != true %},{%endif%}{% endfor %}]}{% if forloop.last != true %},{%endif%}{% endfor %} }

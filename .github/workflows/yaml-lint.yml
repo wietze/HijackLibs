@@ -1,0 +1,19 @@
+---
+name: YAML Linter
+on:
+  push:
+    paths:
+      - "yml/**.yml"
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+
+      - uses: eliezio/action-pykwalify@v1
+        name: Check schema
+        with:
+          files: "yml/**.yml"
+          schema: .github/schema/schema.yml
+          strict: true

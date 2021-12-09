@@ -1,0 +1,29 @@
+---
+name: Update GitHub Pages
+on:
+  push:
+    branches:
+      - master
+    paths:
+      - "yml/**.yml"
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    if: github.event.repository.fork == false
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Change .yml to .md
+        run:  for x in $(find yml/ -name '*.yml'); do mv "$x" "${x/%\.yml/.md}"; done
+      - name: Push to gh-pages branch
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          publish_branch: gh-pages
+          publish_dir: yml
+          destination_dir: _entries
+          enable_jekyll: true
+          keep_files: false
+          commit_message: "Applying update "
+          user_name: 'github-actions[bot]'
+          user_email: 'github-actions[bot]@users.noreply.github.com'
