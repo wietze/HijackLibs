@@ -11,7 +11,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
-      - uses: eliezio/action-pykwalify@v1
+      - uses: eliezio/action-pykwalify@v0.3
         name: Check schema
         with:
           files: "yml/**.yml"
