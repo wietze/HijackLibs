@@ -1,7 +1,7 @@
 ---
 extends: default
 yaml-files:
-  - '*.yml'
+  - 'yml/*.yml'
 rules:
   new-line-at-end-of-file:
     level: error

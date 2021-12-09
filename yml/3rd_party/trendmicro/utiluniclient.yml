@@ -9,7 +9,7 @@ VulnerableExecutables:
   - Path: "%PROGRAMFILES%\\trend micro\\amsp\\coreserviceshell.exe"
     Type: Phantom
     Condition: Trend Micro Maximum Security <=16.0.1221
-    PrivilegeEscalation: True
+    PrivilegeEscalation: true
 
 Resources:
   - https://safebreach.com/blog/2019/trend-micro-security-16-dll-search-order-hijacking-and-potential-abuses/
