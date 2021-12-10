@@ -18,7 +18,7 @@ A simple template can be found [here](/template.yml).
 ## VulnerableExecutable
 | Field | Type | Required | Format | Description |
 | ----- | ---- | -------- | ------ | ----------- |
-| `Path` | String | ✅ | Has to end in .exe | Full location[^1] of legitimate executables that attempt to load the described DLL. |
+| `Path` | String | ✅ | Has to end in `.exe` | Full location[^1] of legitimate executables that attempt to load the described DLL. |
 | `Type` | String | ✅ | `Sideloading` \| `Phantom` \| `Search Order` | The type of DLL Hijacking this executable is vulnerable to. |
 | `AutoElevate` | Boolean | Optional | `true` only | Only create this field and set to `true` if the executable is automatically elevated by Windows. |
 | `PrivilegeEscalation` | Boolean | Optional | `true` only | Only create this field and set to `true` if the executable normally runs under elevated privileges. |

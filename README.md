@@ -7,4 +7,10 @@ This project aims to keep a record of publicly disclosed DLL Hijacking opportuni
 You can find the web version of this repository on https://www.github.com/wietze/HijackLibs/.
 
 
+---
+* **Licence**: [GPLv3.0](/LICENSE)
+* **Code of Conduct**: [Contributor Covenant](/docs/CODE_OF_CONDUCT.md)
+* [**Contribution guide**](/docs/CONTRIBUTING.md)
+* [**YAML Schema**](/docs/SCHEMA.md) used by the project
+* [**Sample YAML template**](/template.yml)
 
