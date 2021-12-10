@@ -19,6 +19,6 @@ jobs:
       - uses: eliezio/action-pykwalify@v0.3
         name: Check schema
         with:
-          files: "yml/**.yml"
+          files: "yml/**/*.yml"
           schema: .github/schema/schema.yml
           strict: true
