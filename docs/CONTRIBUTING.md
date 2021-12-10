@@ -82,7 +82,7 @@ The website is hosted in GitHub pages and uses Jekyll. You can find the code of 
    Update the required files to make the changes you want to make. Remember that you can get a local instance of the website running via Jekyll (see [GitHub Docs](https://docs.github.com/en/pages/setting-up-a-github-pages-site-with-jekyll/testing-your-github-pages-site-locally-with-jekyll)) to validate the changes you have made.
 
 4. **Push and check GitHub actions**
-   Push your entry to your own fork (see [GitHub Docs](https://docs.github.com/en/get-started/using-git/pushing-commits-to-a-remote-repository))..   
+   Push your entry to your own fork (see [GitHub Docs](https://docs.github.com/en/get-started/using-git/pushing-commits-to-a-remote-repository)).   
 5. **Submit your pull request**
    Now all you have to do is open a pull request. 
    One of the maintainers of this project will review your suggestion. If all goes well, your entry will be merged into the the project! 
@@ -92,4 +92,4 @@ The website is hosted in GitHub pages and uses Jekyll. You can find the code of 
 ## Anything else
 Do you want to contribute in a way that's not covered by the above? Please feel free to open an issue on GitHub and we'll look into it - all suggestions are welcome.
 
-[^1]: Our YAML schema defines what fields are expected, what types they have, what format string should be in, and whether or not they are required. You can find a human-readible version of this schema [here](SCHEMA.md).
+[^1]: Our YAML schema defines what fields are expected, what types they have, what format string should be in, and whether or not they are required. You can find a human-readable version of this schema [here](SCHEMA.md).
