@@ -103,7 +103,7 @@
         <section>
             <h2>FAQs</h2>
             <p><strong>Why should I care about this?</strong><br />DLL Hijacking enables the execution of malicious code through a signed and/or trusted executable. Defensive measures such as AV and EDR solutions may not pick up on this activity out of the box, and allow-list applications such as AppLocker may not block the execution of the untrusted code. There are numerous examples of threat actors that have been observed to leaverage DLL Hijacking to achieve their objectives. As such, this project would encourage you to monitor for unusual activity involving {{DLL}}.</p>
-            <p><strong>How do I abuse this vulnerability?</strong><br />As a red teamer, you'll have to compile your own version of {{DLL}}. More background on this can be found <a href="">here</a>.</p>
+            <p><strong>How do I abuse this vulnerability?</strong><br />As a red teamer, you'll have to compile your own version of {{DLL}}. More background on this can be found <a href="https://github.com/{{ site.repo }}/wiki/">here</a>.</p>
             <p><strong>How could the vendor have prevented this vulnerability?</strong><br />
                 {% assign seen = 'false' %}
                 {% for type in types %}

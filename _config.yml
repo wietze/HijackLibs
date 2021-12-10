@@ -1,5 +1,5 @@
 title: "DLL Hijacking"
-repo: wietze/dll-hijacking
+repo: wietze/HijackLibs
 sass:
   style: compressed
   sass_dir: _sass
