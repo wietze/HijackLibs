@@ -137,5 +137,11 @@ dmypy.json
 # Cython debug symbols
 cython_debug/
 
+# Jekyll data
+_site/
+.sass-cache/
+.jekyll-cache/
+.jekyll-metadata
+
 .vscode/
 dev/
