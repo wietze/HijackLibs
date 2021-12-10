@@ -10,7 +10,7 @@ You found or read about a new DLL Hijacking opportunity, good stuff!
 <details><summary>Click here to find out how to contribute</summary>
 <p>
 
-By creating a YAML file that follows our schema, you can get your suggestion added to this project very easily.
+By creating a YAML file that follows our schema[^1], you can get your suggestion added to this project very easily.
 
 0. **Before you start**: 
    make sure there isn't already an entry for the DLL you want to add!
@@ -26,7 +26,7 @@ By creating a YAML file that follows our schema, you can get your suggestion add
    Copy this project's [template](/template.yml) and paste it in your newly created file. Now populate all fields where possible; remove any fields you don't need, and please remove all comments before proceeding to the next step.
 
 5. **Push and check GitHub actions**
-   Push your entry to your own fork (see [GitHub Docs](https://docs.github.com/en/get-started/using-git/pushing-commits-to-a-remote-repository)). A couple of checks will be performed by GitHub actions, to check if your contribution is passing our quality checks. Putting it simply, it is checking if the file you created is valid YAML and whether the fields have been populated correctly in the expected format.
+   Push your entry to your own fork (see [GitHub Docs](https://docs.github.com/en/get-started/using-git/pushing-commits-to-a-remote-repository)). A couple of checks will be performed by GitHub actions, to check if your contribution is passing our quality checks. Putting it simply, it is checking if the file you created is valid YAML and whether the fields have been populated correctly in the expected format[^1].
 
    If all is well, you should see a green tick (✔️) next to your commit. 
    If a check failed, click the red cross (❌) to get more details on what went wrong. Make sure you fix any issues before proceeding to the next step!
@@ -50,10 +50,10 @@ Simply updating the existing YAML file with your new insights will do the job.
    If you're not familiar with this, you can find more information on how to do this via [GitHub Docs](https://docs.github.com/en/get-started/quickstart/fork-a-repo).
 
 2. **Locate and update the YAML file**
-   Locate the `.yml` file under the `/yml` folder and start making changes. Make sure you keep adhering to the YAML schema.
+   Locate the `.yml` file under the `/yml` folder and start making changes. Make sure you keep adhering to the YAML schema[^1].
 
 3. **Push and check GitHub actions**
-   Push your entry to your own fork (see [GitHub Docs](https://docs.github.com/en/get-started/using-git/pushing-commits-to-a-remote-repository)). A couple of checks will be performed by GitHub actions, to check if your contribution is passing our quality checks. Putting it simply, it is checking if the file you updated is still valid YAML and whether the fields have been populated correctly in the expected format.
+   Push your entry to your own fork (see [GitHub Docs](https://docs.github.com/en/get-started/using-git/pushing-commits-to-a-remote-repository)). A couple of checks will be performed by GitHub actions, to check if your contribution is passing our quality checks. Putting it simply, it is checking if the file you updated is still valid YAML and whether the fields have been populated correctly in the expected format[^1].
 
    If all is well, you should see a green tick (✔️) next to your commit. 
    If a check failed, click the red cross (❌) to get more details on what went wrong. Make sure you fix any issues before proceeding to the next step!
@@ -91,3 +91,5 @@ The website is hosted in GitHub pages and uses Jekyll. You can find the code of 
 
 ## Anything else
 Do you want to contribute in a way that's not covered by the above? Please feel free to open an issue on GitHub and we'll look into it - all suggestions are welcome.
+
+[^1]: Our YAML schema defines what fields are expected, what types they have, what format string should be in, and whether or not they are required. You can find a human-readible version of this schema [here](SCHEMA.md).

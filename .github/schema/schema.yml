@@ -34,7 +34,7 @@ mapping:
     sequence:
       - type: str
         pattern: '^[%cC][ a-zA-Z0-9_\-\\%\.\(\):]+(?<!\\)(?<!\.\w{3})$'
-        desc: No trailing spaces, folder paths only (so no filenames)
+        desc: No trailing slashes, folder paths only (so no filenames)
         unique: true
         required: true
 
