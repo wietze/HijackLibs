@@ -1,0 +1,28 @@
+---
+Name: nameofthedll.dll # All lower case
+Author: Author Name
+Created: 2022-01-01
+Vendor: Vendor Name
+ExpectedLocations: # No trailing slashes
+  - '%SYSTEM32%'
+  - '%SYSWOW64%'
+  - '%PROGRAMFILES%'
+  - '%PROGRAMFILES(x86)%'
+  - 'C:\\some\\random\\location'
+  - ...
+VulnerableExecutables:
+  - Path: 'path\to\the\executable.exe'
+    Type: Phantom|Sideloading|Search Order
+    AutoElevate: true # or remove if false
+    PrivilegeEscalation: true # or remove if false
+    SHA256: # remove if not a Microsoft entry
+      - 'for 3rd-party entries, provide a SHA-256 hash'
+  - ...
+
+Resources:
+  - https://some-link.here
+  - ...
+Acknowledgements:
+  - Name: Full Name or Twitter Screen Name
+    Twitter: '@twitter-handle' #has to start with @
+  - ...
