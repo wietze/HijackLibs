@@ -4,19 +4,59 @@ Author: Wietze Beukema
 Created: 2021-02-27
 Vendor: Microsoft
 ExpectedLocations:
-  - "%SYSTEM32%"
-  - "%SYSWOW64%"
+- '%SYSTEM32%'
+- '%SYSWOW64%'
 VulnerableExecutables:
-  - Path: '%SYSTEM32%\certreq.exe'
-    Type: Sideloading
-  - Path: '%SYSTEM32%\osk.exe'
-    Type: Sideloading
-  - Path: '%SYSTEM32%\quickassist.exe'
-    Type: Sideloading
-  - Path: '%SYSTEM32%\wmpdmc.exe'
-    Type: Sideloading
+- Path: '%SYSTEM32%\certreq.exe'
+  Type: Sideloading
+- Path: '%SYSTEM32%\osk.exe'
+  Type: Sideloading
+- Path: '%SYSTEM32%\quickassist.exe'
+  Type: Sideloading
+- Path: '%SYSTEM32%\wmpdmc.exe'
+  Type: Sideloading
+- Path: '%SYSTEM32%\certreq.exe'
+  Type: Environment Variable
+  Variable: SYSTEMROOT
+- Path: '%SYSTEM32%\compmgmtlauncher.exe'
+  Type: Environment Variable
+  Variable: SYSTEMROOT
+- Path: '%SYSTEM32%\dfrgui.exe'
+  Type: Environment Variable
+  Variable: SYSTEMROOT
+- Path: '%SYSTEM32%\explorer.exe'
+  Type: Environment Variable
+  Variable: SYSTEMROOT
+- Path: '%SYSTEM32%\filehistory.exe'
+  Type: Environment Variable
+  Variable: SYSTEMROOT
+- Path: '%SYSTEM32%\gamepanel.exe'
+  Type: Environment Variable
+  Variable: SYSTEMROOT
+- Path: '%SYSTEM32%\mstsc.exe'
+  Type: Environment Variable
+  Variable: SYSTEMROOT
+- Path: '%SYSTEM32%\notepad.exe'
+  Type: Environment Variable
+  Variable: SYSTEMROOT
+- Path: '%SYSTEM32%\presentationsettings.exe'
+  Type: Environment Variable
+  Variable: SYSTEMROOT
+- Path: '%SYSTEM32%\wfs.exe'
+  Type: Environment Variable
+  Variable: SYSTEMROOT
+- Path: '%SYSTEM32%\winver.exe'
+  Type: Environment Variable
+  Variable: SYSTEMROOT
+- Path: '%SYSTEM32%\wordpad.exe'
+  Type: Environment Variable
+  Variable: SYSTEMROOT
+- Path: '%SYSTEM32%\wscollect.exe'
+  Type: Environment Variable
+  Variable: SYSTEMROOT
 Resources:
-  - https://wietze.github.io/blog/hijacking-dlls-in-windows
+- https://wietze.github.io/blog/hijacking-dlls-in-windows
+- https://wietze.github.io/blog/save-the-environment-variables
 Acknowledgements:
-  - Name: Wietze
-    Twitter: "@wietze"
+- Name: Wietze
+  Twitter: '@wietze'

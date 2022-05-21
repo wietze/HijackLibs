@@ -43,7 +43,7 @@ mapping:
     required: true
     sequence:
       - type: map
-        func: not_empty
+        func: check_executables
         mapping:
           Path:
             type: str
@@ -53,7 +53,7 @@ mapping:
 
           Type:
             type: str
-            enum: ["Sideloading", "Phantom", "Search Order"]
+            enum: ["Sideloading", "Phantom", "Search Order", "Environment Variable"]
             required: true
 
           AutoElevate:
@@ -75,6 +75,10 @@ mapping:
               - type: str
                 pattern: "^[a-zA-Z0-9]{64}$"
                 required: true
+
+          Variable:
+            type: str
+            required: false
 
   Resources:
     type: seq
