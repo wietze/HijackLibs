@@ -1,0 +1,61 @@
+---
+Name: rsaenh.dll
+Author: Wietze Beukema
+Created: '2022-05-21'
+Vendor: Microsoft
+ExpectedLocations:
+- '%SYSTEM32%'
+- '%SYSWOW64%'
+VulnerableExecutables:
+- Path: '%SYSTEM32%\compmgmtlauncher.exe'
+  Type: Environment Variable
+  Variable: SYSTEMROOT
+- Path: '%SYSTEM32%\disksnapshot.exe'
+  Type: Environment Variable
+  Variable: SYSTEMROOT
+- Path: '%SYSTEM32%\filehistory.exe'
+  Type: Environment Variable
+  Variable: SYSTEMROOT
+- Path: '%SYSTEM32%\licensingdiag.exe'
+  Type: Environment Variable
+  Variable: SYSTEMROOT
+- Path: '%SYSTEM32%\lpksetup.exe'
+  Type: Environment Variable
+  Variable: SYSTEMROOT
+- Path: '%SYSTEM32%\microsoft.uev.synccontroller.exe'
+  Type: Environment Variable
+  Variable: SYSTEMROOT
+- Path: '%SYSTEM32%\phoneactivate.exe'
+  Type: Environment Variable
+  Variable: SYSTEMROOT
+- Path: '%SYSTEM32%\powershell.exe'
+  Type: Environment Variable
+  Variable: SYSTEMROOT
+- Path: '%SYSTEM32%\rmactivate.exe'
+  Type: Environment Variable
+  Variable: SYSTEMROOT
+- Path: '%SYSTEM32%\scriptrunner.exe'
+  Type: Environment Variable
+  Variable: SYSTEMROOT
+- Path: '%SYSTEM32%\sppextcomobj.exe'
+  Type: Environment Variable
+  Variable: SYSTEMROOT
+- Path: '%SYSTEM32%\stordiag.exe'
+  Type: Environment Variable
+  Variable: SYSTEMROOT
+- Path: '%SYSTEM32%\tzsync.exe'
+  Type: Environment Variable
+  Variable: SYSTEMROOT
+- Path: '%SYSTEM32%\uevappmonitor.exe'
+  Type: Environment Variable
+  Variable: SYSTEMROOT
+- Path: '%SYSTEM32%\useraccountcontrolsettings.exe'
+  Type: Environment Variable
+  Variable: SYSTEMROOT
+Resources:
+- https://wietze.github.io/blog/save-the-environment-variables
+Acknowledgements:
+- Name: Wietze
+  Twitter: '@wietze'
+---
+
