@@ -1,15 +1,14 @@
 body {
     font-family: Arial;
-    min-width: 300px;
-    max-width: 800px;
-    margin: 20px auto;
-    padding: 0 20px;
+    margin: 0;
     margin-bottom: calc(20px + 2.5em);
     overflow-y: scroll;
+    padding-top: 1em;
 }
 
 h1 {
-    font-size: 2em;
+    font-size: 2.5em;
+    word-break: break-word;
 }
 
 h3 {
@@ -42,6 +41,7 @@ figure {
 div.metadata {
     display: flex;
     margin: 10px 0px;
+    word-break: break-word;
 }
 
 div.metadata>div {
@@ -50,7 +50,7 @@ div.metadata>div {
 
 div.key {
     font-weight: bold;
-    flex-basis: 110px;
+    flex-basis: 160px;
     flex-shrink: 0;
 }
 
@@ -64,20 +64,26 @@ div.key {
     margin-bottom: 1px;
     margin-top: 0;
 }
-.pill a { color: white; }
+
+.pill a {
+    color: white;
+}
+
 .pill.margin-right {
     margin-left: 0px;
     margin-right: 3px;
     font-size: revert;
 }
+
 .pill:first-of-type {
     margin-left: 0px;
 }
+
 .pill.margin-right:last-of-type {
     margin-right: 0px;
 }
 
-.pill > .counter {
+.pill>.counter {
     margin: auto 0 auto 3px;
     font-size: xx-small;
     color: rgb(225, 105, 50);
@@ -112,6 +118,7 @@ div.key {
     white-space: nowrap;
     float: right;
 }
+
 .pill.hash a {
     color: white;
     text-decoration: none;
@@ -123,15 +130,18 @@ div.key {
     white-space: nowrap;
     float: right;
 }
+
 .pill.home-dll>a {
     color: rgb(225, 105, 50);
 }
+
 .pill.home-dll:hover {
     background: rgb(225, 105, 50);
     transition: all .05s ease-in;
 }
+
 .pill.home-dll:hover>a {
-    color:  white;
+    color: white;
     transition: all .05s ease-in;
 }
 
@@ -143,22 +153,30 @@ div.key {
     float: right;
     font-size: smaller;
 }
+
 .pill.home-vendor>a {
     color: rgb(37, 37, 37);
     text-decoration: none;
 }
+
 .pill.home-vendor:hover {
-    background: rgb(37, 37, 37);;
-    transition: all .05s ease-in;
-}
-.pill.home-vendor:hover>a {
-    color:  white;
+    background: rgb(37, 37, 37);
+    ;
     transition: all .05s ease-in;
 }
 
-section.description {
+.pill.home-vendor:hover>a {
+    color: white;
+    transition: all .05s ease-in;
+}
+
+div.description_wrapper {
     background: #EEE;
-    padding: 1px 10px;
+}
+
+section.description {
+    padding-top: 10px;
+    padding-bottom: 10px;
     line-height: 1.3em;
 }
 
@@ -191,15 +209,19 @@ footer>div {
     padding: 0 10px;
 }
 
-.head {
+header {
     display: flex;
+    flex-wrap: wrap;
+    /* padding: 2em 0 0 0 !important; */
+    margin-bottom: 0;
 }
 
-.head>h1 {
+header>h1 {
     display: inline;
+    margin: 0;
 }
 
-.head>.back {
+header>.back {
     margin-left: -1.5em;
     width: 1.5em;
     display: flex;
@@ -207,7 +229,7 @@ footer>div {
 
 }
 
-.head>.back>i {
+header>.back>i {
     color: #999;
     cursor: pointer;
 }
@@ -247,9 +269,10 @@ ul.files li:before {
 #filters {
     text-align: right;
     font-size: small;
+    min-height: 19px;
 }
 
-#filters > input {
+#filters>input {
     transform: scale(0.75);
 }
 
@@ -262,11 +285,13 @@ div.button {
 div.button {
     color: #b64913;
 }
+
 div.button:hover {
     background: #b64913;
     color: white;
     transition: all .2s ease-in;
 }
+
 div.button:hover a {
     color: white;
     transition: all .2s ease-in;
@@ -282,4 +307,63 @@ a.link-dotted {
         display: none !important;
     }
 
+}
+
+.yaml-tab {
+    display: none;
+}
+
+.yaml-tab pre {
+    margin-bottom: 0;
+}
+
+.yaml-tab pre code {
+    padding-bottom: 20px;
+}
+
+.yaml-tab-selected {
+    display: block !important;
+}
+
+.yaml-buttons {
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.yaml-button {
+    background: #444;
+    padding: 5px 20px;
+    color: white;
+    margin-bottom: 0;
+    transform: translate(-10px, -35px);
+    margin-bottom: -25px;
+    cursor: pointer;
+}
+
+.yaml-button-selected {
+    background: #333;
+    padding: 5px 20px;
+    color: white;
+}
+
+div.search_banner {
+    /* background: rgb(235, 119, 16);
+      background: linear-gradient(90deg, rgba(235,119,16,1) 0%, rgba(225,166,50,1) 50%, rgba(235,119,16,1) 100%); */
+    background: rgb(225, 105, 50);
+    color: white;
+    padding-bottom: 5px;
+    padding-top: 5px;
+}
+
+section, header {
+    min-width: 300px;
+    max-width: 800px;
+    padding: 0 20px;
+    margin: 30px auto;
+}
+
+header>p.subtitle {
+    margin: 0;
+    font-style: italic;
+    flex-basis: 100%;
 }

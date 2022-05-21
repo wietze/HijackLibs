@@ -1,0 +1,37 @@
+title: Possible preparation for {{ include.page.Name }} DLL Hijacking
+status: experimental
+description: Detects possible DLL hijacking of {{ include.page.Name }} by looking for suspicious file writes of this DLL, to unexpected locations.
+references:
+    - {{ include.page.url | absolute_url }}
+author: "{{ include.page.Author }}"
+date: {{ include.page.Created }}
+tags:
+    - attack.defense_evasion
+{% assign types = include.page.VulnerableExecutables | group_by:"Type"| sort:"name"  -%}
+{% for type in types %}    - attack.{{ site.mapping[type.name]['attack'] }}
+{% endfor -%}
+logsource:
+    product: windows
+    category: file_event
+detection:
+    selection:
+        TargetFileName: '*\{{ include.page.Name }}'
+{% if include.page.ExpectedLocations %}    filter:
+        TargetFileName:
+{% for loc in include.page.ExpectedLocations %}            - '{{ loc    | replace: "%SYSTEM32%", "c:\windows\system32"
+                                                                | replace: "%SYSWOW64%", "c:\windows\syswow64"
+                                                                | replace: "%WINDIR%", "c:\\windows"
+                                                                | replace: "%PROGRAMFILES%", "c:\program files"
+                                                                | replace: "%PROGRAMFILES(x86)%", "c:\program files (x86)"
+                                                                | replace: "%PROGRAMDATA%", "c:\programdata"
+                                                                | replace: "%VERSION%", "*"
+                                                                | replace: "%APPDATA%", "c:\users\*\appdata" }}\*'
+{% endfor %}{% endif %}
+{%- assign concat = include.page.ExpectedLocations | join "-" -%}
+{% if concat contains "SYSWOW" or concat contains "SYSTEM32" %}            - 'c:\windows\winsxs\*'
+            - 'c:\$windows.~bt\*'
+            - 'c:\windows\softwaredistribution\*'
+{% endif %}
+    condition: selection {% if include.page.ExpectedLocations %}and not filter{% endif %}
+falsepositives:
+    - False positives are likely. This rule is more suitable for hunting than for generating detections.

@@ -1,0 +1,7 @@
+---
+Note: Please use the rendered version of this file.
+---
+{% for entry in site.entries %}
+---
+{% include sigma_file.yml page=entry %}
+{%- endfor -%}

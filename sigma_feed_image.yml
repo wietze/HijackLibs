@@ -3,5 +3,5 @@ Note: Please use the rendered version of this file.
 ---
 {% for entry in site.entries %}
 ---
-{% include sigma.yml page=entry %}
-{% endfor %}
+{% include sigma_image.yml page=entry %}
+{%- endfor -%}

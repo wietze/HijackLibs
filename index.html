@@ -1,5 +1,5 @@
 ---
-title: DLL Hijacking
+title: Hijack Libs
 ---
 <!DOCTYPE html>
 <html lang="en">
@@ -72,19 +72,24 @@ title: DLL Hijacking
 
 <body>
     <article>
+        <div class="search_banner">
+        <header><div class="back" style="visibility: hidden;"><i class="fas fa-arrow-left" onclick="triggerSearch('')" style="color: #ddd;"></i></div><h1>Hijack Libs</h1></header>
         <section>
-            <div class="head"><div class="back" style="visibility: hidden;"><i class="fas fa-arrow-left" onclick="triggerSearch('')"></i></div><h1>DLL Hijacking candidates</h1></div>
+
             <input id="search" type="text" style="width: 100%" placeholder="Enter the name of a DLL or EXE here&hellip;" />
             <div id="filters"></div>
+        </section>
+        </div>
+        <section id="window" style="min-height: 120px;">
             <div id="status"></div>
             <div id="results"></div>
         </section>
-        <section id="intro" style="margin-top: 10em;">
+        <section id="intro" style="margin-top: 0em;">
             <h2>What is DLL Hijacking?</h2>
             <p>DLL Hijacking is, in the broadest sense, tricking a legitimate/trusted application into loading an arbitrary DLL. Defensive measures such as AV and EDR solutions may not pick up on this activity out of the box, and allow-list applications such as AppLocker may not block the execution of the untrusted code. There are numerous examples of threat actors that have been observed to leaverage DLL Hijacking to achieve their objectives.</p>
             <p>There are various subtypes of DLL Hijacking, such as DLL Search Order Hijacking (<a href="https://attack.mitre.org/techniques/T1574/001/">T1574.001</a>) and DLL Sideloading (<a href="https://attack.mitre.org/techniques/T1574/002/">T1574.002</a>). An overview of useful resources explaining various aspects of DLL Hijacking can be found <a href="https://github.com/{{ site.repo }}/wiki">here</a>.</p>
             <h2>What is this project about?</h2>
-            <p>This project provides an curated list of DLL Hijacking candidates. A mapping between DLLs and vulnerable executables is kept and can be searched via this website. Additionally, further metadata such as resources provide more context.</p><p>For defenders, this project can provide valuable information when trying to detect DLL Hijacking attempts. Although detecting DLL Hijacking isn't always without challenge, it is certainly possible to monitor for behaviour that may be indicative of abuse. To further support defenders, out-of-the-box Sigma rules are provided through this website. A <span style="font-weight: bold; margin-right: 2px; font-size: larger;">σ</span><a href="/sigma_feed.yml">Sigma feed</a> containing detection rules for all entries part of this project is provided too. </p><p>For red teamers, this project can help identify DLLs that can be used to achieve DLL Hijacking. The aim of this project is not to make it easy to abuse the recorded vulnerabilities; as such, PoCs, code templates or tuturials are not provided.</p>
+            <p>This project provides an curated list of DLL Hijacking candidates. A mapping between DLLs and vulnerable executables is kept and can be searched via this website. Additionally, further metadata such as resources provide more context.</p><p>For defenders, this project can provide valuable information when trying to detect DLL Hijacking attempts. Although detecting DLL Hijacking isn't always without challenge, it is certainly possible to monitor for behaviour that may be indicative of abuse. To further support defenders, out-of-the-box Sigma rules are provided through this website. A <span style="font-weight: bold; margin-right: 2px; font-size: larger;">σ</span><a href="/sigma_feed_image.yml">Sigma feed</a> containing detection rules for all entries part of this project is available too. </p><p>For red teamers, this project can help identify DLLs that can be used to achieve DLL Hijacking. The aim of this project is not to make it easy to abuse the recorded vulnerabilities; as such, PoCs, code templates or tuturials are not provided.</p>
 
             <h2>How do I get involved?</h2>
             <p>This project is fully open source and is maintained by the community. Contributions are more then welcome - please head to this project's <i class="fab fa-github fa-fw"></i><a href="https://github.com/{{ site.repo }}/tree/main/docs/CONTRIBUTING.md">GitHub page</a> to find the contribution guide.

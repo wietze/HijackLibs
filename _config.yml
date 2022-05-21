@@ -26,5 +26,9 @@ mapping:
     title: 'DLL Search Order Hijacking'
     attack: 'T1574.001'
     attack_text: 'Hijack Execution Flow: DLL Search Order Hijacking'
+  Environment Variable:
+    title: "Environment Variable-based DLL Hijacking"
+    attack: 'T1574.001'
+    attack_text: 'Hijack Execution Flow: DLL Search Order Hijacking'
 
 favicon_location: "/assets/img/dll.png"

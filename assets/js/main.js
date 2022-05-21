@@ -21,12 +21,31 @@ function parseUrls(url) {
 }
 
 function downloadSigma(target){
-    target.href = 'data:text/yaml;base64,' + btoa(document.querySelector('code[data-lang=yml]').textContent);
+    target.href = 'data:text/yaml;base64,' + btoa(document.querySelector('div.yaml-tab-selected code[data-lang=yml]').textContent);
+}
+
+function changeYamlDefinition(target){
+    yaml_selected = target.textContent.toLowerCase();
+    // Update tabs
+    curentOffset = document.querySelector('.yaml-tab-selected code')?.scrollTop
+    document.querySelector('.yaml-tab-selected')?.classList.remove('yaml-tab-selected')
+    document.querySelector('#yaml-'+yaml_selected).classList.add('yaml-tab-selected')
+    document.querySelector('#yaml-'+yaml_selected + ' code').scrollTop = curentOffset
+    // Update buttons
+    document.querySelector('.yaml-button-selected')?.classList.remove('yaml-button-selected')
+    target.classList.add('yaml-button-selected')
+    // Update feed url
+    document.querySelector('#yaml-feed-url').href = document.querySelector('#yaml-feed-url').href.replace(/sigma_feed_.*?.yml/i, "sigma_feed_"+yaml_selected+".yml")
 }
 
 function goBack(){
-    history.back();
-    window.location = "/";
+    console.log(document.referrer)
+    if(document.referrer && (document.referrer.indexOf("localhost") > 0 || document.referrer.toLowerCase().indexOf("hijacklibs") > 0)){
+        history.back();
+        window.location = "/";
+    } else {
+        window.location = "/";
+    }
 }
 
 
