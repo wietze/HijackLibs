@@ -15,9 +15,6 @@ VulnerableExecutables:
   Type: Sideloading
 - Path: '%SYSTEM32%\wmpdmc.exe'
   Type: Sideloading
-- Path: '%SYSTEM32%\certreq.exe'
-  Type: Environment Variable
-  Variable: SYSTEMROOT
 - Path: '%SYSTEM32%\compmgmtlauncher.exe'
   Type: Environment Variable
   Variable: SYSTEMROOT

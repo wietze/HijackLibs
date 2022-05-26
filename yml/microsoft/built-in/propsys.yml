@@ -79,16 +79,10 @@ VulnerableExecutables:
   Type: Sideloading
 - Path: '%SYSTEM32%\write.exe'
   Type: Sideloading
-- Path: '%SYSTEM32%\calc.exe'
-  Type: Environment Variable
-  Variable: SYSTEMROOT
 - Path: '%SYSTEM32%\certreq.exe'
   Type: Environment Variable
   Variable: SYSTEMROOT
 - Path: '%SYSTEM32%\cleanmgr.exe'
-  Type: Environment Variable
-  Variable: SYSTEMROOT
-- Path: '%SYSTEM32%\compmgmtlauncher.exe'
   Type: Environment Variable
   Variable: SYSTEMROOT
 - Path: '%SYSTEM32%\control.exe'
@@ -125,15 +119,6 @@ VulnerableExecutables:
   Type: Environment Variable
   Variable: SYSTEMROOT
 - Path: '%SYSTEM32%\verifier.exe'
-  Type: Environment Variable
-  Variable: SYSTEMROOT
-- Path: '%SYSTEM32%\wfs.exe'
-  Type: Environment Variable
-  Variable: SYSTEMROOT
-- Path: '%SYSTEM32%\workfolders.exe'
-  Type: Environment Variable
-  Variable: SYSTEMROOT
-- Path: '%SYSTEM32%\write.exe'
   Type: Environment Variable
   Variable: SYSTEMROOT
 Resources:
