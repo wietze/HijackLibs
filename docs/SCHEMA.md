@@ -19,11 +19,12 @@ A simple template can be found [here](/template.yml).
 | Field | Type | Required | Format | Description |
 | ----- | ---- | -------- | ------ | ----------- |
 | `Path` | String | ✅ | Has to end in `.exe` | Full location[^1] of legitimate executables that attempt to load the described DLL. |
-| `Type` | String | ✅ | `Sideloading` \| `Phantom` \| `Search Order` | The type of DLL Hijacking this executable is vulnerable to. |
+| `Type` | String | ✅ | `Sideloading` \| `Phantom` \| `Search Order` \| `Environment Variable` | The type of DLL Hijacking this executable is vulnerable to. |
 | `AutoElevate` | Boolean | Optional | `true` only | Only create this field and set to `true` if the executable is automatically elevated by Windows. |
 | `PrivilegeEscalation` | Boolean | Optional | `true` only | Only create this field and set to `true` if the executable normally runs under elevated privileges. |
 | `Condition` | String | Optional |  | If certain conditions are required for the attack to work, you can state them here. |
-| `SHA256` | List[String] | Optional | 64 characters | If the executable is 3rd-party (i.e. non-Microsoft), please add the SHA256 hash of the executable here. |
+| `SHA256` | List[String] | Optional | 64 characters | If the executable is 3rd-party (i.e. non-Microsoft), please add the SHA256 hash(es) of the executable here. |
+| `Variable` | String | Only when `Type` is set to `Environment Variable` | Should not contain percentage signs (`%`) | The environment variable name that can be hijacked. |
 
 ## Acknowledgement
 | Field | Type | Required | Format | Description |
