@@ -1,0 +1,12 @@
+---
+Name: oci.dll
+Author: Wietze Beukema
+Created: 2022-06-12
+Vendor: Microsoft
+ExpectedLocations:
+  - '%SYSTEM32%'
+VulnerableExecutables:
+  - Path: '%SYSTEM32%\msdtc.exe'
+    Type: Phantom
+Resources:
+  - https://www.trustwave.com/en-us/resources/blogs/spiderlabs-blog/backdoor-at-the-end-of-the-icmp-tunnel/
