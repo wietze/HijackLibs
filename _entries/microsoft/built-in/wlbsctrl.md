@@ -1,0 +1,17 @@
+---
+Name: wlbsctrl.dll
+Author: Wietze Beukema
+Created: 2022-06-12
+Vendor: Microsoft
+ExpectedLocations:
+  - '%SYSTEM32%'
+VulnerableExecutables:
+  - Path: '%SYSTEM32%\svchost.exe'
+    Condition: IKEEXT Service on Windows <=8
+    Type: Phantom
+Resources:
+  - https://posts.specterops.io/lateral-movement-scm-and-dll-hijacking-primer-d2f61e8ab992
+  - https://www.youtube.com/watch?v=MZ8fgAN2As8
+
+---
+

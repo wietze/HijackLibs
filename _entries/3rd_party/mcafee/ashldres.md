@@ -4,7 +4,8 @@ Author: Wietze Beukema
 Created: 2021-12-08
 Vendor: McAfee
 ExpectedLocations:
-  - "C:\\Program Files\\McAfee.com\\VSO"
+  - '%PROGRAMFILES%\McAfee.com\VSO'
+  - '%PROGRAMFILES(x86)%\McAfee.com\VSO'
 VulnerableExecutables:
   - Path: "mcvsshld.exe"
     SHA256:

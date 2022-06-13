@@ -11,6 +11,7 @@ VulnerableExecutables:
     Type: Sideloading
 Resources:
   - https://wietze.github.io/blog/hijacking-dlls-in-windows
+  - https://twitter.com/0xcarnage/status/1203882560176218113
 Acknowledgements:
   - Name: Wietze
     Twitter: "@wietze"
