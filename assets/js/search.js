@@ -70,7 +70,7 @@ function handleSearch() {
             $('#status').text(foundEntries.length + " "+ verb + " found.");
             addResults(foundEntries, searchValue);
         } else {
-            $('#status').text("No results.");
+            $('#status').html("No results.<br /><span style=\"font-style: italic; font-size: small;\">Missing an entry? Open a <a href=\""+github_repo+"\">pull request</a></span>!");
         }
     }
 }

@@ -1,4 +1,4 @@
-title: "DLL Hijacking"
+title: "HijackLibs"
 repo: wietze/HijackLibs
 sass:
   style: compressed
@@ -28,7 +28,7 @@ mapping:
     attack_text: 'Hijack Execution Flow: DLL Search Order Hijacking'
   Environment Variable:
     title: "Environment Variable-based DLL Hijacking"
-    attack: 'T1574.001'
-    attack_text: 'Hijack Execution Flow: DLL Search Order Hijacking'
+    attack: 'T1574'
+    attack_text: 'Hijack Execution Flow'
 
 favicon_location: "/assets/img/dll.png"

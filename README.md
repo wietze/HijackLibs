@@ -6,4 +6,4 @@ This project aims to keep a record of publicly disclosed DLL Hijacking opportuni
 
 This branch contains the GitHub Pages / Jekyll code that is used to render:
 
-➡️ https://wietze.github.io/HijackLibs/
+➡️ https://www.hijacklibs.net
