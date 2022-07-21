@@ -4,7 +4,7 @@
 
 This project aims to keep a record of publicly disclosed DLL Hijacking opportunities.
 
-You can find the web version of this repository on https://wietze.github.io/HijackLibs/.
+You can find the web version of this repository on https://www.hijacklibs.net.
 
 
 ---
