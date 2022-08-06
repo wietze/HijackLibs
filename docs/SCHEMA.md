@@ -32,4 +32,4 @@ A simple template can be found [here](/template.yml).
 | `Name` | String | ✅ |  | Full name (or Twitter screen name) of the person who should be acknowledged. | 
 | `Twitter` | String | Optional | Has to start with `@` | The Twitter handle of the person who should be acknowledged. | 
 
-[^1]: This field supports environment variables such as `%SYSTEM32%`, `%SYSWOW64%`, `%PROGRAMFILES%`, `%PROGRAMFILES(x86)%`, `%PROGRAMDATA%`, `%APPDATA%`, and so on. Please use this where possible. Variable `%VERSION%` is also available if a path contains a version number that is likely to change. 
+[^1]: This field supports environment variables such as `%SYSTEM32%`, `%SYSWOW64%`, `%PROGRAMFILES%`, `%PROGRAMFILES(x86)%`, `%PROGRAMDATA%`, `%APPDATA%`, `%LOCALAPPDATA%`, and so on. Please use this where possible. Variable `%VERSION%` is also available if a path contains a version number that is likely to change. 
