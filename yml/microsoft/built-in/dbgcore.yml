@@ -4,15 +4,15 @@ Author: Wietze Beukema
 Created: 2021-02-27
 Vendor: Microsoft
 ExpectedLocations:
-  - '%PROGRAMFILES(x86)%\windows kits\10\debuggers\arm'
-  - '%PROGRAMFILES(x86)%\windows kits\10\debuggers\arm\srcsrv'
-  - '%PROGRAMFILES(x86)%\windows kits\10\debuggers\arm64'
-  - '%PROGRAMFILES(x86)%\windows kits\10\debuggers\arm64\srcsrv'
-  - '%PROGRAMFILES(x86)%\windows kits\10\debuggers\x64'
-  - '%PROGRAMFILES(x86)%\windows kits\10\debuggers\x64\srcsrv'
-  - '%PROGRAMFILES(x86)%\windows kits\10\debuggers\x86'
-  - '%PROGRAMFILES(x86)%\windows kits\10\debuggers\x86\srcsrv'
-  - '%PROGRAMFILES(x86)%\microsoft office\root\office%VERSION%'
+  - '%PROGRAMFILES%\windows kits\10\debuggers\arm'
+  - '%PROGRAMFILES%\windows kits\10\debuggers\arm\srcsrv'
+  - '%PROGRAMFILES%\windows kits\10\debuggers\arm64'
+  - '%PROGRAMFILES%\windows kits\10\debuggers\arm64\srcsrv'
+  - '%PROGRAMFILES%\windows kits\10\debuggers\x64'
+  - '%PROGRAMFILES%\windows kits\10\debuggers\x64\srcsrv'
+  - '%PROGRAMFILES%\windows kits\10\debuggers\x86'
+  - '%PROGRAMFILES%\windows kits\10\debuggers\x86\srcsrv'
+  - '%PROGRAMFILES%\microsoft office\root\office%VERSION%'
   - "%SYSTEM32%"
   - "%SYSWOW64%"
 VulnerableExecutables:

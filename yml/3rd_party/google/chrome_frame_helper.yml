@@ -6,7 +6,6 @@ Vendor: Google
 ExpectedLocations:
   - '%LOCALAPPDATA%\Google\Chrome\Application'
   - '%PROGRAMFILES%\Google\Chrome\Application'
-  - '%PROGRAMFILES(x86)%\Google\Chrome\Application'
 VulnerableExecutables:
   - Path: "chrome_frame_helper.exe"
     SHA256:

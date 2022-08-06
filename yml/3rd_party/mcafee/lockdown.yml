@@ -5,7 +5,6 @@ Created: 2022-06-13
 Vendor: McAfee
 ExpectedLocations:
   - '%PROGRAMFILES%\McAfee\VirusScan Enterprise'
-  - '%PROGRAMFILES(x86)%\McAfee\VirusScan Enterprise'
 VulnerableExecutables:
   - Path: "mfeann.exe"
     SHA256:

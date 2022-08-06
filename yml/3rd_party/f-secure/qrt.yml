@@ -5,7 +5,6 @@ Created: 2022-06-13
 Vendor: F-Secure
 ExpectedLocations:
   - '%PROGRAMFILES%\F-Secure\Anti-Virus'
-  - '%PROGRAMFILES(x86)%\F-Secure\Anti-Virus'
 VulnerableExecutables:
   - Path: qrtfix.exe
     Type: Sideloading

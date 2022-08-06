@@ -5,11 +5,8 @@ Created: 2022-06-13
 Vendor: BitDefender
 ExpectedLocations:
   - '%PROGRAMFILES%\Bitdefender Antivirus Free'
-  - '%PROGRAMFILES(x86)%\Bitdefender Antivirus Free'
 VulnerableExecutables:
   - Path: '%PROGRAMFILES%\Bitdefender Antivirus Free\BDReinit.exe'
-    Type: Sideloading
-  - Path: '%PROGRAMFILES(x86)%\Bitdefender Antivirus Free\BDReinit.exe'
     Type: Sideloading
 Resources:
   - https://www.secureworks.com/research/shadowpad-malware-analysis

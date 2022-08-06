@@ -7,7 +7,6 @@ ExpectedLocations: # No trailing slashes
   - '%SYSTEM32%'
   - '%SYSWOW64%'
   - '%PROGRAMFILES%'
-  - '%PROGRAMFILES(x86)%'
   - 'C:\\some\\random\\location'
   - ...
 VulnerableExecutables:

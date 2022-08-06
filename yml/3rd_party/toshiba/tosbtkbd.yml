@@ -5,11 +5,8 @@ Created: 2022-06-14
 Vendor: Toshiba
 ExpectedLocations:
   - '%PROGRAMFILES%\Toshiba\Bluetooth Toshiba Stack'
-  - '%PROGRAMFILES(x86)%\Toshiba\Bluetooth Toshiba Stack'
 VulnerableExecutables:
   - Path: '%PROGRAMFILES%\Toshiba\Bluetooth Toshiba Stack\TosBtKbd.exe'
-    Type: Sideloading
-  - Path: '%PROGRAMFILES(x86)%\Toshiba\Bluetooth Toshiba Stack\TosBtKbd.exe'
     Type: Sideloading
 Resources:
   - https://www.secureworks.com/research/shadowpad-malware-analysis
