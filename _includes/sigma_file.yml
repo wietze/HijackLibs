@@ -18,14 +18,19 @@ detection:
         TargetFileName: '*\{{ include.page.Name }}'
 {% if include.page.ExpectedLocations %}    filter:
         TargetFileName:
-{% for loc in include.page.ExpectedLocations %}            - '{{ loc    | replace: "%SYSTEM32%", "c:\windows\system32"
-                                                                | replace: "%SYSWOW64%", "c:\windows\syswow64"
-                                                                | replace: "%WINDIR%", "c:\\windows"
-                                                                | replace: "%PROGRAMFILES%", "c:\program files"
-                                                                | replace: "%PROGRAMFILES(x86)%", "c:\program files (x86)"
-                                                                | replace: "%PROGRAMDATA%", "c:\programdata"
-                                                                | replace: "%VERSION%", "*"
-                                                                | replace: "%APPDATA%", "c:\users\*\appdata" }}\*'
+{% for loc in include.page.ExpectedLocations %}{% if loc contains '%PROGRAMFILES%' %}            - '{{ loc   | replace: "%PROGRAMFILES%", "c:\program files"
+                        | replace: "%VERSION%", "*"
+                }}\*'
+            - '{{ loc   | replace: "%PROGRAMFILES%", "c:\program files (x86)"
+                        | replace: "%VERSION%", "*"
+                }}\*'{% else %}            - '{{ loc    | replace: "%SYSTEM32%", "c:\windows\system32"
+                         | replace: "%SYSWOW64%", "c:\windows\syswow64"
+                         | replace: "%WINDIR%", "c:\windows"
+                         | replace: "%PROGRAMDATA%", "c:\programdata"
+                         | replace: "%APPDATA%", "c:\users\*\appdata\roaming"
+                         | replace: "%LOCALAPPDATA%", "c:\users\*\appdata\local"
+                         | replace: "%VERSION%", "*"
+                }}\*'{% endif %}
 {% endfor %}{% endif %}
 {%- assign concat = include.page.ExpectedLocations | join "-" -%}
 {% if concat contains "SYSWOW" or concat contains "SYSTEM32" %}            - 'c:\windows\winsxs\*'
