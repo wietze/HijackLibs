@@ -3,8 +3,6 @@ Name: wlbsctrl.dll
 Author: Wietze Beukema
 Created: 2022-06-12
 Vendor: Microsoft
-ExpectedLocations:
-  - '%SYSTEM32%'
 VulnerableExecutables:
   - Path: '%SYSTEM32%\svchost.exe'
     Condition: IKEEXT Service on Windows <=8
