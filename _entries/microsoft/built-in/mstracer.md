@@ -3,9 +3,6 @@ Name: mstracer.dll
 Author: Wietze Beukema
 Created: 2021-12-08
 Vendor: Microsoft
-ExpectedLocations:
-  - "%SYSTEM32%"
-  - "%SYSWOW64%"
 VulnerableExecutables:
   - Path: '%SYSTEM32%\searchindexer.exe'
     Type: Phantom
