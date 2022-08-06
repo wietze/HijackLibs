@@ -63,6 +63,10 @@ VulnerableExecutables:
   Type: Sideloading
 - Path: '%SYSTEM32%\wpnpinst.exe'
   Type: Sideloading
+- Path: '%LOCALAPPDATA%\microsoft\onedrive\onedrive.exe'
+  Type: Search Order
+- Path: '%LOCALAPPDATA%\microsoft\teams\current\teams.exe'
+  Type: Search Order
 - Path: '%SYSTEM32%\dpiscaling.exe'
   Type: Environment Variable
   Variable: SYSTEMROOT
@@ -75,6 +79,9 @@ VulnerableExecutables:
 Resources:
 - https://wietze.github.io/blog/hijacking-dlls-in-windows
 - https://wietze.github.io/blog/save-the-environment-variables
+- https://twitter.com/SBousseaden/status/1550903546916311043
 Acknowledgements:
 - Name: Wietze
   Twitter: '@wietze'
+- Name: Samir
+  Twitter: '@sbousseaden'
