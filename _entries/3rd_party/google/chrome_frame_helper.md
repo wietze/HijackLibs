@@ -4,7 +4,7 @@ Author: Wietze Beukema
 Created: 2021-12-08
 Vendor: Google
 ExpectedLocations:
-  - '%APPDATA%\Local\Google\Chrome\Application'
+  - '%LOCALAPPDATA%\Google\Chrome\Application'
   - '%PROGRAMFILES%\Google\Chrome\Application'
   - '%PROGRAMFILES(x86)%\Google\Chrome\Application'
 VulnerableExecutables:
