@@ -5,7 +5,6 @@ Created: 2021-12-08
 Vendor: Lenovo
 ExpectedLocations:
   - "%PROGRAMFILES%\\Lenovo\\Communications Utility"
-  - "%PROGRAMFILES(x86)%\\Lenovo\\Communications Utility"
 VulnerableExecutables:
   - Path: "cammute.exe"
     SHA256:

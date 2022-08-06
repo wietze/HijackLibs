@@ -6,7 +6,6 @@ Vendor: Microsoft
 ExpectedLocations:
   - "%SYSTEM32%"
   - '%PROGRAMFILES%\HTML Help Workshop'
-  - '%PROGRAMFILES(x86)%\HTML Help Workshop'
 VulnerableExecutables:
   - Path: '%PROGRAMFILES%\HTML Help Workshop\hhc.exe'
     Type: Sideloading

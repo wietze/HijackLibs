@@ -5,16 +5,11 @@ Created: 2022-08-01
 Vendor: Microsoft
 ExpectedLocations:
   - '%PROGRAMFILES%\Windows Defender'
-  - '%PROGRAMFILES(x86)%\Windows Defender'
   - '%PROGRAMDATA%\Microsoft\Windows Defender\Platform\%VERSION%'
 VulnerableExecutables:
   - Path: '%PROGRAMFILES%\Windows Defender\mpcmdrun.exe'
     Type: Sideloading
-  - Path: '%PROGRAMFILES(x86)%\Windows Defender\mpcmdrun.exe'
-    Type: Sideloading
   - Path: '%PROGRAMFILES%\Windows Defender\nissrv.exe'
-    Type: Sideloading
-  - Path: '%PROGRAMFILES(x86)%\Windows Defender\nissrv.exe'
     Type: Sideloading
 Resources:
   - https://www.sentinelone.com/blog/living-off-windows-defender-lockbit-ransomware-sideloads-cobalt-strike-through-microsoft-security-tool/
