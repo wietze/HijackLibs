@@ -31,9 +31,6 @@ VulnerableExecutables:
 - Path: '%PROGRAMFILES%\Google\Chrome\Application\chrome.exe'
   Type: Environment Variable
   Variable: SYSTEMROOT
-- Path: '%PROGRAMFILES%\Google\Chrome\Application\chrome.exe'
-  Type: Environment Variable
-  Variable: SYSTEMROOT
 - Path: '%PROGRAMFILES%\Microsoft\Edge\Application\msedge.exe'
   Type: Environment Variable
   Variable: SYSTEMROOT
