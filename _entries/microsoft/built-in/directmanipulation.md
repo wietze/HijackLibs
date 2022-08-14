@@ -1,0 +1,19 @@
+---
+Name: directmanipulation.dll
+Author: Wietze Beukema
+Created: 2022-08-14
+Vendor: Microsoft
+ExpectedLocations:
+  - "%SYSTEM32%"
+  - "%SYSWOW64%"
+VulnerableExecutables:
+- Path: '%PROGRAMFILES%\Microsoft Office\root\Office%VERSION%\excel.exe'
+  Type: Environment Variable
+  Variable: SYSTEMROOT
+Resources:
+- https://wietze.github.io/blog/save-the-environment-variables
+Acknowledgements:
+  - Name: Wietze
+    Twitter: "@wietze"
+---
+
