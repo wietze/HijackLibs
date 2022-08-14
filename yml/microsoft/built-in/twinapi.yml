@@ -13,6 +13,18 @@ VulnerableExecutables:
 - Path: '%SYSTEM32%\rdpclip.exe'
   Type: Environment Variable
   Variable: SYSTEMROOT
+- Path: '%PROGRAMFILES%\Microsoft\Edge\Application\msedge.exe'
+  Type: Environment Variable
+  Variable: SYSTEMROOT
+- Path: '%PROGRAMFILES%\Microsoft Office\root\Office%VERSION%\excel.exe'
+  Type: Environment Variable
+  Variable: SYSTEMROOT
+- Path: '%PROGRAMFILES%\Microsoft Office\root\Office%VERSION%\powerpnt.exe'
+  Type: Environment Variable
+  Variable: SYSTEMROOT
+- Path: '%PROGRAMFILES%\Microsoft Office\root\Office%VERSION%\winword.exe'
+  Type: Environment Variable
+  Variable: SYSTEMROOT
 Resources:
 - https://wietze.github.io/blog/save-the-environment-variables
 Acknowledgements:

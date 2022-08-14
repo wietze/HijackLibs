@@ -53,6 +53,9 @@ VulnerableExecutables:
 - Path: '%SYSTEM32%\filehistory.exe'
   Type: Environment Variable
   Variable: SYSTEMROOT
+- Path: '%PROGRAMFILES%\Microsoft\Edge\Application\msedge.exe'
+  Type: Environment Variable
+  Variable: SYSTEMROOT
 Resources:
 - https://wietze.github.io/blog/hijacking-dlls-in-windows
 - https://wietze.github.io/blog/save-the-environment-variables
