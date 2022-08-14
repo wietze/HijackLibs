@@ -16,6 +16,9 @@ VulnerableExecutables:
 - Path: '%SYSTEM32%\stordiag.exe'
   Type: Environment Variable
   Variable: SYSTEMROOT
+- Path: '%PROGRAMFILES%\Mozilla Firefox\firefox.exe'
+  Type: Environment Variable
+  Variable: SYSTEMROOT
 Resources:
 - https://wietze.github.io/blog/save-the-environment-variables
 Acknowledgements:
