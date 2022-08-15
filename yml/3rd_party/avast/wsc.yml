@@ -1,6 +1,6 @@
 ---
 Name: wsc.dll
-Author: Matt Green - @mgreen27
+Author: Matt Green 
 Created: 2022-08-15
 Vendor: Avast
 ExpectedLocations:
@@ -13,4 +13,3 @@ VulnerableExecutables:
 Resources:
   - https://github.com/netero1010/Vulnerability-Disclosure/tree/main/CVE-2022-AVAST2
   - https://securelist.com/cycldek-bridging-the-air-gap/97157/
-
