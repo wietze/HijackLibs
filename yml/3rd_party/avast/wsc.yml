@@ -4,12 +4,12 @@ Author: Matt Green - @mgreen27
 Created: 2022-08-15
 Vendor: Avast
 ExpectedLocations:
-  - "%PROGRAMFILES%\AVAST Software\Avast"
+  - %PROGRAMFILES%\AVAST Software\Avast
 VulnerableExecutables:
   - Path: wsc_proxy.exe
     OriginalName: wsc_proxy.exe
     InternalName: wsc_proxy.exe
-    FileDescription: "Avast remediation exe"
+    FileDescription: Avast remediation exe
     SHA256:
       - 85ca20eeec3400c68a62639a01928a5dab824d2eadf589e5cbfe5a2bc41d9654
     Type: Sideloading
