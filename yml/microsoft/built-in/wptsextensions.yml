@@ -1,0 +1,15 @@
+---
+Name: WptsExtensions.dll
+Author: k4nfr3
+Created: 2022-08-15
+Vendor: Microsoft
+ExpectedLocations:
+  - "%PATH%"
+VulnerableExecutables:
+  - Path: '%SYSTEM32%\psr.exe'
+    Type: Sideloading
+Resources:
+  - "https://itm4n.github.io/windows-dll-hijacking-clarified/"
+Acknowledgements:
+  - Name: itm4n
+    Twitter: "@itm4n"
