@@ -7,15 +7,23 @@ ExpectedLocations:
   - "%SYSTEM32%"
   - "%SYSWOW64%"
 VulnerableExecutables:
+  - Path: '%SYSTEM32%\appvclient.exe'
+    Type: Sideloading
   - Path: '%SYSTEM32%\bdeuisrv.exe'
     Type: Sideloading
+  - Path: '%SYSTEM32%\customshellhost.exe'
+    Type: Sideloading
   - Path: '%SYSTEM32%\magnify.exe'
+    Type: Sideloading
+  - Path: '%SYSTEM32%\mblctr.exe'
     Type: Sideloading
   - Path: '%SYSTEM32%\mdmappinstaller.exe'
     Type: Sideloading
   - Path: '%SYSTEM32%\raserver.exe'
     Type: Sideloading
   - Path: '%SYSTEM32%\rdpclip.exe'
+    Type: Sideloading
+  - Path: '%SYSTEM32%\rdpinput.exe'
     Type: Sideloading
   - Path: '%SYSTEM32%\rdpshell.exe'
     Type: Sideloading
@@ -25,6 +33,8 @@ VulnerableExecutables:
     Type: Sideloading
     AutoElevate: true
   - Path: '%SYSTEM32%\securityhealthservice.exe'
+    Type: Sideloading
+  - Path: '%SYSTEM32%\sethc.exe'
     Type: Sideloading
   - Path: '%SYSTEM32%\slui.exe'
     Type: Sideloading
@@ -36,6 +46,10 @@ VulnerableExecutables:
     AutoElevate: true
 Resources:
   - https://wietze.github.io/blog/hijacking-dlls-in-windows
+  - https://securityintelligence.com/posts/windows-features-dll-sideloading/
+  - https://github.com/xforcered/WFH
 Acknowledgements:
   - Name: Wietze
     Twitter: "@wietze"
+  - Name: Chris Spehn
+    Twitter: "@ConsciousHacker"
