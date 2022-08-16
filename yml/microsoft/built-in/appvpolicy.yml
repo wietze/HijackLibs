@@ -5,7 +5,6 @@ Created: 2021-08-16
 Vendor: Microsoft
 ExpectedLocations:
   - "%SYSTEM32%"
-  - "%SYSWOW64%"
 VulnerableExecutables:
   - Path: '%SYSTEM32%\appvclient.exe'
     Type: Sideloading
