@@ -9,7 +9,7 @@ VulnerableExecutables:
   - Path: wsc_proxy.exe
     SHA256:
       - 85ca20eeec3400c68a62639a01928a5dab824d2eadf589e5cbfe5a2bc41d9654
-    Type: Sideloading
+    Type: Search Order
 Resources:
   - https://github.com/netero1010/Vulnerability-Disclosure/tree/main/CVE-2022-AVAST2
   - https://securelist.com/cycldek-bridging-the-air-gap/97157/
