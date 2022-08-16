@@ -19,9 +19,13 @@ VulnerableExecutables:
   Type: Sideloading
 - Path: '%SYSTEM32%\dmomacpmo.exe'
   Type: Sideloading
+- Path: '%SYSTEM32%\dxcap.exe'
+  Type: Sideloading
 - Path: '%SYSTEM32%\dxpserver.exe'
   Type: Sideloading
 - Path: '%SYSTEM32%\mdmdiagnosticstool.exe'
+  Type: Sideloading
+- Path: '%SYSTEM32%\mousocoreworker.exe'
   Type: Sideloading
 - Path: '%SYSTEM32%\musnotificationux.exe'
   Type: Sideloading
@@ -38,9 +42,15 @@ VulnerableExecutables:
 - Path: '%SYSTEM32%\systemreset.exe'
   Type: Sideloading
   AutoElevate: true
+- Path: '%SYSTEM32%\tracerpt.exe'
+  Type: Sideloading
 - Path: '%SYSTEM32%\upfc.exe'
   Type: Sideloading
 - Path: '%SYSTEM32%\usocoreworker.exe'
+  Type: Sideloading
+- Path: '%SYSTEM32%\vsgraphicsdesktopengine.exe'
+  Type: Sideloading
+- Path: '%SYSTEM32%\vsgraphicsremoteengine.exe'
   Type: Sideloading
 - Path: '%SYSTEM32%\wbengine.exe'
   Type: Sideloading
@@ -59,6 +69,10 @@ VulnerableExecutables:
 Resources:
 - https://wietze.github.io/blog/hijacking-dlls-in-windows
 - https://wietze.github.io/blog/save-the-environment-variables
+- https://securityintelligence.com/posts/windows-features-dll-sideloading/
+- https://github.com/xforcered/WFH
 Acknowledgements:
 - Name: Wietze
   Twitter: '@wietze'
+- Name: Chris Spehn
+  Twitter: "@ConsciousHacker"
