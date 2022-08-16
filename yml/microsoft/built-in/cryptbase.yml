@@ -7,6 +7,8 @@ ExpectedLocations:
   - "%SYSTEM32%"
   - "%SYSWOW64%"
 VulnerableExecutables:
+  - Path: '%SYSTEM32%\alg.exe'
+    Type: Sideloading
   - Path: '%SYSTEM32%\calc.exe'
     Type: Sideloading
   - Path: '%SYSTEM32%\compmgmtlauncher.exe'
@@ -79,6 +81,10 @@ VulnerableExecutables:
     Type: Sideloading
 Resources:
   - https://wietze.github.io/blog/hijacking-dlls-in-windows
+  - https://securityintelligence.com/posts/windows-features-dll-sideloading/
+  - https://github.com/xforcered/WFH
 Acknowledgements:
   - Name: Wietze
     Twitter: "@wietze"
+  - Name: Chris Spehn
+    Twitter: "@ConsciousHacker"
