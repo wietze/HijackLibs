@@ -7,10 +7,22 @@ ExpectedLocations:
   - "%SYSTEM32%"
   - "%SYSWOW64%"
 VulnerableExecutables:
+  - Path: '%SYSTEM32%\dcdiag.exe'
+    Type: Sideloading
+  - Path: '%SYSTEM32%\dfsrdiag.exe'
+    Type: Sideloading
   - Path: '%SYSTEM32%\dmcertinst.exe'
+    Type: Sideloading
+  - Path: '%SYSTEM32%\netdom.exe'
+    Type: Sideloading
+  - Path: '%SYSTEM32%\rendom.exe'
     Type: Sideloading
 Resources:
   - https://wietze.github.io/blog/hijacking-dlls-in-windows
+  - https://securityintelligence.com/posts/windows-features-dll-sideloading/
+  - https://github.com/xforcered/WFH
 Acknowledgements:
   - Name: Wietze
     Twitter: "@wietze"
+  - Name: Chris Spehn
+    Twitter: "@ConsciousHacker"
