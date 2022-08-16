@@ -10,6 +10,7 @@ VulnerableExecutables:
   - Path: '%SYSTEM32%\compmgmtlauncher.exe'
     Type: Sideloading
   - Path: '%SYSTEM32%\sdbinst.exe'
+    Type: Sideloading
   - Path: '%WINDIR%\explorer.exe'
     Type: Search Order
 Resources:
