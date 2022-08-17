@@ -1,7 +1,7 @@
 ---
 Name: winscard.dll
 Author: Chris Spehn
-Created: 2021-08-16
+Created: 2021-08-17
 Vendor: Microsoft
 ExpectedLocations:
   - "%SYSTEM32%"
