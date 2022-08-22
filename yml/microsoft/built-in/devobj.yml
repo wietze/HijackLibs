@@ -43,6 +43,8 @@ VulnerableExecutables:
     Type: Sideloading
   - Path: '%SYSTEM32%\osk.exe'
     Type: Sideloading
+  - Path: '%SYSTEM32%\pnputil.exe'
+    Type: Sideloading
   - Path: '%SYSTEM32%\rdpclip.exe'
     Type: Sideloading
   - Path: '%SYSTEM32%\recover.exe'
@@ -51,12 +53,18 @@ VulnerableExecutables:
     Type: Sideloading
   - Path: '%SYSTEM32%\tabcal.exe'
     Type: Sideloading
+  - Path: '%SYSTEM32%\vsgraphicsdesktopengine.exe'
+    Type: Sideloading
   - Path: '%SYSTEM32%\vssvc.exe'
     Type: Sideloading
   - Path: '%SYSTEM32%\workfolders.exe'
     Type: Sideloading
 Resources:
   - https://wietze.github.io/blog/hijacking-dlls-in-windows
+  - https://securityintelligence.com/posts/windows-features-dll-sideloading/
+  - https://github.com/xforcered/WFH
 Acknowledgements:
   - Name: Wietze
     Twitter: "@wietze"
+  - Name: Chris Spehn
+    Twitter: "@ConsciousHacker"

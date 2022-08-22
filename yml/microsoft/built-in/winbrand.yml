@@ -7,6 +7,10 @@ ExpectedLocations:
   - "%SYSTEM32%"
   - "%SYSWOW64%"
 VulnerableExecutables:
+  - Path: '%SYSTEM32%\bdehdcfg.exe'
+    Type: Sideloading
+  - Path: '%SYSTEM32%\licensediag.exe'
+    Type: Sideloading
   - Path: '%SYSTEM32%\slui.exe'
     Type: Sideloading
   - Path: '%SYSTEM32%\systempropertiesadvanced.exe'
@@ -17,6 +21,10 @@ VulnerableExecutables:
     AutoElevate: true
 Resources:
   - https://wietze.github.io/blog/hijacking-dlls-in-windows
+  - https://securityintelligence.com/posts/windows-features-dll-sideloading/
+  - https://github.com/xforcered/WFH
 Acknowledgements:
   - Name: Wietze
     Twitter: "@wietze"
+  - Name: Chris Spehn
+    Twitter: "@ConsciousHacker"

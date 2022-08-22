@@ -15,21 +15,37 @@ VulnerableExecutables:
     Type: Sideloading
   - Path: '%SYSTEM32%\chgport.exe'
     Type: Sideloading
+  - Path: '%SYSTEM32%\csvde.exe'
+    Type: Sideloading
   - Path: '%SYSTEM32%\devicecensus.exe'
     Type: Sideloading
   - Path: '%SYSTEM32%\djoin.exe'
+    Type: Sideloading
+  - Path: '%SYSTEM32%\dsacls.exe'
+    Type: Sideloading
+  - Path: '%SYSTEM32%\dsmgmt.exe'
     Type: Sideloading
   - Path: '%SYSTEM32%\dsregcmd.exe'
     Type: Sideloading
   - Path: '%SYSTEM32%\efsui.exe'
     Type: Sideloading
+  - Path: '%SYSTEM32%\gpfixup.exe'
+    Type: Sideloading
   - Path: '%SYSTEM32%\gpresult.exe'
     Type: Sideloading
+  - Path: '%SYSTEM32%\klist.exe'
+    Type: Sideloading
   - Path: '%SYSTEM32%\ksetup.exe'
+    Type: Sideloading
+  - Path: '%SYSTEM32%\ldifde.exe'
     Type: Sideloading
   - Path: '%SYSTEM32%\net1.exe'
     Type: Sideloading
   - Path: '%SYSTEM32%\nltest.exe'
+    Type: Sideloading
+  - Path: '%SYSTEM32%\netdom.exe'
+    Type: Sideloading
+  - Path: '%SYSTEM32%\ntdsutil.exe'
     Type: Sideloading
   - Path: '%SYSTEM32%\query.exe'
     Type: Sideloading
@@ -37,11 +53,21 @@ VulnerableExecutables:
     Type: Sideloading
   - Path: '%SYSTEM32%\qwinsta.exe'
     Type: Sideloading
+  - Path: '%SYSTEM32%\redircmp.exe'
+    Type: Sideloading
+  - Path: '%SYSTEM32%\redirusr.exe'
+    Type: Sideloading
   - Path: '%SYSTEM32%\rekeywiz.exe'
+    Type: Sideloading
+  - Path: '%SYSTEM32%\rendom.exe'
+    Type: Sideloading
+  - Path: '%SYSTEM32%\repadmin.exe'
     Type: Sideloading
   - Path: '%SYSTEM32%\reset.exe'
     Type: Sideloading
   - Path: '%SYSTEM32%\rwinsta.exe'
+    Type: Sideloading
+  - Path: '%SYSTEM32%\setspn.exe'
     Type: Sideloading
   - Path: '%SYSTEM32%\systempropertiesadvanced.exe'
     Type: Sideloading
@@ -57,6 +83,10 @@ VulnerableExecutables:
     Type: Sideloading
 Resources:
   - https://wietze.github.io/blog/hijacking-dlls-in-windows
+  - https://securityintelligence.com/posts/windows-features-dll-sideloading/
+  - https://github.com/xforcered/WFH
 Acknowledgements:
   - Name: Wietze
     Twitter: "@wietze"
+  - Name: Chris Spehn
+    Twitter: "@ConsciousHacker"

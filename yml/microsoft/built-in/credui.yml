@@ -11,7 +11,15 @@ VulnerableExecutables:
   Type: Sideloading
 - Path: '%SYSTEM32%\fxssvc.exe'
   Type: Sideloading
+- Path: '%SYSTEM32%\gpfixup.exe'
+  Type: Sideloading
+- Path: '%SYSTEM32%\licmgr.exe'
+  Type: Sideloading
 - Path: '%SYSTEM32%\mstsc.exe'
+  Type: Sideloading
+- Path: '%SYSTEM32%\netdom.exe'
+  Type: Sideloading
+- Path: '%SYSTEM32%\nlbmgr.exe'
   Type: Sideloading
 - Path: '%SYSTEM32%\perfmon.exe'
   Type: Sideloading
@@ -19,6 +27,8 @@ VulnerableExecutables:
 - Path: '%SYSTEM32%\rekeywiz.exe'
   Type: Sideloading
 - Path: '%SYSTEM32%\rpcping.exe'
+  Type: Sideloading
+- Path: '%SYSTEM32%\runas.exe'
   Type: Sideloading
 - Path: '%SYSTEM32%\systempropertiesadvanced.exe'
   Type: Sideloading
@@ -38,6 +48,10 @@ VulnerableExecutables:
 Resources:
 - https://wietze.github.io/blog/hijacking-dlls-in-windows
 - https://wietze.github.io/blog/save-the-environment-variables
+- https://securityintelligence.com/posts/windows-features-dll-sideloading/
+- https://github.com/xforcered/WFH
 Acknowledgements:
 - Name: Wietze
   Twitter: '@wietze'
+- Name: Chris Spehn
+  Twitter: "@ConsciousHacker"

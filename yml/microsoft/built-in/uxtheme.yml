@@ -7,6 +7,10 @@ ExpectedLocations:
   - "%SYSTEM32%"
   - "%SYSWOW64%"
 VulnerableExecutables:
+  - Path: '%SYSTEM32%\atbroker.exe'
+    Type: Sideloading
+  - Path: '%SYSTEM32%\cloudnotifications.exe'
+    Type: Sideloading
   - Path: '%SYSTEM32%\cttune.exe'
     Type: Sideloading
   - Path: '%SYSTEM32%\displayswitch.exe'
@@ -17,16 +21,34 @@ VulnerableExecutables:
     Type: Sideloading
   - Path: '%SYSTEM32%\gamepanel.exe'
     Type: Sideloading
+  - Path: '%SYSTEM32%\isoburn.exe'
+    Type: Sideloading
+  - Path: '%SYSTEM32%\mblctr.exe'
+    Type: Sideloading
+  - Path: '%SYSTEM32%\mmc.exe'
+    Type: Sideloading
   - Path: '%SYSTEM32%\msdt.exe'
     Type: Sideloading
     AutoElevate: true
   - Path: '%SYSTEM32%\msra.exe'
     Type: Sideloading
+  - Path: '%SYSTEM32%\musnotifyicon.exe'
+    Type: Sideloading
+  - Path: '%SYSTEM32%\passwordonwakesettingflyout.exe'
+    Type: Sideloading
   - Path: '%SYSTEM32%\quickassist.exe'
+    Type: Sideloading
+  - Path: '%SYSTEM32%\recoverydrive.exe'
     Type: Sideloading
   - Path: '%SYSTEM32%\sdclt.exe'
     Type: Sideloading
     AutoElevate: true
+  - Path: '%SYSTEM32%\sethc.exe'
+    Type: Sideloading
+  - Path: '%SYSTEM32%\sndvol.exe'
+    Type: Sideloading
+  - Path: '%SYSTEM32%\snippingtool.exe'
+    Type: Sideloading
   - Path: '%SYSTEM32%\taskmgr.exe'
     Type: Sideloading
     AutoElevate: true
@@ -40,6 +62,10 @@ VulnerableExecutables:
     Type: Sideloading
 Resources:
   - https://wietze.github.io/blog/hijacking-dlls-in-windows
+  - https://securityintelligence.com/posts/windows-features-dll-sideloading/
+  - https://github.com/xforcered/WFH
 Acknowledgements:
   - Name: Wietze
     Twitter: "@wietze"
+  - Name: Chris Spehn
+    Twitter: "@ConsciousHacker"

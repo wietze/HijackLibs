@@ -21,9 +21,15 @@ ExpectedLocations:
 VulnerableExecutables:
 - Path: '%SYSTEM32%\bootim.exe'
   Type: Sideloading
+- Path: '%SYSTEM32%\dxcap.exe'
+  Type: Sideloading
 - Path: '%SYSTEM32%\taskkill.exe'
   Type: Sideloading
 - Path: '%SYSTEM32%\tasklist.exe'
+  Type: Sideloading
+- Path: '%SYSTEM32%\tracerpt.exe'
+  Type: Sideloading
+- Path: '%SYSTEM32%\werfault.exe'
   Type: Sideloading
 - Path: '%SYSTEM32%\bdehdcfg.exe'
   Type: Environment Variable
@@ -61,6 +67,10 @@ VulnerableExecutables:
 Resources:
 - https://wietze.github.io/blog/hijacking-dlls-in-windows
 - https://wietze.github.io/blog/save-the-environment-variables
+- https://securityintelligence.com/posts/windows-features-dll-sideloading/
+- https://github.com/xforcered/WFH
 Acknowledgements:
 - Name: Wietze
   Twitter: '@wietze'
+- Name: Chris Spehn
+  Twitter: "@ConsciousHacker"
