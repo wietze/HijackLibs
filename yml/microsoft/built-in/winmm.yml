@@ -7,12 +7,30 @@ ExpectedLocations:
   - "%SYSTEM32%"
   - "%SYSWOW64%"
 VulnerableExecutables:
+  - Path: '%SYSTEM32%\mblctr.exe'
+    Type: Sideloading
+  - Path: '%SYSTEM32%\mspaint.exe'
+    Type: Sideloading
+  - Path: '%SYSTEM32%\mstsc.exe'
+    Type: Sideloading
+  - Path: '%SYSTEM32%\osk.exe'
+    Type: Sideloading
+  - Path: '%SYSTEM32%\presentationsettings.exe'
+    Type: Sideloading
+  - Path: '%SYSTEM32%\proximityuxhost.exe'
+    Type: Sideloading
+  - Path: '%SYSTEM32%\wfs.exe'
+    Type: Sideloading
   - Path: '%SYSTEM32%\winsat.exe'
     Type: Sideloading
     AutoElevate: true
 Resources:
   - https://wietze.github.io/blog/hijacking-dlls-in-windows
   - https://securelist.com/wastedlocker-technical-analysis/97944/
+  - https://securityintelligence.com/posts/windows-features-dll-sideloading/
+  - https://github.com/xforcered/WFH
 Acknowledgements:
   - Name: Wietze
     Twitter: "@wietze"
+  - Name: Chris Spehn
+    Twitter: "@ConsciousHacker"

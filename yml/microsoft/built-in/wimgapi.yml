@@ -7,6 +7,8 @@ ExpectedLocations:
   - "%SYSTEM32%"
   - "%SYSWOW64%"
 VulnerableExecutables:
+  - Path: '%SYSTEM32%\recoverydrive.exe'
+    Type: Sideloading
   - Path: '%SYSTEM32%\resetengine.exe'
     Type: Sideloading
   - Path: '%SYSTEM32%\systemreset.exe'
@@ -17,8 +19,12 @@ VulnerableExecutables:
 Resources:
   - https://www.hexacorn.com/blog/2015/02/23/beyond-good-ol-run-key-part-28/
   - https://wietze.github.io/blog/hijacking-dlls-in-windows
+  - https://securityintelligence.com/posts/windows-features-dll-sideloading/
+  - https://github.com/xforcered/WFH
 Acknowledgements:
   - Name: Wietze
     Twitter: "@wietze"
   - Name: Adam
     Twitter: "@hexacorn"
+  - Name: Chris Spehn
+    Twitter: "@ConsciousHacker"

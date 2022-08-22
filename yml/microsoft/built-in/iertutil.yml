@@ -7,7 +7,13 @@ ExpectedLocations:
   - "%SYSTEM32%"
   - "%SYSWOW64%"
 VulnerableExecutables:
+  - Path: '%SYSTEM32%\browserexport.exe'
+    Type: Sideloading
   - Path: '%SYSTEM32%\cipher.exe'
+    Type: Sideloading
+  - Path: '%SYSTEM32%\iesettingsync.exe'
+    Type: Sideloading
+  - Path: '%SYSTEM32%\launchwinapp.exe'
     Type: Sideloading
   - Path: '%SYSTEM32%\microsoftedgebchost.exe'
     Type: Sideloading
@@ -15,8 +21,16 @@ VulnerableExecutables:
     Type: Sideloading
   - Path: '%SYSTEM32%\microsoftedgedevtools.exe'
     Type: Sideloading
+  - Path: '%SYSTEM32%\microsoftedgesh.exe'
+    Type: Sideloading
+  - Path: '%SYSTEM32%\wwahost.exe'
+    Type: Sideloading
 Resources:
   - https://wietze.github.io/blog/hijacking-dlls-in-windows
+  - https://securityintelligence.com/posts/windows-features-dll-sideloading/
+  - https://github.com/xforcered/WFH
 Acknowledgements:
   - Name: Wietze
     Twitter: "@wietze"
+  - Name: Chris Spehn
+    Twitter: "@ConsciousHacker"

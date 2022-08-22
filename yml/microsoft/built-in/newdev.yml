@@ -7,6 +7,8 @@ ExpectedLocations:
   - "%SYSTEM32%"
   - "%SYSWOW64%"
 VulnerableExecutables:
+  - Path: '%SYSTEM32%\infdefaultinstall.exe'
+    Type: Sideloading
   - Path: '%SYSTEM32%\pnpunattend.exe'
     Type: Sideloading
   - Path: '%SYSTEM32%\systemsettingsadminflows.exe'
@@ -14,6 +16,10 @@ VulnerableExecutables:
     AutoElevate: true
 Resources:
   - https://wietze.github.io/blog/hijacking-dlls-in-windows
+  - https://securityintelligence.com/posts/windows-features-dll-sideloading/
+  - https://github.com/xforcered/WFH
 Acknowledgements:
   - Name: Wietze
     Twitter: "@wietze"
+  - Name: Chris Spehn
+    Twitter: "@ConsciousHacker"

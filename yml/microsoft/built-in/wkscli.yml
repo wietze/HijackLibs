@@ -25,6 +25,10 @@ VulnerableExecutables:
     Type: Sideloading
   - Path: '%SYSTEM32%\net1.exe'
     Type: Sideloading
+  - Path: '%SYSTEM32%\netdom.exe'
+    Type: Sideloading
+  - Path: '%SYSTEM32%\secinit.exe'
+    Type: Sideloading
   - Path: '%SYSTEM32%\systempropertiesadvanced.exe'
     Type: Sideloading
     AutoElevate: true
@@ -35,6 +39,10 @@ VulnerableExecutables:
     Type: Sideloading
 Resources:
   - https://wietze.github.io/blog/hijacking-dlls-in-windows
+  - https://securityintelligence.com/posts/windows-features-dll-sideloading/
+  - https://github.com/xforcered/WFH
 Acknowledgements:
   - Name: Wietze
     Twitter: "@wietze"
+  - Name: Chris Spehn
+    Twitter: "@ConsciousHacker"

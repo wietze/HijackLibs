@@ -7,6 +7,8 @@ ExpectedLocations:
 - '%SYSTEM32%'
 - '%SYSWOW64%'
 VulnerableExecutables:
+- Path: '%SYSTEM32%\audiodg.exe'
+  Type: Sideloading
 - Path: '%SYSTEM32%\osk.exe'
   Type: Sideloading
 - Path: '%SYSTEM32%\certreq.exe'
@@ -30,6 +32,10 @@ VulnerableExecutables:
 Resources:
 - https://wietze.github.io/blog/hijacking-dlls-in-windows
 - https://wietze.github.io/blog/save-the-environment-variables
+- https://securityintelligence.com/posts/windows-features-dll-sideloading/
+- https://github.com/xforcered/WFH
 Acknowledgements:
 - Name: Wietze
-  Twitter: '@wietze'
+  Twitter: "@wietze"
+- Name: Chris Spehn
+  Twitter: "@ConsciousHacker"

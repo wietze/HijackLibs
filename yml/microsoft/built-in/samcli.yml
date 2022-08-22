@@ -15,6 +15,10 @@ VulnerableExecutables:
     Type: Sideloading
   - Path: '%SYSTEM32%\chgport.exe'
     Type: Sideloading
+  - Path: '%SYSTEM32%\credwiz.exe'
+    Type: Sideloading
+  - Path: '%SYSTEM32%\dcdiag.exe'
+    Type: Sideloading
   - Path: '%SYSTEM32%\deviceenroller.exe'
     Type: Sideloading
   - Path: '%SYSTEM32%\dpapimig.exe'
@@ -25,6 +29,8 @@ VulnerableExecutables:
   - Path: '%SYSTEM32%\net.exe'
     Type: Sideloading
   - Path: '%SYSTEM32%\net1.exe'
+    Type: Sideloading
+  - Path: '%SYSTEM32%\netdom.exe'
     Type: Sideloading
   - Path: '%SYSTEM32%\netplwiz.exe'
     Type: Sideloading
@@ -52,6 +58,10 @@ VulnerableExecutables:
     Type: Sideloading
 Resources:
   - https://wietze.github.io/blog/hijacking-dlls-in-windows
+  - https://securityintelligence.com/posts/windows-features-dll-sideloading/
+  - https://github.com/xforcered/WFH
 Acknowledgements:
   - Name: Wietze
     Twitter: "@wietze"
+  - Name: Chris Spehn
+    Twitter: "@ConsciousHacker"

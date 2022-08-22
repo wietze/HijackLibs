@@ -11,6 +11,8 @@ VulnerableExecutables:
     Type: Sideloading
   - Path: '%SYSTEM32%\dmomacpmo.exe'
     Type: Sideloading
+  - Path: '%SYSTEM32%\mdmagent.exe'
+    Type: Sideloading
   - Path: '%SYSTEM32%\mdmappinstaller.exe'
     Type: Sideloading
   - Path: '%SYSTEM32%\mdmdiagnosticstool.exe'
@@ -21,6 +23,10 @@ VulnerableExecutables:
     Type: Sideloading
 Resources:
   - https://wietze.github.io/blog/hijacking-dlls-in-windows
+  - https://securityintelligence.com/posts/windows-features-dll-sideloading/
+  - https://github.com/xforcered/WFH
 Acknowledgements:
   - Name: Wietze
     Twitter: "@wietze"
+  - Name: Chris Spehn
+    Twitter: "@ConsciousHacker"
