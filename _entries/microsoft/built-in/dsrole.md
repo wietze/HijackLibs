@@ -11,14 +11,28 @@ VulnerableExecutables:
   Type: Sideloading
 - Path: '%SYSTEM32%\cipher.exe'
   Type: Sideloading
+- Path: '%SYSTEM32%\csvde.exe'
+  Type: Sideloading
+- Path: '%SYSTEM32%\dcdiag.exe'
+  Type: Sideloading
+- Path: '%SYSTEM32%\dsdbutil.exe'
+  Type: Sideloading
 - Path: '%SYSTEM32%\efsui.exe'
   Type: Sideloading
+- Path: '%SYSTEM32%\gpfixup.exe'
+  Type: Sideloading
 - Path: '%SYSTEM32%\net1.exe'
+  Type: Sideloading
+- Path: '%SYSTEM32%\netdom.exe'
   Type: Sideloading
 - Path: '%SYSTEM32%\netplwiz.exe'
   Type: Sideloading
   AutoElevate: true
+- Path: '%SYSTEM32%\ntdsutil.exe'
+  Type: Sideloading
 - Path: '%SYSTEM32%\rekeywiz.exe'
+  Type: Sideloading
+- Path: '%SYSTEM32%\repadmin.exe'
   Type: Sideloading
 - Path: '%SYSTEM32%\systempropertiesadvanced.exe'
   Type: Sideloading
@@ -35,8 +49,12 @@ VulnerableExecutables:
 Resources:
 - https://wietze.github.io/blog/hijacking-dlls-in-windows
 - https://wietze.github.io/blog/save-the-environment-variables
+- https://securityintelligence.com/posts/windows-features-dll-sideloading/
+- https://github.com/xforcered/WFH
 Acknowledgements:
 - Name: Wietze
   Twitter: '@wietze'
+- Name: Chris Spehn
+  Twitter: "@ConsciousHacker"
 ---
 

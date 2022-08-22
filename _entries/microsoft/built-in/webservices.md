@@ -11,14 +11,22 @@ VulnerableExecutables:
     Type: Sideloading
   - Path: '%SYSTEM32%\sppsvc.exe'
     Type: Sideloading
+  - Path: '%SYSTEM32%\vsgraphicsdesktopengine.exe'
+    Type: Sideloading
+  - Path: '%SYSTEM32%\vsgraphicsremoteengine.exe'
+    Type: Sideloading
   - Path: '%SYSTEM32%\wifitask.exe'
     Type: Sideloading
   - Path: '%SYSTEM32%\wksprt.exe'
     Type: Sideloading
 Resources:
   - https://wietze.github.io/blog/hijacking-dlls-in-windows
+  - https://securityintelligence.com/posts/windows-features-dll-sideloading/
+  - https://github.com/xforcered/WFH
 Acknowledgements:
   - Name: Wietze
     Twitter: "@wietze"
+  - Name: Chris Spehn
+    Twitter: "@ConsciousHacker"
 ---
 

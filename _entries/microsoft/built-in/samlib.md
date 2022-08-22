@@ -9,16 +9,24 @@ ExpectedLocations:
 VulnerableExecutables:
   - Path: '%SYSTEM32%\dpapimig.exe'
     Type: Sideloading
+  - Path: '%SYSTEM32%\dsmgmt.exe'
+    Type: Sideloading
   - Path: '%SYSTEM32%\easinvoker.exe'
     Type: Sideloading
     AutoElevate: true
   - Path: '%SYSTEM32%\netplwiz.exe'
     Type: Sideloading
     AutoElevate: true
+  - Path: '%SYSTEM32%\ntdsutil.exe'
+    Type: Sideloading
 Resources:
   - https://wietze.github.io/blog/hijacking-dlls-in-windows
+  - https://securityintelligence.com/posts/windows-features-dll-sideloading/
+  - https://github.com/xforcered/WFH
 Acknowledgements:
   - Name: Wietze
     Twitter: "@wietze"
+  - Name: Chris Spehn
+    Twitter: "@ConsciousHacker"
 ---
 

@@ -7,13 +7,38 @@ ExpectedLocations:
   - "%SYSTEM32%"
   - "%SYSWOW64%"
 VulnerableExecutables:
+  - Path: '%SYSTEM32%\bdeunlock.exe'
+    Type: Sideloading
+  - Path: '%SYSTEM32%\displayswitch.exe'
+    Type: Sideloading
+  - Path: '%SYSTEM32%\easeofaccessdialog.exe'
+    Type: Sideloading
+  - Path: '%SYSTEM32%\lockscreencontentserver.exe'
+    Type: Sideloading
+  - Path: '%SYSTEM32%\mmc.exe'
+    Type: Sideloading
+  - Path: '%SYSTEM32%\msdt.exe'
+    Type: Sideloading
+    AutoElevate: true
+  - Path: '%SYSTEM32%\osk.exe'
+    Type: Sideloading
   - Path: '%SYSTEM32%\rekeywiz.exe'
+    Type: Sideloading
+  - Path: '%SYSTEM32%\sessionmsg.exe'
+    Type: Sideloading
+  - Path: '%SYSTEM32%\taskmgr.exe'
+    Type: Sideloading
+  - Path: '%SYSTEM32%\utilman.exe'
     Type: Sideloading
 Resources:
   - https://wietze.github.io/blog/hijacking-dlls-in-windows
   - https://twitter.com/0xcarnage/status/1203882560176218113
+  - https://securityintelligence.com/posts/windows-features-dll-sideloading/
+  - https://github.com/xforcered/WFH
 Acknowledgements:
   - Name: Wietze
     Twitter: "@wietze"
+  - Name: Chris Spehn
+    Twitter: "@ConsciousHacker"
 ---
 

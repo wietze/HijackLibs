@@ -13,6 +13,10 @@ VulnerableExecutables:
     Type: Sideloading
   - Path: '%SYSTEM32%\chgport.exe'
     Type: Sideloading
+  - Path: '%SYSTEM32%\dcdiag.exe'
+    Type: Sideloading
+  - Path: '%SYSTEM32%\dsdbutil.exe'
+    Type: Sideloading
   - Path: '%SYSTEM32%\driverquery.exe'
     Type: Sideloading
   - Path: '%SYSTEM32%\eventcreate.exe'
@@ -27,6 +31,10 @@ VulnerableExecutables:
     Type: Sideloading
   - Path: '%SYSTEM32%\net1.exe'
     Type: Sideloading
+  - Path: '%SYSTEM32%\netdom.exe'
+    Type: Sideloading
+  - Path: '%SYSTEM32%\ntdsutil.exe'
+    Type: Sideloading
   - Path: '%SYSTEM32%\openfiles.exe'
     Type: Sideloading
   - Path: '%SYSTEM32%\query.exe'
@@ -38,6 +46,8 @@ VulnerableExecutables:
   - Path: '%SYSTEM32%\reset.exe'
     Type: Sideloading
   - Path: '%SYSTEM32%\rwinsta.exe'
+    Type: Sideloading
+  - Path: '%SYSTEM32%\shrpubw.exe'
     Type: Sideloading
   - Path: '%SYSTEM32%\spaceagent.exe'
     Type: Sideloading
@@ -58,8 +68,12 @@ VulnerableExecutables:
     Type: Sideloading
 Resources:
   - https://wietze.github.io/blog/hijacking-dlls-in-windows
+  - https://securityintelligence.com/posts/windows-features-dll-sideloading/
+  - https://github.com/xforcered/WFH
 Acknowledgements:
   - Name: Wietze
     Twitter: "@wietze"
+  - Name: Chris Spehn
+    Twitter: "@ConsciousHacker"
 ---
 

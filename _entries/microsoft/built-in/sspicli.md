@@ -9,6 +9,10 @@ ExpectedLocations:
 VulnerableExecutables:
 - Path: '%SYSTEM32%\at.exe'
   Type: Sideloading
+- Path: '%SYSTEM32%\bitsadmin.exe'
+  Type: Sideloading
+- Path: '%SYSTEM32%\bootcfg.exe'
+  Type: Sideloading
 - Path: '%SYSTEM32%\calc.exe'
   Type: Sideloading
 - Path: '%SYSTEM32%\certreq.exe'
@@ -18,6 +22,12 @@ VulnerableExecutables:
 - Path: '%SYSTEM32%\computerdefaults.exe'
   Type: Sideloading
   AutoElevate: true
+- Path: '%SYSTEM32%\credentialenrollmentmanager.exe'
+  Type: Sideloading
+- Path: '%SYSTEM32%\customshellhost.exe'
+  Type: Sideloading
+- Path: '%SYSTEM32%\deviceenroller.exe'
+  Type: Sideloading
 - Path: '%SYSTEM32%\dialer.exe'
   Type: Sideloading
 - Path: '%SYSTEM32%\driverquery.exe'
@@ -39,7 +49,15 @@ VulnerableExecutables:
   Type: Sideloading
 - Path: '%SYSTEM32%\gpresult.exe'
   Type: Sideloading
+- Path: '%SYSTEM32%\iesettingsync.exe'
+  Type: Sideloading
+- Path: '%SYSTEM32%\klist.exe'
+  Type: Sideloading
 - Path: '%SYSTEM32%\ksetup.exe'
+  Type: Sideloading
+- Path: '%SYSTEM32%\ldp.exe'
+  Type: Sideloading
+- Path: '%SYSTEM32%\logman.exe'
   Type: Sideloading
 - Path: '%SYSTEM32%\mdeserver.exe'
   Type: Sideloading
@@ -55,6 +73,8 @@ VulnerableExecutables:
 - Path: '%SYSTEM32%\mtstocom.exe'
   Type: Sideloading
 - Path: '%SYSTEM32%\muiunattend.exe'
+  Type: Sideloading
+- Path: '%SYSTEM32%\netdom.exe'
   Type: Sideloading
 - Path: '%SYSTEM32%\netsh.exe'
   Type: Sideloading
@@ -75,9 +95,13 @@ VulnerableExecutables:
   Type: Sideloading
 - Path: '%SYSTEM32%\rpcping.exe'
   Type: Sideloading
+- Path: '%SYSTEM32%\runas.exe'
+  Type: Sideloading
 - Path: '%SYSTEM32%\sdclt.exe'
   Type: Sideloading
   AutoElevate: true
+- Path: '%SYSTEM32%\setx.exe'
+  Type: Sideloading
 - Path: '%SYSTEM32%\shutdown.exe'
   Type: Sideloading
 - Path: '%SYSTEM32%\systeminfo.exe'
@@ -108,8 +132,12 @@ VulnerableExecutables:
 Resources:
 - https://wietze.github.io/blog/hijacking-dlls-in-windows
 - https://wietze.github.io/blog/save-the-environment-variables
+- https://securityintelligence.com/posts/windows-features-dll-sideloading/
+- https://github.com/xforcered/WFH
 Acknowledgements:
 - Name: Wietze
   Twitter: '@wietze'
+- Name: Chris Spehn
+  Twitter: "@ConsciousHacker"
 ---
 

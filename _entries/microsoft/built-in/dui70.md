@@ -7,19 +7,57 @@ ExpectedLocations:
 - '%SYSTEM32%'
 - '%SYSWOW64%'
 VulnerableExecutables:
+- Path: '%SYSTEM32%\bdeunlock.exe'
+  Type: Sideloading
+- Path: '%SYSTEM32%\camerasettings.exe'
+  Type: Sideloading
 - Path: '%SYSTEM32%\certreq.exe'
+  Type: Sideloading
+- Path: '%SYSTEM32%\dmnotificationbroker.exe'
+  Type: Sideloading
+- Path: '%SYSTEM32%\dpapimig.exe'
+  Type: Sideloading
+- Path: '%SYSTEM32%\licensingui.exe'
   Type: Sideloading
 - Path: '%SYSTEM32%\optionalfeatures.exe'
   Type: Sideloading
   AutoElevate: true
+- Path: '%SYSTEM32%\osk.exe'
+  Type: Sideloading
+- Path: '%SYSTEM32%\passwordonwakesettingflyout.exe'
+  Type: Sideloading
+- Path: '%SYSTEM32%\phoneactivate.exe'
+  Type: Sideloading
+- Path: '%SYSTEM32%\proximityuxhost.exe'
+  Type: Sideloading
 - Path: '%SYSTEM32%\rasphone.exe'
   Type: Environment Variable
   Variable: SYSTEMROOT
+- Path: '%SYSTEM32%\sessionmsg.exe'
+  Type: Sideloading
+- Path: '%SYSTEM32%\sethc.exe'
+  Type: Sideloading
+- Path: '%SYSTEM32%\sysreseterr.exe'
+  Type: Sideloading
+- Path: '%SYSTEM32%\systemsettingsadminflows.exe'
+  Type: Sideloading
+- Path: '%SYSTEM32%\systemsettingsremovedevice.exe'
+  Type: Sideloading
+- Path: '%SYSTEM32%\utilman.exe'
+  Type: Sideloading
+- Path: '%SYSTEM32%\windowsactiondialog.exe'
+  Type: Sideloading
+- Path: '%SYSTEM32%\wlrmdr.exe'
+  Type: Sideloading
 Resources:
 - https://wietze.github.io/blog/hijacking-dlls-in-windows
 - https://wietze.github.io/blog/save-the-environment-variables
+- https://securityintelligence.com/posts/windows-features-dll-sideloading/
+- https://github.com/xforcered/WFH
 Acknowledgements:
 - Name: Wietze
-  Twitter: '@wietze'
+  Twitter: "@wietze"
+- Name: Chris Spehn
+  Twitter: "@ConsciousHacker"
 ---
 

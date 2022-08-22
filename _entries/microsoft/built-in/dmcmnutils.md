@@ -25,6 +25,8 @@ VulnerableExecutables:
     Type: Sideloading
   - Path: '%SYSTEM32%\mdmdiagnosticstool.exe'
     Type: Sideloading
+  - Path: '%SYSTEM32%\mousocoreworker.exe'
+    Type: Sideloading
   - Path: '%SYSTEM32%\musnotificationux.exe'
     Type: Sideloading
   - Path: '%SYSTEM32%\musnotifyicon.exe'
@@ -37,8 +39,12 @@ VulnerableExecutables:
     Type: Sideloading
 Resources:
   - https://wietze.github.io/blog/hijacking-dlls-in-windows
+  - https://securityintelligence.com/posts/windows-features-dll-sideloading/
+  - https://github.com/xforcered/WFH
 Acknowledgements:
   - Name: Wietze
     Twitter: "@wietze"
+  - Name: Chris Spehn
+    Twitter: "@ConsciousHacker"
 ---
 

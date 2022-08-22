@@ -21,7 +21,11 @@ VulnerableExecutables:
     Type: Sideloading
   - Path: '%SYSTEM32%\lockscreencontentserver.exe'
     Type: Sideloading
+  - Path: '%SYSTEM32%\mblctr.exe'
+    Type: Sideloading
   - Path: '%SYSTEM32%\osk.exe'
+    Type: Sideloading
+  - Path: '%SYSTEM32%\proximityuxhost.exe'
     Type: Sideloading
   - Path: '%SYSTEM32%\rdpclip.exe'
     Type: Sideloading
@@ -29,12 +33,20 @@ VulnerableExecutables:
     Type: Sideloading
   - Path: '%SYSTEM32%\rdvghelper.exe'
     Type: Sideloading
+  - Path: '%SYSTEM32%\sndvol.exe'
+    Type: Sideloading
+  - Path: '%SYSTEM32%\snippingtool.exe'
+    Type: Sideloading
   - Path: '%SYSTEM32%\wmpdmc.exe'
     Type: Sideloading
 Resources:
   - https://wietze.github.io/blog/hijacking-dlls-in-windows
+  - https://securityintelligence.com/posts/windows-features-dll-sideloading/
+  - https://github.com/xforcered/WFH
 Acknowledgements:
   - Name: Wietze
     Twitter: "@wietze"
+  - Name: Chris Spehn
+    Twitter: "@ConsciousHacker"
 ---
 

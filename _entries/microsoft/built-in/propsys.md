@@ -18,6 +18,8 @@ VulnerableExecutables:
 - Path: '%SYSTEM32%\computerdefaults.exe'
   Type: Sideloading
   AutoElevate: true
+- Path: '%SYSTEM32%\customshellhost.exe'
+  Type: Sideloading
 - Path: '%SYSTEM32%\dpiscaling.exe'
   Type: Sideloading
 - Path: '%SYSTEM32%\dsregcmd.exe'
@@ -51,6 +53,8 @@ VulnerableExecutables:
 - Path: '%SYSTEM32%\printui.exe'
   Type: Sideloading
   AutoElevate: true
+- Path: '%SYSTEM32%\proximityuxhost.exe'
+  Type: Sideloading
 - Path: '%SYSTEM32%\quickassist.exe'
   Type: Sideloading
 - Path: '%SYSTEM32%\rdpclip.exe'
@@ -139,8 +143,12 @@ VulnerableExecutables:
 Resources:
 - https://wietze.github.io/blog/hijacking-dlls-in-windows
 - https://wietze.github.io/blog/save-the-environment-variables
+- https://securityintelligence.com/posts/windows-features-dll-sideloading/
+- https://github.com/xforcered/WFH
 Acknowledgements:
 - Name: Wietze
   Twitter: '@wietze'
+- Name: Chris Spehn
+  Twitter: "@ConsciousHacker"
 ---
 

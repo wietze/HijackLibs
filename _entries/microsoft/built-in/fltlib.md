@@ -15,6 +15,8 @@ VulnerableExecutables:
     Type: Sideloading
   - Path: '%SYSTEM32%\dpiscaling.exe'
     Type: Sideloading
+  - Path: '%SYSTEM32%\dfsrdiag.exe'
+    Type: Sideloading
   - Path: '%SYSTEM32%\fltmc.exe'
     Type: Sideloading
   - Path: '%SYSTEM32%\psr.exe'
@@ -36,8 +38,12 @@ VulnerableExecutables:
     Type: Sideloading
 Resources:
   - https://wietze.github.io/blog/hijacking-dlls-in-windows
+  - https://securityintelligence.com/posts/windows-features-dll-sideloading/
+  - https://github.com/xforcered/WFH
 Acknowledgements:
   - Name: Wietze
     Twitter: "@wietze"
+  - Name: Chris Spehn
+    Twitter: "@ConsciousHacker"
 ---
 

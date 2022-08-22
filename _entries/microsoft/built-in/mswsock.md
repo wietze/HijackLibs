@@ -7,18 +7,26 @@ ExpectedLocations:
 - '%SYSTEM32%'
 - '%SYSWOW64%'
 VulnerableExecutables:
+- Path: '%SYSTEM32%\alg.exe'
+  Type: Sideloading
 - Path: '%SYSTEM32%\curl.exe'
   Type: Environment Variable
   Variable: SYSTEMROOT
 - Path: '%SYSTEM32%\devicecensus.exe'
   Type: Environment Variable
   Variable: SYSTEMROOT
+- Path: '%SYSTEM32%\finger.exe'
+  Type: Sideloading
+- Path: '%SYSTEM32%\fsquirt.exe'
+  Type: Sideloading
 - Path: '%SYSTEM32%\ftp.exe'
   Type: Environment Variable
   Variable: SYSTEMROOT
 - Path: '%SYSTEM32%\hostname.exe'
   Type: Environment Variable
   Variable: SYSTEMROOT
+- Path: '%SYSTEM32%\nbtstat.exe'
+  Type: Sideloading
 - Path: '%SYSTEM32%\nslookup.exe'
   Type: Environment Variable
   Variable: SYSTEMROOT
@@ -60,8 +68,12 @@ VulnerableExecutables:
   Variable: SYSTEMROOT
 Resources:
 - https://wietze.github.io/blog/save-the-environment-variables
+- https://securityintelligence.com/posts/windows-features-dll-sideloading/
+- https://github.com/xforcered/WFH
 Acknowledgements:
 - Name: Wietze
   Twitter: '@wietze'
+- Name: Chris Spehn
+  Twitter: "@ConsciousHacker"
 ---
 

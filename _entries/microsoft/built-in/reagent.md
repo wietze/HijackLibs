@@ -14,6 +14,8 @@ VulnerableExecutables:
   - Path: '%SYSTEM32%\recdisc.exe'
     Type: Sideloading
     AutoElevate: true
+  - Path: '%SYSTEM32%\recoverydrive.exe'
+    Type: Sideloading
   - Path: '%SYSTEM32%\relpost.exe'
     Type: Sideloading
   - Path: '%SYSTEM32%\resetengine.exe'
@@ -26,8 +28,12 @@ VulnerableExecutables:
     AutoElevate: true
 Resources:
   - https://wietze.github.io/blog/hijacking-dlls-in-windows
+  - https://securityintelligence.com/posts/windows-features-dll-sideloading/
+  - https://github.com/xforcered/WFH
 Acknowledgements:
   - Name: Wietze
     Twitter: "@wietze"
+  - Name: Chris Spehn
+    Twitter: "@ConsciousHacker"
 ---
 

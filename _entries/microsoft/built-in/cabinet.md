@@ -17,6 +17,8 @@ VulnerableExecutables:
   Type: Sideloading
 - Path: '%SYSTEM32%\extrac32.exe'
   Type: Sideloading
+- Path: '%SYSTEM32%\iesettingsync.exe'
+  Type: Sideloading
 - Path: '%SYSTEM32%\licensingdiag.exe'
   Type: Sideloading
 - Path: '%SYSTEM32%\makecab.exe'
@@ -32,6 +34,8 @@ VulnerableExecutables:
   Type: Sideloading
 - Path: '%SYSTEM32%\plasrv.exe'
   Type: Sideloading
+- Path: '%SYSTEM32%\pnputil.exe'
+  Type: Sideloading
 - Path: '%SYSTEM32%\reagentc.exe'
   Type: Sideloading
 - Path: '%SYSTEM32%\recdisc.exe'
@@ -44,6 +48,8 @@ VulnerableExecutables:
 - Path: '%SYSTEM32%\sdclt.exe'
   Type: Sideloading
   AutoElevate: true
+- Path: '%SYSTEM32%\sihclient.exe'
+  Type: Sideloading
 - Path: '%SYSTEM32%\systemreset.exe'
   Type: Sideloading
   AutoElevate: true
@@ -61,8 +67,12 @@ VulnerableExecutables:
 Resources:
 - https://wietze.github.io/blog/hijacking-dlls-in-windows
 - https://wietze.github.io/blog/save-the-environment-variables
+- https://securityintelligence.com/posts/windows-features-dll-sideloading/
+- https://github.com/xforcered/WFH
 Acknowledgements:
 - Name: Wietze
   Twitter: '@wietze'
+- Name: Chris Spehn
+  Twitter: "@ConsciousHacker"
 ---
 

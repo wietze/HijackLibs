@@ -13,6 +13,8 @@ VulnerableExecutables:
   Type: Sideloading
 - Path: '%SYSTEM32%\datausagelivetiletask.exe'
   Type: Sideloading
+- Path: '%SYSTEM32%\dcdiag.exe'
+  Type: Sideloading
 - Path: '%SYSTEM32%\devicecensus.exe'
   Type: Sideloading
 - Path: '%SYSTEM32%\dnscacheugc.exe'
@@ -24,6 +26,10 @@ VulnerableExecutables:
 - Path: '%SYSTEM32%\fxsunatd.exe'
   Type: Sideloading
   AutoElevate: true
+- Path: '%SYSTEM32%\ipconfig.exe'
+  Type: Sideloading
+- Path: '%SYSTEM32%\mousocoreworker.exe'
+  Type: Sideloading
 - Path: '%SYSTEM32%\msra.exe'
   Type: Sideloading
 - Path: '%SYSTEM32%\mstsc.exe'
@@ -80,10 +86,14 @@ Resources:
 - https://wietze.github.io/blog/hijacking-dlls-in-windows
 - https://wietze.github.io/blog/save-the-environment-variables
 - https://twitter.com/SBousseaden/status/1550903546916311043
+- https://securityintelligence.com/posts/windows-features-dll-sideloading/
+- https://github.com/xforcered/WFH
 Acknowledgements:
 - Name: Wietze
   Twitter: '@wietze'
 - Name: Samir
   Twitter: '@sbousseaden'
+- Name: Chris Spehn
+  Twitter: "@ConsciousHacker"
 ---
 

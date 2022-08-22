@@ -9,13 +9,19 @@ ExpectedLocations:
 VulnerableExecutables:
   - Path: '%SYSTEM32%\compmgmtlauncher.exe'
     Type: Sideloading
+  - Path: '%SYSTEM32%\sdbinst.exe'
+    Type: Sideloading
   - Path: '%WINDIR%\explorer.exe'
     Type: Search Order
 Resources:
   - https://wietze.github.io/blog/hijacking-dlls-in-windows
   - https://go.crowdstrike.com/rs/281-OBQ-266/images/Report2020CrowdStrikeGlobalThreatReport.pdf
+  - https://securityintelligence.com/posts/windows-features-dll-sideloading/
+  - https://github.com/xforcered/WFH
 Acknowledgements:
   - Name: Wietze
     Twitter: "@wietze"
+  - Name: Chris Spehn
+    Twitter: "@ConsciousHacker"
 ---
 

@@ -1,0 +1,19 @@
+---
+Name: netjoin.dll
+Author: Chris Spehn
+Created: 2021-08-17
+Vendor: Microsoft
+ExpectedLocations:
+  - "%SYSTEM32%"
+  - "%SYSWOW64%"
+VulnerableExecutables:
+  - Path: '%SYSTEM32%\netdom.exe'
+    Type: Sideloading
+Resources:
+  - https://securityintelligence.com/posts/windows-features-dll-sideloading/
+  - https://github.com/xforcered/WFH
+Acknowledgements:
+  - Name: Chris Spehn
+    Twitter: "@ConsciousHacker"
+---
+

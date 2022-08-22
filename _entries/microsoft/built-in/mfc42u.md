@@ -1,0 +1,43 @@
+---
+Name: mfc42u.dll
+Author: Chris Spehn
+Created: 2021-08-16
+Vendor: Microsoft
+ExpectedLocations:
+  - "%SYSTEM32%"
+  - "%SYSWOW64%"
+VulnerableExecutables:
+  - Path: '%SYSTEM32%\devicepairingwizard.exe'
+    Type: Sideloading
+  - Path: '%SYSTEM32%\dirquota.exe'
+    Type: Sideloading
+  - Path: '%SYSTEM32%\eudcedit.exe'
+    Type: Sideloading
+  - Path: '%SYSTEM32%\filescrn.exe'
+    Type: Sideloading
+  - Path: '%SYSTEM32%\ldp.exe'
+    Type: Sideloading
+  - Path: '%SYSTEM32%\msconfig.exe'
+    Type: Sideloading
+  - Path: '%SYSTEM32%\msinfo32.exe'
+    Type: Sideloading
+  - Path: '%SYSTEM32%\mspaint.exe'
+    Type: Sideloading
+  - Path: '%SYSTEM32%\nlbmgr.exe'
+    Type: Sideloading
+  - Path: '%SYSTEM32%\shrpubw.exe'
+    Type: Sideloading
+  - Path: '%SYSTEM32%\storrept.exe'
+    Type: Sideloading
+  - Path: '%SYSTEM32%\verifiergui.exe'
+    Type: Sideloading
+  - Path: '%SYSTEM32%\wfs.exe'
+    Type: Sideloading
+Resources:
+  - https://securityintelligence.com/posts/windows-features-dll-sideloading/
+  - https://github.com/xforcered/WFH
+Acknowledgements:
+  - Name: Chris Spehn
+    Twitter: "@ConsciousHacker"
+---
+

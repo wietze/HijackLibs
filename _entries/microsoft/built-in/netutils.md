@@ -17,6 +17,12 @@ VulnerableExecutables:
     Type: Sideloading
   - Path: '%SYSTEM32%\chgport.exe'
     Type: Sideloading
+  - Path: '%SYSTEM32%\credwiz.exe'
+    Type: Sideloading
+  - Path: '%SYSTEM32%\csvde.exe'
+    Type: Sideloading
+  - Path: '%SYSTEM32%\dcdiag.exe'
+    Type: Sideloading
   - Path: '%SYSTEM32%\devicecensus.exe'
     Type: Sideloading
   - Path: '%SYSTEM32%\deviceenroller.exe'
@@ -26,6 +32,12 @@ VulnerableExecutables:
   - Path: '%SYSTEM32%\dpapimig.exe'
     Type: Sideloading
   - Path: '%SYSTEM32%\driverquery.exe'
+    Type: Sideloading
+  - Path: '%SYSTEM32%\dsacls.exe'
+    Type: Sideloading
+  - Path: '%SYSTEM32%\dsdbutil.exe'
+    Type: Sideloading
+  - Path: '%SYSTEM32%\dsmgmt.exe'
     Type: Sideloading
   - Path: '%SYSTEM32%\dsregcmd.exe'
     Type: Sideloading
@@ -40,11 +52,17 @@ VulnerableExecutables:
     Type: Sideloading
   - Path: '%SYSTEM32%\getmac.exe'
     Type: Sideloading
+  - Path: '%SYSTEM32%\gpfixup.exe'
+    Type: Sideloading
   - Path: '%SYSTEM32%\gpresult.exe'
     Type: Sideloading
   - Path: '%SYSTEM32%\ie4uinit.exe'
     Type: Sideloading
+  - Path: '%SYSTEM32%\klist.exe'
+    Type: Sideloading
   - Path: '%SYSTEM32%\ksetup.exe'
+    Type: Sideloading
+  - Path: '%SYSTEM32%\ldifde.exe'
     Type: Sideloading
   - Path: '%SYSTEM32%\mshta.exe'
     Type: Sideloading
@@ -54,10 +72,14 @@ VulnerableExecutables:
     Type: Sideloading
   - Path: '%SYSTEM32%\net1.exe'
     Type: Sideloading
+  - Path: '%SYSTEM32%\netdom.exe'
+    Type: Sideloading
   - Path: '%SYSTEM32%\netplwiz.exe'
     Type: Sideloading
     AutoElevate: true
   - Path: '%SYSTEM32%\nltest.exe'
+    Type: Sideloading
+  - Path: '%SYSTEM32%\ntdsutil.exe'
     Type: Sideloading
   - Path: '%SYSTEM32%\openfiles.exe'
     Type: Sideloading
@@ -69,11 +91,25 @@ VulnerableExecutables:
     Type: Sideloading
   - Path: '%SYSTEM32%\raserver.exe'
     Type: Sideloading
+  - Path: '%SYSTEM32%\redircmp.exe'
+    Type: Sideloading
+  - Path: '%SYSTEM32%\redirusr.exe'
+    Type: Sideloading
   - Path: '%SYSTEM32%\rekeywiz.exe'
+    Type: Sideloading
+  - Path: '%SYSTEM32%\rendom.exe'
+    Type: Sideloading
+  - Path: '%SYSTEM32%\repadmin.exe'
     Type: Sideloading
   - Path: '%SYSTEM32%\reset.exe'
     Type: Sideloading
+  - Path: '%SYSTEM32%\runas.exe'
+    Type: Sideloading
   - Path: '%SYSTEM32%\rwinsta.exe'
+    Type: Sideloading
+  - Path: '%SYSTEM32%\setspn.exe'
+    Type: Sideloading
+  - Path: '%SYSTEM32%\shrpubw.exe'
     Type: Sideloading
   - Path: '%SYSTEM32%\spaceagent.exe'
     Type: Sideloading
@@ -101,8 +137,12 @@ VulnerableExecutables:
     Type: Sideloading
 Resources:
   - https://wietze.github.io/blog/hijacking-dlls-in-windows
+  - https://securityintelligence.com/posts/windows-features-dll-sideloading/
+  - https://github.com/xforcered/WFH
 Acknowledgements:
   - Name: Wietze
     Twitter: "@wietze"
+  - Name: Chris Spehn
+    Twitter: "@ConsciousHacker"
 ---
 

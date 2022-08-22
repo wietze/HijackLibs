@@ -7,13 +7,31 @@ ExpectedLocations:
 - '%SYSTEM32%'
 - '%SYSWOW64%'
 VulnerableExecutables:
+- Path: '%SYSTEM32%\certreq.exe'
+  Type: Sideloading
+- Path: '%SYSTEM32%\certutil.exe'
+  Type: Sideloading
+- Path: '%SYSTEM32%\clipup.exe'
+  Type: Sideloading
+- Path: '%SYSTEM32%\dmcertinst.exe'
+  Type: Sideloading
+- Path: '%SYSTEM32%\dnscmd.exe'
+  Type: Sideloading
+- Path: '%SYSTEM32%\dsregcmd.exe'
+  Type: Sideloading
 - Path: '%SYSTEM32%\filehistory.exe'
   Type: Environment Variable
   Variable: SYSTEMROOT
+- Path: '%SYSTEM32%\sgrmbroker.exe'
+  Type: Sideloading
 Resources:
 - https://wietze.github.io/blog/save-the-environment-variables
+- https://securityintelligence.com/posts/windows-features-dll-sideloading/
+- https://github.com/xforcered/WFH
 Acknowledgements:
 - Name: Wietze
   Twitter: '@wietze'
+- Name: Chris Spehn
+  Twitter: "@ConsciousHacker"
 ---
 

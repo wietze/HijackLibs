@@ -14,6 +14,8 @@ VulnerableExecutables:
 - Path: '%SYSTEM32%\taskmgr.exe'
   Type: Sideloading
   AutoElevate: true
+- Path: '%SYSTEM32%\tracerpt.exe'
+  Type: Sideloading
 - Path: '%SYSTEM32%\typeperf.exe'
   Type: Sideloading
 - Path: '%SYSTEM32%\logman.exe'
@@ -22,8 +24,12 @@ VulnerableExecutables:
 Resources:
 - https://wietze.github.io/blog/hijacking-dlls-in-windows
 - https://wietze.github.io/blog/save-the-environment-variables
+- https://securityintelligence.com/posts/windows-features-dll-sideloading/
+- https://github.com/xforcered/WFH
 Acknowledgements:
 - Name: Wietze
   Twitter: '@wietze'
+- Name: Chris Spehn
+  Twitter: "@ConsciousHacker"
 ---
 

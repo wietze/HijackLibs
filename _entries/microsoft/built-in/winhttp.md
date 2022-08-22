@@ -34,9 +34,15 @@ VulnerableExecutables:
     Type: Sideloading
   - Path: '%SYSTEM32%\pacjsworker.exe'
     Type: Sideloading
+  - Path: '%SYSTEM32%\recoverydrive.exe'
+    Type: Sideloading
   - Path: '%SYSTEM32%\resetengine.exe'
     Type: Sideloading
   - Path: '%SYSTEM32%\rpcping.exe'
+    Type: Sideloading
+  - Path: '%SYSTEM32%\sgrmlpac.exe'
+    Type: Sideloading
+  - Path: '%SYSTEM32%\sihclient.exe'
     Type: Sideloading
   - Path: '%SYSTEM32%\systemreset.exe'
     Type: Sideloading
@@ -45,8 +51,12 @@ VulnerableExecutables:
     Type: Sideloading
 Resources:
   - https://wietze.github.io/blog/hijacking-dlls-in-windows
+  - https://securityintelligence.com/posts/windows-features-dll-sideloading/
+  - https://github.com/xforcered/WFH
 Acknowledgements:
   - Name: Wietze
     Twitter: "@wietze"
+  - Name: Chris Spehn
+    Twitter: "@ConsciousHacker"
 ---
 

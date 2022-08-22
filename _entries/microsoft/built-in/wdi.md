@@ -7,6 +7,8 @@ ExpectedLocations:
 - '%SYSTEM32%'
 - '%SYSWOW64%'
 VulnerableExecutables:
+- Path: '%SYSTEM32%\cofire.exe'
+  Type: Sideloading
 - Path: '%SYSTEM32%\msra.exe'
   Type: Sideloading
 - Path: '%SYSTEM32%\netsh.exe'
@@ -20,8 +22,12 @@ VulnerableExecutables:
 Resources:
 - https://wietze.github.io/blog/hijacking-dlls-in-windows
 - https://wietze.github.io/blog/save-the-environment-variables
+- https://securityintelligence.com/posts/windows-features-dll-sideloading/
+- https://github.com/xforcered/WFH
 Acknowledgements:
 - Name: Wietze
   Twitter: '@wietze'
+- Name: Chris Spehn
+  Twitter: "@ConsciousHacker"
 ---
 

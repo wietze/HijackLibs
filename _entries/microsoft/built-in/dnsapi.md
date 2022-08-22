@@ -9,19 +9,33 @@ ExpectedLocations:
 VulnerableExecutables:
   - Path: '%SYSTEM32%\checknetisolation.exe'
     Type: Sideloading
+  - Path: '%SYSTEM32%\dcdiag.exe'
+    Type: Sideloading
+  - Path: '%SYSTEM32%\dnscmd.exe'
+    Type: Sideloading
   - Path: '%SYSTEM32%\edpcleanup.exe'
+    Type: Sideloading
+  - Path: '%SYSTEM32%\ipconfig.exe'
     Type: Sideloading
   - Path: '%SYSTEM32%\lpremove.exe'
     Type: Sideloading
   - Path: '%SYSTEM32%\msdtc.exe'
     Type: Sideloading
+  - Path: '%SYSTEM32%\netdom.exe'
+    Type: Sideloading
   - Path: '%SYSTEM32%\netsh.exe'
     Type: Sideloading
   - Path: '%SYSTEM32%\nslookup.exe'
     Type: Sideloading
+  - Path: '%SYSTEM32%\rendom.exe'
+    Type: Sideloading
+  - Path: '%SYSTEM32%\repadmin.exe'
+    Type: Sideloading
   - Path: '%SYSTEM32%\securityhealthservice.exe'
     Type: Sideloading
   - Path: '%SYSTEM32%\setupugc.exe'
+    Type: Sideloading
+  - Path: '%SYSTEM32%\sihclient.exe'
     Type: Sideloading
   - Path: '%SYSTEM32%\spoolsv.exe'
     Type: Sideloading
@@ -41,8 +55,12 @@ VulnerableExecutables:
     Type: Sideloading
 Resources:
   - https://wietze.github.io/blog/hijacking-dlls-in-windows
+  - https://securityintelligence.com/posts/windows-features-dll-sideloading/
+  - https://github.com/xforcered/WFH
 Acknowledgements:
   - Name: Wietze
     Twitter: "@wietze"
+  - Name: Chris Spehn
+    Twitter: "@ConsciousHacker"
 ---
 

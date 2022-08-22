@@ -7,6 +7,8 @@ ExpectedLocations:
   - "%SYSTEM32%"
   - "%SYSWOW64%"
 VulnerableExecutables:
+- Path: '%SYSTEM32%\cacls.exe'
+  Type: Sideloading
 - Path: '%PROGRAMFILES%\Google\Chrome\Application\chrome.exe'
   Type: Environment Variable
   Variable: SYSTEMROOT
@@ -18,8 +20,12 @@ VulnerableExecutables:
   Variable: SYSTEMROOT
 Resources:
 - https://wietze.github.io/blog/save-the-environment-variables
+- https://securityintelligence.com/posts/windows-features-dll-sideloading/
+- https://github.com/xforcered/WFH
 Acknowledgements:
   - Name: Wietze
     Twitter: "@wietze"
+  - Name: Chris Spehn
+    Twitter: "@ConsciousHacker"
 ---
 

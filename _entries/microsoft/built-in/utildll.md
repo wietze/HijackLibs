@@ -17,6 +17,8 @@ VulnerableExecutables:
     Type: Sideloading
   - Path: '%SYSTEM32%\quser.exe'
     Type: Sideloading
+  - Path: '%SYSTEM32%\qprocess.exe'
+    Type: Sideloading
   - Path: '%SYSTEM32%\qwinsta.exe'
     Type: Sideloading
   - Path: '%SYSTEM32%\reset.exe'
@@ -29,8 +31,12 @@ VulnerableExecutables:
     Type: Sideloading
 Resources:
   - https://wietze.github.io/blog/hijacking-dlls-in-windows
+  - https://securityintelligence.com/posts/windows-features-dll-sideloading/
+  - https://github.com/xforcered/WFH
 Acknowledgements:
   - Name: Wietze
     Twitter: "@wietze"
+  - Name: Chris Spehn
+    Twitter: "@ConsciousHacker"
 ---
 

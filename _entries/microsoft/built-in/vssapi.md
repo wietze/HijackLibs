@@ -9,6 +9,14 @@ ExpectedLocations:
 VulnerableExecutables:
   - Path: '%SYSTEM32%\bootim.exe'
     Type: Sideloading
+  - Path: '%SYSTEM32%\cleanmgr.exe'
+    Type: Sideloading
+  - Path: '%SYSTEM32%\dsdbutil.exe'
+    Type: Sideloading
+  - Path: '%SYSTEM32%\ntdsutil.exe'
+    Type: Sideloading
+  - Path: '%SYSTEM32%\recoverydrive.exe'
+    Type: Sideloading
   - Path: '%SYSTEM32%\resetengine.exe'
     Type: Sideloading
   - Path: '%SYSTEM32%\rstrui.exe'
@@ -30,8 +38,12 @@ VulnerableExecutables:
     Type: Sideloading
 Resources:
   - https://wietze.github.io/blog/hijacking-dlls-in-windows
+  - https://securityintelligence.com/posts/windows-features-dll-sideloading/
+  - https://github.com/xforcered/WFH
 Acknowledgements:
   - Name: Wietze
     Twitter: "@wietze"
+  - Name: Chris Spehn
+    Twitter: "@ConsciousHacker"
 ---
 

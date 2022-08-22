@@ -7,6 +7,8 @@ ExpectedLocations:
   - "%SYSTEM32%"
   - "%SYSWOW64%"
 VulnerableExecutables:
+  - Path: '%SYSTEM32%\applicationframehost.exe'
+    Type: Sideloading
   - Path: '%SYSTEM32%\dataexchangehost.exe'
     Type: Sideloading
   - Path: '%SYSTEM32%\dwm.exe'
@@ -25,13 +27,19 @@ VulnerableExecutables:
   - Path: '%SYSTEM32%\taskmgr.exe'
     Type: Sideloading
     AutoElevate: true
+  - Path: '%SYSTEM32%\vsgraphicsremoteengine.exe'
+    Type: Sideloading
   - Path: '%SYSTEM32%\winsat.exe'
     Type: Sideloading
     AutoElevate: true
 Resources:
   - https://wietze.github.io/blog/hijacking-dlls-in-windows
+  - https://securityintelligence.com/posts/windows-features-dll-sideloading/
+  - https://github.com/xforcered/WFH
 Acknowledgements:
   - Name: Wietze
     Twitter: "@wietze"
+  - Name: Chris Spehn
+    Twitter: "@ConsciousHacker"
 ---
 
