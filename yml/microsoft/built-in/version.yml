@@ -79,9 +79,15 @@ VulnerableExecutables:
     Type: Sideloading
   - Path: '%SYSTEM32%\wscript.exe'
     Type: Sideloading
+  - Path: '%APPDATA%\Zoom\bin\Zoom.exe'
+    Condition: 'Zoom for Windows <= 5.11.1 (6602)'
+    Type: Sideloading
 Resources:
   - https://securityintelligence.com/posts/windows-features-dll-sideloading/
   - https://github.com/xforcered/WFH
+  - https://twitter.com/an0n_r0/status/1544472352657915904
 Acknowledgements:
   - Name: Chris Spehn
     Twitter: "@ConsciousHacker"
+  - Name: an0n
+    Twitter: "@an0n_r0"
