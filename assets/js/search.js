@@ -157,7 +157,8 @@ function generateHome(){
     // Update status bar
     $('#status').append(latestItemsWrapper);
     $('#status').append(vendorWrapper);
-    addLatestEntryPills(latestItems, Object.keys(data).slice(0,10));
+    items = Object.keys(data).sort(function(a,b){return data[a].date-data[b].date}).reverse()
+    addLatestEntryPills(latestItems, items.slice(0,10));
     addVendorPills(vendorItems, stats_vendor);
     $('#status').append('<br /><span class="stats">The database contains '+ createCommaAnd(result) +' entries. To see all available DLL hijacking entries, click <a href="javascript:" onclick="triggerSearch(\'.exe\')">here</a>.</span>')
 }

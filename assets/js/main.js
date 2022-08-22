@@ -48,6 +48,59 @@ function goBack(){
     }
 }
 
+function timeSince(date) {
+    var seconds = Math.floor((new Date() - date) / 1000);
 
-const load = () => { document.querySelectorAll('a.reference').forEach((x) => { parseUrls(x); }); }
+    var interval = seconds / 31536000;
+
+    if (interval > 1) {
+      return "over" + Math.floor(interval) + " year"+(interval>2 ? "s" : "")+" ago";
+    }
+    interval = seconds / 2592000;
+    if (interval > 1) {
+      return "about " + Math.floor(interval) + " month"+(interval>2 ? "s" : "")+" ago";
+    }
+    interval = seconds / 86400;
+    if (interval > 1) {
+      return Math.floor(interval) + " day"+(interval>2 ? "s" : "")+" ago";
+    }
+    return "Today"
+}
+
+function isValidGitHubUrl(string) {
+    let url;
+
+    try {
+      url = new URL(string);
+    } catch (_) {
+      return false;
+    }
+
+    return url.protocol === "https:" && url.hostname==="github.com";
+  }
+
+function getLastModified(path) {
+    fetch("https://api.github.com/repos/wietze/Hijacklibs/commits?path="+encodeURIComponent(path), { headers: { "Content-Type": "application/json; charset=utf-8" }})
+    .then(res => res.json())
+    .then(commits => {
+        try {
+            date = commits[0]['commit']['committer']['date'].slice(0,10);
+            url = commits[0]['html_url']
+            if(/^\d{4}-\d{2}-\d{2}$/.test(date) && isValidGitHubUrl(url))
+                document.querySelector('div#last-updated').innerHTML = '<a href="'+url+'" class="link-dotted"><time datetime="'+date+'" title="'+date+'">'+timeSince(new Date(date))+'</time></a>';
+
+        } catch {
+            console.error("Could not parse JSON")
+        }
+    })
+    .catch(err => {
+        console.error("Could not load JSON:", err);
+    });
+}
+
+
+const load = () => { document.querySelectorAll('a.reference').forEach((x) => { parseUrls(x); });
+if(window.location.pathname.startsWith('/entries/'))
+    getLastModified(window.location.pathname.replace("/entries/", "/yml/").replace(".html", ".yml"))
+}
 window.onload = load;
