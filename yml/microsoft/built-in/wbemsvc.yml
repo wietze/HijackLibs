@@ -1,11 +1,11 @@
 ---
 Name: wbemsvc.dll
 Author: Wietze Beukema
-Created: '2022-05-21'
+Created: 2022-05-21
 Vendor: Microsoft
 ExpectedLocations:
-- '%SYSTEM32%'
-- '%SYSWOW64%'
+- '%SYSTEM32%\wbem'
+- '%SYSWOW64%\wbem'
 VulnerableExecutables:
 - Path: '%SYSTEM32%\cttune.exe'
   Type: Environment Variable
