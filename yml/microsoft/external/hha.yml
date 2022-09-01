@@ -5,6 +5,7 @@ Created: 2021-12-08
 Vendor: Microsoft
 ExpectedLocations:
   - "%SYSTEM32%"
+  - "%SYSWOW64%"
   - '%PROGRAMFILES%\HTML Help Workshop'
 VulnerableExecutables:
   - Path: '%PROGRAMFILES%\HTML Help Workshop\hhc.exe'
