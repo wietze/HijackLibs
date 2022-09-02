@@ -105,6 +105,21 @@ mapping:
             type: str
             required: false
 
+          OriginalName:
+            type: str
+            required: false
+            pattern: '^[ -~]+$'
+
+          InternalName:
+            type: str
+            required: false
+            pattern: '^[ -~]+$'
+
+          FileDescription:
+            type: str
+            required: false
+            pattern: '^[ -~]+$'
+
   Resources:
     type: seq
     required: false
