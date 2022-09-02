@@ -38,6 +38,31 @@ mapping:
         unique: true
         required: true
 
+  ExpectedVersionInformation:
+    type: seq
+    required: false
+    sequence:
+      - type: map
+        func: check_executables
+        mapping:
+          OriginalName:
+            type: str
+            required: false
+            unique: true
+            pattern: '^[ -~]+$'
+          
+          InternalName:
+            type: str
+            required: false
+            unique: true
+            pattern: '^[ -~]+$'
+          
+          FileDescription:
+            type: str
+            required: false
+            unique: true
+            pattern: '^[ -~]+$'
+
   VulnerableExecutables:
     type: seq
     required: true
