@@ -11,10 +11,13 @@ VulnerableExecutables:
     Type: Sideloading
   - Path: '%SYSTEM32%\presentationhost.exe'
     Type: Sideloading
+  - Path: '%SYSTEMROOT%\Microsoft.NET\Framework\v%VERSION%\applaunch.exe'
+    Type: Sideloading
 Resources:
   - https://wietze.github.io/blog/hijacking-dlls-in-windows
   - https://securityintelligence.com/posts/windows-features-dll-sideloading/
   - https://github.com/xforcered/WFH
+  - https://www.secureworks.com/research/shadowpad-malware-analysis
 Acknowledgements:
   - Name: Wietze
     Twitter: "@wietze"
