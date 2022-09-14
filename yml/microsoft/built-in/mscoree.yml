@@ -11,7 +11,7 @@ VulnerableExecutables:
     Type: Sideloading
   - Path: '%SYSTEM32%\presentationhost.exe'
     Type: Sideloading
-  - Path: '%SYSTEMROOT%\Microsoft.NET\Framework\v%VERSION%\applaunch.exe'
+  - Path: '%WINDIR%\Microsoft.NET\Framework\v%VERSION%\applaunch.exe'
     Type: Sideloading
 Resources:
   - https://wietze.github.io/blog/hijacking-dlls-in-windows
