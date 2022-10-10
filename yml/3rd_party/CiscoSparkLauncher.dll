@@ -8,7 +8,6 @@ ExpectedLocations:
 VulnerableExecutables:
   - Path: 'CiscoCollabHost.exe'
       SHA256:
-      - 187d59e5cc6489220d3c0a666f7cc81ed65cb7001b90aded40f5249268b27838
       - 15bb2d1e81a75a92d0012dcbf47686fa2ab10f2174cda36d7c4b03bfb72313b7
     Type: Search Order
 Resources:
