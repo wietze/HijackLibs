@@ -7,7 +7,7 @@ ExpectedLocations:
   - '%LOCALAPPDATA%\AppData\Local\CiscoSparkLauncher'
 VulnerableExecutables:
   - Path: 'CiscoCollabHost.exe'
-      SHA256:
+    SHA256:
       - 15bb2d1e81a75a92d0012dcbf47686fa2ab10f2174cda36d7c4b03bfb72313b7
     Type: Search Order
 Resources:
