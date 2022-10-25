@@ -8,10 +8,7 @@ ExpectedLocations:
 VulnerableExecutables:
   - Path: "vf_host.exe"
     SHA256:
-      - 0129c9c7b55a6f514a9fa8c38ce59d8939efda6ece67b90c6be13aec40f1bdab
       - df847abbfac55fb23715cde02ab52cbe59f14076f9e4bd15edbe28dcecb2a348
-      - 620e401b2b7727a6c7ebc37ee1f7d8e1742d7121c1f4ea350a43d460ef9bdc4c
-      - c8aea84abb476ab536198a36df53b37be3d987a9ce58cb06e93cac7d2bfb3703 
     Type: Sideloading
 Resources:
   - https://symantec-enterprise-blogs.security.com/blogs/threat-intelligence/budworm-espionage-us-state?web_view=true
