@@ -1,4 +1,5 @@
 title: Possible preparation for {{ include.page.Name }} DLL Hijacking
+id: {% include generate_uuid.yml page=include.page type=2 -%}
 status: experimental
 description: Detects possible DLL hijacking of {{ include.page.Name }} by looking for suspicious file writes of this DLL, to unexpected locations.
 references:
