@@ -1,0 +1,16 @@
+{%- assign length = include.page.Created | size -%}
+{%- assign min = 1000 | add length -%}
+{%- assign max = 9999 -%}
+{%- assign diff = max | minus: min -%}
+{%- assign randomNumber = include.page.Created | date: "%s" | modulo: diff | plus: min -%}
+{%- assign name="abcdefghijklmnopqrstruvwxyz01234567890_." | split:"" -%}
+{%- assign value = randomNumber -%}
+{%- assign i = 0 -%}
+{%- assign y = 0 -%}
+{%- for char in name -%}
+{%- assign i = i | plus:1 -%}
+{%- assign x = include.page.Name | split:"" | where_exp:"item","item == char" | size -%}
+{%- assign y = y | plus:x | times:i -%}
+{%- assign value = value | plus:y | modulo:899999 | plus: 100000 -%}
+{%- endfor -%}
+{{ include.type }}b{{ value }}-{{ randomNumber }}-48a3-{{ randomNumber | times:randomNumber | modulo: diff | plus: min }}-{{ value | times: randomNumber | modulo:899999 | plus: 100000 }}5b
