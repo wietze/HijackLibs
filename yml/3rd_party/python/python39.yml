@@ -6,6 +6,8 @@ Vendor: Python
 ExpectedLocations:
   - '%PROGRAMFILES%\Python39'
   - '%LOCALAPPDATA%\Temp\%VERSION%'
+  - '%PROGRAMFILES%\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\VC\SecurityIssueAnalysis\python'
+  - '%USERPROFILE%\anaconda3'
 VulnerableExecutables:
   - Path: 'python39.exe'
     Type: Sideloading
