@@ -4,7 +4,7 @@ Author: k4nfr3
 Created: 2022-08-15
 Vendor: Microsoft
 VulnerableExecutables:
-  - Path: 'Task Scheduler'
+  - Path: '%SYSTEM32%\svchost.exe'
     Type: Phantom
     PrivilegeEscalation: true    
 Resources:
