@@ -6,6 +6,7 @@ Vendor: Microsoft
 ExpectedLocations:
   - '%PROGRAMFILES%\Windows Kits\10\bin\%VERSION%\x86'
   - '%PROGRAMFILES%\Windows Kits\10\bin\%VERSION%\x64'
+  - '%PROGRAMFILES%\Windows Kits\10\bin\%VERSION%\arm'
   - '%PROGRAMFILES%\Windows Kits\10\bin\%VERSION%\arm64'
 VulnerableExecutables:
   - Path: '%PROGRAMFILES%\Windows Kits\10\bin\%VERSION%\x86\oleview.exe'
