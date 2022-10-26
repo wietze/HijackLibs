@@ -6,6 +6,7 @@ Vendor: Mozilla
 ExpectedLocations:
   - '%PROGRAMFILES%\SeaMonkey'
   - '%PROGRAMFILES%\Mozilla\Firefox'
+  - '%PROGRAMFILES%\Mozilla Thunderbird'
 VulnerableExecutables:
   - Path: '%PROGRAMFILES%\SeaMonkey\seamonkey.exe'
     Type: Sideloading

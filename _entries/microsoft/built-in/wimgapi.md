@@ -6,6 +6,7 @@ Vendor: Microsoft
 ExpectedLocations:
   - "%SYSTEM32%"
   - "%SYSWOW64%"
+  - '%PROGRAMFILES%\Windows Kits\10\Assessment and Deployment Kit\Deployment Tools\arm64\DISM'
 VulnerableExecutables:
   - Path: '%SYSTEM32%\recoverydrive.exe'
     Type: Sideloading
