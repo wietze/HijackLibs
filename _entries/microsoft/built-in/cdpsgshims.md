@@ -1,0 +1,17 @@
+---
+Name: cdpsgshims.dll
+Author: k4nfr3
+Created: 2022-08-15
+Vendor: Microsoft
+VulnerableExecutables:
+  - Path: '%SYSTEM32%\svchost.exe'
+    Type: Phantom
+    PrivilegeEscalation: true
+    Condition: 'CDPSvc runs within a shared process by default only if the machine has less than 3.5GB of RAM'    
+Resources:
+  - "https://itm4n.github.io/cdpsvc-dll-hijacking/"
+Acknowledgements:
+  - Name: itm4n
+    Twitter: "@itm4n"
+---
+
