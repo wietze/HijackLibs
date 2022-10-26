@@ -6,8 +6,7 @@ Vendor: Microsoft
 VulnerableExecutables:
   - Path: 'Task Scheduler'
     Type: Phantom
-    PrivilegeEscalation: true
-    Variable: PATH
+    PrivilegeEscalation: true    
 Resources:
   - "http://remoteawesomethoughts.blogspot.com/2019/05/windows-10-task-schedulerservice.html"
 Acknowledgements:
