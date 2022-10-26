@@ -5,7 +5,7 @@ Created: 2022-08-15
 Vendor: Microsoft
 VulnerableExecutables:
   - Path: 'Task Scheduler'
-    Type: Environment Variable
+    Type: Phantom
     PrivilegeEscalation: true
     Variable: PATH
 Resources:
