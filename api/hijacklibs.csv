@@ -2,7 +2,7 @@
 NOTE: Please use the rendered version of this file.
 ---
 Name,Author,Created,Vendor,CVE,ExpectedLocations,VulnerableExecutablePath,VulnerableExecutableType,VulnerableExecutableAutoElevated,VulnerableExecutablePrivilegeEscalation,VulnerableExecutableCondition,VulnerableExecutableSHA256,VulnerableExecutableEnvironmentVariable,Resources,Acknowledgements,URL
-{%-assign entries = site.entries |sort:"Created"%}
+{%-assign entries = site.entries %}
 {%for file in entries %}
 {%-assign paths = ''%}{%for path in file.ExpectedLocations%}{%assign paths = paths | append:path%}{%unless forloop.last%}{%assign paths = paths | append:', '%}{%endunless%}{%endfor%}
 {%-assign resources = ''%}{%for resource in file.Resources%}{%assign resources = resources | append:resource%}{%unless forloop.last%}{%assign resources = resources | append:', '%}{%endunless%}{%endfor%}
