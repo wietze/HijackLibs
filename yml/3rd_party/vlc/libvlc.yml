@@ -3,6 +3,8 @@ Name: libvlc.dll
 Author: Wietze Beukema
 Created: 2022-11-18
 Vendor: VLC
+ExpectedLocations:
+  - '%PROGRAMFILES%\VideoLAN\VLC'
 VulnerableExecutables:
   - Path: '%PROGRAMFILES%\VideoLAN\VLC\vlc.exe'
     Type: Sideloading
