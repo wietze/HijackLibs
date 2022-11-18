@@ -1,0 +1,14 @@
+---
+NOTE: Please use the rendered version of this file.
+---
+Name,Author,Created,Vendor,CVE,ExpectedLocations,VulnerableExecutablePath,VulnerableExecutableType,VulnerableExecutableAutoElevated,VulnerableExecutablePrivilegeEscalation,VulnerableExecutableCondition,VulnerableExecutableSHA256,VulnerableExecutableEnvironmentVariable,Resources,Acknowledgements,URL
+{%-assign entries = site.entries |sort:"Created"%}
+{%for file in entries %}
+{%-assign paths = ''%}{%for path in file.ExpectedLocations%}{%assign paths = paths | append:path%}{%unless forloop.last%}{%assign paths = paths | append:', '%}{%endunless%}{%endfor%}
+{%-assign resources = ''%}{%for resource in file.Resources%}{%assign resources = resources | append:resource%}{%unless forloop.last%}{%assign resources = resources | append:', '%}{%endunless%}{%endfor%}
+{%-assign acknowledgements = ''%}{%for acknowledgement in file.Acknowledgements%}{%assign acknowledgements = acknowledgements | append:acknowledgement.Name%}{%if acknowledgement.Twitter != null and acknowledgement.Twitter != ""%}{%assign acknowledgements = acknowledgements | append:' (' | append:acknowledgement.Twitter | append:')'%}{%endif%}{%unless forloop.last%}{%assign acknowledgements = acknowledgements | append:', '%}{%endunless%}{%endfor%}
+{%-for command in file.VulnerableExecutables-%}
+{%-assign hashes = ''-%}{%-for hash in command.SHA256%}{%assign hashes = hashes | append:hash%}{%unless forloop.last%}{%assign hashes = hashes | append:', '%}{%endunless%}{%-endfor-%}
+"{{file.Name|replace:'"', '""'}}","{{file.Author|replace:'"', '""'}}","{{file.Created|replace:'"', '""'}}","{{file.Vendor|replace:'"', '""'}}","{{file.CVE|replace:'"', '""'}}","{{paths|replace:'"', '""'}}","{{command.Path|replace:'"', '""'}}","{{command.Type|replace:'"', '""'}}","{{command.AutoElevate}}","{{command.PrivilegeEscalation}}","{{command.Condition|replace:'"', '""'}}","{{hashes}}","{{command.Variable|replace:'"', '""'}}","{{resources|replace:'"', '""'}}","{{acknowledgements|replace:'"', '""'}}","{{file.url | absolute_url}}"
+{%endfor-%}
+{%endfor-%}
