@@ -372,6 +372,7 @@ table {
     border-collapse: collapse;
     border: 1px solid #ccc;
 }
+
 table>thead td {
     font-weight: bold;
     background: rgb(225, 105, 50);
@@ -382,9 +383,14 @@ table td {
     padding: 2px 5px;
 }
 
-table td:first-of-type{
+table td:first-of-type {
     font-weight: bold;
 }
 
-table tr:nth-child(even) {background: rgb(233, 233, 233)}
-table tr:nth-child(odd) {background: #FFF}
+table tr:nth-child(even) {
+    background: rgb(233, 233, 233)
+}
+
+table tr:nth-child(odd) {
+    background: #FFF
+}
