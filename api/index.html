@@ -1,0 +1,106 @@
+---
+title: APIs
+---
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>{% if page.title %}{{ page.title }} | {{ site.title }}{% else %}{% else %}{{ site.title }}{% endif
+        %}</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
+        integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w=="
+        crossorigin="anonymous" />
+    <script src="{{ '/assets/js/main.js' | relative_url }}"></script>
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.6.0.js"></script>
+
+    <link rel="icon" type="image/x-icon" href="{{ site.favicon_location }}">
+</head>
+
+<body>
+    <article>
+        <div class="search_banner">
+            <header>
+                <div class="back" style="visibility: visible;"><i class="fas fa-arrow-left" onclick="goBack()"
+                        style="color: #ddd;"></i></div>
+                <h1>Hijack Libs</h1>
+            </header>
+        </div>
+        <section style="margin-top: 0em;">
+            <h2>APIs</h2>
+            <p>Datasets of the {{ site.title }} project is available in the following formats:</p>
+            <p>
+            <table cellspacing=0>
+                <thead>
+                    <tr>
+                        <td style="width:10%">Format</td>
+                        <td style="width:20%">Type</td>
+                        <td style="width:40%">Structure</td>
+                        <td>URL</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>JSON</td>
+                        <td>All entries</td>
+                        <td>Same as original YAML files</td>
+                        <td><a href="{{'/api/hijacklibs.json' | relative_url }}">{{'/api/hijacklibs.json' |
+                                relative_url}}</a></td>
+                    </tr>
+                    <tr>
+                        <td>CSV</td>
+                        <td>All entries</td>
+                        <td>One line for each (DLL, EXE) combination</td>
+                        <td><a href="{{'/api/hijacklibs.csv' | relative_url }}">{{'/api/hijacklibs.csv' |
+                                relative_url}}</a></td>
+                    </tr>
+                    <tr>
+                        <td>YAML</td>
+                        <td>Individual entries</td>
+                        <td>The 'source' YAML files</td>
+                        <td><a
+                                href="https://raw.githubusercontent.com/{{site.repo}}/main/yml">https://raw.githubusercontent.com/{{site.repo}}/main/yml</a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            </p>
+
+            <p>Furthermore, there are also data sources for detection content:</p>
+            <p>
+            <table cellspacing=0>
+                <thead>
+                    <tr>
+                        <td style="width:10%">Format</td>
+                        <td style="width:20%">Type</td>
+                        <td style="width:40%">Content</td>
+                        <td>URL</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Sigma (YAML)</td>
+                        <td>All entries</td>
+                        <td>Auto-generated detection content for image loads</td>
+                        <td><a href="{{'/api/sigma_feed_image.yml' | relative_url }}">{{'/api/sigma_feed_image.yml' |
+                                relative_url}}</a></td>
+                    </tr>
+                    <tr>
+                        <td>Sigma (YAML)</td>
+                        <td>All entries</td>
+                        <td>Auto-generated detection content for file writes</td>
+                        <td><a href="{{'/api/sigma_feed_file.yml' | relative_url }}">{{'/api/sigma_feed_file.yml' |
+                                relative_url}}</a></td>
+                    </tr>
+                </tbody>
+            </table>
+            </p>
+
+        </section>
+    </article>
+</body>
+
+</html>

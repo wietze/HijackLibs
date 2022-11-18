@@ -1,0 +1,8 @@
+---
+NOTE: Please use the rendered version of this file.
+---
+[{%-for file in site.entries-%}
+{%assign keys = "Name,Author,Created,Vendor,CVE,ExpectedLocations,VulnerableExecutables,Resources,Acknowledgements" | split:','-%}
+{
+{%-for key in keys%}"{{key}}":{{file[key] | jsonify}},{%endfor%}"url":"{{file.url | absolute_url}}"}{% unless forloop.last %},{% endunless -%}
+{%-endfor-%}]
