@@ -4,7 +4,7 @@ Author: Sorina Ionescu
 Created: 2022-10-10
 Vendor: Cisco
 ExpectedLocations:
-  - '%LOCALAPPDATA%\AppData\Local\CiscoSparkLauncher'
+  - '%LOCALAPPDATA%\CiscoSparkLauncher'
 VulnerableExecutables:
   - Path: 'CiscoCollabHost.exe'
     SHA256:
