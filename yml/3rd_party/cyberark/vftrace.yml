@@ -5,6 +5,8 @@ Created: 2022-10-17
 Vendor: CyberArk
 ExpectedLocations:
   - '%PROGRAMFILES%\CyberArk\Endpoint Privilege Manager\Agent\x32'
+  - '%PROGRAMFILES%\CyberArk\Endpoint Privilege Manager\Agent\x64'
+  - '%PROGRAMFILES%\CyberArk\Endpoint Privilege Manager\Agent'
 VulnerableExecutables:
   - Path: "vf_host.exe"
     SHA256:
