@@ -48,17 +48,14 @@ mapping:
           OriginalName:
             type: str
             required: false
-            unique: true
           
           InternalName:
             type: str
             required: false
-            unique: true
           
           FileDescription:
             type: str
             required: false
-            unique: true
 
   VulnerableExecutables:
     type: seq
