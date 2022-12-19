@@ -8,7 +8,7 @@ ExpectedLocations:
 ExpectedVersionInformation:
   - OriginalName: wsc.dll
     InternalName: wsc
-    FileDescription: 
+    FileDescription: ""
 VulnerableExecutables:
   - Path: wsc_proxy.exe
     SHA256:
