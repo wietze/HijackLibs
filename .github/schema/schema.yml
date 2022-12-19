@@ -49,19 +49,16 @@ mapping:
             type: str
             required: true
             unique: true
-            pattern: '^|$^[ -~]+$'
           
           InternalName:
             type: str
             required: true
             unique: true
-            pattern: '^|$^[ -~]+$'
           
           FileDescription:
             type: str
             required: true
             unique: true
-            pattern: '^$|^[ -~]+$'
 
   VulnerableExecutables:
     type: seq
