@@ -7,8 +7,8 @@ ExpectedLocations:
   - '%PROGRAMFILES%\AVAST Software\Avast'
 ExpectedVersionInformation:
   - OriginalName: wsc.dll
-  - InternalName: wsc
-  - FileDescription: Avast security center dll
+    InternalName: wsc
+    FileDescription: Avast security center dll
 VulnerableExecutables:
   - Path: wsc_proxy.exe
     SHA256:
@@ -17,3 +17,4 @@ VulnerableExecutables:
 Resources:
   - https://github.com/netero1010/Vulnerability-Disclosure/tree/main/CVE-2022-AVAST2
   - https://securelist.com/cycldek-bridging-the-air-gap/97157/
+
