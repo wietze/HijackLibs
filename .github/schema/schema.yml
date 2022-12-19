@@ -38,6 +38,38 @@ mapping:
         unique: true
         required: true
 
+  ExpectedVersionInformation:
+    type: seq
+    required: false
+    sequence:
+      - type: map
+        func: check_executables
+        mapping:
+            CompanyName:
+            type: str
+            required: false
+          FileDescription:
+            type: str
+            required: false
+          FileVersion:
+            type: str
+            required: false
+          InternalName:
+            type: str
+            required: false
+          LegalCopyright:
+            type: str
+            required: false
+          OriginalFilename:
+            type: str
+            required: false
+          ProductName:
+            type: str
+            required: false
+          ProductVersion:
+            type: str
+            required: false
+
   VulnerableExecutables:
     type: seq
     required: true
@@ -77,6 +109,31 @@ mapping:
                 required: true
 
           Variable:
+            type: str
+            required: false
+
+            CompanyName:
+            type: str
+            required: false
+          FileDescription:
+            type: str
+            required: false
+          FileVersion:
+            type: str
+            required: false
+          InternalName:
+            type: str
+            required: false
+          LegalCopyright:
+            type: str
+            required: false
+          OriginalFilename:
+            type: str
+            required: false
+          ProductName:
+            type: str
+            required: false
+          ProductVersion:
             type: str
             required: false
 
