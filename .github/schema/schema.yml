@@ -47,17 +47,17 @@ mapping:
         mapping:
           OriginalName:
             type: str
-            required: true
+            required: false
             unique: true
           
           InternalName:
             type: str
-            required: true
+            required: false
             unique: true
           
           FileDescription:
             type: str
-            required: true
+            required: false
             unique: true
 
   VulnerableExecutables:
