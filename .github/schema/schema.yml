@@ -45,7 +45,7 @@ mapping:
       - type: map
         func: check_executables
         mapping:
-            CompanyName:
+          CompanyName:
             type: str
             required: false
           FileDescription:
@@ -112,7 +112,7 @@ mapping:
             type: str
             required: false
 
-            CompanyName:
+          CompanyName:
             type: str
             required: false
           FileDescription:
