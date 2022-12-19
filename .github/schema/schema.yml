@@ -49,19 +49,17 @@ mapping:
             type: str
             required: false
             unique: true
-            pattern: '.|'
+            pattern: '.'
           
           InternalName:
             type: str
             required: false
             unique: true
-            pattern: '.|'
           
           FileDescription:
             type: str
             required: false
             unique: true
-            pattern: '.|'
 
   VulnerableExecutables:
     type: seq
