@@ -47,21 +47,21 @@ mapping:
         mapping:
           OriginalName:
             type: str
-            required: false
+            required: true
             unique: true
-            pattern: '^[ -~]+$'
+            pattern: '^|$^[ -~]+$'
           
           InternalName:
             type: str
-            required: false
+            required: true
             unique: true
-            pattern: '^[ -~]+$'
+            pattern: '^|$^[ -~]+$'
           
           FileDescription:
             type: str
-            required: false
+            required: true
             unique: true
-            pattern: '^[ -~]+$'
+            pattern: '^$|^[ -~]+$'
 
   VulnerableExecutables:
     type: seq
