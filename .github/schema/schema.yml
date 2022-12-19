@@ -45,15 +45,28 @@ mapping:
       - type: map
         func: check_executables
         mapping:
-          OriginalName:
+          CompanyName:
             type: str
             required: false
-          
+          FileDescription:
+            type: str
+            required: false
+          FileVersion:
+            type: str
+            required: false
           InternalName:
             type: str
             required: false
-          
-          FileDescription:
+          LegalCopyright:
+            type: str
+            required: false          
+          OriginalFilename:
+            type: str
+            required: false
+          ProductName:
+            type: str
+            required: false
+          ProductVersion:
             type: str
             required: false
 

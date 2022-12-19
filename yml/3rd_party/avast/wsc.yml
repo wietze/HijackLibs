@@ -6,7 +6,7 @@ Vendor: Avast
 ExpectedLocations:
   - '%PROGRAMFILES%\AVAST Software\Avast'
 ExpectedVersionInformation:
-  - OriginalName: wsc.dll
+  - OriginalFilename: wsc.dll
     InternalName: wsc
     FileDescription: Avast security center dll
 VulnerableExecutables:
