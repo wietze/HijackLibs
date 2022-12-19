@@ -49,7 +49,6 @@ mapping:
             type: str
             required: false
             unique: true
-            pattern: '.'
           
           InternalName:
             type: str
