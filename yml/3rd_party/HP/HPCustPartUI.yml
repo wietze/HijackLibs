@@ -1,0 +1,22 @@
+---
+Name: HPCustPartUI.dll
+Author: Christiaan Beek
+Created: 2022-01-10
+Vendor: HP
+
+ExpectedLocations: # No trailing slashes
+  - '%SYSTEM32%'
+  - '%SYSWOW64%'
+
+VulnerableExecutables:
+  - Path: 'C:\Program Files\HP\'
+    Type: Sideloading
+    SHA256: 0ee5b19ea38bb52d8ba4c7f05fa1ddf95a4f9c2c93b05aa887c5854653248560
+  - ...
+Resources:
+  - https://www.trellix.com/en-us/about/newsroom/stories/research/operation-harvest-a-deep-dive-into-a-long-term-campaign.html
+  - ...
+Acknowledgements:
+  - Name: Christiaan Beek
+    Twitter: '@ChristiaanBeek'
+  - ...
