@@ -7,7 +7,7 @@ ExpectedLocations:
   - '%SYSTEM32%'
   - '%SYSWOW64%'
 VulnerableExecutables:
-  - Path: 'C:\Program Files\HP\HPCustPartic.exe'
+  - Path: 'C:\Program Files\HP\HPCustParticUI.exe'
     Type: Sideloading
     SHA256: 8857232077b4b0f0e4a2c3bb5717fd65079209784f41694f8e1b469e34754cf6
 Resources:
