@@ -1,7 +1,7 @@
 ---
 Name: nameofthedll.dll # All lower case, must match filename (in this case it would be nameofthedll.yml)
 Author: Author Name
-Created: 2022-01-01
+Created: 2023-01-01
 Vendor: Vendor Name
 CVE: CVE-2000-1234 # Or remove line if not applicable
 ExpectedLocations: # No trailing slashes
