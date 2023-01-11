@@ -1,7 +1,7 @@
 ---
 Name: hpcustpartui.dll
 Author: Christiaan Beek
-Created: 2022-01-10
+Created: 2023-01-10
 Vendor: HP
 ExpectedLocations:
   - '%PROGRAMFILES%\HP'
