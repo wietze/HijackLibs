@@ -1,0 +1,18 @@
+---
+Name: siteadv.dll
+Author: Christiaan Beek
+Created: 2023-01-16
+Vendor: McAfee
+ExpectedLocations:
+  - '%PROGRAMFILES%\McAfee\'
+  - '%Temp\'
+VulnerableExecutables:
+  - Path: "sideadv.exe"
+    SHA256:
+      - 	db7b7b3d8e631faa888f02feeb38d6d7a01cb88083a0f54d09a14872e0fac93f
+    Type: Sideloading
+Resources:
+  - https://www.ptsecurity.com/ru-ru/research/pt-esc-threat-intelligence/space-pirates-tools-and-connections/
+Acknowledgements:
+  - Name: Christiaan Beek
+    Twitter: "@ChristiaanBeek"
