@@ -37,6 +37,14 @@ VulnerableExecutables:
 - Path: '%PROGRAMFILES%\Microsoft Office\root\Office%VERSION%\winword.exe'
   Type: Environment Variable
   Variable: SYSTEMROOT
+- Path: '%PROGRAMFILES%\Microsoft Office\root\Office%VERSION%\excel.exe'
+  Type: Environment Variable
+  Variable: SYSTEMROOT
+  Condition: Tested against Microsoft Office 2021
+- Path: '%PROGRAMFILES%\Microsoft Office\root\Office%VERSION%\powerpnt.exe'
+  Type: Environment Variable
+  Variable: SYSTEMROOT
+  Condition: Tested against Microsoft Office 2021
 Resources:
 - https://wietze.github.io/blog/save-the-environment-variables
 Acknowledgements:

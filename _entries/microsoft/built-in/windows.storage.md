@@ -94,6 +94,26 @@ VulnerableExecutables:
 - Path: '%PROGRAMFILES%\WindowsApps\MicrosoftTeams%VERSION%\msteams.exe'
   Type: Environment Variable
   Variable: SYSTEMROOT
+- Path: '%PROGRAMFILES%\Microsoft Office\root\Office%VERSION%\msaccess.exe'
+  Type: Environment Variable
+  Variable: SYSTEMROOT
+  Condition: Tested against Microsoft Office 2021
+- Path: '%PROGRAMFILES%\Microsoft Office\root\Office%VERSION%\msoev.exe'
+  Type: Environment Variable
+  Variable: SYSTEMROOT
+  Condition: Tested against Microsoft Office 2021
+- Path: '%PROGRAMFILES%\Microsoft Office\root\Office%VERSION%\msotd.exe'
+  Type: Environment Variable
+  Variable: SYSTEMROOT
+  Condition: Tested against Microsoft Office 2021
+- Path: '%PROGRAMFILES%\Microsoft Office\root\Office%VERSION%\mspub.exe'
+  Type: Environment Variable
+  Variable: SYSTEMROOT
+  Condition: Tested against Microsoft Office 2021
+- Path: '%PROGRAMFILES%\Microsoft Office\root\Office%VERSION%\onenote.exe'
+  Type: Environment Variable
+  Variable: SYSTEMROOT
+  Condition: Tested against Microsoft Office 2021
 Resources:
 - https://wietze.github.io/blog/save-the-environment-variables
 Acknowledgements:
