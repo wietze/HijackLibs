@@ -37,6 +37,10 @@ VulnerableExecutables:
 - Path: '%PROGRAMFILES%\Microsoft\EdgeWebView\Application\%VERSION%\msedgewebview2.exe'
   Type: Environment Variable
   Variable: SYSTEMROOT
+- Path: '%PROGRAMFILES%\Microsoft Office\root\Office%VERSION%\mspub.exe'
+  Type: Environment Variable
+  Variable: SYSTEMROOT
+  Condition: Tested against Microsoft Office 2021
 Resources:
 - https://wietze.github.io/blog/save-the-environment-variables
 Acknowledgements:
