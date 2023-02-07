@@ -2,7 +2,7 @@
 Name: tmdbglog.dll
 Author: Christiaan Beek
 Created: 2023-01-16
-Vendor: TrendMicro
+Vendor: Trend Micro
 ExpectedLocations:
   - '%PROGRAMFILES%\Trend Micro\Titanium'
 VulnerableExecutables:
