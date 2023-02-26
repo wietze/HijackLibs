@@ -38,6 +38,38 @@ mapping:
         unique: true
         required: true
 
+  ExpectedVersionInformation: &VersionInformation
+    type: seq
+    required: false
+    sequence:
+      - type: map
+        func: not_empty
+        mapping:
+          CompanyName:
+            type: str
+            required: false
+          FileDescription:
+            type: str
+            required: false
+          FileVersion:
+            type: str
+            required: false
+          InternalName:
+            type: str
+            required: false
+          LegalCopyright:
+            type: str
+            required: false
+          OriginalFilename:
+            type: str
+            required: false
+          ProductName:
+            type: str
+            required: false
+          ProductVersion:
+            type: str
+            required: false
+
   VulnerableExecutables:
     type: seq
     required: true
@@ -79,6 +111,9 @@ mapping:
           Variable:
             type: str
             required: false
+
+          ExpectedVersionInformation:
+            <<: *VersionInformation
 
   Resources:
     type: seq
