@@ -79,10 +79,17 @@ VulnerableExecutables:
     Type: Catalog
 - Path: '%SYSTEM32%\repadmin.exe'
   Type: Sideloading
+- Path: '%SYSTEM32%\consent.exe'
+  Type: Sideloading
+  SHA256:
+  - 24fa7502ba1933278e34fe0af4105d7fd997bdf2ceee440a9ff776c3186c285f
+
 Resources:
 - https://wietze.github.io/blog/hijacking-dlls-in-windows
 - https://securityintelligence.com/posts/windows-features-dll-sideloading/
 - https://github.com/xforcered/WFH
+- https://www.secureworks.com/research/shadowpad-malware-analysis
+- https://www.hexacorn.com/blog/2023/02/25/beyond-good-ol-run-key-part-141/
 Acknowledgements:
 - Name: Wietze
   Twitter: '@wietze'
