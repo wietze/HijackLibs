@@ -1,10 +1,14 @@
 ---
 Name: wsc.dll
-Author: Matt Green 
+Author: Matt Green
 Created: 2022-08-15
 Vendor: Avast
 ExpectedLocations:
   - '%PROGRAMFILES%\AVAST Software\Avast'
+ExpectedVersionInformation:
+  - OriginalFilename: wsc.dll
+    InternalName: wsc
+    FileDescription: Avast security center dll
 VulnerableExecutables:
   - Path: wsc_proxy.exe
     SHA256:
