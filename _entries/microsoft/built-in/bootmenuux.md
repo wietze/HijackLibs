@@ -4,14 +4,22 @@ Author: Wietze Beukema
 Created: 2021-02-27
 Vendor: Microsoft
 ExpectedLocations:
-  - "%SYSTEM32%"
+- '%SYSTEM32%'
+ExpectedSignatureInformation:
+- Subject: CN=Microsoft Windows, O=Microsoft Corporation, L=Redmond, S=Washington, C=US
+  Issuer: CN=Microsoft Windows Production PCA 2011, O=Microsoft Corporation, L=Redmond, S=Washington, C=US
+  Type: Catalog
 VulnerableExecutables:
-  - Path: '%SYSTEM32%\bootim.exe'
-    Type: Sideloading
+- Path: '%SYSTEM32%\bootim.exe'
+  Type: Sideloading
+  ExpectedSignatureInformation:
+  - Subject: CN=Microsoft Windows, O=Microsoft Corporation, L=Redmond, S=Washington, C=US
+    Issuer: CN=Microsoft Windows Production PCA 2011, O=Microsoft Corporation, L=Redmond, S=Washington, C=US
+    Type: Catalog
 Resources:
-  - https://wietze.github.io/blog/hijacking-dlls-in-windows
+- https://wietze.github.io/blog/hijacking-dlls-in-windows
 Acknowledgements:
-  - Name: Wietze
-    Twitter: "@wietze"
+- Name: Wietze
+  Twitter: '@wietze'
 ---
 

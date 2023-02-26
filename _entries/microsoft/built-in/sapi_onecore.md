@@ -1,7 +1,7 @@
 ---
 Name: sapi_onecore.dll
 Author: Wietze Beukema
-Created: '2022-05-21'
+Created: 2022-05-21
 Vendor: Microsoft
 ExpectedLocations:
 - '%SYSTEM32%'
@@ -10,6 +10,10 @@ VulnerableExecutables:
 - Path: '%SYSTEM32%\devicecensus.exe'
   Type: Environment Variable
   Variable: SYSTEMROOT
+  ExpectedSignatureInformation:
+  - Subject: CN=Microsoft Windows, O=Microsoft Corporation, L=Redmond, S=Washington, C=US
+    Issuer: CN=Microsoft Windows Production PCA 2011, O=Microsoft Corporation, L=Redmond, S=Washington, C=US
+    Type: Catalog
 Resources:
 - https://wietze.github.io/blog/save-the-environment-variables
 Acknowledgements:

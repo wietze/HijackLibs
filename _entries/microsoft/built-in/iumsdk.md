@@ -4,19 +4,35 @@ Author: Chris Spehn
 Created: 2021-08-16
 Vendor: Microsoft
 ExpectedLocations:
-  - "%SYSTEM32%"
+- '%SYSTEM32%'
+ExpectedSignatureInformation:
+- Subject: CN=Microsoft Windows, O=Microsoft Corporation, L=Redmond, S=Washington, C=US
+  Issuer: CN=Microsoft Windows Production PCA 2011, O=Microsoft Corporation, L=Redmond, S=Washington, C=US
+  Type: Catalog
 VulnerableExecutables:
-  - Path: '%SYSTEM32%\bioiso.exe'
-    Type: Sideloading
-  - Path: '%SYSTEM32%\fsiso.exe'
-    Type: Sideloading
-  - Path: '%SYSTEM32%\ngciso.exe'
-    Type: Sideloading
+- Path: '%SYSTEM32%\bioiso.exe'
+  Type: Sideloading
+  ExpectedSignatureInformation:
+  - Subject: CN=Microsoft Windows, O=Microsoft Corporation, L=Redmond, S=Washington, C=US
+    Issuer: CN=Microsoft Windows Production PCA 2011, O=Microsoft Corporation, L=Redmond, S=Washington, C=US
+    Type: Catalog
+- Path: '%SYSTEM32%\fsiso.exe'
+  Type: Sideloading
+  ExpectedSignatureInformation:
+  - Subject: CN=Microsoft Windows, O=Microsoft Corporation, L=Redmond, S=Washington, C=US
+    Issuer: CN=Microsoft Windows Production PCA 2011, O=Microsoft Corporation, L=Redmond, S=Washington, C=US
+    Type: Catalog
+- Path: '%SYSTEM32%\ngciso.exe'
+  Type: Sideloading
+  ExpectedSignatureInformation:
+  - Subject: CN=Microsoft Windows, O=Microsoft Corporation, L=Redmond, S=Washington, C=US
+    Issuer: CN=Microsoft Windows Production PCA 2011, O=Microsoft Corporation, L=Redmond, S=Washington, C=US
+    Type: Catalog
 Resources:
-  - https://securityintelligence.com/posts/windows-features-dll-sideloading/
-  - https://github.com/xforcered/WFH
+- https://securityintelligence.com/posts/windows-features-dll-sideloading/
+- https://github.com/xforcered/WFH
 Acknowledgements:
-  - Name: Chris Spehn
-    Twitter: "@ConsciousHacker"
+- Name: Chris Spehn
+  Twitter: '@ConsciousHacker'
 ---
 

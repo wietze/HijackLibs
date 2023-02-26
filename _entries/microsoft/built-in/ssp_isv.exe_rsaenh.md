@@ -1,7 +1,7 @@
 ---
 Name: ssp_isv.exe_rsaenh.dll
 Author: Wietze Beukema
-Created: '2022-05-21'
+Created: 2022-05-21
 Vendor: Microsoft
 ExpectedLocations:
 - '%SYSTEM32%'

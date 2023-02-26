@@ -4,24 +4,32 @@ Author: Wietze Beukema
 Created: 2021-12-07
 Vendor: Microsoft
 ExpectedLocations:
-  - "%SYSTEM32%"
-  - "%SYSWOW64%"
+- '%SYSTEM32%'
+- '%SYSWOW64%'
+ExpectedSignatureInformation:
+- Subject: CN=Microsoft Windows, O=Microsoft Corporation, L=Redmond, S=Washington, C=US
+  Issuer: CN=Microsoft Windows Production PCA 2011, O=Microsoft Corporation, L=Redmond, S=Washington, C=US
+  Type: Catalog
 VulnerableExecutables:
-  - Path: '%SYSTEM32%\shrpubw.exe'
-    Type: Sideloading
-  - Path: '%PROGRAMFILES%\Windows Kits\10\bin\%VERSION%\x86\oleview.exe'
-    Type: Sideloading
+- Path: '%SYSTEM32%\shrpubw.exe'
+  Type: Sideloading
+  ExpectedSignatureInformation:
+  - Subject: CN=Microsoft Windows, O=Microsoft Corporation, L=Redmond, S=Washington, C=US
+    Issuer: CN=Microsoft Windows Production PCA 2011, O=Microsoft Corporation, L=Redmond, S=Washington, C=US
+    Type: Catalog
+- Path: '%PROGRAMFILES%\Windows Kits\10\bin\%VERSION%\x86\oleview.exe'
+  Type: Sideloading
 Resources:
-  - https://www.hexacorn.com/blog/2016/03/10/beyond-good-ol-run-key-part-36/
-  - https://www.contextis.com/en/blog/dll-search-order-hijacking
-  - https://securityintelligence.com/posts/windows-features-dll-sideloading/
-  - https://github.com/xforcered/WFH
+- https://www.hexacorn.com/blog/2016/03/10/beyond-good-ol-run-key-part-36/
+- https://www.contextis.com/en/blog/dll-search-order-hijacking
+- https://securityintelligence.com/posts/windows-features-dll-sideloading/
+- https://github.com/xforcered/WFH
 Acknowledgements:
-  - Name: Adam
-    Twitter: "@hexacorn"
-  - Name: Lampros Noutsos
-    Twitter: "@lampnout"
-  - Name: Chris Spehn
-    Twitter: "@ConsciousHacker"
+- Name: Adam
+  Twitter: '@hexacorn'
+- Name: Lampros Noutsos
+  Twitter: '@lampnout'
+- Name: Chris Spehn
+  Twitter: '@ConsciousHacker'
 ---
 

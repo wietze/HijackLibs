@@ -4,19 +4,27 @@ Author: Wietze Beukema
 Created: 2021-02-27
 Vendor: Microsoft
 ExpectedLocations:
-  - "%SYSTEM32%"
-  - "%SYSWOW64%"
+- '%SYSTEM32%'
+- '%SYSWOW64%'
+ExpectedSignatureInformation:
+- Subject: CN=Microsoft Windows, O=Microsoft Corporation, L=Redmond, S=Washington, C=US
+  Issuer: CN=Microsoft Windows Production PCA 2011, O=Microsoft Corporation, L=Redmond, S=Washington, C=US
+  Type: Catalog
 VulnerableExecutables:
-  - Path: '%SYSTEM32%\srtasks.exe'
-    Type: Sideloading
-  - Path: '%SYSTEM32%\tiworker.exe'
-    Type: Sideloading
-    Condition: Windows Server 2012
+- Path: '%SYSTEM32%\srtasks.exe'
+  Type: Sideloading
+  ExpectedSignatureInformation:
+  - Subject: CN=Microsoft Windows, O=Microsoft Corporation, L=Redmond, S=Washington, C=US
+    Issuer: CN=Microsoft Windows Production PCA 2011, O=Microsoft Corporation, L=Redmond, S=Washington, C=US
+    Type: Catalog
+- Path: '%SYSTEM32%\tiworker.exe'
+  Type: Sideloading
+  Condition: Windows Server 2012
 Resources:
-  - https://wietze.github.io/blog/hijacking-dlls-in-windows
-  - https://blog.vonahi.io/srclient-dll-hijacking/
+- https://wietze.github.io/blog/hijacking-dlls-in-windows
+- https://blog.vonahi.io/srclient-dll-hijacking/
 Acknowledgements:
-  - Name: Wietze
-    Twitter: "@wietze"
+- Name: Wietze
+  Twitter: '@wietze'
 ---
 

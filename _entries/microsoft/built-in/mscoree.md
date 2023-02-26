@@ -4,24 +4,36 @@ Author: Wietze Beukema
 Created: 2021-02-27
 Vendor: Microsoft
 ExpectedLocations:
-  - "%SYSTEM32%"
-  - "%SYSWOW64%"
+- '%SYSTEM32%'
+- '%SYSWOW64%'
+ExpectedSignatureInformation:
+- Subject: CN=Microsoft Windows, O=Microsoft Corporation, L=Redmond, S=Washington, C=US
+  Issuer: CN=Microsoft Windows Production PCA 2011, O=Microsoft Corporation, L=Redmond, S=Washington, C=US
+  Type: Catalog
 VulnerableExecutables:
-  - Path: '%SYSTEM32%\aitstatic.exe'
-    Type: Sideloading
-  - Path: '%SYSTEM32%\presentationhost.exe'
-    Type: Sideloading
-  - Path: '%WINDIR%\Microsoft.NET\Framework\v%VERSION%\applaunch.exe'
-    Type: Sideloading
+- Path: '%SYSTEM32%\aitstatic.exe'
+  Type: Sideloading
+  ExpectedSignatureInformation:
+  - Subject: CN=Microsoft Windows, O=Microsoft Corporation, L=Redmond, S=Washington, C=US
+    Issuer: CN=Microsoft Windows Production PCA 2011, O=Microsoft Corporation, L=Redmond, S=Washington, C=US
+    Type: Catalog
+- Path: '%SYSTEM32%\presentationhost.exe'
+  Type: Sideloading
+  ExpectedSignatureInformation:
+  - Subject: CN=Microsoft Windows, O=Microsoft Corporation, L=Redmond, S=Washington, C=US
+    Issuer: CN=Microsoft Windows Production PCA 2011, O=Microsoft Corporation, L=Redmond, S=Washington, C=US
+    Type: Catalog
+- Path: '%WINDIR%\Microsoft.NET\Framework\v%VERSION%\applaunch.exe'
+  Type: Sideloading
 Resources:
-  - https://wietze.github.io/blog/hijacking-dlls-in-windows
-  - https://securityintelligence.com/posts/windows-features-dll-sideloading/
-  - https://github.com/xforcered/WFH
-  - https://www.secureworks.com/research/shadowpad-malware-analysis
+- https://wietze.github.io/blog/hijacking-dlls-in-windows
+- https://securityintelligence.com/posts/windows-features-dll-sideloading/
+- https://github.com/xforcered/WFH
+- https://www.secureworks.com/research/shadowpad-malware-analysis
 Acknowledgements:
-  - Name: Wietze
-    Twitter: "@wietze"
-  - Name: Chris Spehn
-    Twitter: "@ConsciousHacker"
+- Name: Wietze
+  Twitter: '@wietze'
+- Name: Chris Spehn
+  Twitter: '@ConsciousHacker'
 ---
 
