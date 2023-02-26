@@ -6,11 +6,23 @@ Vendor: Microsoft
 ExpectedLocations:
 - '%SYSTEM32%'
 - '%SYSWOW64%'
+ExpectedSignatureInformation:
+- Subject: CN=Microsoft Windows, O=Microsoft Corporation, L=Redmond, S=Washington, C=US
+  Issuer: CN=Microsoft Windows Production PCA 2011, O=Microsoft Corporation, L=Redmond, S=Washington, C=US
+  Type: Catalog
 VulnerableExecutables:
 - Path: '%SYSTEM32%\certutil.exe'
   Type: Sideloading
+  ExpectedSignatureInformation:
+  - Subject: CN=Microsoft Windows, O=Microsoft Corporation, L=Redmond, S=Washington, C=US
+    Issuer: CN=Microsoft Windows Production PCA 2011, O=Microsoft Corporation, L=Redmond, S=Washington, C=US
+    Type: Catalog
 - Path: '%SYSTEM32%\cipher.exe'
   Type: Sideloading
+  ExpectedSignatureInformation:
+  - Subject: CN=Microsoft Windows, O=Microsoft Corporation, L=Redmond, S=Washington, C=US
+    Issuer: CN=Microsoft Windows Production PCA 2011, O=Microsoft Corporation, L=Redmond, S=Washington, C=US
+    Type: Catalog
 - Path: '%SYSTEM32%\csvde.exe'
   Type: Sideloading
 - Path: '%SYSTEM32%\dcdiag.exe'
@@ -19,33 +31,69 @@ VulnerableExecutables:
   Type: Sideloading
 - Path: '%SYSTEM32%\efsui.exe'
   Type: Sideloading
+  ExpectedSignatureInformation:
+  - Subject: CN=Microsoft Windows, O=Microsoft Corporation, L=Redmond, S=Washington, C=US
+    Issuer: CN=Microsoft Windows Production PCA 2011, O=Microsoft Corporation, L=Redmond, S=Washington, C=US
+    Type: Catalog
 - Path: '%SYSTEM32%\gpfixup.exe'
   Type: Sideloading
 - Path: '%SYSTEM32%\net1.exe'
   Type: Sideloading
+  ExpectedSignatureInformation:
+  - Subject: CN=Microsoft Windows, O=Microsoft Corporation, L=Redmond, S=Washington, C=US
+    Issuer: CN=Microsoft Windows Production PCA 2011, O=Microsoft Corporation, L=Redmond, S=Washington, C=US
+    Type: Catalog
 - Path: '%SYSTEM32%\netdom.exe'
   Type: Sideloading
 - Path: '%SYSTEM32%\netplwiz.exe'
   Type: Sideloading
   AutoElevate: true
+  ExpectedSignatureInformation:
+  - Subject: CN=Microsoft Windows, O=Microsoft Corporation, L=Redmond, S=Washington, C=US
+    Issuer: CN=Microsoft Windows Production PCA 2011, O=Microsoft Corporation, L=Redmond, S=Washington, C=US
+    Type: Catalog
 - Path: '%SYSTEM32%\ntdsutil.exe'
   Type: Sideloading
 - Path: '%SYSTEM32%\rekeywiz.exe'
   Type: Sideloading
+  ExpectedSignatureInformation:
+  - Subject: CN=Microsoft Windows, O=Microsoft Corporation, L=Redmond, S=Washington, C=US
+    Issuer: CN=Microsoft Windows Production PCA 2011, O=Microsoft Corporation, L=Redmond, S=Washington, C=US
+    Type: Catalog
 - Path: '%SYSTEM32%\repadmin.exe'
   Type: Sideloading
 - Path: '%SYSTEM32%\systempropertiesadvanced.exe'
   Type: Sideloading
   AutoElevate: true
+  ExpectedSignatureInformation:
+  - Subject: CN=Microsoft Windows, O=Microsoft Corporation, L=Redmond, S=Washington, C=US
+    Issuer: CN=Microsoft Windows Production PCA 2011, O=Microsoft Corporation, L=Redmond, S=Washington, C=US
+    Type: Catalog
 - Path: '%SYSTEM32%\winrs.exe'
   Type: Sideloading
+  ExpectedSignatureInformation:
+  - Subject: CN=Microsoft Windows, O=Microsoft Corporation, L=Redmond, S=Washington, C=US
+    Issuer: CN=Microsoft Windows Production PCA 2011, O=Microsoft Corporation, L=Redmond, S=Washington, C=US
+    Type: Catalog
 - Path: '%SYSTEM32%\wsmanhttpconfig.exe'
   Type: Sideloading
+  ExpectedSignatureInformation:
+  - Subject: CN=Microsoft Windows, O=Microsoft Corporation, L=Redmond, S=Washington, C=US
+    Issuer: CN=Microsoft Windows Production PCA 2011, O=Microsoft Corporation, L=Redmond, S=Washington, C=US
+    Type: Catalog
 - Path: '%SYSTEM32%\wsmprovhost.exe'
   Type: Sideloading
+  ExpectedSignatureInformation:
+  - Subject: CN=Microsoft Windows, O=Microsoft Corporation, L=Redmond, S=Washington, C=US
+    Issuer: CN=Microsoft Windows Production PCA 2011, O=Microsoft Corporation, L=Redmond, S=Washington, C=US
+    Type: Catalog
 - Path: '%SYSTEM32%\filehistory.exe'
   Type: Environment Variable
   Variable: SYSTEMROOT
+  ExpectedSignatureInformation:
+  - Subject: CN=Microsoft Windows, O=Microsoft Corporation, L=Redmond, S=Washington, C=US
+    Issuer: CN=Microsoft Windows Production PCA 2011, O=Microsoft Corporation, L=Redmond, S=Washington, C=US
+    Type: Catalog
 Resources:
 - https://wietze.github.io/blog/hijacking-dlls-in-windows
 - https://wietze.github.io/blog/save-the-environment-variables
@@ -55,4 +103,4 @@ Acknowledgements:
 - Name: Wietze
   Twitter: '@wietze'
 - Name: Chris Spehn
-  Twitter: "@ConsciousHacker"
+  Twitter: '@ConsciousHacker'

@@ -1,20 +1,36 @@
 ---
 Name: twinapi.dll
 Author: Wietze Beukema
-Created: '2022-05-21'
+Created: 2022-05-21
 Vendor: Microsoft
 ExpectedLocations:
 - '%SYSTEM32%'
 - '%SYSWOW64%'
+ExpectedSignatureInformation:
+- Subject: CN=Microsoft Windows, O=Microsoft Corporation, L=Redmond, S=Washington, C=US
+  Issuer: CN=Microsoft Windows Production PCA 2011, O=Microsoft Corporation, L=Redmond, S=Washington, C=US
+  Type: Catalog
 VulnerableExecutables:
 - Path: '%SYSTEM32%\dataexchangehost.exe'
   Type: Sideloading
+  ExpectedSignatureInformation:
+  - Subject: CN=Microsoft Windows, O=Microsoft Corporation, L=Redmond, S=Washington, C=US
+    Issuer: CN=Microsoft Windows Production PCA 2011, O=Microsoft Corporation, L=Redmond, S=Washington, C=US
+    Type: Catalog
 - Path: '%SYSTEM32%\rasphone.exe'
   Type: Environment Variable
   Variable: SYSTEMROOT
+  ExpectedSignatureInformation:
+  - Subject: CN=Microsoft Windows, O=Microsoft Corporation, L=Redmond, S=Washington, C=US
+    Issuer: CN=Microsoft Windows Production PCA 2011, O=Microsoft Corporation, L=Redmond, S=Washington, C=US
+    Type: Catalog
 - Path: '%SYSTEM32%\rdpclip.exe'
   Type: Environment Variable
   Variable: SYSTEMROOT
+  ExpectedSignatureInformation:
+  - Subject: CN=Microsoft Windows, O=Microsoft Corporation, L=Redmond, S=Washington, C=US
+    Issuer: CN=Microsoft Windows Production PCA 2011, O=Microsoft Corporation, L=Redmond, S=Washington, C=US
+    Type: Catalog
 - Path: '%PROGRAMFILES%\Microsoft\Edge\Application\msedge.exe'
   Type: Environment Variable
   Variable: SYSTEMROOT
