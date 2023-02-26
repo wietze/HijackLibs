@@ -12,6 +12,7 @@ A simple template can be found [here](/template.yml).
 | `CVE` | String | Optional | CVE-YYYY-XXXX | ID of the assigned CVE, if applicable. |
 | `ExpectedLocations` | List[String] | Optional | No trailing slashes | Folder locations[^1] where legitimate versions of the DLL are normally found. |
 | `ExpectedVersionInformation` | [VersionInformation](#VersionInformation) | Optional | | File attributes of the legitimate DLL.|
+| `ExpectedSignatureInformation` | [SignatureInformation](#SignatureInformation) | Optional | | Signature data of the legitimate DLL.|
 | `VulnerableExecutables` | List[[VulnerableExecutable](#VulnerableExecutable)] | ✅ |  | Executables that are known to load the DLL described. | 
 | `Resources` | List[String] | Optional | HTTP(S) links only | URLs to relevant content that may explain further context (e.g. a PDF report, a tweet, a YouTube video).|
 | `Acknowledgements` | List[[Acknowledgement](#Acknowledgement)] | Optional |  | People who should be acknowledge for finding this entry (i.e. who did the actual research). |
@@ -27,6 +28,7 @@ A simple template can be found [here](/template.yml).
 | `SHA256` | List[String] | Optional | 64 characters | If the executable is 3rd-party (i.e. non-Microsoft), please add the SHA256 hash(es) of the executable here. |
 | `Variable` | String | Only when `Type` is set to `Environment Variable` | Should not contain percentage signs (`%`) | The environment variable name that can be hijacked. |
 | `ExpectedVersionInformation` | [VersionInformation](#VersionInformation) | Optional |  | File attributes of the legitimate executable.|
+| `ExpectedSignatureInformation` | [SignatureInformation](#SignatureInformation) | Optional | | Signature data of the legitimate executable.|
 
 ## VersionInformation
 | Field | Type | Required | Format | Description |
@@ -39,6 +41,13 @@ A simple template can be found [here](/template.yml).
 | OriginalFilename | String | Optional | | The `OriginalFilename` attribute of the PE file.|
 | ProductName | String | Optional | | The `ProductName` attribute of the PE file.|
 | ProductVersion | String | Optional | | The `ProductVersion` attribute of the PE file.|
+
+## SignatureInformation
+| Field | Type | Required | Format | Description |
+| ----- | ---- | -------- | ------ | ----------- |
+| Subject | String | Optional | [DN format](https://learn.microsoft.com/en-us/previous-versions/windows/desktop/ldap/distinguished-names)  | The expected subject of the certificate.|
+| Issuer | String | Optional | [DN format](https://learn.microsoft.com/en-us/previous-versions/windows/desktop/ldap/distinguished-names) | The expected issuer of the certificate.|
+| Type | String | ✅ | `Authenticode` \| `Catalog` \| `None`  | The expected signature type. |
 
 ## Acknowledgement
 | Field | Type | Required | Format | Description |

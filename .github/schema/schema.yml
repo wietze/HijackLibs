@@ -70,6 +70,26 @@ mapping:
             type: str
             required: false
 
+  ExpectedSignatureInformation: &SignatureInformation
+    type: seq
+    required: false
+    sequence:
+      - type: map
+        func: not_empty
+        mapping:
+          Subject:
+            type: str
+            pattern: '^((CN|C|O|L|C|OU|S|STREET|PostalCode|SERIALNUMBER|OID(\.\d+)+)=(".+?(?<!\\)"|''.+?(?<!\\)''|([^,]|\\,)+?(?<!\\))(,\s*(?<!$)|$))+$'
+            required: false
+          Issuer:
+            type: str
+            pattern: '^((CN|C|O|L|C|OU|S|STREET|PostalCode|SERIALNUMBER|OID(\.\d+)+)=(".+?(?<!\\)"|''.+?(?<!\\)''|([^,]|\\,)+?(?<!\\))(,\s*(?<!$)|$))+$'
+            required: false
+          Type:
+            type: str
+            required: true
+            enum: ["Authenticode", "Catalog", "None"]
+
   VulnerableExecutables:
     type: seq
     required: true
@@ -114,6 +134,9 @@ mapping:
 
           ExpectedVersionInformation:
             <<: *VersionInformation
+
+          ExpectedSignatureInformation:
+            <<: *SignatureInformation
 
   Resources:
     type: seq
