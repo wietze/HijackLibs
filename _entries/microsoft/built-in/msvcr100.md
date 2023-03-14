@@ -9,8 +9,14 @@ ExpectedLocations:
 VulnerableExecutables:
 - Path: '%PROGRAMFILES%\Java\jre%VERSION%\bin\javacpl.exe'
   Type: Sideloading
+- Path: '%PROGRAMFILES%\Microsoft Office\root\Office%VERSION%\winword.exe'
+  SHA256:
+  - 16f099aaff99f981741e299be6aff43f2e53b189481a08582e3b2a04e934aa0a
+  Type: Sideloading
 Resources:
 - https://twitter.com/SBousseaden/status/1530595156055011330
+- https://twitter.com/sbousseaden/status/1604934564614381571
+- https://blog.eclecticiq.com/dark-pink-apt-group-strikes-government-entities-in-south-asian-countries
 Acknowledgements:
 - Name: Samir
   Twitter: '@sbousseaden'
