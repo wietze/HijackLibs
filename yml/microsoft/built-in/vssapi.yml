@@ -84,10 +84,15 @@ VulnerableExecutables:
   - Subject: CN=Microsoft Windows, O=Microsoft Corporation, L=Redmond, S=Washington, C=US
     Issuer: CN=Microsoft Windows Production PCA 2011, O=Microsoft Corporation, L=Redmond, S=Washington, C=US
     Type: Catalog
+- Path: '%PROGRAMFILES%\Avira\Antivirus\avshadow.exe'
+  Type: Sideloading
+  SHA256:
+  - 292e3528a0aa6bf45ecdab5e1d32e5ddd92123e6fd77271b39ba616fbb88faaf
 Resources:
 - https://wietze.github.io/blog/hijacking-dlls-in-windows
 - https://securityintelligence.com/posts/windows-features-dll-sideloading/
 - https://github.com/xforcered/WFH
+- https://www.welivesecurity.com/2023/03/14/slow-ticking-time-bomb-tick-apt-group-dlp-software-developer-east-asia/
 Acknowledgements:
 - Name: Wietze
   Twitter: '@wietze'
