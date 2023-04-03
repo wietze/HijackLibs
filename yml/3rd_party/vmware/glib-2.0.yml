@@ -9,7 +9,7 @@ ExpectedLocations:
   - '%PROGRAMFILES%\VMware\VMware Player'
 ExpectedSignatureInformation:
   - Subject: C=US, ST=California, L=Palo Alto, O=VMware, Inc., OU=Digital ID Class 3 - Microsoft Software Validation v2, OU=Marketing, CN=VMware, Inc.
-    Issuer: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use at https://www.verisign.com/rpa (c)09, CN=VeriSign Class 3 Code Signing 2009-2 CA
+    Issuer: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, CN=VeriSign Class 3 Code Signing 2009-2 CA
     Type: Authenticode
 VulnerableExecutables:
   - Path: '%PROGRAMFILES%\VMware\VMware Tools\VMwareXferlogs.exe'
