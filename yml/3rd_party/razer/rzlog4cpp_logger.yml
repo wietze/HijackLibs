@@ -2,7 +2,7 @@
 Name: rzlog4cpp_logger.dll
 Author: Wietze Beukema
 Created: 2023-04-03
-Vendor: Microsoft
+Vendor: Razer
 ExpectedLocations:
   - '%LOCALAPPDATA%\razer\InGameEngine\cache\RzFpsApplet'
 ExpectedSignatureInformation:
