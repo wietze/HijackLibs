@@ -15,7 +15,7 @@ VulnerableExecutables:
   - Path: '%PROGRAMFILES%\VMware\VMware Tools\VMwareXferlogs.exe'
     Type: Sideloading
     ExpectedSignatureInformation:
-      - Subject: C=US, ST=California, L=Palo Alto, O='VMware, Inc.', CN='VMware, Inc'.
+      - Subject: C=US, ST=California, L=Palo Alto, O='VMware, Inc.', CN='VMware, Inc.'
         Issuer: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert Assured ID Code Signing CA-1
         Type: Authenticode
     SHA256:
