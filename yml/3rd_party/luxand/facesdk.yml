@@ -6,14 +6,14 @@ Vendor: Luxand
 ExpectedLocations:
   - '%PROGRAMFILES%\luxand\facesdk\bin\win64'
 ExpectedSignatureInformation:
-  - Subject: C=US, ST=Virginia, L=Alexandria, street=901 N. Pitt str., O='Luxand, Inc.', CN='Luxand, Inc.'
+  - Subject: C=US, ST=Virginia, L=Alexandria, O='Luxand, Inc.', CN='Luxand, Inc.'
     Issuer: C=GB, ST=Greater Manchester, L=Salford, O=COMODO CA Limited, CN=COMODO RSA Code Signing CA
     Type: Authenticode
 VulnerableExecutables:
   - Path: '%PROGRAMFILES%\luxand\facesdk\bin\win64\FacialFeatureDemo.exe'
     Type: Sideloading
     ExpectedSignatureInformation:
-      - Subject: C=US, ST=Virginia, L=Alexandria, street=901 N. Pitt str., O='Luxand, Inc.', CN='Luxand, Inc.'
+      - Subject: C=US, ST=Virginia, L=Alexandria, O='Luxand, Inc.', CN='Luxand, Inc.'
         Issuer: C=GB, ST=Greater Manchester, L=Salford, O=COMODO CA Limited, CN=COMODO RSA Code Signing CA
         Type: Authenticode
     SHA256:
