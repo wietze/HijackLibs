@@ -79,11 +79,11 @@ mapping:
         mapping:
           Subject:
             type: str
-            pattern: '^((CN|C|O|L|C|OU|S|ST|STREET|PostalCode|SERIALNUMBER|OID(\.\d+)+)=(".+?(?<!\\)"|''.+?(?<!\\)''|([^,]|\\,)+?(?<!\\))(,\s*(?<!$)|$))+$'
+            pattern: '^(?i)((CN|C|O|L|C|OU|S|ST|STREET|PostalCode|SERIALNUMBER|OID(\.\d+)+)=(".+?(?<!\\)"|''.+?(?<!\\)''|([^,]|\\,)+?(?<!\\))(,\s*(?<!$)|$))+$'
             required: false
           Issuer:
             type: str
-            pattern: '^((CN|C|O|L|C|OU|S|ST|STREET|PostalCode|SERIALNUMBER|OID(\.\d+)+)=(".+?(?<!\\)"|''.+?(?<!\\)''|([^,]|\\,)+?(?<!\\))(,\s*(?<!$)|$))+$'
+            pattern: '^(?i)((CN|C|O|L|C|OU|S|ST|STREET|PostalCode|SERIALNUMBER|OID(\.\d+)+)=(".+?(?<!\\)"|''.+?(?<!\\)''|([^,]|\\,)+?(?<!\\))(,\s*(?<!$)|$))+$'
             required: false
           Type:
             type: str
