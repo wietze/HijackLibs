@@ -10,6 +10,10 @@ ExpectedSignatureInformation:
   - Subject: serialNumber=912 309 975, C=NO, ST=Oslo, L=Oslo, street=Mølleparken 6, O=Vivaldi Technologies AS, CN=Vivaldi Technologies AS
     Issuer: C=BE, O=GlobalSign nv-sa, CN=GlobalSign GCC R45 EV CodeSigning CA 2020
     Type: Authenticode
+ExpectedVersionInformation:
+  - OriginalFilename: vivaldi_elf.dll
+    InternalName: chrome_elf_dll
+    FileDescription: Vivaldi
 VulnerableExecutables:
   - Path: '%LOCALAPPDATA%\Vivaldi\Application\vivaldi.exe'
     Type: Sideloading
@@ -17,10 +21,6 @@ VulnerableExecutables:
       - Subject: serialNumber=912 309 975, C=NO, ST=Oslo, L=Oslo, street=Mølleparken 6, O=Vivaldi Technologies AS, CN=Vivaldi Technologies AS
         Issuer: C=BE, O=GlobalSign nv-sa, CN=GlobalSign GCC R45 EV CodeSigning CA 2020
         Type: Authenticode
-    ExpectedVersionInformation:
-      - OriginalFilename: vivaldi_elf.dll
-        InternalName: chrome_elf_dll
-        FileDescription: Vivaldi
     SHA256:
     - 58e7af5eb1acb5c9bee821d59054c69263aed3dce1b95616255dea7114ad8494
 Resources:
