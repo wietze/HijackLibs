@@ -5,7 +5,7 @@ Created: 2023-05-03
 Vendor: Baidu
 ExpectedLocations:
   - '%LOCALAPPDATA%\Temp\%VERSION%\Application2'
-  - '%PROGRAM FILES%\BAIDU\BAIDUPINYIN\%VERSION%'
+  - '%PROGRAMFILES%\BAIDU\BAIDUPINYIN\%VERSION%'
 ExpectedSignatureInformation:
   - Subject: C=CN, ST=Beijing, L=Beijing, O='Beijing Baidu Netcom Science and Technology Co.,Ltd', OU=BPIT, CN='Beijing Baidu Netcom Science and Technology Co.,Ltd'
     Issuer: C=BE, O=GlobalSign nv-sa, CN=GlobalSign GCC R45 CodeSigning CA 2020
