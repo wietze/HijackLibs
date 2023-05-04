@@ -11,11 +11,7 @@ title: APIs
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
     <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/main.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
-        integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w=="
-        crossorigin="anonymous" />
-    <script src="{{ '/assets/js/main.js' | relative_url }}"></script>
-    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.6.0.js"></script>
+    <script src="{{ '/assets/js/visit.js' | relative_url }}" async></script>
 
     <link rel="icon" type="image/x-icon" href="{{ site.favicon_location }}">
 </head>
@@ -29,7 +25,7 @@ title: APIs
                 <h1>Hijack Libs</h1>
             </header>
         </div>
-        <section style="margin-top: 0em;">
+        <section style="margin-top: 0;">
             <h2>APIs</h2>
             <p>Datasets of the {{ site.title }} project are available in the following formats:</p>
             <p>
@@ -47,14 +43,14 @@ title: APIs
                         <td>JSON</td>
                         <td>All entries</td>
                         <td>Same as original YAML files</td>
-                        <td style="word-wrap: anywhere;"><a href="{{'/api/hijacklibs.json' | relative_url }}">{{'/api/hijacklibs.json' |
+                        <td style="word-wrap: anywhere;"><a href="{{'/api/hijacklibs.json' | relative_url }}" data-visit-click="API-JSON">{{'/api/hijacklibs.json' |
                                 relative_url}}</a></td>
                     </tr>
                     <tr>
                         <td>CSV</td>
                         <td>All entries</td>
                         <td>One line for each (DLL, EXE) combination</td>
-                        <td style="word-wrap: anywhere;"><a href="{{'/api/hijacklibs.csv' | relative_url }}">{{'/api/hijacklibs.csv' |
+                        <td style="word-wrap: anywhere;"><a href="{{'/api/hijacklibs.csv' | relative_url }}" data-visit-click="API-CSV">{{'/api/hijacklibs.csv' |
                                 relative_url}}</a></td>
                     </tr>
                     <tr>
@@ -62,7 +58,7 @@ title: APIs
                         <td>Individual entries</td>
                         <td>The 'source' YAML files</td>
                         <td style="word-wrap: anywhere;"><a
-                                href="https://raw.githubusercontent.com/{{site.repo}}/main/yml">https://raw.githubusercontent.com/{{site.repo}}/main/yml</a>
+                                href="https://raw.githubusercontent.com/{{site.repo}}/main/yml" data-visit-click="API-GH">https://raw.githubusercontent.com/{{site.repo}}/main/yml</a>
                         </td>
                     </tr>
                 </tbody>
@@ -85,14 +81,14 @@ title: APIs
                         <td>Sigma (YAML)</td>
                         <td>All entries</td>
                         <td>Auto-generated detection content for image loads</td>
-                        <td style="word-wrap: anywhere;"><a href="{{'/api/sigma_feed_image.yml' | relative_url }}">{{'/api/sigma_feed_image.yml' |
+                        <td style="word-wrap: anywhere;"><a href="{{'/api/sigma_feed_image.yml' | relative_url }}" data-visit-click="API-SIGMA-IMAGE">{{'/api/sigma_feed_image.yml' |
                                 relative_url}}</a></td>
                     </tr>
                     <tr>
                         <td>Sigma (YAML)</td>
                         <td>All entries</td>
                         <td>Auto-generated detection content for file writes</td>
-                        <td style="word-wrap: anywhere;"><a href="{{'/api/sigma_feed_file.yml' | relative_url }}">{{'/api/sigma_feed_file.yml' |
+                        <td style="word-wrap: anywhere;"><a href="{{'/api/sigma_feed_file.yml' | relative_url }}" data-visit-click="API-SIGMA-FILE">{{'/api/sigma_feed_file.yml' |
                                 relative_url}}</a></td>
                     </tr>
                 </tbody>

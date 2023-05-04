@@ -18,6 +18,7 @@
     <link rel="stylesheet" href="{{ '/assets/css/code.css' | relative_url }}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" />
     <script src="{{ '/assets/js/main.js' | relative_url }}"></script>
+    <script src="{{ '/assets/js/visit.js' | relative_url }}" async></script>
     <link rel="icon" type="image/x-icon" href="{{ site.favicon_location }}">
 </head>
 
@@ -122,9 +123,9 @@
 
             <div style="display: flex">
                 <div style="flex-shrink: 0;">
-                    <div class="button"><i class="fa fa-file-download" aria-hidden="true"></i> <a href="javascript:" download="susp_dll_hijacking_{{ page.Name | replace: '.', '-' | escape }}.yml" onclick="downloadSigma(this)">Download YAML</a></div>
+                    <div class="button"><i class="fa fa-file-download" aria-hidden="true"></i> <a href="javascript:" download="susp_dll_hijacking_{{ page.Name | replace: '.', '-' | escape }}.yml" onclick="downloadSigma(this)" data-visit-click="YAML-Download">Download YAML</a></div>
                 </div>
-                <div style="font-size: small; margin: auto 5px; line-height: 1em; font-style: italic">Note that this rule is also included in the <a href="{{ '/api/sigma_feed_image.yml' | relative_url }}" id="yaml-feed-url">Sigma feed</a> that comprises all DLL Hijacking entries part of this project.</div>
+                <div style="font-size: small; margin: auto 5px; line-height: 1em; font-style: italic">Note that this rule is also included in the <a href="{{ '/api/sigma_feed_image.yml' | relative_url }}" id="yaml-feed-url" data-visit-click="SIGMA-Download-feed">Sigma feed</a> that comprises all DLL Hijacking entries part of this project.</div>
             </div>
 
         </section>

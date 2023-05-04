@@ -394,3 +394,49 @@ table tr:nth-child(even) {
 table tr:nth-child(odd) {
     background: #FFF
 }
+
+#status {
+    margin-bottom: 20px;
+    margin-top: 5px;
+}
+#status .stats {
+    color: #555;
+    font-size: smaller;
+}
+
+.result-row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 3px;
+    padding: 0 5px;
+    align-items: center;
+    flex: 1;
+}
+#results ul {
+    list-style: none;
+    padding-left: 0;
+}
+#results li {
+    display: flex;
+}
+#results li::before {
+    content: '';
+    display: inline-block;
+    height: 16px;
+    width: 16px;
+    background-image: url(/assets/img/dll.png);
+    background-size: contain;
+}
+
+.result-row.odd {
+    background-color: #f7f7f7;
+}
+
+.result-row>a {
+    flex-grow: 1;
+}
+
+.result-row .exe {
+    background: #ff9d46;
+    color: black;
+}
