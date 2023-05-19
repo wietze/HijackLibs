@@ -82,6 +82,7 @@ VulnerableExecutables:
     Type: Catalog
 Resources:
 - https://wietze.github.io/blog/hijacking-dlls-in-windows
+- https://twitter.com/Max_Mal_/status/1658566665003585545
 Acknowledgements:
 - Name: Wietze
   Twitter: '@wietze'
