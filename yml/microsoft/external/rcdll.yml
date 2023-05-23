@@ -4,7 +4,7 @@ Author: Gary Lobermier
 Created: 2023-05-22
 Vendor: Microsoft
 ExpectedLocations:
-  - '%PROGRAMFILES%\Windows Kits\10\bin\%VERSION%\x64\'
+  - '%PROGRAMFILES%\Windows Kits\10\bin\%VERSION%\x64'
 ExpectedSignatureInformation:
   - Subject: CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US
     Issuer: CN=Microsoft Windows Production PCA 2010, O=Microsoft Corporation, L=Redmond, S=Washington, C=US
