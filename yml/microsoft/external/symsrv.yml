@@ -1,0 +1,12 @@
+---
+Name: symsrv.dll
+Author: Gary Lobermier
+Created: 2023-05-22
+Vendor: Microsoft
+ExpectedLocations:
+  - '%PROGRAMFILES%\Windows Kits\10\Debuggers\x64'
+VulnerableExecutables:
+  - Path: '%PROGRAMFILES%\Windows Kits\10\Debuggers\x64\symstore.exe'
+    Type: Sideloading
+Resources:
+  -https://globetech.biz/index.php/2023/05/19/evading-edr-by-dll-sideloading-in-csharp/
