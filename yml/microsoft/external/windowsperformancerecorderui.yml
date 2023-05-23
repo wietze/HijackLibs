@@ -14,4 +14,4 @@ VulnerableExecutables:
     Type: Sideloading
     AutoElevate: true
 Resources:
-  -https://globetech.biz/index.php/2023/05/19/evading-edr-by-dll-sideloading-in-csharp/
+  - https://globetech.biz/index.php/2023/05/19/evading-edr-by-dll-sideloading-in-csharp/

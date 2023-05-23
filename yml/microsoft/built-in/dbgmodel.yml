@@ -9,5 +9,5 @@ VulnerableExecutables:
   - Path: '%PROGRAMFILES%\Windows Kits\10\Debuggers\x64\ntsd.exe'
     Type: Sideloading
 Resources:
-  -https://globetech.biz/index.php/2023/05/19/evading-edr-by-dll-sideloading-in-csharp/
+  - https://globetech.biz/index.php/2023/05/19/evading-edr-by-dll-sideloading-in-csharp/
 
