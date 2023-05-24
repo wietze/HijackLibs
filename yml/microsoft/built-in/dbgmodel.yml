@@ -5,8 +5,14 @@ Created: 2023-05-22
 Vendor: Microsoft
 ExpectedLocations:
   - '%SYSTEM32%'
+  - '%SYSWOW64%'
+  - '%PROGRAMFILES%\Windows Kits\10\Debuggers\%VERSION%'
+ExpectedSignatureInformation:
+  - Subject: CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US
+    Issuer: CN=Microsoft Windows Production PCA 2010, O=Microsoft Corporation, L=Redmond, S=Washington, C=US
+    Type: Catalog
 VulnerableExecutables:
-  - Path: '%PROGRAMFILES%\Windows Kits\10\Debuggers\x64\ntsd.exe'
+  - Path: '%PROGRAMFILES%\Windows Kits\10\Debuggers\%VERSION%\ntsd.exe'
     Type: Sideloading
 Resources:
   - https://globetech.biz/index.php/2023/05/19/evading-edr-by-dll-sideloading-in-csharp/
