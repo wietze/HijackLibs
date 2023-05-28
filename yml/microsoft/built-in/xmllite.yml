@@ -11,6 +11,8 @@ ExpectedSignatureInformation:
   Issuer: CN=Microsoft Windows Production PCA 2011, O=Microsoft Corporation, L=Redmond, S=Washington, C=US
   Type: Catalog
 VulnerableExecutables:
+- Path: '%PROGRAMFILES%\Common Files\Microsoft Shared\ink\InputPersonalization.exe'
+  Type: Sideloading
 - Path: '%SYSTEM32%\certreq.exe'
   Type: Sideloading
   ExpectedSignatureInformation:
