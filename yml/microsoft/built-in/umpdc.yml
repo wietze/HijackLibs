@@ -13,6 +13,7 @@ ExpectedSignatureInformation:
 VulnerableExecutables:
 - Path: '%SYSTEM32%\RuntimeBroker.exe'
   Type: Sideloading
+  Condition: 'Works to Windows 10 and Windows Server 2016' # Remove line if not applicable
   ExpectedSignatureInformation:
   - Subject: CN=Microsoft Windows, O=Microsoft Corporation, L=Redmond, S=Washington, C=US
     Issuer: CN=Microsoft Windows Production PCA 2011, O=Microsoft Corporation, L=Redmond, S=Washington, C=US
