@@ -11,6 +11,12 @@ ExpectedSignatureInformation:
   Issuer: CN=Microsoft Windows Production PCA 2011, O=Microsoft Corporation, L=Redmond, S=Washington, C=US
   Type: Catalog
 VulnerableExecutables:
+- Path: '%SYSTEM32%\RuntimeBroker.exe'
+  Type: Sideloading
+  ExpectedSignatureInformation:
+  - Subject: CN=Microsoft Windows, O=Microsoft Corporation, L=Redmond, S=Washington, C=US
+    Issuer: CN=Microsoft Windows Production PCA 2011, O=Microsoft Corporation, L=Redmond, S=Washington, C=US
+    Type: Catalog
 - Path: '%SYSTEM32%\deviceenroller.exe'
   Type: Sideloading
   ExpectedSignatureInformation:
