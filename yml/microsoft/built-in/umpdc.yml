@@ -11,13 +11,6 @@ ExpectedSignatureInformation:
   Issuer: CN=Microsoft Windows Production PCA 2011, O=Microsoft Corporation, L=Redmond, S=Washington, C=US
   Type: Catalog
 VulnerableExecutables:
-- Path: '%SYSTEM32%\RuntimeBroker.exe'
-  Type: Sideloading
-  Condition: 'Works on Windows 10 and Windows Server 2016'
-  ExpectedSignatureInformation:
-  - Subject: CN=Microsoft Windows, O=Microsoft Corporation, L=Redmond, S=Washington, C=US
-    Issuer: CN=Microsoft Windows Production PCA 2011, O=Microsoft Corporation, L=Redmond, S=Washington, C=US
-    Type: Catalog
 - Path: '%SYSTEM32%\deviceenroller.exe'
   Type: Sideloading
   ExpectedSignatureInformation:
@@ -60,9 +53,18 @@ VulnerableExecutables:
   - Subject: CN=Microsoft Windows, O=Microsoft Corporation, L=Redmond, S=Washington, C=US
     Issuer: CN=Microsoft Windows Production PCA 2011, O=Microsoft Corporation, L=Redmond, S=Washington, C=US
     Type: Catalog
+- Path: '%SYSTEM32%\runtimebroker.exe'
+  Type: Sideloading
+  Condition: 'Works on Windows 10 and Windows Server 2016'
+  ExpectedSignatureInformation:
+  - Subject: CN=Microsoft Windows, O=Microsoft Corporation, L=Redmond, S=Washington, C=US
+    Issuer: CN=Microsoft Windows Production PCA 2011, O=Microsoft Corporation, L=Redmond, S=Washington, C=US
+    Type: Catalog    
 Resources:
 - https://securityintelligence.com/posts/windows-features-dll-sideloading/
 - https://github.com/xforcered/WFH
 Acknowledgements:
 - Name: Chris Spehn
   Twitter: '@ConsciousHacker'
+- Name: Michał Kucharski
+  Twitter: '@Kucharskov'
