@@ -154,6 +154,8 @@ VulnerableExecutables:
 - Path: '%PROGRAMFILES%\Microsoft\Edge\Application\msedge.exe'
   Type: Environment Variable
   Variable: SYSTEMROOT
+- Path: '%PROGRAMFILES%\Common Files\Microsoft Shared\ink\InputPersonalization.exe'
+  Type: Sideloading  
 Resources:
 - https://wietze.github.io/blog/hijacking-dlls-in-windows
 - https://wietze.github.io/blog/save-the-environment-variables
@@ -164,5 +166,7 @@ Acknowledgements:
   Twitter: '@wietze'
 - Name: Chris Spehn
   Twitter: '@ConsciousHacker'
+- Name: Michał Kucharski
+  Twitter: '@Kucharskov'  
 ---
 
