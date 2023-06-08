@@ -5,6 +5,7 @@ Created: 2023-06-08
 Vendor: Classic Shell
 ExpectedLocations:
   - '%PROGRAMFILES%\Classic Shell'
+  - '%PROGRAMFILES%\Open-Shell'
 VulnerableExecutables:
   - Path: ClassicExplorerSettings.exe
     Type: Sideloading
