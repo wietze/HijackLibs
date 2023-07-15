@@ -56,6 +56,9 @@ function handleSearch() {
                 return  contains(data[elem]['vendor'], searchValueVendor)
                         && data[elem]['types'].some(x => types.includes(x));
                 });
+        } else if(searchValue.substr(0,4) == 'app:'){
+            searchValueApp = searchValue.substr(4);
+            return addResultsApp(searchValueApp, types);
         } else {
             foundEntries = Object.keys(data).filter(function (elem) {
                 return  (contains(elem, searchValue)
@@ -74,6 +77,40 @@ function handleSearch() {
         }
     }
 }
+
+
+function addResultsApp(searchValueApp, types) {
+    var table = $("<table>").addClass("table");
+    var tableHead = $("<thead>");
+    var tableBody = $("<tbody>");
+
+    var tableHeaderRow = $("<tr>");
+    tableHeaderRow.append($("<th>").text("Exe"));
+    tableHeaderRow.append($("<th>").text("DLL"));
+    tableHeaderRow.append($("<th>").text("Type"));
+    tableHead.append(tableHeaderRow);
+
+    $.each(data, function(dllName, dllEntry) {
+        $.each(dllEntry.executables, function(_, executableName) {
+            if (executableName.includes(searchValueApp) && dllEntry.types.some(x => types.includes(x))) {
+                var tableRow = $("<tr>");
+                var link = $("<a href=\"" + dllEntry.url + "\" onclick=\"updatePageAnchor()\">" + dllName + "</a>");
+                tableRow.append($("<td>").text(executableName));
+                tableRow.append($("<td>").append(link));
+
+                tableRow.append($("<td>").append(dllEntry.types.join(", ")));
+                tableBody.append(tableRow);
+            }
+        });
+    });
+
+    table.append(tableHead);
+    table.append(tableBody);
+
+    $('#results').append(table);
+
+}
+
 
 function addResults(foundEntries, searchValue){
     i = 0;
