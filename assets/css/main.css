@@ -383,8 +383,8 @@ table td {
     padding: 10px 5px;
 }
 
-table td:first-of-type {
-    font-weight: bold;
+table th {
+    background: rgb(233, 233, 233)
 }
 
 table tr:nth-child(even) {
