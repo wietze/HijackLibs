@@ -24,7 +24,7 @@ VulnerableExecutables:
     Issuer: CN=Microsoft Windows Production PCA 2011, O=Microsoft Corporation, L=Redmond, S=Washington, C=US
     Type: Catalog
 - Path: '%SYSTEM32%\PerceptionSimulation\PerceptionSimulationService.exe'
-  Type: Search Order
+  Type: Phantom
   ExpectedSignatureInformation:
   - Subject: CN=Microsoft Windows, O=Microsoft Corporation, L=Redmond, S=Washington, C=US
     Issuer: CN=Microsoft Windows Production PCA 2011, O=Microsoft Corporation, L=Redmond, S=Washington, C=US
