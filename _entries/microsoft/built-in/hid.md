@@ -23,10 +23,19 @@ VulnerableExecutables:
   - Subject: CN=Microsoft Windows, O=Microsoft Corporation, L=Redmond, S=Washington, C=US
     Issuer: CN=Microsoft Windows Production PCA 2011, O=Microsoft Corporation, L=Redmond, S=Washington, C=US
     Type: Catalog
+- Path: '%SYSTEM32%\PerceptionSimulation\PerceptionSimulationService.exe'
+  Type: Phantom
+  ExpectedSignatureInformation:
+  - Subject: CN=Microsoft Windows, O=Microsoft Corporation, L=Redmond, S=Washington, C=US
+    Issuer: CN=Microsoft Windows Production PCA 2011, O=Microsoft Corporation, L=Redmond, S=Washington, C=US
+    Type: Catalog
 Resources:
 - https://wietze.github.io/blog/hijacking-dlls-in-windows
+- https://github.com/netero1010/ServiceMove-BOF
 Acknowledgements:
 - Name: Wietze
   Twitter: '@wietze'
+- Name: v1stra
+  Twitter: '@_v1stra'
 ---
 
