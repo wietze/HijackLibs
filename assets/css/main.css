@@ -234,18 +234,24 @@ header>.back>i {
     cursor: pointer;
 }
 
+header>.back>i.light {
+    color: #ddd;
+}
+
 ul.resources {
     margin: 0;
     padding: 0;
     list-style-type: none;
 }
 
-ul.dirs, ul.files {
+ul.dirs,
+ul.files {
     list-style: none;
     padding: 0;
 }
 
-ul.dirs>li, ul.files>li {
+ul.dirs>li,
+ul.files>li {
     padding-left: 5px;
 }
 
@@ -355,7 +361,8 @@ div.search_banner {
     padding-top: 5px;
 }
 
-section, header {
+section,
+header {
     min-width: 300px;
     max-width: 800px;
     padding: 0 20px;
@@ -373,7 +380,8 @@ table {
     border: 1px solid #ccc;
 }
 
-table>thead td {
+table>thead td,
+table>thead th {
     font-weight: bold;
     background: rgb(225, 105, 50);
     color: white;
@@ -383,7 +391,8 @@ table td {
     padding: 10px 5px;
 }
 
-table td:first-of-type {
+table td:first-of-type,
+table th {
     font-weight: bold;
 }
 
@@ -399,6 +408,7 @@ table tr:nth-child(odd) {
     margin-bottom: 20px;
     margin-top: 5px;
 }
+
 #status .stats {
     color: #555;
     font-size: smaller;
@@ -412,13 +422,16 @@ table tr:nth-child(odd) {
     align-items: center;
     flex: 1;
 }
+
 #results ul {
     list-style: none;
     padding-left: 0;
 }
+
 #results li {
     display: flex;
 }
+
 #results li::before {
     content: '';
     display: inline-block;
@@ -439,4 +452,25 @@ table tr:nth-child(odd) {
 .result-row .exe {
     background: #ff9d46;
     color: black;
+}
+
+.external-favicon {
+    width: 16px;
+    vertical-align: middle;
+}
+
+#contributors {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+    align-content: stretch;
+    justify-content: flex-start;
+    gap: 1px 5px;
+    min-height: 50px;
+}
+
+#contributors>div {
+    padding: 3px;
+    border: 1px solid rgb(225, 105, 50);
+    border-radius: 2px;
 }

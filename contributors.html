@@ -1,0 +1,89 @@
+---
+title: Contributors
+---
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>{% if page.title %}{{ page.title }} | {{ site.title }}{% else %}{% else %}{{ site.title }}{% endif
+        %}</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" />
+    <script src="{{ '/assets/js/visit.js' | relative_url }}" async></script>
+
+    <link rel="icon" type="image/x-icon" href="{{ site.favicon_location }}">
+</head>
+
+<body>
+    <article>
+        <div class="search_banner">
+            <header>
+                <div class="back"><i class="fas fa-arrow-left light" onclick="window.location = '{{ '/' | relative_url }}'"></i></div>
+                <h1>{{ site.title }}</h1>
+            </header>
+        </div>
+        <script>
+            async function load() {
+                let contributors = await (await fetch('https://api.github.com/repos/{{ site.repo }}/contributors')).json();
+                contributors.forEach(function (x) {
+                    var div = document.createElement('div');
+                    div.innerHTML = '<a href="https://github.com/' + x['login'] + '"><img src="https://avatars.githubusercontent.com/u/' + x['id'] + '?s=16&v=4" alt="Avatar of ' + x['login'] + '" class="external-favicon" /></a> <a href="https://github.com/{{ site.repo }}/commits?author=' + x['login'] + '">' + x['login'] + '</a>';
+                    document.getElementById("contributors").appendChild(div);
+                });
+            }
+            load()
+        </script>
+        <section style="margin-top: 0;">
+            <h2>{{ page.title }}</h2>
+            <p>{{ site.title }} thanks everyone who has added entries to this project:</p>
+            <div id="contributors"></div>
+            <p>{{ site.title }} is grateful to all cyber security researchers who provided resources that enabled the
+                creation of new entries for this project:</p>
+            <p>
+            <table cellspacing=0>
+                <thead>
+                    <tr>
+                        <th style="width:80%">Website</td>
+                        <th style="width:20%">Number of references</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    {%- assign resources_url_all = '' | split: ',' %}
+                    {%- assign sites_expand = 'twitter.com,github.com,medium.com' | split: ',' %}
+                    {%- for file in site.entries %}
+                    {%- for resource in file.Resources %}
+                    {% assign base_url_ = resource | downcase | replace: "www.","" | split: '//' | last | split: '/' %}
+                    {% assign base_url = base_url_[0] %}
+                    {% if sites_expand contains base_url %}
+                    {% assign base_url = base_url_[0] | append: '/' | append: base_url_[1] %}
+                    {% endif %}
+                    {% assign resources_url_all = resources_url_all | push: base_url %}
+                    {%- endfor %}
+                    {%- endfor %}
+                    {%- assign resources_url = resources_url_all | group_by_exp: "item", "item" | sort: 'size' | reverse
+                    | group_by: "size" %}
+                    {%- for count in resources_url -%}
+                    {%- assign items = count.items | sort: 'name' %}
+                    {%- for elem in items %}
+                    <tr>
+                        <td><img src="https://icons.duckduckgo.com/ip3/{{ elem.name | split:'/' | first }}.ico"
+                                class="external-favicon" alt="Favicon of {{elem.name }}" /> <a
+                                href="https://{{ elem.name }}">{{ elem.name }}</a></td>
+                        <td>{{ count.name }}</td>
+                    </tr>
+                    {%- endfor %}
+                    {%- endfor -%}
+                </tbody>
+            </table>
+            </p>
+
+
+
+        </section>
+    </article>
+</body>
+
+</html>

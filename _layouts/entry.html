@@ -17,6 +17,7 @@
     <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
     <link rel="stylesheet" href="{{ '/assets/css/code.css' | relative_url }}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" />
+    <script>github_repo="{{ site.repo }}";</script>
     <script src="{{ '/assets/js/main.js' | relative_url }}"></script>
     <script src="{{ '/assets/js/visit.js' | relative_url }}" async></script>
     <link rel="icon" type="image/x-icon" href="{{ site.favicon_location }}">
@@ -146,6 +147,9 @@
                 {%endif%}
             {%endcase%}{%endfor%}</p>
             <p><strong>This DLL Hijack doesn't seem to work (anymore), why is it still included?</strong><br />Luckily, vendors regularly patch vulnerable applications in order to prevent DLL Hijacking from taking place. Nevertheless, older versions will remain vulnerable; for that reason, the entry won't be deleted from this project. To help others, you may want to open a pull request updating the 'precondition' tag on this entry to make the community aware of the reduced scope.</p>
+        </section>
+        <section>
+            <a href="{{'/' | relative_url }}">Homepage</a> | <a href="{{'/api/' | relative_url }}">API</a> | <a href="{{'/contributors' | relative_url }}">Contributors</a>
         </section>
     </article>
 
