@@ -39,7 +39,6 @@ function changeYamlDefinition(target){
 }
 
 function goBack(){
-    console.log(document.referrer)
     if(document.referrer && (document.referrer.indexOf("localhost") > 0 || document.referrer.toLowerCase().indexOf("hijacklibs") > 0)){
         history.back();
         window.location = "/";
@@ -80,7 +79,7 @@ function isValidGitHubUrl(string) {
   }
 
 function getLastModified(path) {
-    fetch("https://api.github.com/repos/wietze/Hijacklibs/commits?path="+encodeURIComponent(path), { headers: { "Content-Type": "application/json; charset=utf-8" }})
+    fetch("https://api.github.com/repos/"+github_repo+"/commits?path="+encodeURIComponent(path), { headers: { "Content-Type": "application/json; charset=utf-8" }})
     .then(res => res.json())
     .then(commits => {
         try {
