@@ -1,0 +1,29 @@
+---
+Name: opera_elf.dll
+Author: Wietze Beukema
+Created: 2023-07-28
+Vendor: Opera
+ExpectedLocations:
+  - '%LOCALAPPDATA%\programs\opera\%VERSION%'
+ExpectedSignatureInformation:
+- Subject: CN=Opera Norway AS, O=Opera Norway AS, L=Oslo, S=Oslo, C=NO, SERIALNUMBER=916 368 127
+  Issuer: CN=DigiCert Trusted G4 Code Signing RSA4096 SHA384 2021 CA1, O="DigiCert, Inc.", C=US
+  Type: Authenticode
+VulnerableExecutables:
+  - Path: '%LOCALAPPDATA%\programs\opera\%VERSION%\opera.exe'
+    Type: Sideloading
+    ExpectedVersionInformation:
+    - FileDescription: Opera Internet Browser
+      InternalName: Opera
+      ProductName: Opera Internet Browser
+    ExpectedSignatureInformation:
+    - Subject: CN=Opera Norway AS, O=Opera Norway AS, L=Oslo, S=Oslo, C=NO, SERIALNUMBER=916 368 127
+      Issuer: CN=DigiCert Trusted G4 Code Signing RSA4096 SHA384 2021 CA1, O="DigiCert, Inc.", C=US
+      Type: Authenticode
+      SHA256:
+      - 5E41D71DB892D1041E55D7700046D5A2FBBB8A4109DE0F1B369DCF46BDFFF6F
+Resources:
+  - https://twitter.com/ShitSecure/status/1566127363389329412
+Acknowledgements:
+- Name: S3cur3Th1sSh1t
+  Twitter: '@ShitSecure'
