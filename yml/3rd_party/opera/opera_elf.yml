@@ -12,6 +12,8 @@ ExpectedSignatureInformation:
 VulnerableExecutables:
   - Path: '%LOCALAPPDATA%\programs\opera\%VERSION%\opera.exe'
     Type: Sideloading
+    SHA256:
+    - 97b2a5f2a7e7b8048162ef93c932e0ffafdd875d54c026524fc3e340d70e4991
     ExpectedVersionInformation:
     - FileDescription: Opera Internet Browser
       InternalName: Opera
@@ -20,8 +22,6 @@ VulnerableExecutables:
     - Subject: CN=Opera Norway AS, O=Opera Norway AS, L=Oslo, S=Oslo, C=NO, SERIALNUMBER=916 368 127
       Issuer: CN=DigiCert Trusted G4 Code Signing RSA4096 SHA384 2021 CA1, O="DigiCert, Inc.", C=US
       Type: Authenticode
-      SHA256:
-      - 5E41D71DB892D1041E55D7700046D5A2FBBB8A4109DE0F1B369DCF46BDFFF6F
 Resources:
   - https://twitter.com/ShitSecure/status/1566127363389329412
 Acknowledgements:
