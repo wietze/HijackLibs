@@ -12,5 +12,6 @@ VulnerableExecutables:
     Type: Catalog
 Resources:
 - https://www.trustwave.com/en-us/resources/blogs/spiderlabs-blog/backdoor-at-the-end-of-the-icmp-tunnel/
+- https://www.crowdstrike.com/blog/4-ways-adversaries-hijack-dlls/
 ---
 

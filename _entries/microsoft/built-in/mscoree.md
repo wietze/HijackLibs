@@ -30,6 +30,7 @@ Resources:
 - https://securityintelligence.com/posts/windows-features-dll-sideloading/
 - https://github.com/xforcered/WFH
 - https://www.secureworks.com/research/shadowpad-malware-analysis
+- https://www.crowdstrike.com/blog/4-ways-adversaries-hijack-dlls/
 Acknowledgements:
 - Name: Wietze
   Twitter: '@wietze'
