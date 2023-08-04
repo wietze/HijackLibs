@@ -5,11 +5,11 @@ function contains(elem, val) {
 }
 
 function getSearchString() {
-    return $.trim($('#search').val()).replace(/ +/g, ' ').toLowerCase()
+    return document.getElementById('search').value.trim().replace(/ +/g, ' ').toLowerCase()
 }
 
 function getFilters() {
-    return Array.from($('#filters input:checked')).map(x => x.getAttribute('data-text'));
+    return Array.from(document.querySelectorAll('#filters input:checked')).map(x => x.getAttribute('data-text'));
 }
 
 function updatePageAnchor(string, override) {
@@ -29,13 +29,13 @@ function highlight(line, search) {
     return line.replace(term, '<span class="highlight">$1</span>')
 }
 function triggerSearch(searchValue){
-    $('#search')[0].value = searchValue;
+    document.getElementById('search').value = searchValue;
     handleSearch();
 }
 
 function handleSearch() {
     while (data == null) { }
-    $('#results').text("");
+    document.getElementById('results').innerHTML = "";
 
     var searchValue = getSearchString();
     var types = getFilters();
@@ -43,17 +43,18 @@ function handleSearch() {
     if (searchValue.length == 0) {
         generateHome();
     } else {
-        $('#intro').css("display", "none");
-        $('.back').css("visibility", "visible");
+        document.getElementById('intro').style.display = "none";
+        Array.from(document.querySelectorAll('.back')).map(item => { item.style.visibility = 'visible'; });
+
         if (searchValue.length <= 2) {
-            $('#status').text("Enter at least three characters.");
+            document.getElementById('status').innerHTML = "Enter at least three characters.";
             return;
         }
 
         if(searchValue.substr(0,4) == 'app:'){
             searchValueApp = searchValue.substr(4);
-            if (searchValueApp.length <= 2) {
-                $('#status').text("Enter at least three characters for the application name.");
+            if (searchValueApp.length <= 1) {
+                document.getElementById('status').innerHTML = "Enter at least two characters for the application name.";
                 return;
             }
             foundEntries = Object.entries(data).filter(function (elem) {
@@ -63,8 +64,8 @@ function handleSearch() {
         } else {
             if(searchValue.substr(0,7) == 'vendor:'){
                 searchValueVendor = searchValue.substr(7);
-                if (searchValueVendor.length <= 2) {
-                    $('#status').text("Enter at least three characters for the vendor name.");
+                if (searchValueVendor.length <= 1) {
+                    document.getElementById('status').innerHTML = "Enter at least two characters for the vendor name.";
                     return;
                 }
                 foundEntries = Object.keys(data).filter(function (elem) {
@@ -84,10 +85,10 @@ function handleSearch() {
 
         if (foundEntries !== undefined && foundEntries.length > 0) {
             let verb = foundEntries.length == 1 ? "entry" : "entries";
-            $('#status').text(foundEntries.length + " " + verb + " found.");
+            document.getElementById('status').innerText = foundEntries.length + " " + verb + " found.";
 
         } else {
-            $('#status').html("No results.<br /><span style=\"font-style: italic; font-size: small;\">Missing an entry? Open a <a href=\"https://www.github.com/"+github_repo+"/pulls\" data-visit-click=\"gh-pull\">pull request</a></span>!");
+            document.getElementById('status').innerHTML = "No results.<br /><span style=\"font-style: italic; font-size: small;\">Missing an entry? Open a <a href=\"https://www.github.com/"+github_repo+"/pulls\" data-visit-click=\"gh-pull\">pull request</a></span>!";
         }
     }
 }
@@ -95,7 +96,7 @@ function handleSearch() {
 
 function addResultsExe(foundEntries, searchValue){
     if(searchValue === undefined || searchValue == null || searchValue == "" ) return
-    let target = $('<ul></ul>');
+    let target = document.createElement("ul");
 
     let exeMapping = {};
     foundEntries.forEach(dll => dll[1]['executables'].forEach(exe => {exe = exe.toLowerCase(); Object.keys(exeMapping).includes(exe) ? exeMapping[exe].push(dll[0]) : (exeMapping[exe] = [dll[0]])}));
@@ -103,46 +104,62 @@ function addResultsExe(foundEntries, searchValue){
 
     foundExes.forEach(function (exe) {
         var foundDlls = exeMapping[exe].sort()
-        let output = $('<li class="exe-file"></li>')
-        let div = $("<div class=\"result-row\"><a>" + highlight(exe, searchValue) + "</a></div>")
-        let div2 = $("<div style='min-width: 200px; max-width: 200px'></div>")
+        let output = document.createElement("li");
+        output.classList.add("exe-file");
+
+        let div = document.createElement("div");
+        div.classList.add("result-row");
+        div.innerHTML = "<a>" + highlight(exe, searchValue) + "</a>";
+
+        let div2 = document.createElement("div");
+        div2.classList.add("result-row-exe");
+
         foundDlls.forEach(function (d) {
-            div2.append('<div class="pill results-dll"><img alt="DLL icon" src="/assets/img/dll.png" style="height: 1.25em; width: 1.25em; vertical-align: middle;"> <a href="' + data[d]['url'] + '" onclick="updatePageAnchor()" title="'+d+' is loaded by '+exe+'.">'+d+'</a></div>')
+            div2.insertAdjacentHTML('beforeend', '<div class="pill results-dll"><img alt="DLL icon" src="/assets/img/dll.png" style="height: 1.25em; width: 1.25em; vertical-align: middle;"> <a href="' + data[d]['url'] + '" onclick="updatePageAnchor()" title="'+d+' is loaded by '+exe+'.">'+d+'</a></div>')
         });
-        div.append(div2)
-        output.append(div);
-        target.append(output);
+        div.appendChild(div2)
+        output.appendChild(div);
+        target.appendChild(output);
     });
-    $('#results').append(target);
+    document.getElementById('results').appendChild(target);
     return foundExes;
 }
 
 function addResultsDll(foundEntries, searchValue){
-    let target = $('<ul></ul>');
+    let target = document.createElement("ul");
 
     foundEntries.forEach(function (d) {
         let found_exes = data[d]['executables'].filter(function (elem) { return contains(elem, searchValue); })
-        let output = $('<li class="dll-file"></li>')
-        let div = $("<div class=\"result-row\"><a href=\"" + data[d]['url'] + "\" onclick=\"updatePageAnchor()\">" + highlight(d, searchValue) + "</a></div>")
-        if (found_exes.length > 0) { found_exes.forEach(function (exe) { div.append("<pre class=\"exe pill\" title=\"This executable loads " + d + ".\">" + highlight(exe, searchValue) + "</pre>"); }) }
-        output.append(div);
-        target.append(output);
+        let output = document.createElement("li");
+        output.classList.add("dll-file");
+
+        let div = document.createElement("div");
+        div.classList.add("result-row");
+        div.innerHTML = "<a href=\"" + data[d]['url'] + "\" onclick=\"updatePageAnchor()\">" + highlight(d, searchValue) + "</a>"
+
+        if (found_exes.length > 0) { found_exes.forEach(function (exe) { div.insertAdjacentHTML('beforeend', "<pre class=\"exe pill\" title=\"This executable loads " + d + ".\">" + highlight(exe, searchValue) + "</pre>"); }) }
+        output.appendChild(div);
+        target.appendChild(output);
     });
-    $('#results').append(target);
+    document.getElementById('results').append(target);
 }
 
 function addLatestEntryPills(target, foundEntries){
     foundEntries.forEach(function (d) {
         let found_exes = data[d]['executables'];
-        let output = $("<div class=\"pill home-dll margin-right\"><img alt=\"DLL icon\" src=\"/assets/img/dll.png\" style=\"height: 1.25em; width: 1.25em; vertical-align: middle;\" /> <a href=\"" + data[d]['url'] + "\" onclick=\"updatePageAnchor()\" title=\""+d+" is loaded by "+found_exes.length+" vulnerable executable"+ (found_exes.length > 1 ? "s" : "") + ".\">" + d + "</a></div>")
-        target.append(output)
+        let output = ("<div class=\"pill home-dll margin-right\"><img alt=\"DLL icon\" src=\"/assets/img/dll.png\" style=\"height: 1.25em; width: 1.25em; vertical-align: middle;\" /> <a href=\"" + data[d]['url'] + "\" onclick=\"updatePageAnchor()\" title=\""+d+" is loaded by "+found_exes.length+" vulnerable executable"+ (found_exes.length > 1 ? "s" : "") + ".\">" + d + "</a></div>")
+        target.insertAdjacentHTML('beforeend', output)
     });
 }
 
 function addVendorPills(target, foundEntries){
-    Object.entries(foundEntries).forEach(function (d) {
-        let output = $("<div class=\"pill home-vendor margin-right\"><a href=\"javascript:\" onclick=\"triggerSearch('vendor:"+d[0]+"')\" title=\"There are "+d[1]+" DLL Hijacking entries associated with " + d[0] + ".\">" + d[0] + "</a><div class=\"counter\">"+d[1]+"</div></div>")
-        target.append(output)
+    let res = Object.entries(foundEntries)
+    res = res.sort((a, b) =>
+        b[1] - a[1] || a[0].localeCompare(b[0])
+    );
+    res.forEach(function (vendor_entry) {
+        let output = ("<div class=\"pill home-vendor margin-right\"><a href=\"javascript:\" onclick=\"triggerSearch('vendor:" + vendor_entry[0] + "')\" title=\"There are " + vendor_entry[1] + " DLL Hijacking entries associated with " + vendor_entry[0] + ".\">" + vendor_entry[0] + "</a><div class=\"counter\">" + vendor_entry[1] + "</div></div>")
+        target.insertAdjacentHTML('beforeend', output)
     });
 }
 
@@ -151,11 +168,10 @@ function createCommaAnd(array){
     return array.join(', ') + ' and ' + last;
 }
 
-
 function generateHome(){
     // Display intro
-    $('#intro').css("display", "block");
-    $('.back').css("visibility", "hidden");
+    document.getElementById('intro').style.display = 'block';
+    Array.from(document.querySelectorAll('.back')).map(item => { item.style.visibility = 'hidden'; });
 
     // Create a mapping with type => number of entries
     stats_type = {}
@@ -168,8 +184,8 @@ function generateHome(){
     }
 
     // Reset status and filter bars
-    $('#status').html('');
-    generateFilter = $('#filters')[0].children.length == 0;
+    document.getElementById('status').innerHTML = '';
+    generateFilter = document.getElementById('filters').children.length == 0;
 
     // Order grouped entries by their size
     result = []
@@ -179,51 +195,57 @@ function generateHome(){
             // Add filter buttons
             if(generateFilter){
                 sanitised = encodeURIComponent(key).toLowerCase().replace(/\.|%[0-9a-z]{2}/gi, '');
-                $('#filters').append($('<input type="checkbox" id="filter_'+sanitised+'" onchange="handleSearch()" data-text="'+key+'" checked><label for="filter_'+sanitised+'">'+key+'</label>'));
+                document.getElementById('filters').insertAdjacentHTML('beforeend','<input type="checkbox" id="filter_'+sanitised+'" onchange="handleSearch()" data-text="'+key+'" checked><label for="filter_'+sanitised+'">'+key+'</label>');
             }
             // Add stat to status bar
             result.push(value + " <em>" + key + "</em>");
     }
 
     // Show latest entries by default
-    let latestItemsWrapper = $('<div style="display: flex; flex-direction: flow;"><div style="white-space:nowrap; margin-right: 5px; width: 120px; flex-shrink: 0;"><strong>Latest entries:</strong></div></div>')
-    let latestItems = $('<div style="display: flex; flex-wrap: wrap;"></div>')
-    latestItemsWrapper.append(latestItems);
+    let latestItemsWrapper = document.createElement("div");
+    latestItemsWrapper.classList.add('latest-items-wrapper');
+    latestItemsWrapper.insertAdjacentHTML('beforeend', '<div style="white-space:nowrap; margin-right: 5px; width: 120px; flex-shrink: 0;"><strong>Latest entries:</strong></div>')
 
-    let vendorWrapper = $('<div style="display: flex; flex-direction: flow;"><div style="white-space:nowrap; margin-right: 5px; width: 120px; flex-shrink: 0;"><strong>By vendor:</strong></div></div>')
-    let vendorItems = $('<div style="display: flex; flex-wrap: wrap;"></div>')
-    vendorWrapper.append(vendorItems);
+    let latestItems = document.createElement("div");
+    latestItems.classList.add('latest-items');
+    latestItemsWrapper.appendChild(latestItems);
+
+    let vendorWrapper = document.createElement("div");
+    vendorWrapper.classList.add('latest-items-wrapper');
+    vendorWrapper.insertAdjacentHTML('beforeend', '<div style="white-space:nowrap; margin-right: 5px; width: 120px; flex-shrink: 0;"><strong>By vendor:</strong></div>')
+
+    let vendorItems = document.createElement("div");
+    vendorItems.classList.add('latest-items');
+    vendorWrapper.appendChild(vendorItems);
 
     // Update status bar
-    $('#status').append(latestItemsWrapper);
-    $('#status').append(vendorWrapper);
+    document.getElementById('status').appendChild(latestItemsWrapper);
+    document.getElementById('status').appendChild(vendorWrapper);
     items = Object.keys(data).sort(function(a,b){return data[a].date-data[b].date}).reverse()
     addLatestEntryPills(latestItems, items.slice(0,10));
     addVendorPills(vendorItems, stats_vendor);
-    $('#status').append('<br /><span class="stats">The database contains '+ createCommaAnd(result) +' entries. To see all available DLL hijacking entries, click <a href="javascript:" onclick="triggerSearch(\'.exe\')">here</a>.</span>')
+    document.getElementById('status').insertAdjacentHTML('beforeend', '<br /><span class="stats">The database contains '+ createCommaAnd(result) +' entries. To see all available DLL hijacking entries, click <a href="javascript:" onclick="triggerSearch(\'.exe\')">here</a>.</span>')
 }
 
-$(function () {
+document.addEventListener('DOMContentLoaded', function(event) {
     if (window.location.hash != "" && window.location.hash != "#") {
         try {
-            hashSearchString = decodeURIComponent(window.location.hash.substr(1));
+            hashSearchString = decodeURIComponent(window.location.hash.substring(1));
             if (getSearchString() != hashSearchString) {
-                $('#search').val(hashSearchString);
+                document.getElementById('search').value = hashSearchString;
             }
         } catch { console.error("Could not decode anchor link", window.location.hash) }
     }
 
-    $.getJSON("/entries.json", function (jdata) {
-        data = jdata;
-
+    fetch("/entries.json").then(r => r.json())
+    .then(gdata => {
+        data = gdata
         generateHome();
-
         searchString = getSearchString()
         if (searchString) handleSearch();
-        $('#search').keyup(debounce(handleSearch, 100));
-    }).fail(function (e, f) {
-        console.error("Could not load JSON:", f);
-    });
+        document.getElementById('search').addEventListener("keyup", debounce(handleSearch, 100));
+    })
+    .catch(e => console.error("Could not load JSON:", e))
 });
 
 function debounce(func, wait, immediate) {

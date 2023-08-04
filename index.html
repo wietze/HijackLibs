@@ -12,7 +12,6 @@ title: HijackLibs
     <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
     <link rel="stylesheet" href="{{ '/assets/css/code.css' | relative_url }}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" />
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <script>github_repo="{{ site.repo }}";</script>
     <script src="{{ '/assets/js/main.js' | relative_url }}"></script>
     <script src="{{ '/assets/js/search.js' | relative_url }}"></script>
@@ -45,7 +44,7 @@ title: HijackLibs
                 <li><em>DLL Search Order Hijacking</em> (<a href="https://attack.mitre.org/techniques/T1574/001/">T1574.001</a>): DLLs specified by an application without a path are searched for in fixed locations in a <a href="https://docs.microsoft.com/en-us/windows/win32/dlls/dynamic-link-library-search-order">specific order</a>. By putting a malicious DLL in a location that is searched in before the actual DLL, the legitimate application will execute arbitrary code upon normal execution.</li>
                 <li><em>Environment Variable-based DLL Hijacking</em>: By changing a specific environment variable to an attacker-controlled directory, it is possible to trick a vulnerable application into loading a malicious {{DLL}} from the attacker-controled location.</li>
             </ul>
-            <p>An overview of useful resources explaining various aspects of DLL Hijacking can be found <a href="https://github.com/{{ site.repo }}/wiki">here</a></p>
+            <p>An overview of useful resources explaining various aspects of DLL Hijacking can be found <a href="https://github.com/{{ site.repo }}/wiki">here</a>.</p>
 
 
             <h2>What is this project about?</h2>
