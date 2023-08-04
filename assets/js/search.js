@@ -53,8 +53,8 @@ function handleSearch() {
 
         if(searchValue.substr(0,4) == 'app:'){
             searchValueApp = searchValue.substr(4);
-            if (searchValueApp.length <= 2) {
-                document.getElementById('status').innerHTML = "Enter at least three characters for the application name.";
+            if (searchValueApp.length <= 1) {
+                document.getElementById('status').innerHTML = "Enter at least two characters for the application name.";
                 return;
             }
             foundEntries = Object.entries(data).filter(function (elem) {
@@ -64,8 +64,8 @@ function handleSearch() {
         } else {
             if(searchValue.substr(0,7) == 'vendor:'){
                 searchValueVendor = searchValue.substr(7);
-                if (searchValueVendor.length <= 2) {
-                    document.getElementById('status').innerHTML = "Enter at least three characters for the vendor name.";
+                if (searchValueVendor.length <= 1) {
+                    document.getElementById('status').innerHTML = "Enter at least two characters for the vendor name.";
                     return;
                 }
                 foundEntries = Object.keys(data).filter(function (elem) {
@@ -131,7 +131,7 @@ function addResultsDll(foundEntries, searchValue){
     foundEntries.forEach(function (d) {
         let found_exes = data[d]['executables'].filter(function (elem) { return contains(elem, searchValue); })
         let output = document.createElement("li");
-        output.classList.add("exe-file");
+        output.classList.add("dll-file");
 
         let div = document.createElement("div");
         div.classList.add("result-row");
@@ -153,8 +153,12 @@ function addLatestEntryPills(target, foundEntries){
 }
 
 function addVendorPills(target, foundEntries){
-    Object.entries(foundEntries).forEach(function (d) {
-        let output = ("<div class=\"pill home-vendor margin-right\"><a href=\"javascript:\" onclick=\"triggerSearch('vendor:"+d[0]+"')\" title=\"There are "+d[1]+" DLL Hijacking entries associated with " + d[0] + ".\">" + d[0] + "</a><div class=\"counter\">"+d[1]+"</div></div>")
+    let res = Object.entries(foundEntries)
+    res = res.sort((a, b) =>
+        b[1] - a[1] || a[0].localeCompare(b[0])
+    );
+    res.forEach(function (vendor_entry) {
+        let output = ("<div class=\"pill home-vendor margin-right\"><a href=\"javascript:\" onclick=\"triggerSearch('vendor:" + vendor_entry[0] + "')\" title=\"There are " + vendor_entry[1] + " DLL Hijacking entries associated with " + vendor_entry[0] + ".\">" + vendor_entry[0] + "</a><div class=\"counter\">" + vendor_entry[1] + "</div></div>")
         target.insertAdjacentHTML('beforeend', output)
     });
 }
