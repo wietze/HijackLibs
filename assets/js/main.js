@@ -53,7 +53,7 @@ function timeSince(date) {
     var interval = seconds / 31536000;
 
     if (interval > 1) {
-      return  "over" + Math.floor(interval) + " year" + (interval>2 ? "s" : "") + " ago";
+      return  "over " + Math.floor(interval) + " year" + (interval>2 ? "s" : "") + " ago";
     }
     interval = seconds / 2592000;
     if (interval > 1) {
