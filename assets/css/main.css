@@ -250,6 +250,10 @@ header>.back>i {
     cursor: pointer;
 }
 
+header>.back>i.light {
+    color: #ddd;
+}
+
 ul.resources {
     margin: 0;
     padding: 0;
@@ -392,7 +396,8 @@ table {
     border: 1px solid #ccc;
 }
 
-table>thead td {
+table>thead td,
+table>thead th {
     font-weight: bold;
     background: rgb(225, 105, 50);
     color: white;
@@ -400,6 +405,11 @@ table>thead td {
 
 table td {
     padding: 10px 5px;
+}
+
+table td:first-of-type,
+table th {
+    font-weight: bold;
 }
 
 table tr:nth-child(even) {
@@ -465,4 +475,25 @@ table tr:nth-child(odd) {
 .result-row .exe {
     background: #ff9d46;
     color: black;
+}
+
+.external-favicon {
+    width: 16px;
+    vertical-align: middle;
+}
+
+#contributors {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+    align-content: stretch;
+    justify-content: flex-start;
+    gap: 1px 5px;
+    min-height: 50px;
+}
+
+#contributors>div {
+    padding: 3px;
+    border: 1px solid rgb(225, 105, 50);
+    border-radius: 2px;
 }

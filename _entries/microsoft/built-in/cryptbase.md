@@ -215,14 +215,25 @@ VulnerableExecutables:
     Type: Catalog
 - Path: '%SYSTEM32%\wscadminui.exe'
   Type: Sideloading
+- Path: '%PROGRAMFILES%\Minecraft Launcher\MinecraftLauncher.exe'
+  Type: Sideloading
+  ExpectedSignatureInformation:
+  - Subject: CN=Mojang AB, O=Mojang AB, L=Stockholm, C=SE
+    Issuer: CN=DigiCert Trusted G4 Code Signing RSA4096 SHA384 2021 CA1, O="DigiCert, Inc.", C=US
+    Type: Authenticode
+  SHA256:
+  - 6511ef24c41cf20f707119dd40971420f1cd6f97f0e888b7d24b5e0dec9d5495
 Resources:
 - https://wietze.github.io/blog/hijacking-dlls-in-windows
 - https://securityintelligence.com/posts/windows-features-dll-sideloading/
 - https://github.com/xforcered/WFH
+- https://twitter.com/AndrewOliveau/status/1682185200862625792
 Acknowledgements:
 - Name: Wietze
   Twitter: '@wietze'
 - Name: Chris Spehn
   Twitter: '@ConsciousHacker'
+- Name: Andrew Oliveau
+  Twitter: '@AndrewOliveau'
 ---
 

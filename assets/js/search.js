@@ -87,7 +87,7 @@ function handleSearch() {
             $('#status').text(foundEntries.length + " " + verb + " found.");
 
         } else {
-            $('#status').html("No results.<br /><span style=\"font-style: italic; font-size: small;\">Missing an entry? Open a <a href=\""+github_repo+"\" data-visit-click=\"gh-pull\">pull request</a></span>!");
+            $('#status').html("No results.<br /><span style=\"font-style: italic; font-size: small;\">Missing an entry? Open a <a href=\"https://www.github.com/"+github_repo+"/pulls\" data-visit-click=\"gh-pull\">pull request</a></span>!");
         }
     }
 }

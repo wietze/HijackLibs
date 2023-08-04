@@ -14,5 +14,6 @@ VulnerableExecutables:
 Resources:
 - https://posts.specterops.io/lateral-movement-scm-and-dll-hijacking-primer-d2f61e8ab992
 - https://www.youtube.com/watch?v=MZ8fgAN2As8
+- https://www.crowdstrike.com/blog/4-ways-adversaries-hijack-dlls/
 ---
 
