@@ -50,40 +50,80 @@ function handleSearch() {
             return;
         }
 
-        if(searchValue.substr(0,7) == 'vendor:'){
-            searchValueVendor = searchValue.substr(7);
-            foundEntries = Object.keys(data).filter(function (elem) {
-                return  contains(data[elem]['vendor'], searchValueVendor)
-                        && data[elem]['types'].some(x => types.includes(x));
+        if(searchValue.substr(0,4) == 'app:'){
+            searchValueApp = searchValue.substr(4);
+            if (searchValueApp.length <= 2) {
+                $('#status').text("Enter at least three characters for the application name.");
+                return;
+            }
+            foundEntries = Object.entries(data).filter(function (elem) {
+                return  data[elem[0]]['types'].some(x => types.includes(x));
                 });
+            foundEntries = addResultsExe(foundEntries, searchValueApp);
         } else {
-            foundEntries = Object.keys(data).filter(function (elem) {
-                return  (contains(elem, searchValue)
-                            || data[elem]['executables'].some(x => contains(x, searchValue))
-                        )
-                        && data[elem]['types'].some(x => types.includes(x));
-                });
+            if(searchValue.substr(0,7) == 'vendor:'){
+                searchValueVendor = searchValue.substr(7);
+                if (searchValueVendor.length <= 2) {
+                    $('#status').text("Enter at least three characters for the vendor name.");
+                    return;
+                }
+                foundEntries = Object.keys(data).filter(function (elem) {
+                    return  contains(data[elem]['vendor'], searchValueVendor)
+                            && data[elem]['types'].some(x => types.includes(x));
+                    });
+            } else {
+                foundEntries = Object.keys(data).filter(function (elem) {
+                    return  (contains(elem, searchValue)
+                                || data[elem]['executables'].some(x => contains(x, searchValue))
+                            )
+                            && data[elem]['types'].some(x => types.includes(x));
+                    });
+            }
+            addResultsDll(foundEntries, searchValue);
         }
 
-        if (foundEntries.length > 0) {
+        if (foundEntries !== undefined && foundEntries.length > 0) {
             let verb = foundEntries.length == 1 ? "entry" : "entries";
-            $('#status').text(foundEntries.length + " "+ verb + " found.");
-            addResults(foundEntries, searchValue);
+            $('#status').text(foundEntries.length + " " + verb + " found.");
+
         } else {
             $('#status').html("No results.<br /><span style=\"font-style: italic; font-size: small;\">Missing an entry? Open a <a href=\"https://www.github.com/"+github_repo+"/pulls\" data-visit-click=\"gh-pull\">pull request</a></span>!");
         }
     }
 }
 
-function addResults(foundEntries, searchValue){
-    i = 0;
+
+function addResultsExe(foundEntries, searchValue){
+    if(searchValue === undefined || searchValue == null || searchValue == "" ) return
+    let target = $('<ul></ul>');
+
+    let exeMapping = {};
+    foundEntries.forEach(dll => dll[1]['executables'].forEach(exe => {exe = exe.toLowerCase(); Object.keys(exeMapping).includes(exe) ? exeMapping[exe].push(dll[0]) : (exeMapping[exe] = [dll[0]])}));
+    let foundExes = Object.keys(exeMapping).filter(function (elem) { return elem.toLowerCase().includes(searchValue.toLowerCase()) })
+
+    foundExes.forEach(function (exe) {
+        var foundDlls = exeMapping[exe].sort()
+        let output = $('<li class="exe-file"></li>')
+        let div = $("<div class=\"result-row\"><a>" + highlight(exe, searchValue) + "</a></div>")
+        let div2 = $("<div style='min-width: 200px; max-width: 200px'></div>")
+        foundDlls.forEach(function (d) {
+            div2.append('<div class="pill results-dll"><img alt="DLL icon" src="/assets/img/dll.png" style="height: 1.25em; width: 1.25em; vertical-align: middle;"> <a href="' + data[d]['url'] + '" onclick="updatePageAnchor()" title="'+d+' is loaded by '+exe+'.">'+d+'</a></div>')
+        });
+        div.append(div2)
+        output.append(div);
+        target.append(output);
+    });
+    $('#results').append(target);
+    return foundExes;
+}
+
+function addResultsDll(foundEntries, searchValue){
     let target = $('<ul></ul>');
 
     foundEntries.forEach(function (d) {
         let found_exes = data[d]['executables'].filter(function (elem) { return contains(elem, searchValue); })
-        let even_odd = (i++ % 2 == 0) ? "even" : "odd";
-        let output = $('<li></li>')
-        let div = $("<div class=\"result-row " + even_odd + "\"><a href=\"" + data[d]['url'] + "\" onclick=\"updatePageAnchor()\">" + highlight(d, searchValue) + "</a></div>")
+        let output = $('<li class="dll-file"></li>')
+        let div = $("<div class=\"result-row\"><a href=\"" + data[d]['url'] + "\" onclick=\"updatePageAnchor()\">" + highlight(d, searchValue) + "</a></div>")
         if (found_exes.length > 0) { found_exes.forEach(function (exe) { div.append("<pre class=\"exe pill\" title=\"This executable loads " + d + ".\">" + highlight(exe, searchValue) + "</pre>"); }) }
         output.append(div);
         target.append(output);

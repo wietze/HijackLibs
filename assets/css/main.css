@@ -72,7 +72,6 @@ div.key {
 .pill.margin-right {
     margin-left: 0px;
     margin-right: 3px;
-    font-size: revert;
 }
 
 .pill:first-of-type {
@@ -124,23 +123,40 @@ div.key {
     text-decoration: none;
 }
 
-.pill.home-dll {
+.pill.home-dll,
+.pill.results-dll {
     background: white;
     border: 1px solid rgb(225, 105, 50);
+    font-size: revert;
+}
+
+.pill.home-dll {
     white-space: nowrap;
     float: right;
 }
 
-.pill.home-dll>a {
+.pill.results-dll {
+    margin: 0 0 1px 0;
+}
+
+.pill.results-dll>a {
+    white-space: normal;
+    line-break: anywhere;
+}
+
+.pill.home-dll>a,
+.pill.results-dll>a {
     color: rgb(225, 105, 50);
 }
 
-.pill.home-dll:hover {
+.pill.home-dll:hover,
+.pill.results-dll:hover {
     background: rgb(225, 105, 50);
     transition: all .05s ease-in;
 }
 
-.pill.home-dll:hover>a {
+.pill.home-dll:hover>a,
+.pill.results-dll:hover>a {
     color: white;
     transition: all .05s ease-in;
 }
@@ -419,7 +435,6 @@ table tr:nth-child(odd) {
     flex-wrap: wrap;
     margin-bottom: 3px;
     padding: 0 5px;
-    align-items: center;
     flex: 1;
 }
 
@@ -432,17 +447,25 @@ table tr:nth-child(odd) {
     display: flex;
 }
 
+#results li:nth-child(odd) {
+    background-color: #f7f7f7;
+}
+
 #results li::before {
     content: '';
     display: inline-block;
     height: 16px;
     width: 16px;
-    background-image: url(/assets/img/dll.png);
     background-size: contain;
 }
 
-.result-row.odd {
-    background-color: #f7f7f7;
+.exe-file::before {
+    background-image: url(/assets/img/exe.png);
+}
+
+.dll-file::before,
+.pill.results-dll>a::before {
+    background-image: url(/assets/img/dll.png);
 }
 
 .result-row>a {
