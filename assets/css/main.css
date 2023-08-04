@@ -438,6 +438,11 @@ table tr:nth-child(odd) {
     flex: 1;
 }
 
+.result-row-exe {
+    min-width: 200px;
+    max-width: 200px;
+}
+
 #results ul {
     list-style: none;
     padding-left: 0;
@@ -496,4 +501,14 @@ table tr:nth-child(odd) {
     padding: 3px;
     border: 1px solid rgb(225, 105, 50);
     border-radius: 2px;
+}
+
+.latest-items-wrapper {
+    display: flex;
+    flex-direction: flow;
+}
+
+.latest-items {
+    display: flex;
+    flex-wrap: wrap;
 }
