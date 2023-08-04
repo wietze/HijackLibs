@@ -226,7 +226,7 @@ function generateHome(){
 document.addEventListener('DOMContentLoaded', function(event) {
     if (window.location.hash != "" && window.location.hash != "#") {
         try {
-            hashSearchString = decodeURIComponent(window.location.hash.substr(1));
+            hashSearchString = decodeURIComponent(window.location.hash.substring(1));
             if (getSearchString() != hashSearchString) {
                 document.getElementById('search').value = hashSearchString;
             }
