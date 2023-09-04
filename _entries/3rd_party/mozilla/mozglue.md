@@ -5,7 +5,7 @@ Created: 2022-09-26
 Vendor: Mozilla
 ExpectedLocations:
   - '%PROGRAMFILES%\SeaMonkey'
-  - '%PROGRAMFILES%\Mozilla\Firefox'
+  - '%PROGRAMFILES%\Mozilla Firefox'
   - '%PROGRAMFILES%\Mozilla Thunderbird'
 VulnerableExecutables:
   - Path: '%PROGRAMFILES%\SeaMonkey\seamonkey.exe'
