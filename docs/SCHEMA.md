@@ -6,14 +6,14 @@ A simple template can be found [here](/template.yml).
 | Field | Type | Required | Format | Description |
 | ----- | ---- | -------- | ------ | ----------- |
 | `Name`| String | ✅ | All lower case, must end in `.dll` | Name of the DLL that is being recorded. |
-| `Author` | String | ✅ |  | Full name of the person creating the entry. | 
+| `Author` | String | ✅ |  | Full name of the person creating the entry. |
 | `Created` | Date| ✅ | YYYY-MM-DD | Date of when the entry was first created. |
-| `Vendor` | String | ✅ |  | Name of the vendor providing the DLL. | 
+| `Vendor` | String | ✅ |  | Name of the vendor providing the DLL. |
 | `CVE` | String | Optional | CVE-YYYY-XXXX | ID of the assigned CVE, if applicable. |
 | `ExpectedLocations` | List[String] | Optional | No trailing slashes | Folder locations[^1] where legitimate versions of the DLL are normally found. |
 | `ExpectedVersionInformation` | [VersionInformation](#VersionInformation) | Optional | | File attributes of the legitimate DLL.|
 | `ExpectedSignatureInformation` | [SignatureInformation](#SignatureInformation) | Optional | | Signature data of the legitimate DLL.|
-| `VulnerableExecutables` | List[[VulnerableExecutable](#VulnerableExecutable)] | ✅ |  | Executables that are known to load the DLL described. | 
+| `VulnerableExecutables` | List[[VulnerableExecutable](#VulnerableExecutable)] | ✅ |  | Executables that are known to load the DLL described. |
 | `Resources` | List[String] | Optional | HTTP(S) links only | URLs to relevant content that may explain further context (e.g. a PDF report, a tweet, a YouTube video).|
 | `Acknowledgements` | List[[Acknowledgement](#Acknowledgement)] | Optional |  | People who should be acknowledge for finding this entry (i.e. who did the actual research). |
 
@@ -52,7 +52,7 @@ A simple template can be found [here](/template.yml).
 ## Acknowledgement
 | Field | Type | Required | Format | Description |
 | ----- | ---- | -------- | ------ | ----------- |
-| `Name` | String | ✅ |  | Full name (or Twitter screen name) of the person who should be acknowledged. | 
-| `Twitter` | String | Optional | Has to start with `@` | The Twitter handle of the person who should be acknowledged. | 
+| `Name` | String | ✅ |  | Full name (or Twitter screen name) of the person who should be acknowledged. |
+| `Twitter` | String | Optional | Has to start with `@` | The Twitter handle of the person who should be acknowledged. |
 
-[^1]: This field supports environment variables such as `%SYSTEM32%`, `%SYSWOW64%`, `%PROGRAMFILES%`, `%PROGRAMDATA%`, `%APPDATA%`, `%LOCALAPPDATA%`, and so on. Please use this where possible. Variable `%VERSION%` is also available if a path contains a version number that is likely to change. 
+[^1]: This field supports environment variables such as `%SYSTEM32%`, `%SYSWOW64%`, `%PROGRAMFILES%`, `%PROGRAMDATA%`, `%APPDATA%`, `%LOCALAPPDATA%`, and so on. Please use this where possible. Variable `%VERSION%` is also available if a path contains a version number that is likely to change.
