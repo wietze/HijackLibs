@@ -5,6 +5,7 @@ Created: 2023-04-04
 Vendor: Microsoft
 ExpectedLocations:
 - '%WINDIR%\Microsoft.NET\Framework\v%VERSION%'
+- '%WINDIR%\Microsoft.NET\Framework64\v%VERSION%'
 VulnerableExecutables:
 - Path: '%WINDIR%\Microsoft.NET\Framework\v%VERSION%\mscorsvw.exe'
   Type: Sideloading
