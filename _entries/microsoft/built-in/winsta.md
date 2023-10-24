@@ -181,14 +181,23 @@ VulnerableExecutables:
   - Subject: CN=Microsoft Windows, O=Microsoft Corporation, L=Redmond, S=Washington, C=US
     Issuer: CN=Microsoft Windows Production PCA 2011, O=Microsoft Corporation, L=Redmond, S=Washington, C=US
     Type: Catalog
+- Path: '%SYSTEM32%\DriverStore\FileRepository\%VERSION%\igfxSDK.exe'
+  Type: Sideloading
+  ExpectedSignatureInformation:
+  - Subject: CN=Intel(R) pGFX 2020, O=Intel Corporation, L=Santa Clara, S=CA, C=US
+    Issuer: CN=Intel External Issuing CA 7B, O=Intel Corporation, L=Santa Clara, S=CA, C=US
+    Type: Catalog
 Resources:
 - https://wietze.github.io/blog/hijacking-dlls-in-windows
 - https://securityintelligence.com/posts/windows-features-dll-sideloading/
 - https://github.com/xforcered/WFH
+- https://twitter.com/BSummerz/status/1716851156625105342
 Acknowledgements:
 - Name: Wietze
   Twitter: '@wietze'
 - Name: Chris Spehn
   Twitter: '@ConsciousHacker'
+- Name: Will Summerhill
+  Twitter: '@BSummerz'
 ---
 
