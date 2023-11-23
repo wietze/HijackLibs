@@ -4,19 +4,21 @@
 <head>
     <title>{{ page.Name }} | {{ site.title }}</title>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=1">
     <meta name="author" content="{{ page.Author }}">
-    <link rel="canonical" href="{{ page.url | absolute_url }}" />
-    <meta name="title" content="{{ page.Name }} on {{ site.title }}" />
-    <meta property="og:title" name="og:title" content="{{ page.Name }} on {{ site.title }}" />
-    <meta property="og:site_name" name="og:site_name" content="{{ site.title }}" />
-    <meta property="og:type" name="og:type" content="object" />
-    <meta property="og:url" name="og:url" content="{{  page.url | absolute_url }}" />
-    <meta property="og:image" name="og:image" content="{{ '/assets/img/dll.png' | absolute_url }}" />
-    <meta property="og:description" name="og:description" content="Check out the entry for {{ page.Name }} on {{ site.title }} - it is loaded by applications vulnerable to DLL Hijacking!" />
+    <link rel="canonical" href="{{ page.url | absolute_url }}">
+    <meta name="title" content="{{ page.Name }} on {{ site.title }}">
+    <meta name="description" content="{{ page.Name }} is loaded by applications vulnerable to DLL Hijacking - find out which apps are vulnerable, how to detect abuse and what to do next.">
+    <meta property="og:title" name="og:title" content="{{ page.Name }} on {{ site.title }}">
+    <meta property="og:site_name" name="og:site_name" content="{{ site.title }}">
+    <meta property="og:type" name="og:type" content="object">
+    <meta property="og:url" name="og:url" content="{{  page.url | absolute_url }}">
+    <meta property="og:image" name="og:image" content="{{ '/assets/img/dll.png' | absolute_url }}">
+    <meta property="og:description" name="og:description" content="Check out the entry for {{ page.Name }} on {{ site.title }} - it is loaded by applications vulnerable to DLL Hijacking!">
+    <link rel="sitemap" type="application/xml" title="Sitemap" href="{{ '/sitemap.xml' | relative_url}}">
     <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
     <link rel="stylesheet" href="{{ '/assets/css/code.css' | relative_url }}">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous">
     <script>github_repo="{{ site.repo }}";</script>
     <script src="{{ '/assets/js/main.js' | relative_url }}"></script>
     <script src="{{ '/assets/js/visit.js' | relative_url }}" async></script>
@@ -25,28 +27,28 @@
 
 <body>{% capture DLL %}<code>{{ page.Name | escape }}</code>{% endcapture %}
     <article>
-        <header><div class="back"><i class="fas fa-arrow-left" onclick="goBack()"></i></div><h1>{{ page.Name | escape}}</h1><p class="subtitle">Part of the <img alt="DLL icon" src="/assets/img/dll.png" style="height: 1.25em; width: 1.25em; vertical-align: middle;" /><a href="/">Hijack Libs</a> project.</p></header>
+        <header><div class="back"><i class="fas fa-arrow-left" onclick="goBack()"></i></div><h1>{{ page.Name | escape}}</h1><p class="subtitle">Part of the <img alt="DLL icon" src="/assets/img/dll.png" style="height: 1.25em; width: 1.25em; vertical-align: middle;"><a href="/">Hijack Libs</a> project.</p></header>
         <div class="description_wrapper">
-        <section class="description">{% if page.Description %}
+        <div class="section description">{% if page.Description %}
             <div class="metadata"><div class="key">Description</div><div>{{ page.Description | escape }}</div></div>{% endif %}
             <div class="metadata">
                 {% assign types = page.VulnerableExecutables | group_by:"Type" %}
                 <div class="key" title="Type(s) of DLL Hijacking that applies.">Type{%if types.size > 1%}s{%endif%}</div>
                     <div style="display: flex; flex-direction: column;">
                     {% for type in types %}
-                    <div style="flex: 1;{% if forloop.first == false %} margin-top: 1em;{%endif%}">{% capture TYPE %}<span style="font-weight: bold">{{ site.mapping[type.name]['title'] }}</span> <span style="color: #ffd4d4; font-size: x-small;">({{ type.size }}&nbsp;EXE{% if type.size > 1 %}s{% endif %})</span>{% endcapture %}{% case type.name %}{% when 'Sideloading' %}
+                    <div style="flex: 1;{% if forloop.first == false %} margin-top: 1em;{%endif%}">{% capture TYPE %}<strong>{{ site.mapping[type.name]['title'] }}</strong> <span style="color: #ffd4d4; font-size: x-small;">({{ type.size }}&nbsp;EXE{% if type.size > 1 %}s{% endif %})</span>{% endcapture %}{% case type.name %}{% when 'Sideloading' %}
                         <span class="pill type"><i class="fas fa-folder-open"></i> {{ TYPE }}</span>
-                        <br />By copying (and optionally renaming) a vulnerable application to a user-writeable folder, alongside a malicious {{DLL}}, arbitrary code can be executed through the legitimate application.{% when 'Phantom' %}
+                        <br>By copying (and optionally renaming) a vulnerable application to a user-writeable folder, alongside a malicious {{DLL}}, arbitrary code can be executed through the legitimate application.{% when 'Phantom' %}
                         <span class="pill type"><i class="fas fa-ghost"></i> {{ TYPE }}</span>
-                        <br />By copying a malicious {{DLL}} to a specific location, a vulnerable application will execute the malicious DLL's code upon normal execution.{% when 'Search Order' %}
+                        <br>By copying a malicious {{DLL}} to a specific location, a vulnerable application will execute the malicious DLL's code upon normal execution.{% when 'Search Order' %}
                         <span class="pill type"><i class="fas fa-sort-amount-down-alt"></i> {{ TYPE }}</span>
-                        <br />DLLs specified by an application without a path are searched for in fixed locations in a <a href="https://docs.microsoft.com/en-us/windows/win32/dlls/dynamic-link-library-search-order">specific order</a>. By putting a malicious {{ DLL }} in a location that is searched in before the actual DLL, the legitimate application will execute arbitrary code upon normal execution.{% when 'Environment Variable' %}
+                        <br>DLLs specified by an application without a path are searched for in fixed locations in a <a href="https://docs.microsoft.com/en-us/windows/win32/dlls/dynamic-link-library-search-order">specific order</a>. By putting a malicious {{ DLL }} in a location that is searched in before the actual DLL, the legitimate application will execute arbitrary code upon normal execution.{% when 'Environment Variable' %}
                         <span class="pill type"><i class="fas fa-percent"></i> {{ TYPE }}</span>
                         {%- assign new_vars = ',' | split: ',' -%}
                         {%- assign variables = type.items | group_by:"Variable" -%}
                         {%- for variable in variables %}{% assign new_vars = new_vars | push: variable.name %} {% endfor -%}
                         {%- assign var =  new_vars |  join: "%</code> or <code>%" -%}
-                        <br />By changing the <code>%{{var}}%</code> environment variable to an attacker-controlled directory, it is possible to trick a vulnerable application into loading a malicious {{DLL}} from the attacker-controled location.{% endcase %}
+                        <br>By changing the <code>%{{var}}%</code> environment variable to an attacker-controlled directory, it is possible to trick a vulnerable application into loading a malicious {{DLL}} from the attacker-controled location.{% endcase %}
                         <span style="font-style: italic; font-size: small;display: inline-block;">See also MITRE ATT&amp;CK&reg; technique <a href="https://attack.mitre.org/techniques/{{ site.mapping[type.name]['attack'] | replace:'.','/'}}/" class="link-dotted">{{ site.mapping[type.name]['attack'] }}: {{ site.mapping[type.name]['attack_text'] }}</a>.</span>
                     </div>
                 {% endfor %}
@@ -69,7 +71,7 @@
                 <div> Thanks to {% for person in page.Acknowledgements %}{% if person.Twitter %}<a href="https://twitter.com/{{person.Twitter}}">{{person.Twitter}}</a> ({{person.Name}}){% else %}{{person.Name}} {% endif %}{% assign calc = forloop.length | minus: 2 %}{% if forloop.index == calc %},{% endif %}{% if forloop.last == false %} and {%endif%}{% endfor %}.</div>
             </div>{%endif%}
             <div class="metadata"><div class="key">Last updated</div><div id="last-updated">Unknown</div></div>
-        </section>
+        </div>
     </div>
         <section>
             <h2>Expected Locations</h2>
@@ -94,9 +96,9 @@
                     <div class="vulnerable_exe">
                         <div><a href="{{ '/' | relative_url }}#app:{{loc.Path | url_encode | replace: "+", "%20"}}" title="Click to search for other DLL Hijacking candidates for {{loc.Path | split: "\" | last | escape}}."><code style="display: contents; word-break: break-all;">{{loc.Path | escape}}</code></a>{% if loc.Variable %} by changing <code>%{{loc.Variable}}%</code>{% endif %}</div>
                         <div class="pills">{% if loc.AutoElevate %}
-                            <div class="pill uac" title="{{loc.Path | split: "\" | last | escape}} will automatically increase its integrity level from medium to high, granting itself wider system access, without showing a User Account Control (UAC) prompt (assuming default settings). Under specific cirumstances, this would allow an attacker to run malicious code with elevated privileges without the user being notified." onclick="if (typeof window.orientation !== 'undefined') {alert(this.title); }"><img alt="UAC logo" src="{{ '/assets/img/uac.png' | relative_url }}" style="height: 1em; vertical-align: middle;" /> <span style="font-weight: bold">Auto Elevation</span></div>{% endif %}{% if loc.PrivilegeEscalation == true %}
-                            <div class="pill privesc" title="{{loc.Path | split: "\" | last | escape}} runs or can run under a high integrity level (meaning it has wider system access). Under specific circumstances, this would allow an attacker to run malicious code from this elevated process." onclick="if (typeof window.orientation !== 'undefined') {alert(this.title); }"><i class="fas fa-lock-open"></i> <span style="font-weight: bold">Privilege Escalation</span></div>{% endif %}{% if loc.Condition %}
-                            <div class="pill condition" title="The following is assumed:&#010;{{ loc.Condition | escape }}" onclick="if (typeof window.orientation !== 'undefined') {alert(this.title); }"><i class="fas fa-info-circle"></i> <span style="font-weight: bold">Preconditions</span></div>{% endif %}
+                            <div class="pill uac" title="{{loc.Path | split: "\" | last | escape}} will automatically increase its integrity level from medium to high, granting itself wider system access, without showing a User Account Control (UAC) prompt (assuming default settings). Under specific cirumstances, this would allow an attacker to run malicious code with elevated privileges without the user being notified." onclick="if (typeof window.orientation !== 'undefined') {alert(this.title); }"><img alt="UAC logo" src="{{ '/assets/img/uac.png' | relative_url }}" style="height: 1em; vertical-align: middle;"> <strong>Auto Elevation</strong></div>{% endif %}{% if loc.PrivilegeEscalation == true %}
+                            <div class="pill privesc" title="{{loc.Path | split: "\" | last | escape}} runs or can run under a high integrity level (meaning it has wider system access). Under specific circumstances, this would allow an attacker to run malicious code from this elevated process." onclick="if (typeof window.orientation !== 'undefined') {alert(this.title); }"><i class="fas fa-lock-open"></i> <strong>Privilege Escalation</strong></div>{% endif %}{% if loc.Condition %}
+                            <div class="pill condition" title="The following is assumed:&#010;{{ loc.Condition | escape }}" onclick="if (typeof window.orientation !== 'undefined') {alert(this.title); }"><i class="fas fa-info-circle"></i> <strong>Preconditions</strong></div>{% endif %}
                             {% if loc.SHA256 %}
                             <div class="pill hash"> <i class="fas fa-file-signature"></i> <a style="font-weight: bold" href="https://www.virustotal.com/gui/file/{{loc.SHA256[0]}}" title="Click to view the VirusTotal entry of this hash.">File hash available</a></div>{% endif %}
                         </div>
@@ -117,14 +119,14 @@
                 {% highlight yml %}{% include sigma_file.yml page=page %}{% endhighlight %}
                 </div>
             </div>
-            <div class="yaml-buttons">
-                <a onclick="changeYamlDefinition(this)" class="yaml-button yaml-button-selected" title="Click to show the Sigma rule looking for image loads involving {{ page.Name }}.">Image</a>
-                <a onclick="changeYamlDefinition(this)" class="yaml-button" title="Click to show the Sigma rule looking for file events involving {{ page.Name }}.">File</a>
+            <div class="yaml-buttons" role="radiogroup">
+                <a href="javascript:" onclick="changeYamlDefinition(this)" class="yaml-button yaml-button-selected" title="Click to show the Sigma rule looking for image loads involving {{ page.Name }}." role="radio" aria-checked="true" tabindex="0">Image</a>
+                <a href="javascript:" onclick="changeYamlDefinition(this)" class="yaml-button" title="Click to show the Sigma rule looking for file events involving {{ page.Name }}." role="radio" aria-checked="false" tabindex="1">File</a>
             </div>
 
             <div style="display: flex">
                 <div style="flex-shrink: 0;">
-                    <div class="button"><i class="fa fa-file-download" aria-hidden="true"></i> <a href="javascript:" download="susp_dll_hijacking_{{ page.Name | replace: '.', '-' | escape }}.yml" onclick="downloadSigma(this)" data-visit-click="YAML-Download">Download YAML</a></div>
+                    <div class="button"><i class="fa fa-file-download" aria-hidden="true"></i> <a href="javascript:" download="susp_dll_hijacking_{{ page.Name | replace: '.', '-' | escape }}.yml" onclick="downloadSigma(this)" data-visit-click="YAML-Download" role="button" aria-pressed="false" tabindex="2">Download YAML</a></div>
                 </div>
                 <div style="font-size: small; margin: auto 5px; line-height: 1em; font-style: italic">Note that this rule is also included in the <a href="{{ '/api/sigma_feed_image.yml' | relative_url }}" id="yaml-feed-url" data-visit-click="SIGMA-Download-feed">Sigma feed</a> that comprises all DLL Hijacking entries part of this project.</div>
             </div>
@@ -133,9 +135,9 @@
 
         <section>
             <h2>FAQs</h2>
-            <p><strong>Why should I care about this?</strong><br />DLL Hijacking enables the execution of malicious code through a signed and/or trusted executable. Defensive measures such as AV and EDR solutions may not pick up on this activity out of the box, and allow-list applications such as AppLocker may not block the execution of the untrusted code. There are numerous examples of threat actors that have been observed to leaverage DLL Hijacking to achieve their objectives. As such, this project wants to encourage you to monitor for unusual activity involving {{DLL}}.</p>
-            <p><strong>How do I abuse this vulnerability?</strong><br />As a red teamer, you'll have to compile your own version of {{DLL}}. More background on this can be found <a href="https://github.com/{{ site.repo }}/wiki/">here</a>.</p>
-            <p><strong>How could the vendor have prevented this vulnerability?</strong><br />
+            <p><strong>Why should I care about this?</strong><br>DLL Hijacking enables the execution of malicious code through a signed and/or trusted executable. Defensive measures such as AV and EDR solutions may not pick up on this activity out of the box, and allow-list applications such as AppLocker may not block the execution of the untrusted code. There are numerous examples of threat actors that have been observed to leaverage DLL Hijacking to achieve their objectives. As such, this project wants to encourage you to monitor for unusual activity involving {{DLL}}.</p>
+            <p><strong>How do I abuse this vulnerability?</strong><br>As a red teamer, you will have to compile your own version of {{DLL}}. There are <a href="https://github.com/{{ site.repo }}/wiki/">various guides</a> on how this can be achieved.</p>
+            <p><strong>How could the vendor have prevented this vulnerability?</strong><br>
                 {% assign seen = 'false' %}
                 {% for type in types %}
                 {% case type.name %}{% when 'Phantom' %}
@@ -146,7 +148,7 @@
                 {% assign seen = 'true' %}
                 {%endif%}
             {%endcase%}{%endfor%}</p>
-            <p><strong>This DLL Hijack doesn't seem to work (anymore), why is it still included?</strong><br />Luckily, vendors regularly patch vulnerable applications in order to prevent DLL Hijacking from taking place. Nevertheless, older versions will remain vulnerable; for that reason, the entry won't be deleted from this project. To help others, you may want to open a pull request updating the 'precondition' tag on this entry to make the community aware of the reduced scope.</p>
+            <p><strong>This DLL Hijack doesn't seem to work (anymore), why is it still included?</strong><br>Luckily, vendors regularly patch vulnerable applications in order to prevent DLL Hijacking from taking place. Nevertheless, older versions will remain vulnerable; for that reason, the entry won't be deleted from this project. To help others, you may want to open a pull request updating the 'precondition' tag on this entry to make the community aware of the reduced scope.</p>
         </section>
         <section>
             <a href="{{'/' | relative_url }}">Homepage</a> | <a href="{{'/api/' | relative_url }}">API</a> | <a href="{{'/contributors' | relative_url }}">Contributors</a>

@@ -190,9 +190,9 @@ div.description_wrapper {
     background: #EEE;
 }
 
-section.description {
-    padding-top: 10px;
-    padding-bottom: 10px;
+.description {
+    padding-top: 10px !important;
+    padding-bottom: 10px !important;
     line-height: 1.3em;
 }
 
@@ -378,6 +378,7 @@ div.search_banner {
 }
 
 section,
+div.section,
 header {
     min-width: 300px;
     max-width: 800px;
