@@ -4,7 +4,7 @@
 <head>
     <title>{{ page.Name }} | {{ site.title }}</title>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="author" content="{{ page.Author }}">
     <link rel="canonical" href="{{ page.url | absolute_url }}">
     <meta name="title" content="{{ page.Name }} on {{ site.title }}">
@@ -138,21 +138,21 @@
             <p><strong>Why should I care about this?</strong><br>DLL Hijacking enables the execution of malicious code through a signed and/or trusted executable. Defensive measures such as AV and EDR solutions may not pick up on this activity out of the box, and allow-list applications such as AppLocker may not block the execution of the untrusted code. There are numerous examples of threat actors that have been observed to leaverage DLL Hijacking to achieve their objectives. As such, this project wants to encourage you to monitor for unusual activity involving {{DLL}}.</p>
             <p><strong>How do I abuse this vulnerability?</strong><br>As a red teamer, you will have to compile your own version of {{DLL}}. There are <a href="https://github.com/{{ site.repo }}/wiki/">various guides</a> on how this can be achieved.</p>
             <p><strong>How could the vendor have prevented this vulnerability?</strong><br>
-                {% assign seen = 'false' %}
-                {% for type in types %}
-                {% case type.name %}{% when 'Phantom' %}
+                {%- assign seen = 'false' -%}
+                {%- for type in types -%}
+                {%- case type.name -%}{%- when 'Phantom' -%}
                 Phantom DLL Hijacking vulnerabilities are typically introduced due to human error: for example, a typo may cause an executable to attempt to load a non-existing DLL; similarly, the removal of a DLL without removing the reference in the depending application will result in the same. Better (code coverage) testing and unused dependency detection may aid in catching potential Phantom DLL vulnerabilities from being introduced.
-                {% else %}
-                {% if seen == 'false' %}
+                {%- else -%}
+                {%- if seen == 'false' -%}
                 Most DLL Hijacking vulnerabilities are introduced by the 'lazy' loading of DLL files, which relies on Windows' default <a href="https://docs.microsoft.com/en-us/windows/win32/dlls/dynamic-link-library-search-order" class="link-dotted" title="Click to see Microsoft's documentation on DLL search order.">DLL search order</a>. Explicitly specifying where a required DLL is located is easy and often already helps a lot. This doesn't have to hurt portability if Windows API calls are used to obtain paths, e.g. <a href="https://docs.microsoft.com/en-gb/windows/win32/api/sysinfoapi/nf-sysinfoapi-getsystemdirectorya"  class="link-dotted" title="Click to see Microsoft's documentation on this API call.">GetSystemDirectory</a> to get the path of the System32 folder. Even better is to check the signature of required DLLs prior to loading them; most platforms, frameworks and/or runtimes offer means to verify DLL signatures with minimal performance impact.
-                {% assign seen = 'true' %}
-                {%endif%}
-            {%endcase%}{%endfor%}</p>
+                {%- assign seen = 'true' -%}
+                {%-endif-%}
+            {%-endcase-%}{%-endfor-%}</p>
             <p><strong>This DLL Hijack doesn't seem to work (anymore), why is it still included?</strong><br>Luckily, vendors regularly patch vulnerable applications in order to prevent DLL Hijacking from taking place. Nevertheless, older versions will remain vulnerable; for that reason, the entry won't be deleted from this project. To help others, you may want to open a pull request updating the 'precondition' tag on this entry to make the community aware of the reduced scope.</p>
         </section>
-        <section>
+        <div class="section">
             <a href="{{'/' | relative_url }}">Homepage</a> | <a href="{{'/api/' | relative_url }}">API</a> | <a href="{{'/contributors' | relative_url }}">Contributors</a>
-        </section>
+        </div>
     </article>
 
     <footer><div>Contribute to this project: <span style="white-space: nowrap"><i class="fab fa-github fa-fw"></i> <a href="https://github.com/{{ site.repo }}">https://github.com/{{ site.repo }}</a></span></div></footer>

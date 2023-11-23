@@ -7,7 +7,8 @@ title: HijackLibs
 <head>
     <title>{{ site.title }}</title>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="{{ site.title }} provides an curated list of DLL Hijacking candidates: mappings between DLLs and vulnerable executables, with additional metadata for more context. For defenders, this project can provide valuable information when trying to detect DLL Hijacking attempts; for red teamers, this project can help identify DLLs that can be used to achieve DLL Hijacking.">
 
     <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
     <link rel="stylesheet" href="{{ '/assets/css/code.css' | relative_url }}">
@@ -24,17 +25,17 @@ title: HijackLibs
 <body>
     <article>
         <div class="search_banner">
-        <header><div class="back" style="visibility: hidden;"><i class="fas fa-arrow-left light" onclick="triggerSearch('')"></i></div><h1>{{ site.title }}</h1></header>
-        <section>
-
-            <input id="search" type="text" style="width: 100%" placeholder="Enter the name of a DLL or EXE here&hellip;">
-            <div id="filters"></div>
-        </section>
+        <header>
+            <div class="back" style="visibility: hidden;"><i class="fas fa-arrow-left light" onclick="triggerSearch('')"></i></div><h1>{{ site.title }}</h1></header>
+            <div class="section">
+                <input id="search" type="text" style="width: 100%" placeholder="Enter the name of a DLL or EXE here&hellip;">
+                <div id="filters"></div>
+            </div>
         </div>
-        <section id="window" style="min-height: 120px;">
+        <div id="window" style="min-height: 120px;" class="section">
             <div id="status"></div>
             <div id="results"></div>
-        </section>
+        </div>
         <section id="intro" style="margin-top: 0em;">
             <h2>What is DLL Hijacking?</h2>
             <p>DLL Hijacking is, in the broadest sense, tricking a legitimate/trusted application into loading an arbitrary <a href="https://en.wikipedia.org/wiki/Dynamic-link_library">DLL</a>. Defensive measures such as AV and EDR solutions may not pick up on this activity out of the box, and allow-list applications such as AppLocker may not block the execution of the untrusted code. There are numerous examples of threat actors that have been observed to leaverage DLL Hijacking to achieve their objectives.</p>
@@ -45,11 +46,11 @@ title: HijackLibs
                 <li><em>DLL Search Order Hijacking</em> (<a href="https://attack.mitre.org/techniques/T1574/001/">T1574.001</a>): DLLs specified by an application without a path are searched for in fixed locations in a <a href="https://docs.microsoft.com/en-us/windows/win32/dlls/dynamic-link-library-search-order">specific order</a>. By putting a malicious DLL in a location that is searched in before the actual DLL, the legitimate application will execute arbitrary code upon normal execution.</li>
                 <li><em>Environment Variable-based DLL Hijacking</em>: By changing a specific environment variable to an attacker-controlled directory, it is possible to trick a vulnerable application into loading a malicious {{DLL}} from the attacker-controled location.</li>
             </ul>
-            <p>An overview of useful resources explaining various aspects of DLL Hijacking can be found <a href="https://github.com/{{ site.repo }}/wiki">here</a>.</p>
+            <p>For an overview of useful resources explaining various aspects of DLL Hijacking, please refer to our <a href="https://github.com/{{ site.repo }}/wiki">wiki</a>.</p>
 
 
             <h2>What is this project about?</h2>
-            <p>This project provides an curated list of DLL Hijacking candidates. A mapping between DLLs and vulnerable executables is kept and can be searched via this website. Additionally, further metadata such as resources provide more context.</p><p>For defenders, this project can provide valuable information when trying to detect DLL Hijacking attempts. Although detecting DLL Hijacking isn't always without challenge, it is certainly possible to monitor for behaviour that may be indicative of abuse. To further support defenders, out-of-the-box Sigma rules are provided through this website. A <span style="font-weight: bold; margin-right: 2px; font-size: larger;">σ</span><a href="{{'/api/sigma_feed_image.yml' | relative_url}}">Sigma feed</a> containing detection rules for all entries part of this project is available too. </p><p>For red teamers, this project can help identify DLLs that can be used to achieve DLL Hijacking. The aim of this project is not to make it easy to abuse the recorded vulnerabilities; as such, PoCs, code templates or tuturials are not provided.</p>
+            <p>This project provides an curated list of DLL Hijacking candidates. A mapping between DLLs and vulnerable executables is kept and can be searched via this website. Additionally, further metadata such as resources provide more context.</p><p>For defenders, this project can provide valuable information when trying to detect DLL Hijacking attempts. Although detecting DLL Hijacking isn't always without challenge, it is certainly possible to monitor for behaviour that may be indicative of abuse. To further support defenders, out-of-the-box Sigma rules are provided through this website. A <strong style="margin-right: 2px; font-size: larger;">σ</strong><a href="{{'/api/sigma_feed_image.yml' | relative_url}}">Sigma feed</a> containing detection rules for all entries part of this project is available too. </p><p>For red teamers, this project can help identify DLLs that can be used to achieve DLL Hijacking. The aim of this project is not to make it easy to abuse the recorded vulnerabilities; as such, PoCs, code templates or tuturials are not provided.</p>
             <h2>How can I use this project's data?</h2>
             <p>This project offers a number of generated files, including JSON and CSV, containing all of the project's data. Because they are automatically updated to the latest version, they can be used in automated processes. More information can be found on the <a href="{{'/api/' | relative_url}}">API page</a>.
             <h2>How do I get involved?</h2>
