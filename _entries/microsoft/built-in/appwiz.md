@@ -18,25 +18,16 @@ ExpectedVersionInformation:
   OriginalFilename: APPWIZ.CPL
   ProductName: Microsoft® Windows® Operating System
 VulnerableExecutables:
-- Path: '%SYSTEM32%\shrpubw.exe'
+- Path: '%SYSTEM32%\fondue.exe'
   Type: Sideloading
   ExpectedSignatureInformation:
   - Subject: CN=Microsoft Windows, O=Microsoft Corporation, L=Redmond, S=Washington, C=US
     Issuer: CN=Microsoft Windows Production PCA 2011, O=Microsoft Corporation, L=Redmond, S=Washington, C=US
     Type: Catalog
-- Path: '%PROGRAMFILES%\Windows Kits\10\bin\%VERSION%\x86\oleview.exe'
-  Type: Sideloading
 Resources:
-- https://www.hexacorn.com/blog/2016/03/10/beyond-good-ol-run-key-part-36/
-- https://www.contextis.com/en/blog/dll-search-order-hijacking
-- https://securityintelligence.com/posts/windows-features-dll-sideloading/
-- https://github.com/xforcered/WFH
+- https://www.hexacorn.com/blog/2024/01/06/1-little-known-secret-of-fondue-exe/
 Acknowledgements:
 - Name: Adam
   Twitter: '@hexacorn'
-- Name: Lampros Noutsos
-  Twitter: '@lampnout'
-- Name: Chris Spehn
-  Twitter: '@ConsciousHacker'
 ---
 
