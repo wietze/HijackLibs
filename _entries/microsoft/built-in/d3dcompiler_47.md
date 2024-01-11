@@ -12,6 +12,7 @@ ExpectedLocations:
 - '%PROGRAMFILES%\cisco systems\cisco jabber'
 - '%PROGRAMFILES%\microsoft\edge\application\%VERSION%'
 - '%PROGRAMFILES%\Google\Chrome\Application\%VERSION%'
+- '%LOCALAPPDATA%\microsoft\teams\stage'
 - '%SYSTEM32%'
 - '%SYSWOW64%'
 ExpectedSignatureInformation:
