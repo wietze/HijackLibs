@@ -5,7 +5,7 @@ func: check_root
 mapping:
   Name:
     type: str
-    pattern: '^[a-z0-9_\-\.]+\.(dll|ocx)$'
+    pattern: '^[a-z0-9_\-\.]+\.(dll|ocx|cpl)$'
     required: true
 
   Author:
