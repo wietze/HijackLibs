@@ -27,7 +27,7 @@ def check_root(value, rule_obj, path):
 
     # YAML-provided data
     entry_name = value.get('Name')
-    if entry_name.replace('.dll', '.yml').replace('.ocx', '.yml') != filename:
+    if entry_name.replace('.dll', '.yml').replace('.ocx', '.yml').replace('.cpl', '.yml') != filename:
         raise AssertionError("File name does not match 'Name' field.")
     vendor_name = value.get('Vendor').replace(' ', '')
     if vendor_name.lower() != (vendor if vendor_type == '3rd_party' else vendor_type):
