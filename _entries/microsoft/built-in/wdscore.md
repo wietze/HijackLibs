@@ -96,14 +96,24 @@ VulnerableExecutables:
   - Subject: CN=Microsoft Windows, O=Microsoft Corporation, L=Redmond, S=Washington, C=US
     Issuer: CN=Microsoft Windows Production PCA 2011, O=Microsoft Corporation, L=Redmond, S=Washington, C=US
     Type: Catalog
+- Path: '%SYSTEM32%\ieunatt.exe'
+  Type: Sideloading
+  Condition: On Windows 11 and higher
+  ExpectedSignatureInformation:
+  - Subject: CN=Microsoft Windows, O=Microsoft Corporation, L=Redmond, S=Washington, C=US
+    Issuer: CN=Microsoft Windows Production PCA 2011, O=Microsoft Corporation, L=Redmond, S=Washington, C=US
+    Type: Catalog
 Resources:
 - https://wietze.github.io/blog/hijacking-dlls-in-windows
 - https://securityintelligence.com/posts/windows-features-dll-sideloading/
 - https://github.com/xforcered/WFH
+- https://www.hexacorn.com/blog/2023/12/30/1-little-known-secret-of-ieunatt-exe-on-win11/
 Acknowledgements:
 - Name: Wietze
   Twitter: '@wietze'
 - Name: Chris Spehn
   Twitter: '@ConsciousHacker'
+- Name: Adam
+  Twitter: '@hexacorn'
 ---
 
