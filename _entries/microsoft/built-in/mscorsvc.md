@@ -13,7 +13,17 @@ VulnerableExecutables:
     - Subject: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, OU=MOPR, CN=Microsoft Corporation
       Issuer: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft Code Signing PCA
       Type: Catalog
+- Path: '%WINDIR%\WinSxS\amd64_netfx4-ngentask_exe_%VERSION%\ngentask.exe'
+  Type: Phantom
+  ExpectedSignatureInformation:
+    - Subject: CN=Microsoft Windows, O=Microsoft Corporation, L=Redmond, S=Washington, C=US
+      Issuer: CN=Microsoft Windows Production PCA 2011, O=Microsoft Corporation, L=Redmond, S=Washington, C=US
+      Type: Catalog
 Resources:
 - https://decoded.avast.io/threatintel/apt-treasure-trove-avast-suspects-chinese-apt-group-mustang-panda-is-collecting-data-from-burmese-government-agencies-and-opposition-groups/
+- https://www.securityjoes.com/post/hide-and-seek-in-windows-closet-unmasking-the-winsxs-hijacking-hideout
+Acknowledgements:
+- Name: Michał Kucharski
+  Twitter: '@Kucharskov'  
 ---
 
