@@ -17,7 +17,7 @@ ExpectedSignatureInformation:
   Issuer: CN=DigiCert Trusted G4 Code Signing RSA4096 SHA384 2021 CA1, O="DigiCert, Inc.", C=US
   Type: Authenticode
 VulnerableExecutables:
-- Path: 'C:\Program Files\Notepad++\notepad++.exe'
+- Path: '%PROGRAMFILES%\Notepad++\notepad++.exe'
   Type: Sideloading
   ExpectedVersionInformation:
   - CompanyName: Don HO don.h@free.fr
