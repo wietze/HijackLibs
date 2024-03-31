@@ -1,0 +1,35 @@
+---
+Name: mimetools.dll
+Author: Wietze Beukema
+Created: 2024-03-31
+Vendor: Notepad++
+ExpectedLocations:
+- '%PROGRAMFILES%\Notepad++\plugins'
+- '%PROGRAMFILES%\Notepad++\plugins\mimetools'
+ExpectedVersionInformation:
+- CompanyName: Don HO don.h@free.fr
+  FileDescription: Base64 encoder/decoder plugin for Notepad++
+  InternalName: base64.dll
+  OriginalFilename: base64.dll
+  ProductName: mimeTools
+ExpectedSignatureInformation:
+- Subject: CN="Notepad++", O="Notepad++", L=Saint Cloud, S=Ile-de-France, C=FR
+  Issuer: CN=DigiCert Trusted G4 Code Signing RSA4096 SHA384 2021 CA1, O="DigiCert, Inc.", C=US
+  Type: Authenticode
+VulnerableExecutables:
+- Path: 'C:\Program Files\Notepad++\notepad++.exe'
+  Type: Sideloading
+    ExpectedVersionInformation:
+    - CompanyName: Don HO don.h@free.fr
+      FileDescription: Notepad++
+      InternalName: notepad++.exe
+      OriginalFilename: notepad++.exe
+      ProductName: Notepad++
+    ExpectedSignatureInformation:
+    - Subject: CN="Notepad++", O="Notepad++", L=Saint Cloud, S=Ile-de-France, C=FR
+      Issuer: CN=DigiCert Trusted G4 Code Signing RSA4096 SHA384 2021 CA1, O="DigiCert, Inc.", C=US
+      Type: Authenticode
+    SHA256:
+    - a41ecbdc16f1e893c5f40bae38174e14e3d969408b219f3f87fec2460d9fea40
+Resources:
+  - https://twitter.com/Cryptolaemus1/status/1770507063816241440
