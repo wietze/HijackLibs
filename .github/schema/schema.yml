@@ -33,7 +33,7 @@ mapping:
     required: false
     sequence:
       - type: str
-        pattern: '^[%cC][ a-zA-Z0-9&_\-\\%\.\(\):]+(?<!\\)(?<!\.\w{3})$'
+        pattern: '^[%cC][ a-zA-Z0-9&_\-\+\\%\.\(\):]+(?<!\\)(?<!\.\w{3})$'
         desc: Only backslashes, no trailing slashes, folder paths only (so no filenames)
         unique: true
         required: true
@@ -101,7 +101,7 @@ mapping:
             type: str
             required: true
             unique: true
-            pattern: '^[ a-zA-Z0-9&_\-\\%\.\(\)]+$'
+            pattern: '^[ a-zA-Z0-9&_\-\+\\%\.\(\)]+$'
 
           Type:
             type: str
