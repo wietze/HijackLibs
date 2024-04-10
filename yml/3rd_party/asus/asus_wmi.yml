@@ -7,7 +7,7 @@ ExpectedLocations:
   - '%PROGRAMFILES%\ASUS\AXSP\%VERSION%'
   - '%PROGRAMFILES(x86)%\ASUS\AXSP\%VERSION%'
 VulnerableExecutables:
-  - Path: '%PROGRAMFILES(x86)%\ASUS\AXSP\4.02.12\atkexComSvc.exe'
+  - Path: '%PROGRAMFILES(x86)%\ASUS\AXSP\%VERSION%\atkexComSvc.exe'
     Type: Sideloading|Search Order
     ExpectedSignatureInformation:
       - Subject: C=TW, L=Taipei City, O=ASUSTeK Computer Inc., CN=ASUSTeK Computer Inc.
@@ -24,4 +24,4 @@ Resources:
   - https://www.virustotal.com/gui/file/7f4689de97d97ddb6e788119ebf0dc3707c66f8216d7cbc79ea329d0c3df63bf/details
 Acknowledgements:
   - Name: Jai Minton
-    Twitter: '@cyberrraiju'
+    Twitter: '@cyberrraiju' 
