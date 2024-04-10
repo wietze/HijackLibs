@@ -10,7 +10,6 @@ VulnerableExecutables:
     Type: Sideloading
     ExpectedVersionInformation:
       - FileDescription: True Burner
-        Comments: http://www.glorylogic.com
     SHA256: 
       - '3e190f160218ad78c85c169dfd0828d36e4a366a3e2a61337391f0d7599a7558'
 Resources:
