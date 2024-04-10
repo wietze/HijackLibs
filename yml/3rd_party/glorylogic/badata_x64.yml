@@ -2,7 +2,7 @@
 Name: badata_x64.dll
 Author: Jai Minton - HuntressLabs
 Created: 2024-04-10
-Vendor: Cisco
+Vendor: Glorylogic
 ExpectedLocations: 
   - '%PROGRAMFILES%\True Burner'
 VulnerableExecutables:
