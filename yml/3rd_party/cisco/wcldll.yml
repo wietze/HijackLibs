@@ -5,9 +5,10 @@ Created: 2024-04-10
 Vendor: Cisco
 ExpectedLocations: 
   - '%PROGRAMFILES(x86)%\Cisco Systems\Cisco Jabber'
-  - '%PROGRAMFILES(x86)%\webex'
+  - '%PROGRAMFILES(x86)%\Webex\Applications'
+  - '%PROGRAMFILES(x86)%\Webex\Plugins'
 VulnerableExecutables:
-  - Path: '%PROGRAMFILES(x86)%\webex\ptInst.exe'
+  - Path: '%PROGRAMFILES(x86)%\Webex\Applications\ptInst.exe'
     Type: Sideloading
     ExpectedVersionInformation:
       - OriginalFilename: ptInst.exe
