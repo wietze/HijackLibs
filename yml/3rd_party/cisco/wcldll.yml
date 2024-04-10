@@ -1,6 +1,6 @@
 ---
 Name: wcldll.dll 
-Author: Jai Minton, HuntressLabs
+Author: Jai Minton - HuntressLabs
 Created: 2024-04-10
 Vendor: Cisco
 ExpectedLocations: 
@@ -8,7 +8,7 @@ ExpectedLocations:
   - '%PROGRAMFILES(x86)%\webex\'
 VulnerableExecutables:
   - Path: '%PROGRAMFILES(x86)%\webex\ptInst.exe'
-    Type: Sideloading|Search Order
+    Type: Sideloading
     ExpectedVersionInformation:
       - OriginalFilename: ptInst.exe
         InternalName: ptInst

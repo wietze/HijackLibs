@@ -1,13 +1,13 @@
 ---
 Name: badata_x64.dll
-Author: Jai Minton, HuntressLabs
+Author: Jai Minton - HuntressLabs
 Created: 2024-04-10
 Vendor: Cisco
 ExpectedLocations: 
   - '%PROGRAMFILES%\True Burner'
 VulnerableExecutables:
   - Path: '%PROGRAMFILES%\True Burner\TrueBurner.exe'
-    Type: Sideloading|Search Order
+    Type: Sideloading
     ExpectedVersionInformation:
       - FileDescription: True Burner
         Comments: http://www.glorylogic.com
