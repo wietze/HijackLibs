@@ -1,0 +1,28 @@
+---
+Name: asio.dll
+Author: Jai Minton - HuntressLabs
+Created: 2024-04-10
+Vendor: Asus
+ExpectedLocations:
+  - '%PROGRAMFILES%\ASUS\AXSP\%VERSION%'
+VulnerableExecutables:
+  - Path: '%PROGRAMFILES%\ASUS\AXSP\4.02.12\atkexComSvc.exe'
+    Type: Sideloading
+    ExpectedSignatureInformation:
+      - Subject: C=TW, L=Taipei City, O=ASUSTeK Computer Inc., CN=ASUSTeK Computer Inc.
+        Issuer: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert EV Code Signing CA (SHA2)
+        Type: Authenticode
+    ExpectedVersionInformation:
+      - OriginalFilename: atkexComSvc.exe
+        InternalName: atkexComSvc.exe
+        FileDescription: ASUS Com Service
+    SHA256:
+      - '12c22ba646232d5d5087d0300d5cfd46fed424f26143a02dc866f1bfceab3c10'
+Resources:
+  - https://www.virustotal.com/gui/file/006f91524d53d483074335f74c2ca2c10cab9b64de86f6151eedfa53174434f2/relations
+  - https://www.virustotal.com/gui/file/7f4689de97d97ddb6e788119ebf0dc3707c66f8216d7cbc79ea329d0c3df63bf/details
+Acknowledgements:
+  - Name: Jai Minton
+    Twitter: '@cyberrraiju'
+---
+
