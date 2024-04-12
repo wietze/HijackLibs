@@ -1,20 +1,20 @@
 ---
-Name: wcldll.dll 
+Name: wcldll.dll
 Author: Jai Minton - HuntressLabs
 Created: 2024-04-10
 Vendor: Cisco
-ExpectedLocations: 
-  - '%PROGRAMFILES(x86)%\Cisco Systems\Cisco Jabber'
-  - '%PROGRAMFILES(x86)%\Webex\Applications'
-  - '%PROGRAMFILES(x86)%\Webex\Plugins'
+ExpectedLocations:
+  - '%PROGRAMFILES%\Cisco Systems\Cisco Jabber'
+  - '%PROGRAMFILES%\Webex\Applications'
+  - '%PROGRAMFILES%\Webex\Plugins'
 VulnerableExecutables:
-  - Path: '%PROGRAMFILES(x86)%\Webex\Applications\ptInst.exe'
+  - Path: '%PROGRAMFILES%\Webex\Applications\ptInst.exe'
     Type: Sideloading
     ExpectedVersionInformation:
       - OriginalFilename: ptInst.exe
         InternalName: ptInst
         FileDescription: WebEx PT ptInst Module
-    SHA256: 
+    SHA256:
       - 'bf1a0c67b433f52ebd304553f022baa34bfbca258c932d2b4b8b956b1467bfa5'
 Resources:
   - https://www.virustotal.com/gui/file/bf1a0c67b433f52ebd304553f022baa34bfbca258c932d2b4b8b956b1467bfa5/details
@@ -22,4 +22,4 @@ Resources:
   - https://www.virustotal.com/gui/file/fa1443219f210bdcf3a25b311342851f61378536eb11810366468156fbd5c051
 Acknowledgements:
   - Name: Jai Minton
-    Twitter: '@cyberrraiju' 
+    Twitter: '@cyberrraiju'
