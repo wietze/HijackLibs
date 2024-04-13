@@ -1,0 +1,26 @@
+---
+Name: corefoundation.dll
+Author: Matt Anderson - HuntressLabs
+Created: 2024-04-13
+Vendor: Apple
+ExpectedLocations:
+  - 'C:\Program Files\Common Files\Apple\Apple Application Support'
+  - 'C:\Windows\System32'
+VulnerableExecutables:
+  - Path: 'C:\Program Files (x86)\iTunes\ituneshelper.exe'
+  - Path: 'C:\Program Files\iTunes\iTunesHelper.exe'
+  - Path: 'C:\Program Files (x86)\Common Files\Apple\iTunesHelper.exe'
+  - Path: 'C:\Program Files (x86)\QuickTime\QuickTimePlayer.exe'
+    Type: Sideloading
+    SHA256:
+      - '01d0837b17e639e9171337d61d05c03298fe2647b0bd0f261f966b2fd6c4d6e'
+Resources:
+  - https://analyze.intezer.com/analyses/82011cc1-c3df-4c63-9945-8730b0d1cf3e
+  - https://www.virustotal.com/gui/file/ff5e56c20591a9019eb28b3cab88f5a240657c1c360bf01ad3a6d417fa10b7f5
+  - https://www.joesandbox.com/analysis/1394928/0/html
+  - https://www.virustotal.com/gui/file/0d8878cca08903777888b3681f90e4a07c7aef7d9600a67dfa985844d4bf5eda/details
+  - https://discussions.apple.com/thread/2732037?sortBy=best
+  - https://iosninja.io/dll/download/corefoundation-dll
+Acknowledgements:
+  - Name: Matt Anderson
+    Twitter: '@nosecurething'
