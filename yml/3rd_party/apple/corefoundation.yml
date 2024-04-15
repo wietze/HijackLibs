@@ -4,13 +4,13 @@ Author: Matt Anderson - HuntressLabs
 Created: 2024-04-13
 Vendor: Apple
 ExpectedLocations:
-  - 'C:\Program Files\Common Files\Apple\Apple Application Support'
-  - 'C:\Windows\System32'
+  - '%PROGRAMFILES%\Common Files\Apple\Apple Application Support'
+  - '%System32%'
 VulnerableExecutables:
-  - Path: 'C:\Program Files (x86)\iTunes\ituneshelper.exe'
-  - Path: 'C:\Program Files\iTunes\iTunesHelper.exe'
-  - Path: 'C:\Program Files (x86)\Common Files\Apple\iTunesHelper.exe'
-  - Path: 'C:\Program Files (x86)\QuickTime\QuickTimePlayer.exe'
+  - Path: '%PROGRAMFILES%\iTunes\ituneshelper.exe'
+  - Path: '%PROGRAMFILES%\iTunes\iTunesHelper.exe'
+  - Path: '%PROGRAMFILES%\Common Files\Apple\iTunesHelper.exe'
+  - Path: '%PROGRAMFILES%\QuickTime\QuickTimePlayer.exe'
     Type: Sideloading
     SHA256:
       - '0d8878cca08903777888b3681f90e4a07c7aef7d9600a67dfa985844d4bf5eda'
