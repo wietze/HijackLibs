@@ -1,6 +1,6 @@
 ---
 Name: keyscramblerie.dll
-Author: Swachchhanda Shrawan Poudel
+Author: Matt Anderson - HuntressLabs, Swachchhanda Shrawan Poudel
 Created: 2024-04-15
 Vendor: QFX
 ExpectedLocations:
@@ -20,5 +20,7 @@ Resources:
   - https://www.virustotal.com/gui/file/5cb9876681f78d3ee8a01a5aaa5d38b05ec81edc48b09e3865b75c49a2187831/details
   - https://www.virustotal.com/gui/file/9cfdc3fe2a10fe2b514fc224c9c8740e1de039d90b9c17f85b64ff29d4a4ebb1
 Acknowledgements:
+  - Name: Matt Anderson
+    Twitter: '@nosecurething'
   - Name: Swachchhanda Shrawan Poudel
     Twitter: '@_swachchhanda_'
