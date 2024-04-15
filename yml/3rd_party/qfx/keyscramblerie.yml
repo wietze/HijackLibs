@@ -2,7 +2,7 @@
 Name: keyscramblerie.dll
 Author: Swachchhanda Shrawan Poudel
 Created: 2023-01-01
-Vendor: QFX Software Corporation
+Vendor: QFX
 ExpectedLocations:
   - '%PROGRAMFILES%\KeyScrambler'
 VulnerableExecutables:
