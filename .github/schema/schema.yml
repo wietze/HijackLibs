@@ -10,7 +10,7 @@ mapping:
 
   Author:
     type: str
-    pattern: '^\w[\w\s\-'']+\w$'
+    pattern: '^\w[\w\s\-'',]+\w$'
     required: true
 
   Created:
