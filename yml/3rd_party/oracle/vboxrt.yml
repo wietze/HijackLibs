@@ -1,0 +1,22 @@
+---
+Name: vboxrt.dll
+Author: Jai Minton - HuntressLabs
+Created: 2024-04-15
+Vendor: Oracle
+ExpectedLocations:
+  - '%PROGRAMFILES%\Oracle\VirtualBox'
+VulnerableExecutables:
+  - Path: '%PROGRAMFILES%\Oracle\VirtualBox\VBoxSVC.exe'
+    Type: Sideloading
+    ExpectedVersionInformation:
+      - FileDescription: VirtualBox Interface
+    SHA256:
+      - '448402c129a721812fa1c5f279f5ca906b9c8bbca652a91655d144d20ce5e6b4'
+Resources:
+  - https://asec.ahnlab.com/en/58319/
+  - https://www.virustotal.com/gui/file/cf801023465679ec34084bdb1adb9f54b2fc3130925a4b8fdc10b11639b4a7cd
+Acknowledgements:
+  - Name: Jai Minton
+    Twitter: '@cyberrraiju'
+  - Name: Huntress
+    Twitter: '@HuntressLabs'

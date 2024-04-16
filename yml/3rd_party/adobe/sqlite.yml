@@ -1,0 +1,21 @@
+---
+Name: sqlite.dll
+Author: Jai Minton - HuntressLabs
+Created: 2024-04-15
+Vendor: Adobe
+ExpectedLocations:
+  - '%PROGRAMFILES%\Adobe\Acrobat Reader DC\Reader'
+VulnerableExecutables:
+  - Path: '%PROGRAMFILES%\Adobe\Acrobat Reader DC\Reader\AcroBroker.exe'
+    Type: Sideloading
+    SHA256:
+      - 1f64f01063b26bf05d4b076d54816e54dacd08b7fd6e5bc9cc5d11a548ff2215
+Resources:
+  - https://asec.ahnlab.com/en/58319/
+  - https://www.virustotal.com/gui/file/1f64f01063b26bf05d4b076d54816e54dacd08b7fd6e5bc9cc5d11a548ff2215
+  - https://www.virustotal.com/gui/file/802bad293e5d5e75ffac3df3dd5301315a886534011871275a1b41c9cec1f298
+Acknowledgements:
+  - Name: Jai Minton
+    Twitter: '@cyberrraiju'
+  - Name: Huntress
+    Twitter: '@HuntressLabs'
