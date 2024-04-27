@@ -21,6 +21,7 @@ Resources:
   - https://www.virustotal.com/gui/file/9cfdc3fe2a10fe2b514fc224c9c8740e1de039d90b9c17f85b64ff29d4a4ebb1
 Acknowledgements:
   - Name: Matt Anderson
+    Company: Huntress
     Twitter: '@nosecurething'
   - Name: Swachchhanda Shrawan Poudel
     Twitter: '@_swachchhanda_'
