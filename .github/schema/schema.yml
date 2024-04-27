@@ -147,7 +147,7 @@ mapping:
         unique: true
         pattern: '^([^:\/?#]+:)(?:\/\/([^\/?#]*))?([^?#]+)?(\?[^#]*)?(#.*)?'
 
-  Acknowledgements:
+  Acknowledgements: &Individuals
     type: seq
     required: false
     sequence:
@@ -159,6 +159,9 @@ mapping:
             type: str
             pattern: '^\w[\w\s\-'']+\w$'
             required: true
+          Company:
+            type: str
+            required: false
           Twitter:
             type: str
             pattern: '^@(\w){1,15}$'
