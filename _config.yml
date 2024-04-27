@@ -1,8 +1,5 @@
 title: "HijackLibs"
 repo: wietze/HijackLibs
-sass:
-  style: compressed
-  sass_dir: _sass
 collections:
   entries:
     output: true

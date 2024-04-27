@@ -68,7 +68,10 @@
             </div>{% endif %}{% if page.Acknowledgements %}
             <div class="metadata">
                 <div class="key" title="Persons who have found or otherwise contributed to this DLL Hijacking opportunity.">Acknowledgements</div>
-                <div> Thanks to {% for person in page.Acknowledgements %}{% if person.Twitter %}<a href="https://twitter.com/{{person.Twitter}}">{{person.Twitter}}</a> ({{person.Name}}){% else %}{{person.Name}} {% endif %}{% assign calc = forloop.length | minus: 2 %}{% if forloop.index == calc %},{% endif %}{% if forloop.last == false %} and {%endif%}{% endfor %}.</div>
+                <div> Thanks to {% for person in page.Acknowledgements %}
+                    {%- assign name = person.Name -%}{%- if person.Company -%}{%- assign name = name | append:' of ' | append: person.Company -%}{%-endif-%}
+                    {{name}}{%- if person.Twitter %} (<a href="https://twitter.com/{{person.Twitter}}">{{person.Twitter}}</a>){%-endif-%}
+                    {%-assign calc = forloop.length | minus: 2 -%}{%- if forloop.index == calc %}, {%-endif-%}{%-if forloop.last == false %} and {% endif-%}{% endfor-%}.</div>
             </div>{%endif%}
             <div class="metadata"><div class="key">Last updated</div><div id="last-updated">Unknown</div></div>
         </div>
