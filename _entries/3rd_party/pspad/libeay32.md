@@ -1,0 +1,25 @@
+---
+Name: libeay32.dll
+Author: Jai Minton - HuntressLabs
+Created: 2024-04-15
+Vendor: PSPad
+ExpectedLocations:
+  - '%PROGRAMFILES%\PSPad editor'
+VulnerableExecutables:
+  - Path: '%PROGRAMFILES%\PSPad editor\PSPad.exe'
+    Type: Sideloading
+    ExpectedVersionInformation:
+      - FileDescription: Text editor
+    SHA256:
+      - '0a97c374a6cc14b54b01deb3be77b28e274ced8c0627efba6b84712284332a7a'
+Resources:
+  - https://asec.ahnlab.com/en/58319/
+  - https://www.virustotal.com/gui/file/cf801023465679ec34084bdb1adb9f54b2fc3130925a4b8fdc10b11639b4a7cd
+  - https://www.virustotal.com/gui/file/7add49ed95d6a9e90988dcbfc54cdb727e0c705e3d79879717849798354e3e25
+  - https://www.virustotal.com/gui/file/a13c09f41979df8717a9d39e15e6ce960c1c4ba6af456a563fa3ff1b8b4d388c
+Acknowledgements:
+  - Name: Jai Minton
+    Company: Huntress
+    Twitter: '@cyberrraiju'
+---
+

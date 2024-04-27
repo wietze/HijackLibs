@@ -1,0 +1,22 @@
+---
+Name: qtcorevbox4.dll
+Author: Jai Minton - HuntressLabs
+Created: 2024-04-15
+Vendor: Oracle
+ExpectedLocations:
+  - '%PROGRAMFILES%\Oracle\VirtualBox'
+VulnerableExecutables:
+  - Path: '%PROGRAMFILES%\Oracle\VirtualBox\VBoxTestOGL.exe'
+    Type: Sideloading
+    SHA256:
+      - 'e631bf67c349ce3afc7d5960b0247af9466292bc314ff393dee0716f3a50fd5f'
+Resources:
+  - https://asec.ahnlab.com/en/58319/
+  - https://www.virustotal.com/gui/file/cf801023465679ec34084bdb1adb9f54b2fc3130925a4b8fdc10b11639b4a7cd
+  - https://www.virustotal.com/gui/file/a6e6b1a47021fa1e4d36b047f5326eb04d5f545907fc6ac3730162a07cc792ff
+Acknowledgements:
+  - Name: Jai Minton
+    Company: Huntress
+    Twitter: '@cyberrraiju'
+---
+

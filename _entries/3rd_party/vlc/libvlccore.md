@@ -1,0 +1,21 @@
+---
+Name: libvlccore.dll
+Author: Jai Minton - HuntressLabs
+Created: 2024-04-15
+Vendor: VLC
+ExpectedLocations:
+  - '%PROGRAMFILES%\VideoLAN\VLC'
+VulnerableExecutables:
+  - Path: '%PROGRAMFILES%\VideoLAN\VLC\vlc.exe'
+    Type: Sideloading
+    SHA256:
+      - 1fcd04fe1a3d519c7d585216b414cd947d16997d77d81a2892821f588c630937
+Resources:
+  - https://asec.ahnlab.com/en/58319/
+  - https://www.virustotal.com/gui/file/33c08eeaff6e9aa686a14144cb84d1895f260d28b767a0d2a10dbe427a65d7c0
+Acknowledgements:
+  - Name: Jai Minton
+    Company: Huntress
+    Twitter: '@cyberrraiju'
+---
+

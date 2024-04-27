@@ -23,6 +23,7 @@ Resources:
   - https://www.virustotal.com/gui/file/7f4689de97d97ddb6e788119ebf0dc3707c66f8216d7cbc79ea329d0c3df63bf/details
 Acknowledgements:
   - Name: Jai Minton
+    Company: Huntress
     Twitter: '@cyberrraiju'
 ---
 

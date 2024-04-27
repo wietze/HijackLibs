@@ -24,6 +24,7 @@ Resources:
   - https://iosninja.io/dll/download/corefoundation-dll
 Acknowledgements:
   - Name: Matt Anderson
+    Company: Huntress
     Twitter: '@nosecurething'
 ---
 

@@ -16,6 +16,7 @@ Resources:
   - https://www.virustotal.com/gui/file/64d0fc47fd77eb300942602a912ea9403960acd4f2ed33a8e325594bf700d65f
 Acknowledgements:
   - Name: Matt Anderson
+    Company: Huntress
     Twitter: '@nosecurething'
 ---
 
