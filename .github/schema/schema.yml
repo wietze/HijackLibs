@@ -147,7 +147,7 @@ mapping:
         unique: true
         pattern: '^([^:\/?#]+:)(?:\/\/([^\/?#]*))?([^?#]+)?(\?[^#]*)?(#.*)?'
 
-  Acknowledgements:
+  Acknowledgements: &Individuals
     type: seq
     required: false
     sequence:
@@ -155,7 +155,7 @@ mapping:
         func: not_empty
         required: true
         mapping:
-          Name: &Individual
+          Name:
             type: str
             pattern: '^\w[\w\s\-'']+\w$'
             required: true
