@@ -155,10 +155,13 @@ mapping:
         func: not_empty
         required: true
         mapping:
-          Name:
+          Name: &Individual
             type: str
             pattern: '^\w[\w\s\-'']+\w$'
             required: true
+          Company:
+            type: str
+            required: false
           Twitter:
             type: str
             pattern: '^@(\w){1,15}$'
