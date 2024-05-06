@@ -8,10 +8,6 @@ ExpectedLocations:
 VulnerableExecutables:
   - Path: '%PROGRAMFILES%\IObit\Driver Booster\%VERSION%\DriverBooster.exe'
     Type: Sideloading
-    ExpectedSignatureInformation:
-      - Subject: C=CN, PostalCode=610042, S=Sichuan Sheng, L=Chengdu Shi, STREET=No. 605, 6th Floor, Unit 1, Building 1, STREET=45 Renmin South Road, O=IObit CO., LTD, CN=IObit CO., LTD
-        Issuer: C=GB, ST=Greater Manchester, L=Salford, O=Sectigo Limited, CN=Sectigo RSA Code Signing CA
-        Type: Authenticode
     ExpectedVersionInformation:
       - OriginalFilename: RttHlp.exe
         InternalName: RttHlp.exe
