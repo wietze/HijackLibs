@@ -1,0 +1,25 @@
+---
+Name: avdevice-54.dll
+Author: Jai Minton - HuntressLabs
+Created: 2024-05-06
+Vendor: AnyMP4
+ExpectedLocations:
+  - '%PROGRAMFILES%\AnyMP4 Studio\AnyMP4 Blu-ray Creator'
+VulnerableExecutables:
+  - Path: '%PROGRAMFILES%\AnyMP4 Studio\AnyMP4 Blu-ray Creator\AnyMP4 Blu-ray Creator.exe'
+    Type: Sideloading
+    ExpectedVersionInformation:
+      - OriginalFilename: AnyMP4 Blu-ray Creator.exe
+        InternalName: AnyMP4 Blu-ray Creator
+        FileDescription: AnyMP4 Blu-ray Creator
+    SHA256:
+      - '98c9c45cf18434fe9ab79c9db2e88c1f1db48c95338864421e4d761d71c2fbc6'
+Resources:
+  - https://www.virustotal.com/gui/file/98c9c45cf18434fe9ab79c9db2e88c1f1db48c95338864421e4d761d71c2fbc6/details
+Acknowledgements:
+  - Name: Chad Hudson
+    Company: Huntress
+    Twitter: '@0xBurgers'
+  - Name: Jai Minton
+    Company: Huntress
+    Twitter: '@cyberrraiju'
