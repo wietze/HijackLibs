@@ -1,0 +1,22 @@
+---
+Name: sqlite.dll
+Author: Jai Minton - HuntressLabs
+Created: 2024-05-06
+Vendor: SoftPerfect
+ExpectedLocations:
+  - '%PROGRAMFILES%\NetWorx'
+VulnerableExecutables:
+  - Path: '%PROGRAMFILES%\NetWorx\networx.exe'
+    Type: Sideloading
+    ExpectedVersionInformation:
+      - FileDescription: NetWorx Application (64-bit)
+    SHA256:
+      - '29345d9c6ff0106c9032b15e2c88f17bc8972ed843d1b5c044cf17d00f1d45c5'
+Resources:
+  - https://www.virustotal.com/gui/file/0271e401ca9e430868f45148a04680295929450aecc537285359a28605645daf
+  - https://www.virustotal.com/gui/file/29345d9c6ff0106c9032b15e2c88f17bc8972ed843d1b5c044cf17d00f1d45c5/relations
+  - https://www.virustotal.com/gui/file/4489bffe08dcbd1e9741f9b66f8ba10b7526318a1dc8d190aef13bbc1599b0f7/details
+Acknowledgements:
+  - Name: Jai Minton
+    Company: Huntress
+    Twitter: '@cyberrraiju'
