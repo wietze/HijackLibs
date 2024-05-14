@@ -7,7 +7,7 @@ ExpectedLocations:
 - '%PROGRAMFILES%\Bitdefender Antivirus Free'
 VulnerableExecutables:
 - Path: '%PROGRAMFILES%\Bitdefender Antivirus Free\BDReinit.exe'
-  Type: Sideloading
+  Type: Clearly-invalid-value
   SHA256:
   - 386EB7AA33C76CE671D6685F79512597F1FAB28EA46C8EC7D89E58340081E2BD
   ExpectedSignatureInformation:
@@ -17,4 +17,3 @@ VulnerableExecutables:
 Resources:
 - https://www.secureworks.com/research/shadowpad-malware-analysis
 - https://www.hexacorn.com/blog/2023/02/25/beyond-good-ol-run-key-part-141/
-

@@ -27,9 +27,5 @@ jobs:
         with:
           config_file: .github/.yamllint
 
-      - uses: cketti/action-pykwalify@v0.3-temp-fix #eliezio/action-pykwalify@v0.3
-        name: Check schema
-        with:
-          files: "yml/**/*.*"
-          schema: .github/schema/schema.yml
-          strict: true
+      - name: Run Pydantic validator
+        run: python3 .github/schema/pychecks.py "yml/**/*.yml"
