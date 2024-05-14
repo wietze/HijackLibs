@@ -94,19 +94,22 @@ class Entry(BaseModel):
         return self
 
 
-def find_line_number(object, path: list[str|int]):
-    index_count = -1
-    for i, line in enumerate(object.split('\n'), start=1):
-        if isinstance(path[0], int):
-            if re.findall(f'^\\s*-', line):
-                index_count += 1
-                if index_count == path[0]:
-                    path.pop(0)
-        elif re.match(rf'^\s*{re.escape(path[0])}:', line):
-            path.pop(0)
-            index_count = -1
-        if not path:
-            return i
+def find_line_number(object: str, path: list[str|int]):
+    try:
+        index_count = -1
+        for i, line in enumerate(object.split('\n'), start=1):
+            if isinstance(path[0], int):
+                if re.findall(f'^\\s*-', line):
+                    index_count += 1
+                    if index_count == path[0]:
+                        path.pop(0)
+            elif re.match(rf'^\s*{re.escape(path[0])}:', line):
+                path.pop(0)
+                index_count = -1
+            if not path:
+                return i
+    except:
+        pass
     return 1
 
 
@@ -145,7 +148,7 @@ if __name__ == "__main__":
                 error_messages = []
                 for error in e.errors():
                     error_messages.append(f"{error['msg']}: {'.'.join(str(y) for y in error['loc'])}")
-                    errors.append({'file': file_path, 'line': find_line_number(contents, [x for x in error['loc']]), 'message': f"{error['msg']}: {'.'.join(str(y) for y in error['loc'])}", 'title': error['type']})
+                    errors.append({'file': file_path, 'line': find_line_number(contents, [x for x in error['loc']]) if error['loc'] else 1, 'message': f"{error['msg']}: {'.'.join(str(y) for y in error['loc'])}", 'title': error['type']})
                 print("> {}".format(file_path))
                 print(f"  {data}")
                 print(f"  ERROR: {', '.join(error_messages)}")
