@@ -19,7 +19,6 @@ Resources:
   - https://analyze.intezer.com/analyses/82011cc1-c3df-4c63-9945-8730b0d1cf3e
   - https://www.virustotal.com/gui/file/ff5e56c20591a9019eb28b3cab88f5a240657c1c360bf01ad3a6d417fa10b7f5
   - https://www.joesandbox.com/analysis/1394928/0/html
-  - https://www.virustotal.com/gui/file/0d8878cca08903777888b3681f90e4a07c7aef7d9600a67dfa985844d4bf5eda/details
   - https://discussions.apple.com/thread/2732037?sortBy=best
   - https://iosninja.io/dll/download/corefoundation-dll
 Acknowledgements:

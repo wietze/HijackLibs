@@ -18,6 +18,5 @@ VulnerableExecutables:
 Resources:
   - https://www.secureworks.com/research/shadowpad-malware-analysis
   - https://www.pwc.co.uk/issues/cyber-security-services/research/chasing-shadows.html
-
 ---
 

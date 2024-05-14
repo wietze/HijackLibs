@@ -13,6 +13,5 @@ VulnerableExecutables:
     Type: Sideloading
 Resources:
   - https://medium.com/insomniacs/analysis-walkthrough-fun-clientrun-part-1-b2509344ebe6
-
 ---
 

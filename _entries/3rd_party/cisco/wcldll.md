@@ -17,7 +17,6 @@ VulnerableExecutables:
     SHA256:
       - 'bf1a0c67b433f52ebd304553f022baa34bfbca258c932d2b4b8b956b1467bfa5'
 Resources:
-  - https://www.virustotal.com/gui/file/bf1a0c67b433f52ebd304553f022baa34bfbca258c932d2b4b8b956b1467bfa5/details
   - https://www.virustotal.com/gui/file/26227914bdad9baf491a9b966e6301fc997cff35c677dcfd9628654f4f6bc9fc/relations
   - https://www.virustotal.com/gui/file/fa1443219f210bdcf3a25b311342851f61378536eb11810366468156fbd5c051
 Acknowledgements:

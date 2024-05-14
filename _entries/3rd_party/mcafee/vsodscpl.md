@@ -15,6 +15,5 @@ Resources:
 Acknowledgements:
   - Name: Sean Gallagher
     Twitter: "@thepacketrat"
-
 ---
 
