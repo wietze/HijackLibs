@@ -14,8 +14,6 @@ VulnerableExecutables:
         FileDescription: AnyMP4 Blu-ray Creator
     SHA256:
       - '98c9c45cf18434fe9ab79c9db2e88c1f1db48c95338864421e4d761d71c2fbc6'
-Resources:
-  - https://www.virustotal.com/gui/file/98c9c45cf18434fe9ab79c9db2e88c1f1db48c95338864421e4d761d71c2fbc6/details
 Acknowledgements:
   - Name: Chad Hudson
     Company: Huntress
