@@ -7,7 +7,7 @@ ExpectedLocations:
   - '%PROGRAMFILES%\HP'
 VulnerableExecutables:
   - Path: hpqhvind.exe
-    Type: Sideloadings
+    Type: Sideloading
     SHA256:
       - 404c4ab8ea4d0c05ac78038a7addb045861706832ea3a51dec8c39cfc15017d3
     ExpectedSignatureInformation:
