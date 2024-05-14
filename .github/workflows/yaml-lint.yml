@@ -26,6 +26,16 @@ jobs:
           fi
           unset files
 
+      - name: Check casing
+        run: |
+          files=$(find "$GITHUB_WORKSPACE/yml" | egrep '[[:upper:]]');
+          if [[ $files ]]; then
+            echo "::errror::Files with uppercase letters found, please ensure all file names and folder paths are fully lower case.";
+            for i in $files; do echo "::error file=$i,line=1::File path contains uppercase characters"; done
+            exit 1;
+          fi
+          unset files
+
       - name: Run YAML linter
         uses: ibiqlik/action-yamllint@v3.1.1
         with:
