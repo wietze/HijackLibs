@@ -1,0 +1,23 @@
+---
+Name: python310.dll
+Author: Jai Minton
+Created: 2024-05-08
+Vendor: Python
+ExpectedLocations:
+  - '%PROGRAMFILES%\Python310'
+  - '%LOCALAPPDATA%\Temp\%VERSION%'
+  - '%PROGRAMFILES%\DWAgent\runtime'
+  - '%USERPROFILE%\anaconda3'
+VulnerableExecutables:
+  - Path: 'pythonw.exe'
+    Type: Sideloading
+  - Path: 'dwagent.exe'
+    Type: Sideloading
+Resources:
+  - https://www.virustotal.com/gui/file/115fba7a9ea7d2e38d042c7fa5f81209e0d712c107ceb2eafe2f27f94c8f6054/details
+Acknowledgements:
+  - Name: Jai Minton
+    Company: Huntress
+    Twitter: '@cyberrraiju'
+---
+

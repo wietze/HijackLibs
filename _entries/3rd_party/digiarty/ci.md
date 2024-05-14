@@ -1,0 +1,24 @@
+---
+Name: ci.dll
+Author: Jai Minton - HuntressLabs
+Created: 2024-05-06
+Vendor: Digiarty
+ExpectedLocations:
+  - '%PROGRAMFILES%\Digiarty\WinX Blu-ray Decrypter'
+VulnerableExecutables:
+  - Path: '%PROGRAMFILES%\Digiarty\WinX Blu-ray Decrypter\WinX Blu-ray Decrypter.exe'
+    Type: Sideloading
+    ExpectedVersionInformation:
+      - FileDescription: WinX Blu-ray Decrypter
+    SHA256:
+      - '1fd92aa46464f8453e33dc7461f80ee7b441f9042e9d0110086226c5f725bd9f'
+Resources:
+  - https://www.virustotal.com/gui/file/2560b7390da7c7a1d92050d9c1f5e3a8025cd35fff5360fe73583b5e3f48731e
+  - https://www.virustotal.com/gui/file/ae2453d0e03d72759d5239dcfe9518d6a721319006613a41f8bb53d37d4d1391/details
+  - https://www.virustotal.com/gui/file/7306316b53f915aaff06f00896829884db857b7e5c2747188ae080cad5b8c0e1
+Acknowledgements:
+  - Name: Jai Minton
+    Company: Huntress
+    Twitter: '@cyberrraiju'
+---
+

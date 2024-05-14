@@ -1,0 +1,29 @@
+---
+Name: libxfont-1.dll
+Author: Jai Minton - HuntressLabs
+Created: 2024-05-10
+Vendor: Mobatek
+ExpectedLocations:
+  - '%PROGRAMFILES%\Mobatek\MobaXterm Personal Edition'
+  - '%PROGRAMFILES%\Mobatek\MobaXterm'
+ExpectedSignatureInformation:
+  - Subject: C=FR, PostalCode=31830, S=Midi-Pyrénées, L=Plaisance du Touch, STREET=13 rue Paul Bernadot, O=Mobatek, CN=Mobatek
+    Issuer: C=GB, S=Greater Manchester, L=Salford, O=COMODO CA Limited, CN=COMODO RSA Code Signing CA
+    Type: Authenticode
+VulnerableExecutables:
+  - Path: '%PROGRAMFILES%\Mobatek\MobaXterm Personal Edition\MobaXterm.exe'
+    Type: Sideloading
+    SHA256:
+      - '35132e05638b942403b8a813925de7b54e2e2e35b6ba7a8a081e8b96edd4c0aa'
+  - Path: '%PROGRAMFILES%\Mobatek\MobaXterm\MobaXterm.exe'
+    Type: Sideloading
+    SHA256:
+      - '35132e05638b942403b8a813925de7b54e2e2e35b6ba7a8a081e8b96edd4c0aa'
+Resources:
+  - https://www.virustotal.com/gui/file/b99bd7ffb7634749487570d0b3a7e423047de4ab13a10c2d912660aec322618e/details
+Acknowledgements:
+  - Name: Jai Minton
+    Company: Huntress
+    Twitter: '@cyberrraiju'
+---
+

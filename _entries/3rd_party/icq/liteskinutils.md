@@ -1,0 +1,27 @@
+---
+Name: liteskinutils.dll
+Author: Jai Minton - HuntressLabs
+Created: 2024-05-06
+Vendor: ICQ
+ExpectedLocations:
+  - '%PROGRAMFILES%\ICQLite'
+VulnerableExecutables:
+  - Path: '%PROGRAMFILES%\ICQLite\ICQLite.exe'
+    Type: Sideloading
+    ExpectedVersionInformation:
+      - OriginalFilename: ICQLite.exe
+        InternalName: ICQ Lite
+        FileDescription: ICQLite
+    SHA256:
+      - 'e6baea057b35e495a3fc3cdf3b95d503c3abc63c371fbb0067f1052798ce3601'
+Resources:
+  - https://www.virustotal.com/gui/file/e5e53392b29b74545e463b65052e0b6b07e8299d709f07501fb0f31b97a679ab/details
+  - https://www.virustotal.com/gui/file/a278d5604a93e93a5580845da93af6c316a37a4cd35c1fc9348958ae1bebdb90/details
+  - https://www.virustotal.com/gui/file/104ca4690b0ff17eb55e1330c5baf5580a731b6834f0716c483e646d6030855c/relations
+  - https://www.virustotal.com/gui/file/010f55aef8ccba2ea1307d934decd577a08fa21547d1db30e01f3ae5ff1cce07/relations
+Acknowledgements:
+  - Name: Jai Minton
+    Company: Huntress
+    Twitter: '@cyberrraiju'
+---
+

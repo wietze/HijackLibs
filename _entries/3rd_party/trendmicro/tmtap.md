@@ -13,6 +13,5 @@ VulnerableExecutables:
 
 Resources:
   - https://medium.com/@infiniti_css/trend-micro-password-manager-dll-hijack-fa839acaad59
-
 ---
 
