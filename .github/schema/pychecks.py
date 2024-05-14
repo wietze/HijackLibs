@@ -4,18 +4,23 @@ from datetime import date
 from typing import List, Optional
 
 import yaml
-from pydantic import BaseModel, HttpUrl, ValidationError, conlist, constr
+from pydantic import BaseModel, HttpUrl, ValidationError, conlist, constr, ConfigDict
 
 str_non_empty = constr(strip_whitespace=True, min_length=1,
                        pattern=r"[^ ]+", strict=True)
 
 
 class Acknowledgement(BaseModel):
+    model_config = ConfigDict(extra='forbid')
+
     Name: constr(pattern=r"^\w[\w\s\-'']+\w$")
+    Company: str_non_empty = None
     Twitter: Optional[constr(pattern=r"^@(\w){1,15}$")] = None
 
 
 class VersionInformation(BaseModel):
+    model_config = ConfigDict(extra='forbid')
+
     CompanyName: str_non_empty = None
     FileDescription: str_non_empty = None
     FileVersion: str_non_empty = None
@@ -27,6 +32,8 @@ class VersionInformation(BaseModel):
 
 
 class SignatureInformation(BaseModel):
+    model_config = ConfigDict(extra='forbid')
+
     Subject: constr(
         pattern=r'^(?i)((CN|C|O|L|C|OU|S|ST|STREET|PostalCode|SERIALNUMBER|OID(\.\d+)+)=(".+?"|''.+?''|([^,]|\\,)+?)(,\s*|$))+$') = None
     Issuer: constr(
@@ -35,6 +42,8 @@ class SignatureInformation(BaseModel):
 
 
 class VulnerableExecutables(BaseModel):
+    model_config = ConfigDict(extra='forbid')
+
     Path: constr(pattern=r"^[ a-zA-Z0-9&_\-\+\\%\.\(\):]+$")
     Type: constr(
         pattern=r"^(Sideloading|Phantom|Search Order|Environment Variable)$")
@@ -48,6 +57,8 @@ class VulnerableExecutables(BaseModel):
 
 
 class Entry(BaseModel):
+    model_config = ConfigDict(extra='forbid')
+
     Name: constr(pattern=r"^[a-z0-9_\-\.]+\.(dll|ocx|cpl)$")
     Author: constr(pattern=r"^\w[\w\s\-'',]+\w$")
     Created: date
@@ -65,8 +76,6 @@ class Entry(BaseModel):
     Resources: Optional[List[HttpUrl]] = None
     Acknowledgements: Optional[List[Acknowledgement]] = None
 
-    class Config:
-        extra = 'forbid'
 
 
 if __name__ == "__main__":
