@@ -1,5 +1,5 @@
 ---
-name: YAML Linter
+name: Entry Validation
 on:
   push:
     branches:
