@@ -2,6 +2,10 @@
 name: YAML Linter
 on:
   push:
+    branches:
+      - master
+    paths:
+      - "yml/**"
   pull_request:
     paths:
       - "yml/**"

@@ -7,7 +7,7 @@ ExpectedLocations:
 - '%PROGRAMFILES%\Bitdefender Antivirus Free'
 VulnerableExecutables:
 - Path: '%PROGRAMFILES%\Bitdefender Antivirus Free\BDReinit.exe'
-  Type: Clearly-invalid-value
+  Type: Sideloading
   SHA256:
   - 386EB7AA33C76CE671D6685F79512597F1FAB28EA46C8EC7D89E58340081E2BD
   ExpectedSignatureInformation:
