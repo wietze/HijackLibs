@@ -13,7 +13,6 @@ VulnerableExecutables:
     SHA256:
       - '3e190f160218ad78c85c169dfd0828d36e4a366a3e2a61337391f0d7599a7558'
 Resources:
-  - https://www.virustotal.com/gui/file/3e190f160218ad78c85c169dfd0828d36e4a366a3e2a61337391f0d7599a7558/relations
   - https://www.virustotal.com/gui/file/9326dd40e37d720f15a0104f89d6e76eb7a75b6e1fad14018326dbaa01681e74/relations
 Acknowledgements:
   - Name: Jai Minton

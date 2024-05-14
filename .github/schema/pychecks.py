@@ -90,7 +90,7 @@ class Entry(BaseModel):
             vt_urls = [str(resource) for resource in self.Resources if 'virustotal.com' in str(resource)]
             for url in vt_urls:
                 if any(f"virustotal.com/gui/file/{hash}" in url for hash in hashes):
-                    raise AssertionError(f"Resource '{url}' redundant, as corresponding file hash is already included. Please remove this resource.")
+                    raise AssertionError(f"Resource '{url}' redundant, as corresponding file hash is already included as SHA256 entry. Please remove this resource.")
         return self
 
 
@@ -157,7 +157,7 @@ if __name__ == "__main__":
                 print("> {}".format(file_path))
                 print(f"  {data}")
                 print(f"  ERROR: {e}")
-                errors.append({'file': file_path, 'line': 1, 'message': f"{e}", 'title': type(e).__name__})
+                errors.append({'file': file_path, 'line': 1, 'message': str(e), 'title': type(e).__name__})
 
     if errors:
         print("")
