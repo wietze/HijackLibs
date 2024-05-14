@@ -1,5 +1,5 @@
 ## HijackLibs
-![YAML Linter status](https://github.com/wietze/HijackLibs/actions/workflows/yaml-lint.yml/badge.svg) ![Licence](https://img.shields.io/github/license/wietze/HijackLibs)
+![YAML Linter status](https://github.com/wietze/HijackLibs/actions/workflows/entry-validation.yml/badge.svg) ![Licence](https://img.shields.io/github/license/wietze/HijackLibs)
 
 
 This project aims to keep a record of publicly disclosed DLL Hijacking opportunities.
@@ -13,4 +13,3 @@ You can find the web version of this repository on https://www.hijacklibs.net.
 * [**Contribution guide**](/docs/CONTRIBUTING.md)
 * [**YAML Schema**](/docs/SCHEMA.md) used by the project
 * [**Sample YAML template**](/template.yml)
-

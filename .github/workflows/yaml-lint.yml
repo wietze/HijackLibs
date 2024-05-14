@@ -2,15 +2,19 @@
 name: YAML Linter
 on:
   push:
+    branches:
+      - main
+    paths:
+      - "yml/**"
   pull_request:
     paths:
       - "yml/**"
 
 jobs:
-  check:
+  linting-and-qc-checks:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v4
 
       - name: Check file extensions
         run: |
@@ -23,13 +27,13 @@ jobs:
           unset files
 
       - name: Run YAML linter
-        uses: ibiqlik/action-yamllint@v3.1.0
+        uses: ibiqlik/action-yamllint@v3.1.1
         with:
           config_file: .github/.yamllint
+          file_or_dir: yml/**/*.yml
 
-      - uses: cketti/action-pykwalify@v0.3-temp-fix #eliezio/action-pykwalify@v0.3
-        name: Check schema
-        with:
-          files: "yml/**/*.*"
-          schema: .github/schema/schema.yml
-          strict: true
+      - name: Run Pydantic validator
+        run: |
+          python3 -m pip install --upgrade pip
+          python3 -m pip install -r .github/schema/requirements.txt
+          python3 .github/schema/pychecks.py "yml/**/*.yml"

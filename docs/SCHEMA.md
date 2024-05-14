@@ -1,5 +1,5 @@
 # YAML Schema
-A formal version of the below can be found [here](/.github/schema/schema.yml).
+A formal version of the below can be found [here](/.github/schema/pychecks.py).
 
 A simple template can be found [here](/template.yml).
 
