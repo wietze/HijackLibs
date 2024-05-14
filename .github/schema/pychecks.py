@@ -1,6 +1,7 @@
 import glob
 import sys
 import os
+import re
 from datetime import date
 from typing import List, Optional
 
@@ -93,6 +94,22 @@ class Entry(BaseModel):
         return self
 
 
+def find_line_number(object, path: list[str|int]):
+    index_count = -1
+    for i, line in enumerate(object.split('\n'), start=1):
+        if isinstance(path[0], int):
+            if re.findall(f'^\\s*-', line):
+                index_count += 1
+                if index_count == path[0]:
+                    path.pop(0)
+        elif re.match(rf'^\s*{re.escape(path[0])}:', line):
+            path.pop(0)
+            index_count = -1
+        if not path:
+            return i
+    return 1
+
+
 if __name__ == "__main__":
     if len(sys.argv) != 2:
         raise Exception("Unexpected argument count")
@@ -101,7 +118,7 @@ if __name__ == "__main__":
     for file_path in glob.glob(sys.argv[1], recursive=True):
         with open(file_path, encoding='utf-8') as f:
             try:
-                data = yaml.safe_load(f)
+                data = yaml.safe_load(contents := f.read())
             except:
                 raise Exception("Could not parse YAML")
 
@@ -128,7 +145,7 @@ if __name__ == "__main__":
                 error_messages = []
                 for error in e.errors():
                     error_messages.append(f"{error['msg']}: {'.'.join(str(y) for y in error['loc'])}")
-                    errors.append({'file': file_path, 'line': 1, 'message': f"{error['msg']}: {'.'.join(str(y) for y in error['loc'])}", 'title': error['type']})
+                    errors.append({'file': file_path, 'line': find_line_number(contents, [x for x in error['loc']]), 'message': f"{error['msg']}: {'.'.join(str(y) for y in error['loc'])}", 'title': error['type']})
                 print("> {}".format(file_path))
                 print(f"  {data}")
                 print(f"  ERROR: {', '.join(error_messages)}")
