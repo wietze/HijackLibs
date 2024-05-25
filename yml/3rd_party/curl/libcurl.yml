@@ -1,7 +1,7 @@
 ---
 Name: libcurl.dll
 Author: Still Hsu
-Created: 2024-03-31
+Created: 2024-05-26
 Vendor: curl
 ExpectedLocations:
 - '%PROGRAMFILES%\Notepad++\updater'
