@@ -5,7 +5,6 @@ Created: 2024-05-26
 Vendor: curl
 ExpectedLocations:
 - '%PROGRAMFILES%\Notepad++\updater'
-- '%ProgramFiles(x86)%\Notepad++\updater'
 VulnerableExecutables:
 - Path: '%PROGRAMFILES%\Notepad++\updater\GUP.exe'
   Type: Sideloading
