@@ -1,0 +1,21 @@
+---
+Name: msidcrl40.dll
+Author: Jai Minton - HuntressLabs
+Created: 2024-05-29
+Vendor: Microsoft
+ExpectedLocations:
+  - '%PROGRAMFILES%\msn messenger'
+VulnerableExecutables:
+  - Path: '%PROGRAMFILES%\msn messenger\livecall.exe'
+    Type: Sideloading
+    SHA256:
+      - '63ec17feda1f0ea80e0dd7b7938fbf7354aedf8d9f4041543afca9a35337f7bf'
+Resources:
+  - https://www.virustotal.com/gui/file/e2787ddbbf2a7304827a17d698f7cede17edbf0633d36f39f4c020ee8f37ccd1
+  - https://www.virustotal.com/gui/file/448bfca5913e45ec36863ec2e72d959bd1f8ac30e0c794b708b3a6f45a050ef4
+Acknowledgements:
+  - Name: Jai Minton
+    Company: Huntress
+    Twitter: '@cyberrraiju'
+---
+

@@ -1,0 +1,22 @@
+---
+Name: relay.dll
+Author: Jai Minton - HuntressLabs
+Created: 2024-05-27
+Vendor: Canon
+VulnerableExecutables:
+  - Path: 'UniversalInstaller.exe'
+    Type: Sideloading
+    ExpectedVersionInformation:
+      - OriginalFilename: UniversalInstaller.exe
+        InternalName: UniversalInstaller.exe
+        FileDescription: Universal Installer Windows
+    SHA256:
+      - a05b592a971fe5011554013bcfe9a4aaf9cfc633bdd1fe3a8197f213d557b8d3
+Resources:
+  - https://www.virustotal.com/gui/file/6122b4ceb394e4a441b4f7ac92745b1aa64b6c83a4101d6d326e130efa5a5d10/details
+Acknowledgements:
+  - Name: Jai Minton
+    Company: Huntress
+    Twitter: '@cyberrraiju'
+---
+
