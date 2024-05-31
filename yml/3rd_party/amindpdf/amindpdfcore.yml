@@ -4,9 +4,9 @@ Author: Still Hsu
 Created: 2024-05-26
 Vendor: AmindPDF
 ExpectedLocations:
-- '%ProgramFiles(x86)%\GeekerPDF\GeekerPDF'
+- '%PROGRAMFILES%\GeekerPDF\GeekerPDF'
 VulnerableExecutables:
-- Path: '%ProgramFiles(x86)%\GeekerPDF\GeekerPDF\GeekerPDF.exe'
+- Path: '%PROGRAMFILES%\GeekerPDF\GeekerPDF\GeekerPDF.exe'
   Type: Sideloading
   ExpectedVersionInformation:
   - FileDescription: AmindPDF
