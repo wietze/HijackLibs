@@ -12,10 +12,8 @@ VulnerableExecutables:
       - Subject: C=US, ST=CALIFORNIA, L=Redwood City, O='Electronic Arts, Inc.', OU=EAC, CN='Electronic Arts, Inc.'
         Issuer: C=US, O='DigiCert, Inc.', CN=DigiCert Trusted G4 Code Signing RSA4096 SHA384 2021 CA1
         Type: Authenticode
-    ExpectedVersionInformation:
-      - FileDescription: MediaInfo
     SHA256:
-      - '4fc64e114f80ce755040ac2891bd1fab0492a831177491f3fe1382adf94030f9'
+      - '4e775b5fafb4e6d89a4694f8694d2b8b540534bd4a52ff42f70095f1c929160e'
 Resources:
   - https://www.virustotal.com/gui/file/2251e6582a12427b9b70d0e9ec7c8c27debe22b0a08b6ff6be46f4fb8914338c
   - https://www.virustotal.com/gui/file/173e138d5cf12f7eb55a67bcf3afc97ac1d7598fe4290ca4f125f28692e90fed
