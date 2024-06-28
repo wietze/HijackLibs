@@ -19,6 +19,8 @@ VulnerableExecutables:
     Type: Authenticode
   SHA256:
   - e5bbbf34414426f63e6cd1354c306405e54bf31279829c7542dccfb7d85af0ec
+Resources:
+  - https://www.virustotal.com/gui/file/d1e44e4224899cb160a92f4c7f4f042b10ae0ee3fc16bbe457ad32e8b1527ed5
 Acknowledgements:
   - Name: Still Hsu
     Twitter: '@AzakaSekai_'
