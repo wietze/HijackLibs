@@ -4,7 +4,7 @@ Author: Jai Minton - HuntressLabs
 Created: 2024-06-14
 Vendor: iTop
 ExpectedLocations:
-  - '%PROGRAMFILES%\DualSafe Password Manager\'
+  - '%PROGRAMFILES%\DualSafe Password Manager'
 VulnerableExecutables:
   - Path: '%PROGRAMFILES%\DualSafe Password Manager\DPMInit.exe'
     Type: Sideloading
