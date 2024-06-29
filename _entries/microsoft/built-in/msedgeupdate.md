@@ -1,0 +1,19 @@
+---
+Name: msedgeupdate.dll
+Author: Still Hsu
+Created: 2024-05-26
+Vendor: Microsoft
+ExpectedLocations:
+  - '%PROGRAMFILES%\Microsoft\EdgeUpdate\%VERSION%'
+VulnerableExecutables:
+  - Path: '%PROGRAMFILES%\Microsoft\EdgeUpdate\MicrosoftEdgeUpdate.exe'
+    Type: Sideloading
+    ExpectedSignatureInformation:
+    - Subject: CN=Microsoft Windows, O=Microsoft Corporation, L=Redmond, S=Washington, C=US
+      Issuer: CN=Microsoft Windows Production PCA 2011, O=Microsoft Corporation, L=Redmond, S=Washington, C=US
+      Type: Authenticode
+Acknowledgements:
+  - Name: Still Hsu
+    Twitter: '@AzakaSekai_'
+---
+
