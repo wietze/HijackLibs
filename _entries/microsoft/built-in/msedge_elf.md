@@ -1,0 +1,25 @@
+---
+Name: msedge_elf.dll
+Author: Still Hsu
+Created: 2024-07-10
+Vendor: Microsoft
+ExpectedLocations:
+  - '%PROGRAMFILES%\Microsoft\Edge\Application\%VERSION%'
+  - '%PROGRAMFILES%\Microsoft\EdgeCore\%VERSION%'
+  - '%PROGRAMFILES%\Microsoft\EdgeWebView\%VERSION%'
+VulnerableExecutables:
+  - Path: '%PROGRAMFILES%\Microsoft\Edge\Application\%VERSION%'
+    Type: Sideloading
+    ExpectedSignatureInformation:
+    - Subject: CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US
+      Issuer: CN=Microsoft Code Signing PCA 2011, O=Microsoft Corporation, L=Redmond, S=Washington, C=US
+      Type: Authenticode
+    SHA256:
+    - 7914d38736f3ce4f89432e15816711fffdfd9002fa50ce7205c1176af9142ab4
+Resources:
+  - https://www.sentinelone.com/labs/chinese-entanglement-dll-hijacking-in-the-asian-gambling-sector/
+Acknowledgements:
+  - Name: Still Hsu
+    Twitter: '@AzakaSekai_'
+---
+
