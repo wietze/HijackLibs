@@ -7,7 +7,7 @@ VulnerableExecutables:
 - Path: 'lenovodesk.exe'
   Type: Sideloading
   ExpectedVersionInformation:
-  - Copyright: Lenovo All rights reserved
+  - LegalCopyright: Lenovo All rights reserved
     FileDescription: Showdesk
     InternalName: ShowDesk.exe
     OriginalFilename: ShowDesk.exe
