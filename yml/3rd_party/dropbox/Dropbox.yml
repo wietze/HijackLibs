@@ -7,7 +7,7 @@ ExpectedLocations:
   - '%PROGRAMFILES%\Dropbox\Temp\GUM*.tmp'
   - '%PROGRAMFILES%\Dropbox\Update'
   - '%PROGRAMFILES%\Dropbox\Update\%VERSION%'
-  - '%LOCALAPPDATA%\DropboxUpdate\Update\'
+  - '%LOCALAPPDATA%\DropboxUpdate\Update'
 VulnerableExecutables:
   - Path: 'DropboxUpdate.exe'
     Type: Sideloading
