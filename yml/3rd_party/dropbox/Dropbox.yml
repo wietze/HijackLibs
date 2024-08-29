@@ -4,7 +4,6 @@ Author: Jai Minton - HuntressLabs
 Created: 2024-08-07
 Vendor: Dropbox
 ExpectedLocations:
-  - '%PROGRAMFILES%\Dropbox\Temp\%VERSION%'
   - '%PROGRAMFILES%\Dropbox\Update'
   - '%PROGRAMFILES%\Dropbox\Update\%VERSION%'
   - '%LOCALAPPDATA%\DropboxUpdate\Update'
