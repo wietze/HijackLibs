@@ -1,7 +1,7 @@
 ---
 Name: goopdate.dll
 Author: Jai Minton - HuntressLabs
-Created: 2024-08-07
+Created: 2024-08-08
 Vendor: Dropbox
 ExpectedLocations:
   - '%PROGRAMFILES%\Dropbox\Update'
