@@ -1,0 +1,23 @@
+---
+Name: atl71.dll
+Author: Jai Minton - HuntressLabs
+Created: 2024-08-30
+Vendor: Xunlei
+ExpectedLocations:
+  - '%PROGRAMFILES%\Common Files\Thunder Network\TP\%VERSION%'
+VulnerableExecutables:
+  - Path: '%PROGRAMFILES%\Common Files\Thunder Network\TP\%VERSION%\XLBugReport.exe'
+    Type: Sideloading
+    ExpectedVersionInformation:
+      - OriginalFilename: XLBugReport.exe
+        InternalName: XLBugReport.exe
+        FileDescription: 迅雷错误报告
+    SHA256:
+      - '64f8d68cc1cfc5b9cc182df3becf704af93d0f1cc93ee59dbf682c75b6d4ffc0'
+Resources:
+  - https://www.virustotal.com/gui/file/07ff27bfc879ad9f4d90f17c755c89d2fc3a84994c2304ee3cd79eb84674b9c0/relations
+  - https://www.virustotal.com/gui/file/d42dc50226c59ab41afb691a0d94fa4e141702b678d8bd2fdaaaecb43a8e5b4b/details
+Acknowledgements:
+  - Name: Jai Minton
+    Company: Huntress
+    Twitter: '@cyberrraiju'
