@@ -1,0 +1,25 @@
+---
+Name: calibre-launcher.dll
+Author: Jai Minton - HuntressLabs
+Created: 2024-08-07
+Vendor: Calibre
+ExpectedLocations:
+  - '%PROGRAMFILES%\Calibre2'
+VulnerableExecutables:
+  - Path: 'calibre.exe'
+    Type: Sideloading
+    ExpectedVersionInformation:
+      - OriginalFilename: calibre.exe
+        InternalName: calibre
+        FileDescription: The main calibre program
+    SHA256:
+      - 735e7b33b97bff3cf6416ed3b8ed7213d7258eec05202cbf8f8f8002c6435fd1
+Resources:
+  - https://www.huntress.com/blog/advanced-persistent-threat-targeting-vietnamese-human-rights-defenders
+Acknowledgements:
+  - Name: Jai Minton
+    Company: Huntress
+    Twitter: '@cyberrraiju'
+  - Name: Craig Sweeney
+    Company: Huntress
+    Twitter: '@bumbucha'
