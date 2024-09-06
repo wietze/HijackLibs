@@ -2,7 +2,7 @@
 Name: atl71.dll
 Author: Jai Minton - HuntressLabs
 Created: 2024-08-30
-Vendor: thunder7
+Vendor: Xunlei
 ExpectedLocations:
   - '%PROGRAMFILES%\Common Files\Thunder Network\TP\%VERSION%'
 VulnerableExecutables:
