@@ -1,0 +1,37 @@
+---
+Name: goopdate.dll
+Author: Jai Minton - HuntressLabs
+Created: 2024-08-08
+Vendor: Dropbox
+ExpectedLocations:
+  - '%PROGRAMFILES%\Dropbox\Update'
+  - '%PROGRAMFILES%\Dropbox\Update\%VERSION%'
+  - '%LOCALAPPDATA%\DropboxUpdate\Update'
+VulnerableExecutables:
+  - Path: 'DropboxUpdate.exe'
+    Type: Sideloading
+    ExpectedVersionInformation:
+      - OriginalFilename: DropboxUpdate.exe
+        InternalName: Dropbox Update
+        FileDescription: Dropbox Update
+    SHA256:
+      - 47839789332aaf8861f7731bf2d3fbb5e0991ea0d0b457bb4c8c1784f76c73dc
+  - Path: 'DropboxCrashHandler.exe'
+    Type: Sideloading
+    ExpectedVersionInformation:
+      - OriginalFilename: DropboxUpdate.exe
+        InternalName: Dropbox Update
+        FileDescription: Dropbox Update
+    SHA256:
+      - 47839789332aaf8861f7731bf2d3fbb5e0991ea0d0b457bb4c8c1784f76c73dc
+Resources:
+  - https://www.huntress.com/blog/advanced-persistent-threat-targeting-vietnamese-human-rights-defenders
+Acknowledgements:
+  - Name: Jai Minton
+    Company: Huntress
+    Twitter: '@cyberrraiju'
+  - Name: Craig Sweeney
+    Company: Huntress
+    Twitter: '@bumbucha'
+---
+
