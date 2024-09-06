@@ -2,7 +2,7 @@
 Name: webui.dll
 Author: Jai Minton - HuntressLabs
 Created: 2024-08-30
-Vendor: Itop
+Vendor: iTop
 ExpectedLocations:
   - '%PROGRAMFILES%\iTop Screen Recorder'
 VulnerableExecutables:
