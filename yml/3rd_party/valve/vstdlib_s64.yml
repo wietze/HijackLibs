@@ -1,0 +1,28 @@
+---
+Name: vstdlib_s64.dll
+Author: Still Hsu
+Created: 2024-09-24
+Vendor: Valve
+ExpectedLocations:
+- '%Program Files (x86)\Steam'
+VulnerableExecutables:
+- Path: '%Program Files (x86)\Steam\steamerrorreporter64.exe'
+  Type: Sideloading
+  ExpectedVersionInformation:
+  - FileDescription: steamerrorreporter.exe
+    InternalName: steamerrorreporter.exe
+    OriginalFilename: steamerrorreporter.exe
+    ProductName: Steam
+  ExpectedSignatureInformation:
+  - Subject: CN=Valve Corp., O=Valve Corp., L=Bellevue, S=Washington, C=US
+    Issuer: CN=DigiCert Trusted G4 RSA4096 SHA256 TimeStamping CA, O="DigiCert, Inc.", C=US
+    Type: Authenticode
+  SHA256:
+  - 0a0c09753b5103e86e32c2d8086dd1399f0d97a00e1525ec9c390067cdb242ba
+Resources:
+  - https://github.com/PaloAltoNetworks/Unit42-timely-threat-intel/blob/main/2024-09-19-IOCs-for-file-downloader-to-Lumma-Stealer.txt
+  - https://x.com/Unit42_Intel/status/1837137726409158770
+Acknowledgements:
+  - Name: Unit 42
+    Twitter: '@Unit42_Intel'
+  
