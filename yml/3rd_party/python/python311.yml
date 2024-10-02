@@ -1,0 +1,19 @@
+---
+Name: python311.dll
+Author: Swachchhanda Shrawan Poudel
+Created: 2024-10-02
+Vendor: Python
+ExpectedLocations:
+  - '%PROGRAMFILES%\Python311'
+  - '%Userprofile%\AppData\Local\Programs\Python\Python311'
+VulnerableExecutables:
+  - Path: 'pythonw.exe'
+    Type: Sideloading
+Resources:
+  - https://www.securonix.com/blog/seolurker-attack-campaign-uses-seo-poisoning-fake-google-ads-to-install-malware/
+  - https://thedfirreport.com/2024/09/30/nitrogen-campaign-drops-sliver-and-ends-with-blackcat-ransomware/
+  - https://www.virustotal.com/gui/file/9514035fea8000a664799e369ae6d3af6abfe8e5cda23cdafbede83051692e63
+  - https://www.rapid7.com/blog/post/2024/05/13/ongoing-malvertising-campaign-leads-to-ransomware/
+Acknowledgements:
+  - Name: Swachchhanda Shrawan Poudel
+    Twitter: '@_swachchhanda_'
