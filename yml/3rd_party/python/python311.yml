@@ -9,6 +9,14 @@ ExpectedLocations:
 VulnerableExecutables:
   - Path: 'pythonw.exe'
     Type: Sideloading
+    SHA256:
+      - 24385D352B83222DC5AB92FA57B6649854ECD74DE378E279D8AC20A0B3B16009
+    ExpectedVersionInformation:
+      - OriginalFilename: pythonw.exe
+        ProductName: Python
+        InternalName: Python Application
+        CompanyName: Python Software Foundation
+        FileDescription: Python
 Resources:
   - https://www.securonix.com/blog/seolurker-attack-campaign-uses-seo-poisoning-fake-google-ads-to-install-malware/
   - https://thedfirreport.com/2024/09/30/nitrogen-campaign-drops-sliver-and-ends-with-blackcat-ransomware/
