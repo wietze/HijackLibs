@@ -5,7 +5,7 @@ Created: 2024-10-02
 Vendor: Python
 ExpectedLocations:
   - '%PROGRAMFILES%\Python311'
-  - '%Userprofile%\AppData\Local\Programs\Python\Python311'
+  - '%LOCALAPPDATA%\Programs\Python\Python311'
 VulnerableExecutables:
   - Path: 'pythonw.exe'
     Type: Sideloading
