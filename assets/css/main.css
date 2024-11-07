@@ -1,7 +1,6 @@
 body {
     font-family: Arial;
     margin: 0;
-    margin-bottom: calc(20px + 2.5em);
     overflow-y: scroll;
     padding-top: 1em;
 }
@@ -42,6 +41,39 @@ div.metadata {
     display: flex;
     margin: 10px 0px;
     word-break: break-word;
+}
+
+div.dll-types {
+    display: flex;
+    flex-direction: column;
+    gap: 1em
+}
+
+div.dll-types>div>span:not(.type) {
+    display: block;
+}
+
+@media only screen and (max-width: 600px) {
+
+    div.metadata,
+    div.latest-items-wrapper {
+        flex-wrap: wrap;
+    }
+
+    div.metadata>div {
+        flex: 0 0 100%;
+    }
+
+    div.dll-types>div>span:not(.type) {
+        display: unset;
+    }
+
+    ul.resources {
+        display: grid;
+        width: 100%;
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        gap: 0 10px;
+    }
 }
 
 div.metadata>div {
@@ -209,8 +241,8 @@ div.description_wrapper {
 }
 
 footer {
-    position: fixed;
-    /* height: 2.5em; */
+    position: sticky;
+    /* margin: 0.5em 0; */
     bottom: 0;
     right: 0;
     left: 0;
@@ -221,8 +253,8 @@ footer>div {
     position: relative;
     min-width: 350px;
     max-width: 800px;
-    margin: 9px auto;
-    padding: 0 10px;
+    margin: 0px auto;
+    padding: 10px;
 }
 
 header {
@@ -298,23 +330,25 @@ ul.files li:before {
     transform: scale(0.75);
 }
 
-div.button {
+button.button {
     border: 1px solid #b64913;
     display: inline-block;
     padding: 5px 10px;
+    cursor: pointer;
 }
 
-div.button {
+button.button {
+    background: inherit;
     color: #b64913;
 }
 
-div.button:hover {
+button.button:hover {
     background: #b64913;
     color: white;
     transition: all .2s ease-in;
 }
 
-div.button:hover a {
+button.button:hover a {
     color: white;
     transition: all .2s ease-in;
 }
@@ -347,23 +381,28 @@ a.link-dotted {
     display: block !important;
 }
 
+button {
+    font-size: initial;
+}
+
 .yaml-buttons {
     display: flex;
     flex-direction: row-reverse;
 }
 
 .yaml-button {
-    background: #444;
+    background: #333;
     padding: 5px 20px;
     color: white;
     margin-bottom: 0;
-    transform: translate(-10px, -35px);
+    transform: translate(-10px, -45px);
     margin-bottom: -25px;
     cursor: pointer;
+    border: 0;
 }
 
 .yaml-button-selected {
-    background: #333;
+    background: #444;
     padding: 5px 20px;
     color: white;
 }
