@@ -22,8 +22,9 @@ p {
     text-align: justify;
 }
 
-span.highlight {
+mark {
     background: #fac013;
+    color: inherit;
 }
 
 code {
@@ -122,6 +123,11 @@ div.key {
     border-radius: 4px;
 }
 
+.pill>img {
+    height: 1em;
+    vertical-align: middle;
+}
+
 .pill.type {
     font-size: initial;
 }
@@ -148,6 +154,7 @@ div.key {
     background: #394eff;
     white-space: nowrap;
     float: right;
+    font-weight: bold;
 }
 
 .pill.hash a {
@@ -160,6 +167,7 @@ div.key {
     background: white;
     border: 1px solid rgb(225, 105, 50);
     font-size: revert;
+    cursor: pointer;
 }
 
 .pill.home-dll {
@@ -200,6 +208,7 @@ div.key {
     white-space: nowrap;
     float: right;
     font-size: smaller;
+    cursor: pointer;
 }
 
 .pill.home-vendor>a {
@@ -407,13 +416,17 @@ button {
     color: white;
 }
 
-div.search_banner {
+div.search-banner {
     /* background: rgb(235, 119, 16);
       background: linear-gradient(90deg, rgba(235,119,16,1) 0%, rgba(225,166,50,1) 50%, rgba(235,119,16,1) 100%); */
     background: rgb(225, 105, 50);
     color: white;
     padding-bottom: 5px;
     padding-top: 5px;
+}
+
+div.search-banner input[type=text] {
+    width: 100%;
 }
 
 section,
@@ -423,6 +436,10 @@ header {
     max-width: 800px;
     padding: 0 20px;
     margin: 30px auto;
+}
+
+section:first-of-type {
+    margin-top: 0;
 }
 
 header>p.subtitle {
@@ -441,9 +458,11 @@ table>thead th {
     font-weight: bold;
     background: rgb(225, 105, 50);
     color: white;
+    text-align: left;
 }
 
-table td {
+table td,
+th {
     padding: 10px 5px;
 }
 
@@ -468,6 +487,7 @@ table tr:nth-child(odd) {
 #status .stats {
     color: #555;
     font-size: smaller;
+    margin-bottom: 1em;
 }
 
 .result-row {
@@ -490,6 +510,11 @@ table tr:nth-child(odd) {
 
 #results li {
     display: flex;
+    padding: 2px 0;
+}
+
+#results li:hover {
+    background-color: rgba(225, 105, 50, 0.1) !important;
 }
 
 #results li:nth-child(odd) {
@@ -551,4 +576,96 @@ table tr:nth-child(odd) {
 .latest-items {
     display: flex;
     flex-wrap: wrap;
+}
+
+.mitre-text {
+    font-style: italic;
+    font-size: small;
+    display: inline-block;
+}
+
+.exe-count {
+    color: #ffd4d4;
+    font-size: x-small;
+}
+
+code.full-name {
+    display: contents;
+    word-break: break-all;
+}
+
+.feed-note {
+    font-size: small;
+    margin: auto 5px;
+    line-height: 1em;
+    font-style: italic
+}
+
+.download-buttons {
+    flex-shrink: 0;
+}
+
+.yaml-controls {
+    display: flex
+}
+
+.nowrap {
+    white-space: nowrap
+}
+
+img.logo-inline {
+    height: 1.25em;
+    width: 1.25em;
+    vertical-align: middle;
+}
+
+table.contributors {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+table.contributors th:nth-child(2) {
+    width: 20%;
+}
+
+table.apis {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+table.apis th:nth-child(1) {
+    width: 10%;
+}
+
+table.apis th:nth-child(2) {
+    width: 20%;
+}
+
+table.apis th:nth-child(3) {
+    width: 40%;
+}
+
+.wrap-anywhere {
+    word-wrap: anywhere;
+}
+
+div.section#window {
+    min-height: 120px;
+}
+
+strong.sigma {
+    margin-right: 2px;
+    font-size: larger
+}
+
+div.headline {
+    white-space: nowrap;
+    margin-right: 5px;
+    width: 120px;
+    flex-shrink: 0;
+    font-weight: bold;
+}
+
+a.clickable {
+    cursor: pointer
 }

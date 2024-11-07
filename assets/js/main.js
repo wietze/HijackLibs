@@ -1,22 +1,33 @@
+var github_repo = undefined;
+
 function parseUrls(url) {
+    let i = document.createElement("i");
     if (result = url.href.match(/^https?:\/\/(?:www\.)?twitter.com\/([a-zA-Z0-9_-]+)\/status\/\d+/)) {
-        url.insertAdjacentHTML('beforeBegin', "<i class=\"fab fa-twitter fa-fw\"></i>");
-        url.text = "Tweet by @" + result[1];
+        i.classList.add("fab", "fa-twitter", "fa-fw"); i.title="Tweet";
+        url.insertAdjacentElement('beforeBegin', i)
+        url.innerText = `Tweet by @${result[1]}`
     } else
         if (/^.*\.pdf/g.test(url.href)) {
-            url.insertAdjacentHTML('beforeBegin', "<i class=\"fas fa-file-pdf fa-fw\" title=\"PDF file\"></i>");
-            url.text = url.hostname;
+            i.classList.add("fas", "fa-file-pdf", "fa-fw"); i.title="PDF file";
+            url.insertAdjacentElement('beforeBegin', i)
+            url.innerText = url.hostname
         } else
             if (result = url.href.match(/^https?:\/\/(?:www\.)?github.com\/([a-zA-Z0-9_-]+(\/[a-zA-Z0-9_-]+)?)(\/|$)/)) {
-                url.insertAdjacentHTML('beforeBegin', "<i class=\"fab fa-github fa-fw\" title=\"GitHub repo\"></i>");
-                url.text = result[1];
+                i.classList.add("fab", "fa-github", "fa-fw"); i.title="GitHub repo";
+                url.insertAdjacentElement('beforeBegin', i)
+                url.innerText =  result[1]
             } else
                 if (url.hostname.endsWith("youtube.com")) {
-                    url.insertAdjacentHTML('beforeBegin', "<i class=\"fab fa-youtube fa-fw\" title=\"YouTube video\"></i>Video on ");
-                    url.text = "YouTube";
+                    i.classList.add("fab", "fa-youtube", "fa-fw"); i.title="GitHub repo";
+                    let span =  document.createElement("span");
+                    span.innerText = "Video on ";
+                    url.insertAdjacentElement('beforeBegin', i);
+                    url.insertAdjacentElement('beforeBegin', span);
+                    url.innerText = "YouTube"
                 } else {
-                    url.insertAdjacentHTML('beforeBegin', "<i class=\"fas fa-external-link-alt fa-fw\" title=\"Web page\"></i>");
-                    url.text = url.hostname;
+                    i.classList.add("fas", "fa-external-link-alt", "fa-fw"); i.title="Web page";
+                    url.insertAdjacentElement('beforeBegin', i)
+                    url.innerText = url.hostname
                 }
 }
 
@@ -42,6 +53,7 @@ function changeYamlDefinition(target) {
 }
 
 function goBack() {
+    console.log(document.referrer)
     if (document.referrer && (document.referrer.indexOf("localhost") > 0 || document.referrer.toLowerCase().indexOf("hijacklibs") > 0)) {
         history.back();
         window.location = "/";
@@ -110,7 +122,9 @@ window.onload = load;
 
 
 document.addEventListener('DOMContentLoaded', function () {
+    github_repo = document.getElementsByTagName("body")[0].dataset['githubRepo'];
     document.querySelectorAll('button#yaml-download').forEach(x => x.addEventListener("click", _ => downloadSigma(x)))
     document.querySelectorAll('button.yaml-button').forEach(x => x.addEventListener("click", _ => changeYamlDefinition(x)))
     document.getElementById('back-button')?.addEventListener("click", _ => goBack())
+    document.querySelectorAll(".vulnerable_exe .pill[title]").forEach(x => x.addEventListener("click", _=>{if (('ontouchstart' in window) || (navigator.maxTouchPoints > 0) || (navigator.msMaxTouchPoints > 0)) {alert(x.title); }}));
 });
