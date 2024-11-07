@@ -53,7 +53,6 @@ function changeYamlDefinition(target) {
 }
 
 function goBack() {
-    console.log(document.referrer)
     if (document.referrer && (document.referrer.indexOf("localhost") > 0 || document.referrer.toLowerCase().indexOf("hijacklibs") > 0)) {
         history.back();
         window.location = "/";
