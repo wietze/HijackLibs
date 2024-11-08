@@ -6,7 +6,7 @@ Vendor: Microsoft
 ExpectedLocations:
   - 'C:\Program Files\Windows Photo Viewer'
 VulnerableExecutables:
-  - Path: 'C:\Program Files\Windows Photo Viewer\Imaging Devices.exe'
+  - Path: 'C:\Program Files\Windows Photo Viewer\ImagingDevices.exe'
     Type: Sideloading
 Resources:
 Acknowledgements:
