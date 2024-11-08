@@ -1,0 +1,13 @@
+---
+Name: sti.dll
+Author: Tim Baker
+Created: 2024-11-09
+Vendor: Microsoft
+ExpectedLocations:
+  - 'C:\Program Files\Windows Photo Viewer'
+VulnerableExecutables:
+  - Path: 'C:\Program Files\Windows Photo Viewer\Imaging Devices.exe'
+    Type: Sideloading
+Resources:
+Acknowledgements:
+  - Name: Tim Baker (https://www.dotsec.com)
