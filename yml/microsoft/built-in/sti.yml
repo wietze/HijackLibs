@@ -10,4 +10,5 @@ VulnerableExecutables:
     Type: Sideloading
 Resources:
 Acknowledgements:
-  - Name: Tim Baker (https://www.dotsec.com)
+  - Name: Tim Baker
+  - Company: DotSec (https://www.dotsec.com)
