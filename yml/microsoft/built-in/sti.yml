@@ -4,7 +4,7 @@ Author: Tim Baker
 Created: 2024-11-09
 Vendor: Microsoft
 ExpectedLocations:
-  - '%\PROGRAMFILES%\Windows Photo Viewer'
+  - '%PROGRAMFILES%\Windows Photo Viewer'
 VulnerableExecutables:
   - Path: '%PROGRAMFILES%\Windows Photo Viewer\ImagingDevices.exe'
     Type: Sideloading
