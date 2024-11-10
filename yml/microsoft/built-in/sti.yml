@@ -4,11 +4,13 @@ Author: Tim Baker
 Created: 2024-11-09
 Vendor: Microsoft
 ExpectedLocations:
-  - '%PROGRAMFILES%\Windows Photo Viewer'
+  - '%SYSTEM32%'
+  - '%SYSWOW64%'
 VulnerableExecutables:
   - Path: '%PROGRAMFILES%\Windows Photo Viewer\ImagingDevices.exe'
     Type: Sideloading
 Resources:
+  - https://blog.google/threat-analysis-group/government-backed-actors-exploiting-winrar-vulnerability/
 Acknowledgements:
   - Name: Tim Baker
     Company: DotSec (https://www.dotsec.com)
