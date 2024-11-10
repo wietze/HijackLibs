@@ -13,7 +13,7 @@ VulnerableExecutables:
         OriginalFilename: wpp.exe
         ProductName: WPS Office
     ExpectedSignatureInformation:
-      - Subject:  'CN="Zhuhai Kingsoft Office Software Co., Ltd.", O="Zhuhai Kingsoft Office Software Co., Ltd.", L=Zhuhai, S=Guangdong, C=CN'
+      - Subject: 'CN="Zhuhai Kingsoft Office Software Co., Ltd.", O="Zhuhai Kingsoft Office Software Co., Ltd.", L=Zhuhai, S=Guangdong, C=CN'
         Issuer: 'CN=DigiCert Assured ID Code Signing CA-1, OU=www.digicert.com, O=DigiCert Inc, C=US'
         Type: Authenticode
 Resources:
