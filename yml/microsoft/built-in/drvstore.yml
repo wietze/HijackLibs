@@ -32,7 +32,7 @@ VulnerableExecutables:
 Resources:
 - https://securityintelligence.com/posts/windows-features-dll-sideloading/
 - https://github.com/xforcered/WFH
-- https://www.microsoft.com/en-us/download/details.aspx?id=105437 (HVCIScan Download)
+- https://www.microsoft.com/en-us/download/details.aspx?id=105437
 Acknowledgements:
 - Name: Chris Spehn
   Twitter: '@ConsciousHacker'
