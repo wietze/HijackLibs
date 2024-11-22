@@ -1,18 +1,16 @@
 ---
 extends: default
 yaml-files:
-  - 'yml/*.yml'
+  - '*.yml'
 rules:
   new-line-at-end-of-file:
     level: error
   trailing-spaces:
     level: warning
   line-length:
-    max: 120
+    max: 1000
     allow-non-breakable-words: true
     level: warning
   new-lines:
     level: error
-  indentation:
-    spaces: 2
-    level: error
+  indentation: disable

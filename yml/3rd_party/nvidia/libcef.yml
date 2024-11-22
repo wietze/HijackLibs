@@ -1,0 +1,20 @@
+---
+Name: libcef.dll
+Author: Matt Anderson - HuntressLabs
+Created: 2024-04-13
+Vendor: Nvidia
+ExpectedLocations:
+  - '%PROGRAMFILES%\NVIDIA Corporation\NVIDIA GeForce Experience'
+VulnerableExecutables:
+  - Path: '%Program Files (x86)\NVIDIA Corporation\NVIDIA GeForce Experience\NVIDA Share.exe'
+    Type: Sideloading
+    SHA256:
+      - 'f1e2f82d5f21fb8169131fedee6704696451f9e28a8705fca5c0dd6dad151d64'
+Resources:
+  - https://www.trendmicro.com/en_us/research/24/c/cve-2024-21412--darkgate-operators-exploit-microsoft-windows-sma.html
+  - https://analyze.intezer.com/analyses/93e92d7a-9a46-4c1c-8ac0-87b4453beeb8
+  - https://www.virustotal.com/gui/file/64d0fc47fd77eb300942602a912ea9403960acd4f2ed33a8e325594bf700d65f
+Acknowledgements:
+  - Name: Matt Anderson
+    Company: Huntress
+    Twitter: '@nosecurething'

@@ -183,6 +183,8 @@ VulnerableExecutables:
     Type: Catalog
 - Path: '%LOCALAPPDATA%\microsoft\onedrive\onedrive.exe'
   Type: Search Order
+- Path: '%LOCALAPPDATA%\microsoft\onedrive\OneDriveStandaloneUpdater.exe'
+  Type: Search Order
 - Path: '%LOCALAPPDATA%\microsoft\teams\current\teams.exe'
   Type: Search Order
 - Path: '%SYSTEM32%\dpiscaling.exe'
@@ -221,6 +223,7 @@ Resources:
 - https://securityintelligence.com/posts/windows-features-dll-sideloading/
 - https://github.com/xforcered/WFH
 - https://twitter.com/AndrewOliveau/status/1682185200862625792
+- https://x00.zip/playing-with-process-handles/
 Acknowledgements:
 - Name: Wietze
   Twitter: '@wietze'
@@ -230,3 +233,5 @@ Acknowledgements:
   Twitter: '@ConsciousHacker'
 - Name: Andrew Oliveau
   Twitter: '@AndrewOliveau'
+- Name: Tim Peck
+  Twitter: '@B0bby_Tablez'

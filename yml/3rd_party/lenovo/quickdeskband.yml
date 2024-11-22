@@ -1,0 +1,20 @@
+---
+Name: quickdeskband.dll
+Author: Wietze Beukema
+Created: 2024-07-15
+Vendor: Lenovo
+VulnerableExecutables:
+- Path: 'lenovodesk.exe'
+  Type: Sideloading
+  ExpectedVersionInformation:
+  - LegalCopyright: Lenovo All rights reserved
+    FileDescription: Showdesk
+    InternalName: ShowDesk.exe
+    OriginalFilename: ShowDesk.exe
+    ProductName: ShowDesk
+  SHA256:
+  - db0e5a869b63f4ee5ce17e58a35b42ecb9889f9ab4fb7d2d591ff029a0363751
+Resources:
+- https://twitter.com/StopMalvertisin/status/1722939123470848279
+- https://twitter.com/RexorVc0/status/1811280904662257907
+- https://mp.weixin.qq.com/s/IB2w86cXcpmGS8qrOnprKw

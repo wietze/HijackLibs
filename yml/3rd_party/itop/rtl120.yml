@@ -1,0 +1,22 @@
+---
+Name: rtl120.dll
+Author: Jai Minton - HuntressLabs
+Created: 2024-06-14
+Vendor: iTop
+ExpectedLocations:
+  - '%PROGRAMFILES%\DualSafe Password Manager'
+VulnerableExecutables:
+  - Path: '%PROGRAMFILES%\DualSafe Password Manager\DPMInit.exe'
+    Type: Sideloading
+    ExpectedVersionInformation:
+      - FileDescription: DualSafe Password Manager
+        OriginalFilename: DPMInit.exe
+    SHA256:
+      - '26a24d3b0206c6808615c7049859c2fe62c4dcd87e7858be40ae8112b0482616'
+Resources:
+  - https://www.virustotal.com/gui/file/0e93a41edf1ca3e1723e5e0d73f3e0f54d6d672606b9dc0cda745f87e3fd0339/relations
+  - https://www.virustotal.com/gui/file/6028d64b53880676fcd62b445fd71952f9141b8ac0e60329b15cf9e04e437cea/details
+Acknowledgements:
+  - Name: Jai Minton
+    Company: Huntress
+    Twitter: '@cyberrraiju'

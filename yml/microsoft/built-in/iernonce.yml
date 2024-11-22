@@ -1,0 +1,39 @@
+---
+Name: iernonce.dll
+Author: Wietze Beukema
+Created: 2024-01-11
+Vendor: Microsoft
+ExpectedLocations:
+- '%SYSTEM32%'
+- '%SYSWOW64%'
+ExpectedVersionInformation:
+- CompanyName: Microsoft Corporation
+  FileDescription: Run Once Wrapper
+  InternalName: RunOnce
+  LegalCopyright: © Microsoft Corporation. All rights reserved.
+  OriginalFilename: RUNONCE.EXE
+  ProductName: Microsoft® Windows® Operating System
+ExpectedSignatureInformation:
+- Subject: CN=Microsoft Windows, O=Microsoft Corporation, L=Redmond, S=Washington, C=US
+  Issuer: CN=Microsoft Windows Production PCA 2011, O=Microsoft Corporation, L=Redmond, S=Washington, C=US
+  Type: Catalog
+VulnerableExecutables:
+- Path: '%SYSWOW64%\runonce.exe'
+  Type: Sideloading
+  Condition: SYSWOW64 version only; requires command-line argument '/RunOnceEx6432'
+  ExpectedVersionInformation:
+  - CompanyName: Microsoft Corporation
+    FileDescription: Extended RunOnce processing with UI
+    InternalName: IERNONCE.DLL
+    LegalCopyright: © Microsoft Corporation. All rights reserved.
+    OriginalFilename: IERNONCE.DLL.MUI
+    ProductName: Internet Explorer
+  ExpectedSignatureInformation:
+  - Subject: CN=Microsoft Windows, O=Microsoft Corporation, L=Redmond, S=Washington, C=US
+    Issuer: CN=Microsoft Windows Production PCA 2011, O=Microsoft Corporation, L=Redmond, S=Washington, C=US
+    Type: Catalog
+Resources:
+- https://www.hexacorn.com/blog/2023/12/26/1-little-known-secret-of-runonce-exe-32-bit/
+Acknowledgements:
+- Name: Adam
+  Twitter: '@hexacorn'

@@ -1,0 +1,23 @@
+---
+Name: register.dll
+Author: Jai Minton - HuntressLabs
+Created: 2024-05-06
+Vendor: IObit
+ExpectedLocations:
+  - '%PROGRAMFILES%\IObit\Driver Booster\%VERSION%'
+VulnerableExecutables:
+  - Path: '%PROGRAMFILES%\IObit\Driver Booster\%VERSION%\DriverBooster.exe'
+    Type: Sideloading
+    ExpectedVersionInformation:
+      - OriginalFilename: RttHlp.exe
+        InternalName: RttHlp.exe
+        FileDescription: IObit RttHlp
+    SHA256:
+      - '8aed681ad8d660257c10d2f0e85ae673184055a341901643f27afc38e5ef8473'
+Resources:
+  - https://www.virustotal.com/gui/file/0500e5ad7e344d32ee26da988aeb30f6344a0c89a68eacce5d6a5683d1fee0e1/relations
+  - https://www.virustotal.com/gui/file/cdfe0f80cd3dc1914c7ad1a6305c0c1116168a37c5cfe8ff51650e2ac814b818/details
+Acknowledgements:
+  - Name: Jai Minton
+    Company: Huntress
+    Twitter: '@cyberrraiju'

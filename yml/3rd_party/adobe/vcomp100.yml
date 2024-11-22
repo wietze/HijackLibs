@@ -1,0 +1,25 @@
+---
+Name: vcomp100.dll
+Author: Jai Minton - HuntressLabs
+Created: 2024-07-09
+Vendor: Adobe
+VulnerableExecutables:
+  - Path: '%PROGRAMFILES%\Adobe\Adobe Photoshop %VERSION%\convert.exe'
+    Type: Sideloading
+    ExpectedSignatureInformation:
+      - Subject: SERIALNUMBER=2748129,CN=Adobe Systems Incorporated,OU="Photoshop\, Bridge - SHA256",O=Adobe Systems Incorporated,L=San Jose,ST=California,C=US,2.5.4.15=#131450726976617465204f7267616e697a6174696f6e,1.3.6.1.4.1.311.60.2.1.2=#130844656c6177617265,1.3.6.1.4.1.311.60.2.1.3=#13025553
+        Issuer: CN=Symantec Class 3 Extended Validation Code Signing CA,OU=Symantec Trust Network,O=Symantec Corporation,C=US
+        Type: Authenticode
+    ExpectedVersionInformation:
+      - FileDescription: ImageMagick Studio library and utility programs
+        OriginalFilename: ImageMagick
+        InternalName: ImageMagick
+    SHA256:
+      - 'db2457caa1ccd65e63718b9e28789a12e17bc7a038975fba4f07dcd9f38e7016'
+Resources:
+  - https://www.virustotal.com/gui/file/0ab581841cc19922d424dbc518d279070ea75ec2983334ba1b74c16ca5729bc1/relations
+  - https://www.virustotal.com/gui/file/5a5e1142b50096e3af0f9079c45c84f8a6ca1be60e45dbc489327a2632d73fd5/details
+Acknowledgements:
+  - Name: Jai Minton
+    Company: Huntress
+    Twitter: '@cyberrraiju'

@@ -1,0 +1,21 @@
+---
+Name: libglib-2.0-0.dll
+Author: Jai Minton - HuntressLabs
+Created: 2024-04-15
+Vendor: Wireshark
+ExpectedLocations:
+  - '%PROGRAMFILES%\Wireshark'
+VulnerableExecutables:
+  - Path: '%PROGRAMFILES%\Wireshark\Mergecap.exe'
+    Type: Sideloading
+    ExpectedVersionInformation:
+      - FileDescription: Mergecap
+    SHA256:
+      - 'ac7a321a7b00b4adb5863b9a7e91e69afe9ce1953317234a2bd1bee97de744da'
+Resources:
+  - https://asec.ahnlab.com/en/58319/
+  - https://www.virustotal.com/gui/file/fcb0272d586fff854ce9b329fbbba26902984a112a1afe96a149dbb2011ad289
+Acknowledgements:
+  - Name: Jai Minton
+    Company: Huntress
+    Twitter: '@cyberrraiju'

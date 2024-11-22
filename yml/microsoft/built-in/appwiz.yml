@@ -1,0 +1,31 @@
+---
+Name: appwiz.cpl
+Author: Wietze Beukema
+Created: 2024-01-11
+Vendor: Microsoft
+ExpectedLocations:
+- '%SYSTEM32%'
+- '%SYSWOW64%'
+ExpectedSignatureInformation:
+- Subject: CN=Microsoft Windows, O=Microsoft Corporation, L=Redmond, S=Washington, C=US
+  Issuer: CN=Microsoft Windows Production PCA 2011, O=Microsoft Corporation, L=Redmond, S=Washington, C=US
+  Type: Catalog
+ExpectedVersionInformation:
+- CompanyName: Microsoft Corporation
+  FileDescription: Shell Application Manager
+  InternalName: APPWIZ
+  LegalCopyright: © Microsoft Corporation. All rights reserved.
+  OriginalFilename: APPWIZ.CPL
+  ProductName: Microsoft® Windows® Operating System
+VulnerableExecutables:
+- Path: '%SYSTEM32%\fondue.exe'
+  Type: Sideloading
+  ExpectedSignatureInformation:
+  - Subject: CN=Microsoft Windows, O=Microsoft Corporation, L=Redmond, S=Washington, C=US
+    Issuer: CN=Microsoft Windows Production PCA 2011, O=Microsoft Corporation, L=Redmond, S=Washington, C=US
+    Type: Catalog
+Resources:
+- https://www.hexacorn.com/blog/2024/01/06/1-little-known-secret-of-fondue-exe/
+Acknowledgements:
+- Name: Adam
+  Twitter: '@hexacorn'

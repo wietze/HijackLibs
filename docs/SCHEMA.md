@@ -1,5 +1,5 @@
 # YAML Schema
-A formal version of the below can be found [here](/.github/schema/schema.yml).
+A formal version of the below can be found [here](/.github/schema/pychecks.py).
 
 A simple template can be found [here](/template.yml).
 
@@ -53,6 +53,7 @@ A simple template can be found [here](/template.yml).
 | Field | Type | Required | Format | Description |
 | ----- | ---- | -------- | ------ | ----------- |
 | `Name` | String | ✅ |  | Full name (or Twitter screen name) of the person who should be acknowledged. |
+| `Company` | String | Optional | Name of the acknowledged person's employer, should it be relevant to their contribution. |
 | `Twitter` | String | Optional | Has to start with `@` | The Twitter handle of the person who should be acknowledged. |
 
 [^1]: This field supports environment variables such as `%SYSTEM32%`, `%SYSWOW64%`, `%PROGRAMFILES%`, `%PROGRAMDATA%`, `%APPDATA%`, `%LOCALAPPDATA%`, and so on. Please use this where possible. Variable `%VERSION%` is also available if a path contains a version number that is likely to change.
