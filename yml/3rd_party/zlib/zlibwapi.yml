@@ -4,7 +4,7 @@ Author: Still Hsu
 Created: 2024-11-24
 Vendor: zlib
 ExpectedLocations:
-  - '%programfiles%\DS Clock'
+  - '%PROGRAMFILES%\DS Clock'
 VulnerableExecutables:
 - Path: '%PROGRAMFILES%\DS Clock\dsclock.exe'
   Type: Sideloading
@@ -22,7 +22,7 @@ VulnerableExecutables:
   SHA256:
   - f85ce4492e1354f8310027c5f70ef73aae654fcd8fd9a58034e4f82a41a9826b
 Resources:
-  - https://x.com/malwrhunterteam/status/1859316170773397966
+  - https://twitter.com/malwrhunterteam/status/1859316170773397966
   - https://www.virustotal.com/gui/file/b8d38fc9f4560719fa64227e4b25b732b22602cb596d44cb38418a196c3340be
   - https://github.com/Still34/malware-lab/tree/main/reworkshop/2024-11-24
 Acknowledgements:
