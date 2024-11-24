@@ -216,6 +216,12 @@ VulnerableExecutables:
     Type: Authenticode
   SHA256:
   - 6511ef24c41cf20f707119dd40971420f1cd6f97f0e888b7d24b5e0dec9d5495
+- Path: '%PROGRAMFILES%\Microsoft Deployment Toolkit\Bin\Microsoft.BDD.Catalog35.exe'
+  Type: Sideloading
+  ExpectedSignatureInformation:
+  - Subject: CN=Microsoft Windows, O=Microsoft Corporation, L=Redmond, S=Washington, C=US
+    Issuer: CN=Microsoft Windows Production PCA 2011, O=Microsoft Corporation, L=Redmond, S=Washington, C=US
+    Type: Catalog
 Resources:
 - https://wietze.github.io/blog/hijacking-dlls-in-windows
 - https://wietze.github.io/blog/save-the-environment-variables
@@ -224,6 +230,7 @@ Resources:
 - https://github.com/xforcered/WFH
 - https://twitter.com/AndrewOliveau/status/1682185200862625792
 - https://x00.zip/playing-with-process-handles/
+- https://twitter.com/BSummerz/status/1860045985919205645
 Acknowledgements:
 - Name: Wietze
   Twitter: '@wietze'
@@ -235,3 +242,5 @@ Acknowledgements:
   Twitter: '@AndrewOliveau'
 - Name: Tim Peck
   Twitter: '@B0bby_Tablez'
+- Name: Will Summerhill
+  Twitter: '@BSummerz'
