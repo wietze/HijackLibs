@@ -24,11 +24,9 @@ VulnerableExecutables:
 Resources:
   - https://x.com/malwrhunterteam/status/1859316170773397966
   - https://www.virustotal.com/gui/file/b8d38fc9f4560719fa64227e4b25b732b22602cb596d44cb38418a196c3340be
-  - https://www.virustotal.com/gui/file/f85ce4492e1354f8310027c5f70ef73aae654fcd8fd9a58034e4f82a41a9826b/relations
   - https://github.com/Still34/malware-lab/tree/main/reworkshop/2024-11-24
 Acknowledgements:
   - Name: MalwareHunterTeam
     Twitter: '@malwrhunterteam'
   - Name: Still Hsu
     Twitter: '@AzakaSekai_'
-
