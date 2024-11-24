@@ -75,7 +75,7 @@ VulnerableExecutables:
   - Subject: CN=Microsoft Windows, O=Microsoft Corporation, L=Redmond, S=Washington, C=US
     Issuer: CN=Microsoft Windows Production PCA 2011, O=Microsoft Corporation, L=Redmond, S=Washington, C=US
     Type: Catalog
-- Path: 'C:\Program Files\Microsoft Deployment Toolkit\Bin\Microsoft.BDD.Catalog35.exe'
+- Path: '%PROGRAMFILES%\Microsoft Deployment Toolkit\Bin\Microsoft.BDD.Catalog35.exe'
   Type: Sideloading
   ExpectedSignatureInformation:
   - Subject: CN=Microsoft Windows, O=Microsoft Corporation, L=Redmond, S=Washington, C=US
@@ -84,7 +84,7 @@ VulnerableExecutables:
 Resources:
 - https://securityintelligence.com/posts/windows-features-dll-sideloading/
 - https://github.com/xforcered/WFH
-- https://x.com/BSummerz/status/1860045985919205645
+- https://twitter.com/BSummerz/status/1860045985919205645
 Acknowledgements:
 - Name: Chris Spehn
   Twitter: '@ConsciousHacker'
