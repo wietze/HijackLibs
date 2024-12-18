@@ -11,7 +11,7 @@ VulnerableExecutables:
     SHA256:
       - '6f7f390b2012e7dfef9fcbd673a4a0256e2e217b11831e9a27a9d460ba57c0d2'
 Resources:
-  - https://cyble.com/blog/threat-actor-targets-manufacturing-industry-with-malware/
+  - https://cyble.com/blog/threat-actor-targets-manufacturing-industry-with-malware
   - https://www.virustotal.com/gui/file/dc36a3d95d9a476d773b961b15b188aa3aae0e0a875bca8857fca18c691ec250
   - https://www.virustotal.com/gui/file/6f7f390b2012e7dfef9fcbd673a4a0256e2e217b11831e9a27a9d460ba57c0d2
 Acknowledgements:
