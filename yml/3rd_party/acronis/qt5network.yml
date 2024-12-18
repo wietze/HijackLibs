@@ -2,7 +2,7 @@
 Name: qt5network.dll
 Author: Micah Babinski
 Created: 2024-12-17
-Vendor: The Qt Company
+Vendor: Acronis
 ExpectedLocations:
   - '%PROGRAMFILES%\Acronis\CyberProtectHomeOffice'
 VulnerableExecutables:
