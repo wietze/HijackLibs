@@ -7,7 +7,7 @@ ExpectedLocations:
   - '%SYSTEM32%'
 VulnerableExecutables:
   - Path: 'C:\Program Files\cmder.exe'
-    Type: Phantom|Sideloading|Search Order
+    Type: Phantom
     AutoElevate: true 
     SHA256:
       - 6F35596886C21C661972FCF117DC9BC392E49B164D86EC1F1DB7AAAAC82DFB24
