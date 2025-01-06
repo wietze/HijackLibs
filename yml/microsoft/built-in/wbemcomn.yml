@@ -7,10 +7,9 @@ ExpectedLocations: # No trailing slashes
   - '%SYSTEM32%'
   - '%SYSWOW64%'
 VulnerableExecutables:
-  - Path: 'C:\Windows\System32\Wbem\wbemcomn.dll'
+  - Path: 'C:\Windows\System32\Wbem\WmiApSrv.exe'
     Type: Search Order
     AutoElevate: true # Remove line if false
-    PrivilegeEscalation: false # Remove line if false
 Resources:
   - https://gist.github.com/v1stra/7a13f2a27a1c9b97778d12e13a3d53c2
 Acknowledgements:
