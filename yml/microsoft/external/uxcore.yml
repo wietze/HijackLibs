@@ -1,0 +1,23 @@
+---
+Name: uxcore.dll
+Author: Jai Minton - HuntressLabs
+Created: 2024-05-06
+Vendor: Microsoft
+ExpectedLocations:
+  - '%PROGRAMFILES%\windows live\installer'
+VulnerableExecutables:
+  - Path: '%PROGRAMFILES%\windows live\installer\Dashboard.exe'
+    Type: Sideloading
+    ExpectedVersionInformation:
+      - OriginalFilename: Dashboard.exe
+        InternalName: Dashboard.exe
+        FileDescription: Windows Live installer client executable
+    SHA256:
+      - '8cc871ee8760a4658189528b4a5d8afe9824f6a13faaf1fe7eb56f2a3ad2d04e'
+Resources:
+  - https://www.virustotal.com/gui/file/016468b087cdbe5123189b68965cb65dc95ba1a59fc3ed32144b92d1274d13b6/relations
+  - https://www.virustotal.com/gui/file/23c3fec8dc60c06caadecb31e2d770212e70faf0de866cb5878622f077d4fe2a
+Acknowledgements:
+  - Name: Jai Minton
+    Company: Huntress
+    Twitter: '@cyberrraiju'
