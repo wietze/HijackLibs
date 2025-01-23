@@ -1,0 +1,18 @@
+---
+Name: wbemcomn.dll
+Author: v1stra
+Created: 2024-12-12
+Vendor: Microsoft
+ExpectedLocations:
+  - '%SYSTEM32%'
+  - '%SYSWOW64%'
+VulnerableExecutables:
+  - Path: '%SYSTEM32%\Wbem\WmiApSrv.exe'
+    Type: Search Order
+Resources:
+  - https://gist.github.com/v1stra/7a13f2a27a1c9b97778d12e13a3d53c2
+Acknowledgements:
+  - Name: v1stra
+    Twitter: '@_v1stra' 
+---
+
