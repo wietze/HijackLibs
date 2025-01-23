@@ -65,6 +65,12 @@ VulnerableExecutables:
   - Subject: CN=Microsoft Windows, O=Microsoft Corporation, L=Redmond, S=Washington, C=US
     Issuer: CN=Microsoft Windows Production PCA 2011, O=Microsoft Corporation, L=Redmond, S=Washington, C=US
     Type: Catalog
+- Path: '%SYSTEM32%\rdpinit.exe'
+  Type: Sideloading
+  ExpectedSignatureInformation:
+  - Subject: CN=Microsoft Windows, O=Microsoft Corporation, L=Redmond, S=Washington, C=US
+    Issuer: CN=Microsoft Windows Production PCA 2011, O=Microsoft Corporation, L=Redmond, S=Washington, C=US
+    Type: Catalog
 - Path: '%SYSTEM32%\rdpshell.exe'
   Type: Sideloading
   ExpectedSignatureInformation:
@@ -121,5 +127,8 @@ Acknowledgements:
   Twitter: '@wietze'
 - Name: Chris Spehn
   Twitter: '@ConsciousHacker'
+- Name: Austin Worline
+  Company: Huntress
+  Twitter: '@0xffaraday'
 ---
 
