@@ -71,7 +71,6 @@ VulnerableExecutables:
   Type: Sideloading
   AutoElevate: true
   ExpectedSignatureInformation:
-  ExpectedSignatureInformation:
   - Subject: CN="Skutta, Kristjan", O="Skutta, Kristjan", L=Berlin, C=DE
     Issuer: CN=DigiCert SHA2 Assured ID Code Signing CA, OU=www.digicert.com, O=DigiCert Inc, C=US
     Type: Catalog
