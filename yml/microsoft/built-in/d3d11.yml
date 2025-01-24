@@ -75,8 +75,8 @@ VulnerableExecutables:
     Issuer: CN=Microsoft Windows Production PCA 2011, O=Microsoft Corporation, L=Redmond, S=Washington, C=US
     Type: Catalog
   - Path: '%ProgramFiles(x86)%\Steam\steamapps\common\wallpaper_engine\wallpaper32.exe'
-  Type: Sideloading
-   ExpectedSignatureInformation:
+    Type: Sideloading
+  ExpectedSignatureInformation:
   - Subject: CN="Skutta, Kristjan", O="Skutta, Kristjan", L=Berlin, C=DE
     Issuer: CN=DigiCert SHA2 Assured ID Code Signing CA, OU=www.digicert.com, O=DigiCert Inc, C=US
 Resources:
