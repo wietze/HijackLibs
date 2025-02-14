@@ -79,7 +79,7 @@ VulnerableExecutables:
   ExpectedSignatureInformation:
   - Subject: CN="Skutta, Kristjan", O="Skutta, Kristjan", L=Berlin, C=DE
     Issuer: CN=DigiCert SHA2 Assured ID Code Signing CA, OU=www.digicert.com, O=DigiCert Inc, C=US
-    Type: Catalog
+    Type: Authenticode
 Resources:
 - https://wietze.github.io/blog/hijacking-dlls-in-windows
 - https://securityintelligence.com/posts/windows-features-dll-sideloading/
