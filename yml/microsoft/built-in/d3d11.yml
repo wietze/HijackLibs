@@ -86,6 +86,7 @@ Resources:
 - https://wietze.github.io/blog/hijacking-dlls-in-windows
 - https://securityintelligence.com/posts/windows-features-dll-sideloading/
 - https://github.com/xforcered/WFH
+- https://blog.amartinsec.com/blog/dllhijacking/
 Acknowledgements:
 - Name: Wietze
   Twitter: '@wietze'
