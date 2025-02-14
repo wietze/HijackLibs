@@ -74,7 +74,7 @@ VulnerableExecutables:
   - Subject: CN=Microsoft Windows, O=Microsoft Corporation, L=Redmond, S=Washington, C=US
     Issuer: CN=Microsoft Windows Production PCA 2011, O=Microsoft Corporation, L=Redmond, S=Washington, C=US
     Type: Catalog
-- Path: '%ProgramFiles(x86)%\Steam\steamapps\common\wallpaper_engine\wallpaper32.exe'
+- Path: '%PROGRAMFILES%\Steam\steamapps\common\wallpaper_engine\wallpaper32.exe'
   Type: Sideloading
   ExpectedSignatureInformation:
   - Subject: CN="Skutta, Kristjan", O="Skutta, Kristjan", L=Berlin, C=DE
