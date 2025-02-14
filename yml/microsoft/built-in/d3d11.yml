@@ -74,12 +74,24 @@ VulnerableExecutables:
   - Subject: CN=Microsoft Windows, O=Microsoft Corporation, L=Redmond, S=Washington, C=US
     Issuer: CN=Microsoft Windows Production PCA 2011, O=Microsoft Corporation, L=Redmond, S=Washington, C=US
     Type: Catalog
+- Path: '%PROGRAMFILES%\Steam\steamapps\common\wallpaper_engine\wallpaper32.exe'
+  Type: Sideloading
+  SHA256:
+  - 1b0d67730ad59a49715e39f904f4f59ea9e81a54ea51ab20e6ec473546708aa7
+  ExpectedSignatureInformation:
+  - Subject: CN="Skutta, Kristjan", O="Skutta, Kristjan", L=Berlin, C=DE
+    Issuer: CN=DigiCert SHA2 Assured ID Code Signing CA, OU=www.digicert.com, O=DigiCert Inc, C=US
+    Type: Authenticode
 Resources:
 - https://wietze.github.io/blog/hijacking-dlls-in-windows
 - https://securityintelligence.com/posts/windows-features-dll-sideloading/
 - https://github.com/xforcered/WFH
+- https://blog.amartinsec.com/blog/dllhijacking/
 Acknowledgements:
 - Name: Wietze
   Twitter: '@wietze'
 - Name: Chris Spehn
   Twitter: '@ConsciousHacker'
+- Name: Josh Allman
+  Company: Huntress
+  Twitter: '@xorjosh'
