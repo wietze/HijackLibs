@@ -1,0 +1,25 @@
+---
+Name: dal_keepalives.dll
+Author: Wietze Beukema
+Created: 2025-02-15
+Vendor: Audinate
+CVE: CVE-2022-23748
+ExpectedLocations:
+  - '%PROGRAMFILES%\audinate\shared files'
+
+VulnerableExecutables:
+  - Path: '%PROGRAMFILES%\audinate\shared files\mDnsResponder.exe'
+    Type: Sideloading
+    ExpectedVersionInformation:
+    - FileDescription: Dante Discovery
+      InternalName: mDNSResponder.exe
+      OriginalFilename: mDNSResponder.exe
+      ProductName: Dante Discovery
+      FileVersion: 1.3.0.0
+      Copyright: © 2013-2014 Audinate Pty Ltd
+    SHA256:
+    - 8360c2391f373c9de46c5b37fef952c2309be34e62127777ad7358ddb1d437ff
+Resources:
+  - https://research.checkpoint.com/2023/stayin-alive-targeted-attacks-against-telecoms-and-government-ministries-in-asia/
+  - https://www.cisa.gov/news-events/alerts/2025/02/06/cisa-adds-five-known-exploited-vulnerabilities-catalog
+  - https://www.virustotal.com/gui/file/d4bd89ff56b75fc617f83eb858b6dbce7b36376889b07fa0c2417322ca361c30
