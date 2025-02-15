@@ -14,6 +14,7 @@ Resources:
   - https://www.trendmicro.com/en_us/research/24/c/cve-2024-21412--darkgate-operators-exploit-microsoft-windows-sma.html
   - https://analyze.intezer.com/analyses/93e92d7a-9a46-4c1c-8ac0-87b4453beeb8
   - https://www.virustotal.com/gui/file/64d0fc47fd77eb300942602a912ea9403960acd4f2ed33a8e325594bf700d65f
+  - https://research.checkpoint.com/2023/beyond-the-horizon-traveling-the-world-on-camaro-dragons-usb-flash-drives/
 Acknowledgements:
   - Name: Matt Anderson
     Company: Huntress

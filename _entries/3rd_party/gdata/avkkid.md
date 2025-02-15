@@ -1,0 +1,22 @@
+---
+Name: avkkid.dll
+Author: Wietze Beukema
+Created: 2025-02-15
+Vendor: G DATA
+ExpectedLocations:
+  - '%PROGRAMFILES%\G DATA\TotalSecurity\avkkid'
+VulnerableExecutables:
+  - Path: '%PROGRAMFILES%\G DATA\TotalSecurity\avkkid\avkkid.exe'
+    Type: Sideloading
+    ExpectedVersionInformation:
+      - OriginalFilename: AVKKid.exe
+        InternalName: AVKKid
+        FileDescription: G DATA Security Software - KidSafe
+        ProductName: G DATA Security Software
+    SHA256:
+      - '388b0714e2a8146c270afe6a4c80d109988ad8dc026a0f260b376d9c35a330ed'
+Resources:
+  - https://research.checkpoint.com/2023/beyond-the-horizon-traveling-the-world-on-camaro-dragons-usb-flash-drives/
+  - https://www.virustotal.com/gui/file/68eb5590d8ad952215cf54741b0ed6204c19bba4dcb8d704883e007f16de5028
+---
+
