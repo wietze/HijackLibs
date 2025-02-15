@@ -16,7 +16,7 @@ VulnerableExecutables:
       OriginalFilename: mDNSResponder.exe
       ProductName: Dante Discovery
       FileVersion: 1.3.0.0
-      Copyright: © 2013-2014 Audinate Pty Ltd
+      LegalCopyright: © 2013-2014 Audinate Pty Ltd
     SHA256:
     - 8360c2391f373c9de46c5b37fef952c2309be34e62127777ad7358ddb1d437ff
 Resources:
