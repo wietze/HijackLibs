@@ -1,0 +1,22 @@
+---
+Name: eacore.dll
+Author: Wietze Beukema
+Created: 2025-02-15
+Vendor: Electronic Arts
+ExpectedLocations:
+  - '%PROGRAMFILES%\Electronic Arts\EA Desktop\EA Desktop'
+VulnerableExecutables:
+  - Path: '%PROGRAMFILES%\Electronic Arts\EA Desktop\EA Desktop\EACoreServer.exe'
+    Type: Sideloading
+    ExpectedSignatureInformation:
+      - Subject: C=US, ST=CALIFORNIA, L=Redwood City, O='Electronic Arts, Inc.', OU=EAC, CN='Electronic Arts, Inc.'
+        Type: Authenticode
+    SHA256:
+      - '2c24f443087674a64742d5e63f62b035102314d4431fdb336cbdcb68291454dd'
+Resources:
+  - https://research.checkpoint.com/2023/beyond-the-horizon-traveling-the-world-on-camaro-dragons-usb-flash-drives/
+  - https://x.com/FatzQatz/status/1883443770819248130
+  - https://www.virustotal.com/gui/file/dc673d59a6a9df3d02e83fd03af80e117bea20954602ae416540870b1b3d13c4
+Acknowledgements:
+  - Name: FatzQatz
+    Twitter: '@FatzQatz'
