@@ -21,7 +21,7 @@ VulnerableExecutables:
     ExpectedSignatureInformation:
       - Subject: CN="Flexera Software LLC", O="Flexera Software LLC", L=Unknown, C=Unknown
         Issuer: CN=DigiCert Trusted G4 Code Signing RSA4096 SHA384 2021 CA1, O=DigiCert Inc, C=US
-        Type: Code Signing
+        Type: Authenticode
 Resources:
   - https://asec.ahnlab.com/en/58319/
   - https://www.virustotal.com/gui/file/e7b69768215453b2c648d7060161ce9b9eaf1ace631eb2ac11b60a7195e2263e
