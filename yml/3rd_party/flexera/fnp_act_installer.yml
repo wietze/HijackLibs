@@ -25,6 +25,7 @@ VulnerableExecutables:
 Resources:
   - https://asec.ahnlab.com/en/58319/
   - https://www.virustotal.com/gui/file/e7b69768215453b2c648d7060161ce9b9eaf1ace631eb2ac11b60a7195e2263e
+  - https://app.any.run/tasks/faf0d668-7e06-4b1c-922b-2bb3a9d81dae
 Acknowledgements:
   - Name: Jai Minton
     Company: Huntress
