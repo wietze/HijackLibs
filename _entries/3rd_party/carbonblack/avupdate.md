@@ -1,0 +1,22 @@
+---
+Name: avupdate.dll
+Author: Josh Allman
+Created: 2025-02-18
+Vendor: Carbon Black
+ExpectedLocations:
+  - '%PROGRAMFILES%\Confer\scanner\upd.exe'
+VulnerableExecutables:
+  - Path: '%PROGRAMFILES%\Confer\scanner\upd.exe'
+    Type: Sideloading
+    ExpectedVersionInformation:
+      - FileDescription: Carbon Black Cloud Sensor AV Update Tool x64
+    SHA256:
+      - '3dfae7b23f6d1fe6e37a19de0e3b1f39249d146a1d21102dcc37861d337a0633'
+Resources:
+  - https://blackpointcyber.com/resources/blog/qilin-ransomware-and-the-hidden-dangers-of-byovd/
+Acknowledgements:
+  - Name: Josh Allman
+    Company: Huntress
+    Twitter: '@xorjosh'
+---
+
