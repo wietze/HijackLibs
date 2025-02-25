@@ -8,7 +8,7 @@ ExpectedLocations:
 VulnerableExecutables:
   - Path: '%PROGRAMFILES%\Ahnenblatt4\Ahnenblatt4.exe'
     Type: Sideloading
-     ExpectedVersionInformation:
+    ExpectedVersionInformation:
         - FileDescription: Ahnenblatt
       SHA256:
       - '8f4f53bc02348a549f3437444aacec43eae5f90875ea3c5ec96600ba1cb4a061'
