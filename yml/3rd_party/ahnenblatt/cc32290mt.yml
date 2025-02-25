@@ -10,7 +10,7 @@ VulnerableExecutables:
     Type: Sideloading
     ExpectedVersionInformation:
         - FileDescription: Ahnenblatt
-      SHA256:
+    SHA256:
       - '8f4f53bc02348a549f3437444aacec43eae5f90875ea3c5ec96600ba1cb4a061'
 Resources:
   - https://www.virustotal.com/gui/file/dab744a533bcbc4a2d3f19a54694ceb00587a0ce68d046ca9085d5013321ea5a
