@@ -9,15 +9,17 @@ VulnerableExecutables:
   - Path: '%PROGRAMFILES%\Ahnenblatt4\Ahnenblatt4.exe'
     Type: Sideloading
      ExpectedVersionInformation:
-      - FileDescription: Ahnenblatt
-    SHA256: 
+        - FileDescription: Ahnenblatt
+      SHA256:
       - '8f4f53bc02348a549f3437444aacec43eae5f90875ea3c5ec96600ba1cb4a061'
 Resources:
   - https://www.virustotal.com/gui/file/dab744a533bcbc4a2d3f19a54694ceb00587a0ce68d046ca9085d5013321ea5a
 Acknowledgements:
   - Name: Josh Allman
-    Twitter: '@xorjosh' 
+    Twitter: '@xorjosh'
+    Company: Huntress
   - Name: Amelia Casley
-    Twitter: '@pe4Chscreeching' 
+    Twitter: '@pe4Chscreeching'
+    Company: Huntress
   - Name: Faith Stratton
-    Twitter: '@f0xtrot_sierra'     
+    Twitter: '@f0xtrot_sierra'
