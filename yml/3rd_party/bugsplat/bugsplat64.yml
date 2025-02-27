@@ -1,5 +1,5 @@
 ---
-Name: BugSplat64.dll
+Name: bugsplat64.dll
 Author: Swachchhanda Shrawan Poudel
 Created: 2025-02-27
 Vendor: BugSplat
@@ -22,6 +22,6 @@ Resources:
 Acknowledgements:
   - Name: Ankit Anubhav
     Twitter: '@ankit_anubhav'
-  - Name: Swachchhanda Shrawan Poudl
+  - Name: Swachchhanda Shrawan Poudel
     Company: Nextron Systems
     Twitter: '@_swachchhanda_'
