@@ -1,0 +1,21 @@
+---
+Name: mfcu100u.dll
+Author: Josh Allman
+Created: 2025-02-28
+Vendor: Tech Smith
+ExpectedLocations:
+  - '%PROGRAMFILES%\TechSmith\Camtasia Studio 8'
+VulnerableExecutables:
+  - Path: '%PROGRAMFILES%\TechSmith\Camtasia Studio 8\CamMenuMaker.exe'
+    Type: Sideloading
+    SHA256:
+      - '88a1f9a40eb7ece8999092b2872b6afde0fb3776e29384c5b00631bb0fca34d1'
+Resources:
+  - https://www.virustotal.com/gui/file/73670defa750d0a09470356279494a0c947245229d283c42e7ef0f2b8427b847
+Acknowledgements:
+  - Name: Josh Allman
+    Twitter: '@xorjosh'
+    Company: Huntress
+  - Name: Dipo R
+    Twitter: @dipotwb
+    Company: Huntress
