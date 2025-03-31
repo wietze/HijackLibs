@@ -4,8 +4,7 @@ Author: Josh Allman
 Created: 2025-03-27
 Vendor: Microsoft
 ExpectedLocations:
-  - '%ProgramFiles%\Common Files\Microsoft Shared\MODI\11.0'
-  - '%Program Files(x86)%\Common Files\microsoft shared\MSPaper\MODI\11.0'
+  - '%PROGRAMFILES%\Common Files\Microsoft Shared\MODI\11.0'
 VulnerableExecutables:
   - Path: 'C:\Program Files\Common Files\Microsoft Shared\MODI\11.0\MSPSCAN.EXE'
     Type: Sideloading
