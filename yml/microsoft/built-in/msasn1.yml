@@ -2,7 +2,7 @@ Name: msasn1.dll
 Author: ice-wzl
 Created: 2025-04-04
 Vendor: Microsoft
-ExpectedLocations: # No trailing slashes
+ExpectedLocations:
   - '%SYSTEM32%'
 VulnerableExecutables:
   - Path: 'winbox64.exe'
@@ -19,4 +19,3 @@ Resources:
 Acknowledgements:
   - Name: ice-wzl
     Twitter: '@ice_wzl_cyber'
-  - ...
