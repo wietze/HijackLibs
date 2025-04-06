@@ -1,0 +1,16 @@
+---
+Name: concrt140.dll
+Author: Austin Worline
+Created: 2025-04-06
+Vendor: Microsoft
+ExpectedLocations:
+  - '%PROGRAMFILES(X86)%\Microsoft Visual Studio\<YEAR>\Community\Common7\IDE\VC\vcpackages'
+  - '%PROGRAMFILES(X86)%\Microsoft Visual Studio\<YEAR>\BuildTools\Common7\IDE\VC\vcpackages'
+  - '%PROGRAMFILES(X86)%\Microsoft Visual Studio\<YEAR>\BuildTools\Common7\IDE'
+VulnerableExecutables:
+  - Path: vcpkgsrv.exe
+    Type: Sideloading
+Acknowledgements:
+  - Name: Austin Worline
+    Company: Huntress
+    Twitter: "@0xffaraday"
