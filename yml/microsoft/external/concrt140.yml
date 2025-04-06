@@ -10,6 +10,8 @@ ExpectedLocations:
 VulnerableExecutables:
   - Path: vcpkgsrv.exe
     Type: Sideloading
+Resources:
+  - https://www.virustotal.com/gui/file/119910bd40da350fe61397b7eb8b6bc4c1280ff130129b4f5046d7f460c62fac
 Acknowledgements:
   - Name: Austin Worline
     Company: Huntress
