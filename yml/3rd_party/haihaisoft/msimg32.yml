@@ -4,9 +4,9 @@ Author: Jai Minton - HuntressLabs
 Created: 2025-04-10
 Vendor: Haihaisoft
 ExpectedLocations:
-  - "%PROGRAMFILES%\Haihaisoft PDF Reader"
-  - "%SYSTEM32%"
-  - "%SYSWOW64%"
+  - '%PROGRAMFILES%\Haihaisoft PDF Reader'
+  - '%SYSTEM32%'
+  - '%SYSWOW64%'
 VulnerableExecutables:
   - Path: '%PROGRAMFILES%\Haihaisoft PDF Reader\hpreader.exe'
     Type: Sideloading

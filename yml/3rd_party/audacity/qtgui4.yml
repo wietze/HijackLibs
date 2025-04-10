@@ -4,8 +4,8 @@ Author: Jai Minton - HuntressLabs
 Created: 2025-04-10
 Vendor: mathiasrauen
 ExpectedLocations:
-  - "%PROGRAMFILES%\Audacity"
-  - "%PROGRAMFILES%\AOMEI\AOMEI Backupper\%VERSION%"
+  - '%PROGRAMFILES%\Audacity'
+  - '%PROGRAMFILES%\AOMEI\AOMEI Backupper\%VERSION%'
 VulnerableExecutables:
   - Path: '%PROGRAMFILES%\Audacity\crashreporter.exe'
     Type: Sideloading

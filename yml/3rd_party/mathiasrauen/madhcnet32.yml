@@ -4,8 +4,8 @@ Author: Jai Minton - HuntressLabs
 Created: 2025-04-10
 Vendor: mathiasrauen
 ExpectedLocations:
-  - "%PROGRAMFILES%\Multimedia\K-Lite Codec Pack\Filters\madVR"
-  - "%PROGRAMFILES%\K-Lite Codec Pack\Filters\madVR"
+  - '%PROGRAMFILES%\Multimedia\K-Lite Codec Pack\Filters\madVR'
+  - '%PROGRAMFILES%\K-Lite Codec Pack\Filters\madVR'
 VulnerableExecutables:
   - Path: '%PROGRAMFILES%\K-Lite Codec Pack\Filters\madVR\madHcCtrl.exe'
     Type: Sideloading
