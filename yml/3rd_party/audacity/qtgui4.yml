@@ -2,7 +2,7 @@
 Name: qtgui4.dll
 Author: Jai Minton - HuntressLabs
 Created: 2025-04-10
-Vendor: mathiasrauen
+Vendor: audacity
 ExpectedLocations:
   - '%PROGRAMFILES%\Audacity'
   - '%PROGRAMFILES%\AOMEI\AOMEI Backupper\%VERSION%'
