@@ -1,0 +1,24 @@
+---
+Name: madhcnet32.dll
+Author: Jai Minton - HuntressLabs
+Created: 2025-04-10
+Vendor: Systemsoftware Mathias Rauen
+ExpectedLocations:
+  - '%PROGRAMFILES%\Multimedia\K-Lite Codec Pack\Filters\madVR'
+  - '%PROGRAMFILES%\K-Lite Codec Pack\Filters\madVR'
+VulnerableExecutables:
+  - Path: '%PROGRAMFILES%\K-Lite Codec Pack\Filters\madVR\madHcCtrl.exe'
+    Type: Sideloading
+    ExpectedVersionInformation:
+      - OriginalFilename: madHcCtrl.exe
+        FileDescription: mad* home cinema control
+    SHA256:
+      - '69a90665113bd73b30360d87f7f6ed2c789a90a67f3b6e86474e21273a64f699'
+Resources:
+  - https://www.virustotal.com/gui/file/d98677d4cf165a8885dc16e8a8411b36bfe39b10e188c6277253173b3ff73346/relations
+Acknowledgements:
+  - Name: Jai Minton
+    Company: Huntress
+    Twitter: '@cyberrraiju'
+---
+
