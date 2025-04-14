@@ -2,11 +2,15 @@
 Name: msimg32.dll
 Author: Jai Minton - HuntressLabs
 Created: 2025-04-10
-Vendor: Haihaisoft
+Vendor: Microsoft
 ExpectedLocations:
   - '%PROGRAMFILES%\Haihaisoft PDF Reader'
   - '%SYSTEM32%'
   - '%SYSWOW64%'
+ExpectedVersionInformation:
+  - OriginalFilename: gdiext
+    InternalName: gdiext
+    FileDescription: GDIEXT Client DLL
 VulnerableExecutables:
   - Path: '%PROGRAMFILES%\Haihaisoft PDF Reader\hpreader.exe'
     Type: Sideloading
