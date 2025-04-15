@@ -2,33 +2,46 @@ var github_repo = undefined;
 
 function parseUrls(url) {
     let i = document.createElement("i");
-    if (result = url.href.match(/^https?:\/\/(?:www\.)?twitter.com\/([a-zA-Z0-9_-]+)\/status\/\d+/)) {
-        i.classList.add("fab", "fa-twitter", "fa-fw"); i.title="Tweet";
+    if (result = url.href.match(/^https?:\/\/(?:www\.)?(?:x|twitter)\.com\/([a-zA-Z0-9_-]+)\/status\/\d+/)) {
+        i.classList.add("fab", "fa-x-twitter", "fa-fw"); i.title = "Tweet";
         url.insertAdjacentElement('beforeBegin', i)
         url.innerText = `Tweet by @${result[1]}`
     } else
         if (/^.*\.pdf/g.test(url.href)) {
-            i.classList.add("fas", "fa-file-pdf", "fa-fw"); i.title="PDF file";
+            i.classList.add("fa-solid", "fa-file-pdf", "fa-fw"); i.title = "PDF file";
             url.insertAdjacentElement('beforeBegin', i)
             url.innerText = url.hostname
         } else
             if (result = url.href.match(/^https?:\/\/(?:www\.)?github.com\/([a-zA-Z0-9_-]+(\/[a-zA-Z0-9_-]+)?)(\/|$)/)) {
-                i.classList.add("fab", "fa-github", "fa-fw"); i.title="GitHub repo";
+                i.classList.add("fab", "fa-github", "fa-fw"); i.title = "GitHub repo";
                 url.insertAdjacentElement('beforeBegin', i)
-                url.innerText =  result[1]
+                url.innerText = result[1]
             } else
                 if (url.hostname.endsWith("youtube.com")) {
-                    i.classList.add("fab", "fa-youtube", "fa-fw"); i.title="GitHub repo";
-                    let span =  document.createElement("span");
+                    i.classList.add("fab", "fa-youtube", "fa-fw"); i.title = "YouTube URL";
+                    let span = document.createElement("span");
                     span.innerText = "Video on ";
                     url.insertAdjacentElement('beforeBegin', i);
                     url.insertAdjacentElement('beforeBegin', span);
                     url.innerText = "YouTube"
-                } else {
-                    i.classList.add("fas", "fa-external-link-alt", "fa-fw"); i.title="Web page";
-                    url.insertAdjacentElement('beforeBegin', i)
-                    url.innerText = url.hostname
-                }
+                } else
+                    if (result = url.href.match(/^https?:\/\/(?:www\.)?virustotal.com\/gui\/file\/([a-zA-Z0-9]+)(?:\/([a-zA-Z0-9_-]+))?$/)) {
+                        i.classList.add("fab", "fa-font-awesome", "fa-flip-horizontal", "fa-fw"); i.title = "VirusTotal URL";
+                        url.insertAdjacentElement('beforeBegin', i);
+
+                        let code = document.createElement("code")
+                        code.innerText = result[1]
+
+                        url.innerText = "";
+                        url.appendChild(code)
+                        url.insertAdjacentText('beforeBegin', "Malicious hash ");
+                        url.title = "VirusTotal link for this hash"
+                    } else {
+                        i.classList.add("fa-solid", "fa-external-link-alt", "fa-fw"); i.title = "Web page";
+                        url.insertAdjacentElement('beforeBegin', i)
+                        url.innerText = url.hostname
+                    }
+
 }
 
 function downloadSigma(target) {
@@ -125,5 +138,5 @@ document.addEventListener('DOMContentLoaded', function () {
     document.querySelectorAll('button#yaml-download').forEach(x => x.addEventListener("click", _ => downloadSigma(x)))
     document.querySelectorAll('button.yaml-button').forEach(x => x.addEventListener("click", _ => changeYamlDefinition(x)))
     document.getElementById('back-button')?.addEventListener("click", _ => goBack())
-    document.querySelectorAll(".vulnerable_exe .pill[title]").forEach(x => x.addEventListener("click", _=>{if (('ontouchstart' in window) || (navigator.maxTouchPoints > 0) || (navigator.msMaxTouchPoints > 0)) {alert(x.title); }}));
+    document.querySelectorAll(".vulnerable_exe .pill[title]").forEach(x => x.addEventListener("click", _ => { if (('ontouchstart' in window) || (navigator.maxTouchPoints > 0) || (navigator.msMaxTouchPoints > 0)) { alert(x.title); } }));
 });

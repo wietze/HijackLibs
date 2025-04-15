@@ -1,3 +1,7 @@
+:root {
+    --theme-colour: rgb(225, 105, 50);
+}
+
 body {
     font-family: Arial;
     margin: 0;
@@ -15,7 +19,7 @@ h3 {
 }
 
 a {
-    color: rgb(192, 61, 0);
+    color: color-mix(in srgb, var(--theme-colour) 85%, rgb(0, 0, 0));
 }
 
 p {
@@ -42,6 +46,7 @@ div.metadata {
     display: flex;
     margin: 10px 0px;
     word-break: break-word;
+    gap: 3px;
 }
 
 div.dll-types {
@@ -77,10 +82,6 @@ div.dll-types>div>span:not(.type) {
     }
 }
 
-div.metadata>div {
-    margin-right: 5px;
-}
-
 div.key {
     font-weight: bold;
     flex-basis: 160px;
@@ -89,36 +90,20 @@ div.key {
 
 .pill {
     font-size: x-small;
-    background: rgb(225, 105, 50);
+    background: var(--theme-colour);
     color: white;
-    padding: 2px 5px;
+    padding: 4px 10px;
     border-radius: 3px;
-    margin-left: 3px;
-    margin-bottom: 1px;
-    margin-top: 0;
 }
 
 .pill a {
     color: white;
 }
 
-.pill.margin-right {
-    margin-left: 0px;
-    margin-right: 3px;
-}
-
-.pill:first-of-type {
-    margin-left: 0px;
-}
-
-.pill.margin-right:last-of-type {
-    margin-right: 0px;
-}
-
 .pill>.counter {
     margin: auto 0 auto 3px;
     font-size: xx-small;
-    color: rgb(225, 105, 50);
+    color: var(--theme-colour);
     padding: 1px;
     border-radius: 4px;
 }
@@ -135,25 +120,24 @@ div.key {
 .pill.uac {
     background: #58b000;
     white-space: nowrap;
-    float: right;
+    cursor: default;
 }
 
 .pill.condition {
     background: #0081bd;
     white-space: nowrap;
-    float: right;
+    cursor: default;
 }
 
 .pill.privesc {
     background: #ff9900;
     white-space: nowrap;
-    float: right;
+    cursor: default;
 }
 
 .pill.hash {
-    background: #394eff;
+    background: #336fcc;
     white-space: nowrap;
-    float: right;
     font-weight: bold;
 }
 
@@ -164,15 +148,18 @@ div.key {
 
 .pill.home-dll,
 .pill.results-dll {
-    background: white;
-    border: 1px solid rgb(225, 105, 50);
+    --background-colour: white;
+    --foreground-colour: var(--theme-colour);
+    --border-colour: var(--foreground-colour);
+
+    background: var(--background-colour);
+    border: 1px solid var(--border-colour);
     font-size: revert;
     cursor: pointer;
 }
 
 .pill.home-dll {
     white-space: nowrap;
-    float: right;
 }
 
 .pill.results-dll {
@@ -186,44 +173,46 @@ div.key {
 
 .pill.home-dll>a,
 .pill.results-dll>a {
-    color: rgb(225, 105, 50);
+    color: var(--foreground-colour);
 }
 
 .pill.home-dll:hover,
 .pill.results-dll:hover {
-    background: rgb(225, 105, 50);
+    background: var(--foreground-colour);
     transition: all .05s ease-in;
 }
 
 .pill.home-dll:hover>a,
 .pill.results-dll:hover>a {
-    color: white;
+    color: var(--background-colour);
     transition: all .05s ease-in;
 }
 
 .pill.home-vendor {
+    --background-colour: white;
+    --foreground-colour: rgb(37, 37, 37);
+    --border-colour: var(--foreground-colour);
     display: flex;
-    background: white;
-    border: 1px solid rgb(37, 37, 37);
+    background: var(--background-colour);
+    border: 1px solid var(--border-colour);
     white-space: nowrap;
-    float: right;
     font-size: smaller;
     cursor: pointer;
 }
 
 .pill.home-vendor>a {
-    color: rgb(37, 37, 37);
+    color: var(--foreground-colour);
     text-decoration: none;
 }
 
 .pill.home-vendor:hover {
-    background: rgb(37, 37, 37);
-    ;
+    background: var(--foreground-colour);
+    border: 1px solid var(--background-colour);
     transition: all .05s ease-in;
 }
 
 .pill.home-vendor:hover>a {
-    color: white;
+    color: var(--background-colour);
     transition: all .05s ease-in;
 }
 
@@ -239,6 +228,7 @@ div.description_wrapper {
 
 .pills {
     display: flex;
+    gap: 0 2px
 }
 
 .vulnerable_exe {
@@ -246,7 +236,11 @@ div.description_wrapper {
     justify-content: space-between;
     flex-wrap: wrap;
     align-items: center;
-    width: calc(100% - 1.4em);
+    width: calc(100% - 1.6em);
+}
+
+.latest-items-wrapper .pill {
+    padding: 2px 4px;
 }
 
 footer {
@@ -301,6 +295,10 @@ ul.resources {
     list-style-type: none;
 }
 
+ul.resources .fa-fw {
+    margin-right: 3px;
+}
+
 ul.dirs,
 ul.files {
     list-style: none;
@@ -310,24 +308,28 @@ ul.files {
 ul.dirs>li,
 ul.files>li {
     padding-left: 5px;
+    margin: 2px 0;
 }
 
-ul.dirs li:before {
-    content: "\0f07c";
-    font-family: "Font Awesome 5 Free";
+ul.dirs li::before,
+ul.files li::before {
+    text-align: center;
+    width: 1.25em;
+    display: inline-block;
+    font-family: "Font Awesome 6 Free";
     margin: 0 5px 0 0;
     font-weight: 900;
+}
+
+ul.dirs li::before {
+    content: "\0f07c";
     color: orange;
 }
 
-ul.files li:before {
+ul.files li::before {
     content: "\0f15b";
-    font-family: "Font Awesome 5 Free";
-    margin: 0 5px 0 0;
-    font-weight: 900;
-    color: #a3bcd4;
+    color: #cacaca;
 }
-
 
 #filters {
     text-align: right;
@@ -340,25 +342,26 @@ ul.files li:before {
 }
 
 button.button {
-    border: 1px solid #b64913;
+    --background-colour: white;
+    --text-colour: var(--theme-colour);
+    --border-colour: var(--text-colour);
+
+    border: 1px solid var(--border-colour);
     display: inline-block;
     padding: 5px 10px;
     cursor: pointer;
-}
-
-button.button {
-    background: inherit;
-    color: #b64913;
+    background: var(--background-colour);
+    color: var(--text-colour);
 }
 
 button.button:hover {
-    background: #b64913;
-    color: white;
+    background: var(--text-colour);
+    color: var(--background-colour);
     transition: all .2s ease-in;
 }
 
 button.button:hover a {
-    color: white;
+    color: var(--background-colour);
     transition: all .2s ease-in;
 }
 
@@ -419,11 +422,30 @@ button {
 div.search-banner {
     /* background: rgb(235, 119, 16);
       background: linear-gradient(90deg, rgba(235,119,16,1) 0%, rgba(225,166,50,1) 50%, rgba(235,119,16,1) 100%); */
-    background: rgb(225, 105, 50);
+
+    background: linear-gradient(-45deg, var(--theme-colour), color-mix(in srgb, var(--theme-colour) 85%, red), color-mix(in srgb, var(--theme-colour) 85%, #ef0), color-mix(in srgb, var(--theme-colour) 85%, yellow), var(--theme-colour));
+    background-size: 400% 400%;
+    animation: gradient 15s cubic-bezier(.79, .14, .15, .86) infinite;
+
     color: white;
-    padding-bottom: 5px;
-    padding-top: 5px;
+    padding-bottom: 20px;
+    padding-top: 20px;
 }
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
 
 div.search-banner input[type=text] {
     width: 100%;
@@ -435,7 +457,7 @@ header {
     min-width: 300px;
     max-width: 800px;
     padding: 0 20px;
-    margin: 30px auto;
+    margin: 5px auto;
 }
 
 section:first-of-type {
@@ -456,7 +478,7 @@ table {
 table>thead td,
 table>thead th {
     font-weight: bold;
-    background: rgb(225, 105, 50);
+    background: var(--theme-colour);
     color: white;
     text-align: left;
 }
@@ -482,6 +504,9 @@ table tr:nth-child(odd) {
 #status {
     margin-bottom: 20px;
     margin-top: 5px;
+    display: flex;
+    flex-direction: column;
+    gap: 3px 0;
 }
 
 #status .stats {
@@ -510,7 +535,7 @@ table tr:nth-child(odd) {
 
 #results li {
     display: flex;
-    padding: 2px 0;
+    padding: 6px 6px;
 }
 
 #results li:hover {
@@ -524,8 +549,8 @@ table tr:nth-child(odd) {
 #results li::before {
     content: '';
     display: inline-block;
-    height: 16px;
-    width: 16px;
+    height: 20px;
+    width: 20px;
     background-size: contain;
 }
 
@@ -558,24 +583,26 @@ table tr:nth-child(odd) {
     align-items: stretch;
     align-content: stretch;
     justify-content: flex-start;
-    gap: 1px 5px;
+    gap: 2px 5px;
     min-height: 50px;
 }
 
 #contributors>div {
-    padding: 3px;
-    border: 1px solid rgb(225, 105, 50);
+    padding: 6px;
+    border: 1px solid var(--theme-colour);
     border-radius: 2px;
 }
 
 .latest-items-wrapper {
     display: flex;
     flex-direction: flow;
+    gap: 3px 0;
 }
 
 .latest-items {
     display: flex;
     flex-wrap: wrap;
+    gap: 2px 3px;
 }
 
 .mitre-text {
@@ -615,7 +642,7 @@ code.full-name {
 
 img.logo-inline {
     height: 1.25em;
-    width: 1.25em;
+    padding-right: 3px;
     vertical-align: middle;
 }
 
@@ -668,4 +695,119 @@ div.headline {
 
 a.clickable {
     cursor: pointer
+}
+
+.logo {
+    display: flex;
+    flex-direction: row;
+    font-size: min(max(1.5vh, 1em), 1.5em);
+    align-items: center;
+    gap: 15px;
+    line-height: 1em;
+}
+
+.logo h1 a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.site-logo {
+    height: calc(min(max(1.0vh, 0.8em), 1.5em) * 3);
+    filter: drop-shadow(1px 0px 0px #888) drop-shadow(-1px 0px 0px #888) drop-shadow(0px 1px 0px #888) drop-shadow(0px -1px 0px #888) drop-shadow(5px 5px 4px rgba(68, 68, 68, 0.46));
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --theme-colour: color-mix(in srgb, rgb(225, 105, 50) 85%, rgb(0, 0, 0))
+    }
+
+    body {
+        background-color: #282828;
+        color: white;
+    }
+
+    #status .stats {
+        color: #bbb;
+    }
+
+    .pill.home-dll,
+    .pill.results-dll {
+        --background-colour: var(--theme-colour);
+        --border-colour: var(--background-colour);
+        --foreground-colour: white;
+    }
+
+    .pill.home-vendor {
+        --foreground-colour: rgb(37, 37, 37);
+        --background-colour: #bbb;
+        --border-colour: var(--background-colour);
+    }
+
+    .pill>.counter {
+        color: var(--theme-colour);
+        font-weight: bold;
+    }
+
+    a {
+        color: rgb(225, 95, 0);
+    }
+
+    #results li:nth-child(odd) {
+        background-color: #3c3c3c;
+    }
+
+    table tr:nth-child(2n+1) {
+        background-color: #282828;
+    }
+
+    table tr:nth-child(2n) {
+        background-color: #3c3c3c;
+    }
+
+    mark {
+        background: rgba(226, 186, 4, 0.932);
+        color: black !important;
+    }
+
+    .result-row .exe {
+        background: rgba(156, 70, 0, 0.932);
+        color: white;
+    }
+
+    div.description_wrapper {
+        background:
+            #3c3c3c;
+    }
+
+    footer {
+        background-color: #555;
+    }
+
+    button.button {
+        --background-colour: var(--theme-colour);
+        --border-colour: #555;
+        --text-colour: "inherit";
+    }
+
+    table {
+        color: #eee;
+        border-color: #555;
+    }
+
+    .external-favicon {
+        filter: drop-shadow(0px 0px 2px rgba(255, 255, 255, 1))
+    }
+
+    #contributors>div {
+        background-color: "inherit";
+        border-color: #555;
+    }
+
+    #contributors>div a {
+        color: var(--theme-colour);
+    }
+
+    ul.files li::before {
+        color: white;
+    }
 }

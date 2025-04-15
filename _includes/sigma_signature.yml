@@ -1,0 +1,30 @@
+title: Possibly malicious versions of {{ include.page.Name }}
+id: {% include generate_uuid.yml page=include.page type=3 -%}
+status: experimental
+description: Detects possible DLL hijacking of {{ include.page.Name }} by looking for versions not meeting the known signature data.
+references:
+    - {{ include.page.url | absolute_url }}
+author: "{{ include.page.Author }}"
+date: {{ include.page.Created }}
+tags:
+    - attack.defense_evasion
+{% assign types = include.page.VulnerableExecutables | group_by:"Type"| sort:"name"  -%}
+{% for type in types %}    - attack.{{ site.mapping[type.name]['attack'] }}
+{% endfor -%}
+logsource:
+    product: windows
+    category: image_load
+detection:
+    selection:
+        ImageLoaded: '*\{{ include.page.Name }}'
+{% if include.page.ExpectedSignatureInformation %}    filter:
+        ImageLoaded:
+            - Signed: 'true'
+            - SignatureStatus: 'signed'
+            - Signature|contains:
+            {%- for signature in include.page.ExpectedSignatureInformation %}
+                - '{{ signature.Subject | replace: "'", "''"}}'
+{% endfor %}{% endif %}
+    condition: selection {% if include.page.ExpectedLocations %}and not filter{% endif %}
+falsepositives:
+    - False positives are likely. This rule is more suitable for hunting than for generating detections.

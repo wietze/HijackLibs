@@ -1,33 +1,49 @@
 ---
 title: HijackLibs
 ---
+{%- assign logo = '/assets/img/logo.svg' | relative_url %}
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
-    <title>{{ site.title }}</title>
+    <title>{{site.title}}</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="{{ site.title }} provides an curated list of DLL Hijacking candidates: mappings between DLLs and vulnerable executables, with additional metadata for more context. For defenders, this project can provide valuable information when trying to detect DLL Hijacking attempts; for red teamers, this project can help identify DLLs that can be used to achieve DLL Hijacking.">
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self' https://cdnjs.cloudflare.com/ https://visit.hijacklibs.net/  ; img-src 'self' https://visit.hijacklibs.net/ ">
+    <meta name="description" content="{{site.title}} provides an curated list of DLL Hijacking opportunities: mappings between DLLs and vulnerable executables, with additional metadata for more context. For defenders, this project can provide valuable information when trying to detect DLL Hijacking attempts; for red teamers, this project can help identify DLLs that can be used to achieve DLL Hijacking.">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self' https://cdnjs.cloudflare.com/ https://visit.hijacklibs.net/ ; img-src 'self' https://visit.hijacklibs.net/ ">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="HijackLibs.net">
+    <meta property="og:image" content="{{'/assets/img/screenshot.png' | absolute_url}}">
+    <meta property="og:image:type" content="image/png">
+    <meta property="og:image:width" content="1920">
+    <meta property="og:image:height" content="1080">
+    <meta property="og:site_name" content="HijackLibs.net">
 
-    <link rel="canonical" href="{{ '/' | absolute_url }}">
-    <link rel="icon" type="image/x-icon" href="{{ site.favicon_location }}">
-    <link rel="sitemap" type="application/xml" title="Sitemap" href="{{ '/sitemap.xml' | absolute_url }}">
-    <link rel="stylesheet" href="{{ '/assets/css/code.css' | relative_url }}">
-    <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous">
 
-    <script src="{{ '/assets/js/main.js' | relative_url }}"></script>
-    <script src="{{ '/assets/js/search.js' | relative_url }}"></script>
-    <script src="{{ '/assets/js/visit.js' | relative_url }}" async></script>
+
+    <link rel="canonical" href="{{'/' | absolute_url}}">
+    <link rel="icon" type="image/x-icon" href="{{site.favicon_location}}">
+    <link rel="sitemap" type="application/xml" title="Sitemap" href="{{'/sitemap.xml' | absolute_url}}">
+    <link rel="stylesheet" href="{{'/assets/css/code.css' | relative_url}}">
+    <link rel="stylesheet" href="{{'/assets/css/main.css' | relative_url}}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer">
+
+
+    <script src="{{'/assets/js/main.js' | relative_url}}"></script>
+    <script src="{{'/assets/js/search.js' | relative_url}}"></script>
+    <script src="{{'/assets/js/visit.js' | relative_url}}" async></script>
 </head>
 
-<body data-github-repo="{{ site.repo }}">
+<body data-github-repo="{{site.repo}}">
     <article>
         <div class="search-banner">
         <header>
-            <div class="back"><i class="fas fa-arrow-left light" id="back-button-search"></i></div><h1>{{ site.title }}</h1></header>
+            <div class="back"><i class="fa-solid fa-arrow-left light" id="back-button-search"></i></div>
+            <div class="logo">
+                <a href="{{ '/' | relative_url }}"><img src="{{ logo }}" class="site-logo" alt="Logo" /></a>
+                <h1><a href="{{ '/' | relative_url }}">{{ site.title }}</a></h1>
+            </div>
+        </header>
             <div class="section">
                 <input id="search" type="text" placeholder="Enter the name of a DLL or EXE here&hellip;">
                 <div id="filters"></div>
@@ -40,22 +56,22 @@ title: HijackLibs
         <section id="intro">
             <h2>What is DLL Hijacking?</h2>
             <p>DLL Hijacking is, in the broadest sense, tricking a legitimate/trusted application into loading an arbitrary <a href="https://en.wikipedia.org/wiki/Dynamic-link_library">DLL</a>. Defensive measures such as AV and EDR solutions may not pick up on this activity out of the box, and allow-list applications such as AppLocker may not block the execution of the untrusted code. There are numerous examples of threat actors that have been observed to leverage DLL Hijacking to achieve their objectives.</p>
-            <p>There are various subtypes of DLL Hijacking; this project distinguishes between the following types:</p>
+            <p>There are various subtypes of DLL Hijacking (<a href="https://attack.mitre.org/techniques/T1574/001/">T1574.001</a>); this project distinguishes between the following types:</p>
             <ul>
-                <li><em>DLL Sideloading</em> (<a href="https://attack.mitre.org/techniques/T1574/002/">T1574.002</a>): By copying (and optionally renaming) a vulnerable application to a user-writeable folder, alongside a malicious DLL, arbitrary code can be executed through the legitimate application.</li>
+                <li><em>DLL Sideloading</em>: By copying (and optionally renaming) a vulnerable application to a user-writeable folder, alongside a malicious DLL, arbitrary code can be executed through the legitimate application.</li>
                 <li><em>Phantom DLL Hijacking</em>: By copying a malicious DLL to a specific location, vulnerable applications will load and execute the (normally non-existent) DLL upon normal execution.</li>
-                <li><em>DLL Search Order Hijacking</em> (<a href="https://attack.mitre.org/techniques/T1574/001/">T1574.001</a>): DLLs specified by an application without a path are searched for in fixed locations in a <a href="https://docs.microsoft.com/en-us/windows/win32/dlls/dynamic-link-library-search-order">specific order</a>. By putting a malicious DLL in a location that is searched in before the actual DLL, the legitimate application will execute arbitrary code upon normal execution.</li>
+                <li><em>DLL Search Order Hijacking</em>: DLLs specified by an application without a path are searched for in fixed locations in a <a href="https://docs.microsoft.com/en-us/windows/win32/dlls/dynamic-link-library-search-order">specific order</a>. By putting a malicious DLL in a location that is searched in before the actual DLL, the legitimate application will execute arbitrary code upon normal execution.</li>
                 <li><em>Environment Variable-based DLL Hijacking</em>: By changing a specific environment variable to an attacker-controlled directory, it is possible to trick a vulnerable application into loading a malicious DLL from the attacker-controlled location.</li>
             </ul>
-            <p>For an overview of useful resources explaining various aspects of DLL Hijacking, please refer to our <a href="https://github.com/{{ site.repo }}/wiki">wiki</a>.</p>
+            <p>For an overview of useful resources explaining various aspects of DLL Hijacking, please refer to our <a href="https://github.com/{{site.repo}}/wiki">wiki</a>.</p>
 
 
             <h2>What is this project about?</h2>
-            <p>This project provides an curated list of DLL Hijacking candidates. A mapping between DLLs and vulnerable executables is kept and can be searched via this website. Additionally, further metadata such as resources provide more context.</p><p>For defenders, this project can provide valuable information when trying to detect DLL Hijacking attempts. Although detecting DLL Hijacking isn't always without challenge, it is certainly possible to monitor for behaviour that may be indicative of abuse. To further support defenders, out-of-the-box Sigma rules are provided through this website. A <strong class="sigma">σ</strong><a href="{{'/api/sigma_feed_image.yml' | relative_url}}">Sigma feed</a> containing detection rules for all entries part of this project is available too. </p><p>For red teamers, this project can help identify DLLs that can be used to achieve DLL Hijacking. The aim of this project is not to make it easy to abuse the recorded vulnerabilities; as such, PoCs, code templates or tutorials are not provided.</p>
+            <p>This project provides an curated list of DLL Hijacking candidates. A mapping between DLLs and vulnerable executables is kept and can be searched via this website. Additionally, further metadata such as resources provide more context.</p><p>For defenders, this project can provide valuable information when trying to detect DLL Hijacking attempts. Although detecting DLL Hijacking isn't always without challenge, it is certainly possible to monitor for behaviour that may be indicative of abuse. To further support defenders, out-of-the-box Sigma rules are provided through this website. A <strong class="sigma">&sigma;</strong><a href="{{'/api/sigma_feed_image.yml' | relative_url}}">Sigma feed</a> containing detection rules for all entries part of this project is available too. </p><p>For red teamers, this project can help identify DLLs that can be used to achieve DLL Hijacking. The aim of this project is not to make it easy to abuse the recorded vulnerabilities; as such, PoCs, code templates or tutorials are not provided.</p>
             <h2>How can I use this project's data?</h2>
             <p>This project offers a number of generated files, including JSON and CSV, containing all of the project's data. Because they are automatically updated to the latest version, they can be used in automated processes. More information can be found on the <a href="{{'/api/' | relative_url}}">API page</a>.
             <h2>How do I get involved?</h2>
-            <p>This project is fully open source and is maintained by the community, as can be seen on our <a href="{{'/contributors' | relative_url }}">contributors page</a>. Everyone can contribute, and new contributions are more than welcome - please head to this project's <i class="fab fa-github fa-fw"></i><a href="https://github.com/{{ site.repo }}/tree/main/docs/CONTRIBUTING.md">GitHub page</a> to find the contribution guide.
+            <p>This project is fully open source and is maintained by the community, as can be seen on our <a href="{{'/contributors' | relative_url }}">contributors page</a>. Everyone can contribute, and new contributions are more than welcome - please head to this project's <i class="fab fa-github fa-fw"></i><a href="https://github.com/{{site.repo}}/tree/main/docs/CONTRIBUTING.md">GitHub page</a> to find the contribution guide.
             </p>
         </section>
     </article>

@@ -201,7 +201,7 @@ function addLatestEntryPills(target, foundEntries) {
         let found_exes = data[dll]['executables'];
 
         let d = document.createElement("div")
-        d.classList.add("pill", "home-dll", "margin-right");
+        d.classList.add("pill", "home-dll");
 
         let i = document.createElement('img')
         i.alt = "DLL icon";
@@ -228,7 +228,7 @@ function addVendorPills(target, foundEntries) {
     );
     res.forEach(function (vendor_entry) {
         let d = document.createElement("div")
-        d.classList.add("pill", "home-vendor", "margin-right");
+        d.classList.add("pill", "home-vendor");
 
         let a = document.createElement("a");
         a.title = `There are ${vendor_entry[1]} DLL Hijacking entries associated with ${vendor_entry[0]}.`;

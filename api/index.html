@@ -10,12 +10,19 @@ title: APIs
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="This page shows all data sources provided by {{ site.title }} that can be used for automated pulling of the entries on this website. This may be useful for e.g. automation purposes.">
     <meta http-equiv="Content-Security-Policy" content="default-src 'self' https://cdnjs.cloudflare.com/ https://visit.hijacklibs.net/ ; img-src 'self' https://visit.hijacklibs.net/ ">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="HijackLibs.net">
+    <meta property="og:image" content="{{'/assets/img/screenshot.png' | absolute_url}}">
+    <meta property="og:image:type" content="image/png">
+    <meta property="og:image:width" content="1920">
+    <meta property="og:image:height" content="1080">
+    <meta property="og:site_name" content="HijackLibs.net">
 
     <link rel="canonical" href="{{ page.url | absolute_url }}">
     <link rel="icon" type="image/x-icon" href="{{ site.favicon_location }}">
     <link rel="sitemap" type="application/xml" title="Sitemap" href="{{ '/sitemap.xml' | absolute_url }}">
     <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer">
 
     <script src="{{ '/assets/js/main.js' | relative_url }}"></script>
     <script src="{{ '/assets/js/visit.js' | relative_url }}" async></script>
@@ -25,7 +32,7 @@ title: APIs
     <article>
         <div class="search-banner">
             <header>
-                <div class="back"><i class="fas fa-arrow-left light" id="back-button"></i></div>
+                <div class="back"><i class="fa-solid fa-arrow-left light" id="back-button"></i></div>
                 <h1>{{ site.title }}</h1>
             </header>
         </div>
@@ -93,6 +100,13 @@ title: APIs
                         <td>All entries</td>
                         <td>Auto-generated detection content for file writes</td>
                         <td class="wrap-anywhere"><a href="{{'/api/sigma_feed_file.yml' | relative_url }}" data-visit-click="API-SIGMA-FILE">{{'/api/sigma_feed_file.yml' |
+                                relative_url}}</a></td>
+                    </tr>
+                    <tr>
+                        <td>Sigma (YAML)</td>
+                        <td>All entries</td>
+                        <td>Auto-generated detection content for (unsigned) image loads</td>
+                        <td class="wrap-anywhere"><a href="{{'/api/sigma_feed_signature.yml' | relative_url }}" data-visit-click="API-SIGMA-FILE">{{'/api/sigma_feed_signature.yml' |
                                 relative_url}}</a></td>
                     </tr>
                 </tbody>

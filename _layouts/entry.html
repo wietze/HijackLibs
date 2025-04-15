@@ -5,67 +5,73 @@
 <html lang="en">
 
 <head>
-    <title>{{ page.Name }} | {{ site.title }}</title>
+    <title>{{page.Name}} | {{site.title}}</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="author" content="{{ page.Author }}">
-    <meta name="title" content="{{ page.Name }} on {{ site.title }}">
-    <meta name="description" content="{{ page.Name }} is loaded by {%if exes>1%}{{exes}} applications{%else%}an application{%endif%} vulnerable to {{type_names | array_to_sentence_string}}. Find out on {{site.title}} which apps are vulnerable, how you can detect malicious use of {{ page.Name }}, and how to remediate.">
-    <meta property="og:title" name="og:title" content="{{ page.Name }} on {{ site.title }}">
-    <meta property="og:site_name" name="og:site_name" content="{{ site.title }}">
+    <meta name="author" content="{{page.Author}}">
+    <meta name="title" content="{{page.Name}} on {{site.title}}">
+    <meta name="description" content="{{page.Name}} is loaded by {%if exes>1%}{{exes}} applications{%else%}an application{%endif%} vulnerable to {{type_names | array_to_sentence_string}}. Find out on {{site.title}} which apps are vulnerable, how you can detect malicious use of {{page.Name}}, and how to remediate.">
+    <meta property="og:title" name="og:title" content="{{page.Name}} on {{site.title}}">
+    <meta property="og:site_name" name="og:site_name" content="{{site.title}}">
     <meta property="og:type" name="og:type" content="object">
-    <meta property="og:url" name="og:url" content="{{  page.url | absolute_url }}">
-    <meta property="og:image" name="og:image" content="{{ '/assets/img/dll.png' | absolute_url }}">
-    <meta property="og:description" name="og:description" content="Check out the entry for {{ page.Name }} on {{ site.title }} - it is loaded by applications vulnerable to DLL Hijacking!">
+    <meta property="og:url" name="og:url" content="{{page.url | absolute_url}}">
+    <meta property="og:image" name="og:image" content="{{'/assets/img/logo.svg' | absolute_url}}">
+    <meta property="og:description" name="og:description" content="Check out the entry for {{page.Name}} on {{site.title}} - it is loaded by applications vulnerable to DLL Hijacking!">
     <meta http-equiv="Content-Security-Policy" content="default-src 'self' https://visit.hijacklibs.net/ https://cdnjs.cloudflare.com/ ; script-src 'self' https://visit.hijacklibs.net/ ; connect-src https://api.github.com/">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="{{'/assets/img/screenshot.png' | absolute_url}}">
+    <meta property="og:image:type" content="image/png">
+    <meta property="og:image:width" content="1920">
+    <meta property="og:image:height" content="1080">
+    <meta property="og:site_name" content="HijackLibs.net">
 
-    <link rel="canonical" href="{{ page.url | absolute_url }}">
-    <link rel="icon" type="image/x-icon" href="{{ site.favicon_location }}">
-    <link rel="sitemap" type="application/xml" title="Sitemap" href="{{ '/sitemap.xml' | absolute_url }}">
-    <link rel="stylesheet" href="{{ '/assets/css/code.css' | relative_url }}">
-    <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous">
+    <link rel="canonical" href="{{page.url | absolute_url}}">
+    <link rel="icon" type="image/x-icon" href="{{site.favicon_location}}">
+    <link rel="sitemap" type="application/xml" title="Sitemap" href="{{'/sitemap.xml' | absolute_url}}">
+    <link rel="stylesheet" href="{{'/assets/css/code.css' | relative_url}}">
+    <link rel="stylesheet" href="{{'/assets/css/main.css' | relative_url}}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer">
 
-    <script src="{{ '/assets/js/main.js' | relative_url }}"></script>
-    <script src="{{ '/assets/js/visit.js' | relative_url }}" async></script>
+    <script src="{{'/assets/js/main.js' | relative_url}}"></script>
+    <script src="{{'/assets/js/visit.js' | relative_url}}" async></script>
 </head>
 
-<body data-github-repo="{{ site.repo }}">{% capture DLL %}<code>{{ page.Name | escape }}</code>{% endcapture %}
+<body data-github-repo="{{site.repo}}">{% capture DLL %}<code>{{page.Name | escape}}</code>{% endcapture %}
     <article>
-        <header><div class="back"><i class="fas fa-arrow-left" id="back-button"></i></div><h1>{{ page.Name | escape}}</h1><p class="subtitle">Part of the <img alt="DLL icon" src="/assets/img/dll.png" class="logo-inline"><a href="/">{{site.title}}</a> project.</p></header>
+        <header><div class="back"><i class="fa-solid fa-arrow-left" id="back-button"></i></div><h1>{{ page.Name | escape}}</h1><p class="subtitle">Part of the <img alt="DLL icon" src="/assets/img/dll.png" class="logo-inline"><a href="/">{{site.title}}</a> project.</p></header>
         <div class="description_wrapper">
         <div class="section description">{% if page.Description %}
-            <div class="metadata"><div class="key">Description</div><div>{{ page.Description | escape }}</div></div>{% endif %}
+            <div class="metadata"><div class="key">Description</div><div>{{page.Description | escape}}</div></div>{% endif %}
             <div class="metadata">
-                <div class="key" title="Type(s) of DLL Hijacking that applies.">Type{%if types.size > 1%}s{%endif%}</div>
+                <div class="key" title="Type(s) of DLL Hijacking that applies.">DLL Hijacking type{%if types.size > 1%}s{%endif%}</div>
                     <div class="dll-types">
                     {% for type in types %}
-                    <div>{% capture TYPE %}<strong>{{ site.mapping[type.name]['title'] }}</strong> <span class="exe-count">({{ type.size }}&nbsp;EXE{% if type.size > 1 %}s{% endif %})</span>{% endcapture %}{% case type.name %}{% when 'Sideloading' %}
-                        <span class="pill type"><i class="fas fa-folder-open"></i> {{ TYPE }}</span>
+                    <div>{% capture TYPE %}<strong>{{site.mapping[type.name]['title']}}</strong> <span class="exe-count">({{type.size}}&nbsp;EXE{% if type.size > 1 %}s{% endif %})</span>{% endcapture %}{% case type.name %}{% when 'Sideloading' %}
+                        <span class="pill type"><i class="fa-regular fa-folder-open"></i> {{TYPE}}</span>
                         <span>By copying (and optionally renaming) a vulnerable application to a user-writeable folder, alongside a malicious {{DLL}}, arbitrary code can be executed through the legitimate application.</span>{% when 'Phantom' %}
-                        <span class="pill type"><i class="fas fa-ghost"></i> {{ TYPE }}</span>
+                        <span class="pill type"><i class="fa-solid fa-ghost"></i> {{TYPE}}</span>
                         <span>By copying a malicious {{DLL}} to a specific location, a vulnerable application will execute the malicious DLL's code upon normal execution.</span>{% when 'Search Order' %}
-                        <span class="pill type"><i class="fas fa-sort-amount-down-alt"></i> {{ TYPE }}</span>
-                        <span>DLLs specified by an application without a path are searched for in fixed locations in a <a href="https://docs.microsoft.com/en-us/windows/win32/dlls/dynamic-link-library-search-order">specific order</a>. By putting a malicious {{ DLL }} in a location that is searched in before the actual DLL, the legitimate application will execute arbitrary code upon normal execution.</span>{% when 'Environment Variable' %}
-                        <span class="pill type"><i class="fas fa-percent"></i> {{ TYPE }}</span>
+                        <span class="pill type"><i class="fa-solid fa-sort-amount-down-alt"></i> {{TYPE}}</span>
+                        <span>DLLs specified by an application without a path are searched for in fixed locations in a <a href="https://docs.microsoft.com/en-us/windows/win32/dlls/dynamic-link-library-search-order">specific order</a>. By putting a malicious {{DLL}} in a location that is searched in before the actual DLL, the legitimate application will execute arbitrary code upon normal execution.</span>{% when 'Environment Variable' %}
+                        <span class="pill type"><i class="fa-solid fa-percent"></i> {{TYPE}}</span>
                         {%- assign new_vars = ',' | split: ',' -%}
                         {%- assign variables = type.items | group_by:"Variable" -%}
                         {%- for variable in variables %}{% assign new_vars = new_vars | push: variable.name %} {% endfor -%}
                         {%- assign var =  new_vars |  join: "%</code> or <code>%" %}
                         <span>By changing the <code>%{{var}}%</code> environment variable to an attacker-controlled directory, it is possible to trick a vulnerable application into loading a malicious {{DLL}} from the attacker-controled location.</span>{% endcase %}
-                        <span class="mitre-text">See also MITRE ATT&amp;CK&reg; technique <a href="https://attack.mitre.org/techniques/{{ site.mapping[type.name]['attack'] | replace:'.','/'}}/" class="link-dotted">{{ site.mapping[type.name]['attack'] }}: {{ site.mapping[type.name]['attack_text'] }}</a>.</span>
+                        <span class="mitre-text">See also MITRE ATT&amp;CK&reg; technique <a href="https://attack.mitre.org/techniques/{{site.mapping[type.name]['attack'] | replace:'.','/'}}/" class="link-dotted">{{ site.mapping[type.name]['attack']}}: {{site.mapping[type.name]['attack_text']}}</a>.</span>
                     </div>
                 {% endfor %}
                 </div>
             </div>
             <div class="metadata">
-                <div class="key" title="Vendor associated with this entry.">Vendor</div>
-                <div>{{ page.Vendor }}</div>
+                <div class="key" title="Vendor associated with this entry.">DLL Vendor</div>
+                <div>{{page.Vendor}}</div>
             </div>
-
+            {% if page.Resources %}
             <div class="metadata">
-                <div class="key" title="Resources on this DLL Hijacking entry.">Resources</div><ul class="resources">{% for reference in page.Resources %}<li><a href="{{ reference }}" class="reference">{{reference}}</a></li>{% endfor %}</ul>
-            </div>{% if page.CVE %}
+                <div class="key" title="Resources on this DLL Hijacking entry.">Resources</div><ul class="resources">{% for reference in page.Resources %}<li><a href="{{reference}}" class="reference">{{reference}}</a></li>{% endfor %}</ul>
+            </div>{% endif %}{% if page.CVE %}
             <div class="metadata">
                 <div class="key" title="Common Vulnerabilities and Exposures (CVE &reg;)">CVE &reg;</div>
                 <div><a href="https://nvd.nist.gov/vuln/detail/{{page.CVE}}">{{page.CVE}}</a></div>
@@ -97,17 +103,15 @@
             <h2>Vulnerable Executables</h2>
             The following {% if page.VulnerableExecutables.size > 1 %}executables attempt{%else%}executable attempts{%endif%} to load {{DLL}}:
             {% for type in types %}
-            {% if types.size > 1 %}<h3>{{ site.mapping[type.name]['title'] }}</h3>{% endif %}
+            {% if types.size > 1 %}<h3>{{site.mapping[type.name]['title']}}</h3>{% endif %}
             <ul class="files">{% for loc in type.items %}
-                <li>
-                    <div class="vulnerable_exe">
-                        <div><a href="{{ '/' | relative_url }}#app:{{loc.Path | url_encode | replace: "+", "%20"}}" title="Click to search for other DLL Hijacking candidates for {{loc.Path | split: "\" | last | escape}}."><code class="full-name">{{loc.Path | escape}}</code></a>{% if loc.Variable %} by changing <code>%{{loc.Variable}}%</code>{% endif %}</div>
+                <li><div class="vulnerable_exe"><div><a href="{{'/' | relative_url}}#app:{{loc.Path | url_encode | replace: "+", "%20"}}" title="Click to search for other DLL Hijacking candidates for {{loc.Path | split: "\" | last | escape}}."><code class="full-name">{{loc.Path | escape}}</code></a>{% if loc.Variable %} by changing <code>%{{loc.Variable}}%</code>{% endif %}</div>
                         <div class="pills">{% if loc.AutoElevate %}
-                            <div class="pill uac" title="{{loc.Path | split: "\" | last | escape}} will automatically increase its integrity level from medium to high, granting itself wider system access, without showing a User Account Control (UAC) prompt (assuming default settings). Under specific cirumstances, this would allow an attacker to run malicious code with elevated privileges without the user being notified." ><img alt="UAC logo" src="{{ '/assets/img/uac.png' | relative_url }}"> <strong>Auto Elevation</strong></div>{% endif %}{% if loc.PrivilegeEscalation == true %}
-                            <div class="pill privesc" title="{{loc.Path | split: "\" | last | escape}} runs or can run under a high integrity level (meaning it has wider system access). Under specific circumstances, this would allow an attacker to run malicious code from this elevated process."><i class="fas fa-lock-open"></i> <strong>Privilege Escalation</strong></div>{% endif %}{% if loc.Condition %}
-                            <div class="pill condition" title="The following is assumed:&#010;{{ loc.Condition | escape }}"><i class="fas fa-info-circle"></i> <strong>Preconditions</strong></div>{% endif %}
+                            <div class="pill uac" title="{{loc.Path | split: "\" | last | escape}} will automatically increase its integrity level from medium to high, granting itself wider system access, without showing a User Account Control (UAC) prompt (assuming default settings). Under specific cirumstances, this would allow an attacker to run malicious code with elevated privileges without the user being notified." ><img alt="UAC logo" src="{{'/assets/img/uac.png' | relative_url}}"> <strong>Auto Elevation</strong></div>{% endif %}{% if loc.PrivilegeEscalation == true %}
+                            <div class="pill privesc" title="{{loc.Path | split: "\" | last | escape}} runs or can run under a high integrity level (meaning it has wider system access). Under specific circumstances, this would allow an attacker to run malicious code from this elevated process."><i class="fa-solid fa-lock-open"></i> <strong>Privilege Escalation</strong></div>{% endif %}{% if loc.Condition %}
+                            <div class="pill condition" title="The following is assumed:&#010;{{loc.Condition | escape}}"><i class="fa-solid fa-info-circle"></i> <strong>Preconditions</strong></div>{% endif %}
                             {% if loc.SHA256 %}
-                            <div class="pill hash"> <i class="fas fa-file-signature"></i> <a href="https://www.virustotal.com/gui/file/{{loc.SHA256[0]}}" title="Click to view the VirusTotal entry of this hash.">File hash available</a></div>{% endif %}
+                            <div class="pill hash"> <i class="fa-solid fa-font-awesome fa-flip-horizontal"></i> <a href="https://www.virustotal.com/gui/file/{{loc.SHA256[0]}}" title="Click to view the VirusTotal entry of this hash." target="_blank">File hash available</a></div>{% endif %}
                         </div>
                     </div>
                 </li>{% endfor %}
@@ -117,7 +121,7 @@
 
         <section>
             <h2>Detection</h2>
-            Below a sample <a href="https://github.com/SigmaHQ/sigma" class="link-dotted" title="Sigma is a generic signature format for SIEM systems.">Sigma</a> rule that will find processes that loaded {{DLL}} located in a folder that is not one of the expected locations (see above).
+            Below a sample <a href="https://github.com/SigmaHQ/sigma" class="link-dotted" title="Sigma is a generic signature format for SIEM systems." target="_blank">Sigma</a> rule that will find processes that loaded {{DLL}} located in a folder that is not one of the expected locations (see above).
             <div id="yaml-definitions" data-nosnippet>
                 <div id="yaml-image" class="yaml-tab yaml-tab-selected">
                 {% highlight yml %}{% include sigma_image.yml page=page %}{% endhighlight %}
@@ -125,17 +129,22 @@
                 <div id="yaml-file" class="yaml-tab">
                 {% highlight yml %}{% include sigma_file.yml page=page %}{% endhighlight %}
                 </div>
+                {% if page.ExpectedSignatureInformation %}
+                <div id="yaml-signature" class="yaml-tab">
+                {% highlight yml %}{% include sigma_signature.yml page=page %}{% endhighlight %}
+                </div>{% endif %}
             </div>
             <div class="yaml-buttons" role="radiogroup">
-                <button class="yaml-button yaml-button-selected" title="Click to show the Sigma rule looking for image loads involving {{ page.Name }}." role="radio" aria-checked="true" tabindex="0">Image</button>
-                <button class="yaml-button" title="Click to show the Sigma rule looking for file events involving {{ page.Name }}." role="radio" aria-checked="false" tabindex="1">File</button>
+                <button class="yaml-button yaml-button-selected" title="Click to show the Sigma rule looking for image loads involving {{page.Name}}." role="radio" aria-checked="true" tabindex="0">Image</button>
+                <button class="yaml-button" title="Click to show the Sigma rule looking for file events involving {{page.Name}}." role="radio" aria-checked="false" tabindex="1">File</button>
+                {% if page.ExpectedSignatureInformation %}<button class="yaml-button yaml-button" title="Click to show the Sigma rule looking for renamed filenames of executables targeting {{page.Name}}." role="radio" aria-checked="true" tabindex="2">Signature</button>{%endif%}
             </div>
 
             <div class="yaml-controls">
                 <div class="download-buttons">
-                    <button class="button" data-filename="susp_dll_hijacking_{{ page.Name | replace: '.', '-' | escape }}.yml" id="yaml-download" data-visit-click="YAML-Download" aria-pressed="false" tabindex="2"><i class="fa fa-file-download" aria-hidden="true"></i> Download YAML</button>
+                    <button class="button" data-filename="susp_dll_hijacking_{{page.Name | replace: '.', '-' | escape}}.yml" id="yaml-download" data-visit-click="YAML-Download" aria-pressed="false" tabindex="2"><i class="fa fa-file-download" aria-hidden="true"></i> Download YAML</button>
                 </div>
-                <div class="feed-note">Note that this rule is also included in the <a href="{{ '/api/sigma_feed_image.yml' | relative_url }}" id="yaml-feed-url" data-visit-click="SIGMA-Download-feed">Sigma feed</a> that comprises all DLL Hijacking entries part of this project.</div>
+                <div class="feed-note">Note that this rule is also included in the <a href="{{'/api/sigma_feed_image.yml' | relative_url}}" id="yaml-feed-url" data-visit-click="SIGMA-Download-feed">Sigma feed</a> that comprises all DLL Hijacking entries part of this project.</div>
             </div>
 
         </section>
@@ -143,7 +152,7 @@
         <section>
             <h2>FAQs</h2>
             <p><strong>Why should I care about this?</strong><br>DLL Hijacking enables the execution of malicious code through a signed and/or trusted executable. Defensive measures such as AV and EDR solutions may not pick up on this activity out of the box, and allow-list applications such as AppLocker may not block the execution of the untrusted code. There are numerous examples of threat actors that have been observed to leaverage DLL Hijacking to achieve their objectives. As such, this project wants to encourage you to monitor for unusual activity involving {{DLL}}.</p>
-            <p><strong>How do I abuse this vulnerability?</strong><br>As a red teamer, you will have to compile your own version of {{DLL}}. There are <a href="https://github.com/{{ site.repo }}/wiki/">various guides</a> on how this can be achieved.</p>
+            <p><strong>How do I abuse this vulnerability?</strong><br>As a red teamer, you will have to compile your own version of {{DLL}}. There are <a href="https://github.com/{{site.repo}}/wiki/">various guides</a> on how this can be achieved.</p>
             <p><strong>How could the vendor have prevented this vulnerability?</strong><br>
                 {%- assign seen = 'false' -%}
                 {%- for type in types -%}
@@ -151,7 +160,7 @@
                 Phantom DLL Hijacking vulnerabilities are typically introduced due to human error: for example, a typo may cause an executable to attempt to load a non-existing DLL; similarly, the removal of a DLL without removing the reference in the depending application will result in the same. Better (code coverage) testing and unused dependency detection may aid in catching potential Phantom DLL vulnerabilities from being introduced.
                 {%- else -%}
                 {%- if seen == 'false' -%}
-                Most DLL Hijacking vulnerabilities are introduced by the 'lazy' loading of DLL files, which relies on Windows' default <a href="https://docs.microsoft.com/en-us/windows/win32/dlls/dynamic-link-library-search-order" class="link-dotted" title="Click to see Microsoft's documentation on DLL search order.">DLL search order</a>. Explicitly specifying where a required DLL is located is easy and often already helps a lot. This doesn't have to hurt portability if Windows API calls are used to obtain paths, e.g. <a href="https://docs.microsoft.com/en-gb/windows/win32/api/sysinfoapi/nf-sysinfoapi-getsystemdirectorya"  class="link-dotted" title="Click to see Microsoft's documentation on this API call.">GetSystemDirectory</a> to get the path of the System32 folder. Even better is to check the signature of required DLLs prior to loading them; most platforms, frameworks and/or runtimes offer means to verify DLL signatures with minimal performance impact.
+                Most DLL Hijacking vulnerabilities are introduced by the 'lazy' loading of DLL files, which relies on Windows' default <a href="https://docs.microsoft.com/en-us/windows/win32/dlls/dynamic-link-library-search-order" target="_blank" class="link-dotted" title="Click to see Microsoft's documentation on DLL search order.">DLL search order</a>. Explicitly specifying where a required DLL is located is easy and often already helps a lot. This doesn't have to hurt portability if Windows API calls are used to obtain paths, e.g. <a href="https://docs.microsoft.com/en-gb/windows/win32/api/sysinfoapi/nf-sysinfoapi-getsystemdirectorya" target="_blank" class="link-dotted" title="Click to see Microsoft's documentation on this API call.">GetSystemDirectory</a> to get the path of the System32 folder. Even better is to check the signature of required DLLs prior to loading them; most platforms, frameworks and/or runtimes offer means to verify DLL signatures with minimal performance impact.
                 {%- assign seen = 'true' -%}
                 {%-endif-%}
             {%-endcase-%}{%-endfor-%}</p>
@@ -162,6 +171,6 @@
         </div>
     </article>
 
-    <footer><div>Contribute to this project: <span class="nowrap"><i class="fab fa-github fa-fw"></i> <a href="https://github.com/{{ site.repo }}">https://github.com/{{ site.repo }}</a></span></div></footer>
+    <footer><div>Contribute to this project: <span class="nowrap"><i class="fab fa-github fa-fw"></i> <a href="https://github.com/{{site.repo}}">https://github.com/{{site.repo}}</a></span></div></footer>
 </body>
 </html>

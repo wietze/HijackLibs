@@ -1,0 +1,7 @@
+---
+Note: Please use the rendered version of this file.
+---
+{% for entry in site.entries %}{% if entry.ExpectedSignatureInformation %}
+---
+{% include sigma_signature.yml page=entry %}
+{%- endif %}{%- endfor -%}
