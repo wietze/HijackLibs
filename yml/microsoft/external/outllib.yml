@@ -13,7 +13,7 @@ VulnerableExecutables:
     Type: Sideloading
   - Path: '%PROGRAMFILES%\Microsoft Office\Root\OFFICE%VERSION%\outlook.exe'
     Type: Sideloading
-  - Path: '%PROGRAMFILES%\Microsoft Office %VERSION%\ClientX86\Root\Office%VERSION%\outlook.exe
+  - Path: '%PROGRAMFILES%\Microsoft Office %VERSION%\ClientX86\Root\Office%VERSION%\outlook.exe'
     Type: Sideloading
   - Path: '%PROGRAMFILES%\Microsoft Office %VERSION%\ClientX64\Root\Office%VERSION%\outlook.exe'
     Type: Sideloading
