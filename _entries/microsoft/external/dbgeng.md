@@ -8,6 +8,8 @@ ExpectedLocations:
   - '%PROGRAMFILES%\Windows Kits\%VERSION%\Debuggers\x64'
   - '%PROGRAMFILES%\Windows Kits\%VERSION%\Debuggers\arm'
   - '%PROGRAMFILES%\Windows Kits\%VERSION%\Debuggers\arm64'
+  - '%SYSTEM32%'
+  - '%SYSWOW64%'
 VulnerableExecutables:
   - Path: windbg.exe
     Type: Sideloading

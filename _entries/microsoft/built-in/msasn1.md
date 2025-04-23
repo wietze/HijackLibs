@@ -5,6 +5,7 @@ Created: 2025-04-04
 Vendor: Microsoft
 ExpectedLocations:
   - '%SYSTEM32%'
+  - '%SYSWOW64%'
 ExpectedVersionInformation:
   - OriginalFilename: msasn1.dll
     InternalName: msasn1.dll

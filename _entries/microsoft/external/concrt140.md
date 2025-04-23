@@ -7,6 +7,15 @@ ExpectedLocations:
   - '%PROGRAMFILES%\Microsoft Visual Studio\%VERSION%\Community\Common7\IDE\VC\vcpackages'
   - '%PROGRAMFILES%\Microsoft Visual Studio\%VERSION%\BuildTools\Common7\IDE\VC\vcpackages'
   - '%PROGRAMFILES%\Microsoft Visual Studio\%VERSION%\BuildTools\Common7\IDE'
+  - '%PROGRAMFILES%\Microsoft Intune Management Extension'
+  - '%PROGRAMFILES%\Microsoft\Edge\Application\%VERSION%'
+  - '%PROGRAMFILES%\Microsoft\EdgeWebView\Application\%VERSION%'
+  - '%PROGRAMFILES%\microsoft\edgewebview\application\%VERSION%'
+  - '%PROGRAMFILES%\Microsoft RDInfra\RDMonitoringAgent_%VERSION%\Agent'
+  - '%PROGRAMFILES%\WindowsApps\Microsoft.VCLibs.%VERSION%'
+  - '%PROGRAMFILES%\WindowsApps\Microsoft.OutlookForWindows_%VERSION%'
+  - '%SYSTEM32%'
+  - '%SYSWOW64%'
 ExpectedVersionInformation:
   - OriginalFilename: concrt140.dll
     InternalName: concrt140.dll

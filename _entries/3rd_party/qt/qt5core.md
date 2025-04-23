@@ -5,6 +5,10 @@ Created: 2024-06-13
 Vendor: Qt
 ExpectedLocations:
   - '%PROGRAMFILES%\Electronic Arts\EA Desktop\EA Desktop'
+  - '%PROGRAMFILES%\Microsoft Onedrive\%VERSION%'
+  - '%LOCALAPPDATA%\Microsoft\Onedrive\%VERSION%'
+  - '%PROGRAMFILES%\Dropbox\Client\%VERSION%'
+  - '%PROGRAMFILES%\LogiOptionsPlus'
 VulnerableExecutables:
   - Path: '%PROGRAMFILES%\Electronic Arts\EA Desktop\EA Desktop\EASteamProxy.exe'
     Type: Sideloading
