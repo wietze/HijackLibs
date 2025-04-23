@@ -6,10 +6,15 @@ Vendor: Microsoft
 ExpectedLocations:
   - '%PROGRAMFILES%\Microsoft Office\OFFICE%VERSION%'
   - '%PROGRAMFILES%\Microsoft Office\Root\OFFICE%VERSION%'
+  - '%PROGRAMFILES%\Microsoft Office %VERSION%\ClientX86\Root\Office%VERSION%'
+  - '%PROGRAMFILES%\Microsoft Office %VERSION%\ClientX64\Root\Office%VERSION%'
 VulnerableExecutables:
   - Path: '%PROGRAMFILES%\Microsoft Office\OFFICE%VERSION%\outlook.exe'
     Type: Sideloading
   - Path: '%PROGRAMFILES%\Microsoft Office\Root\OFFICE%VERSION%\outlook.exe'
     Type: Sideloading
+  - Path: '%PROGRAMFILES%\Microsoft Office %VERSION%\ClientX86\Root\Office%VERSION%\outlook.exe
+    Type: Sideloading
+  - Path: '%PROGRAMFILES%\Microsoft Office %VERSION%\ClientX64\Root\Office%VERSION%\outlook.exe'
 Resources:
   - https://medium.com/insomniacs/analysis-walkthrough-fun-clientrun-part-1-b2509344ebe6
