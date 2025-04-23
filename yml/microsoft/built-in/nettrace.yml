@@ -5,6 +5,7 @@ Created: 2021-02-27
 Vendor: Microsoft
 ExpectedLocations:
 - '%SYSTEM32%'
+- '%SYSWOW64%'
 ExpectedSignatureInformation:
 - Subject: CN=Microsoft Windows, O=Microsoft Corporation, L=Redmond, S=Washington, C=US
   Issuer: CN=Microsoft Windows Production PCA 2011, O=Microsoft Corporation, L=Redmond, S=Washington, C=US
