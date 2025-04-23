@@ -19,6 +19,7 @@ VulnerableExecutables:
     Type: Sideloading
 Resources:
   - https://research.checkpoint.com/2025/apt29-phishing-campaign/
+  - https://www.virustotal.com/gui/file/d931078b63d94726d4be5dc1a00324275b53b935b77d3eed1712461f0c180164
 Acknowledgements:
   - Name: Swachchhanda Shrawan Poudel
     Twitter: '@_swachchhanda_'
