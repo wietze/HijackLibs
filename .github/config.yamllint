@@ -1,0 +1,38 @@
+---
+extends: default
+yaml-files:
+  - '*.yml'
+rules:
+  braces: enable
+  brackets: enable
+  colons: enable
+  commas: enable
+  comments-indentation:
+    level: warning
+  comments:
+    level: warning
+  document-end:
+    present: false
+  document-start:
+    present: true
+    level: error
+  empty-lines: enable
+  empty-values: disable
+  hyphens: enable
+  indentation: disable
+  key-duplicates: enable
+  key-ordering: disable
+  line-length:
+    max: 1000
+    allow-non-breakable-words: true
+    level: warning
+  new-line-at-end-of-file:
+    level: error
+  new-lines:
+    level: error
+  octal-values: disable
+  quoted-strings: disable
+  trailing-spaces:
+    level: error
+  truthy:
+    level: warning
