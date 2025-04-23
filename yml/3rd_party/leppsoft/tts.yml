@@ -1,9 +1,9 @@
 ---
-Name: tts.dll 
+Name: tts.dll
 Author: Walter Gordillo
 Created: 2025-03-14
 Vendor: LeppSoft
-ExpectedLocations: 
+ExpectedLocations:
   - '%PROGRAMFILES%\Soundpad'
 VulnerableExecutables:
   - Path: '%PROGRAMFILES%\Soundpad\Soundpad.exe'
@@ -15,5 +15,5 @@ Resources:
   - https://www.virustotal.com/gui/file/af328ef3ae2c81a0ad5937cb186bb45d3190dbee390e180240e0a0218a1bce98
 Acknowledgements:
   - Name: Walter Gordillo
-    Twitter: '@n0tspam' 
+    Twitter: '@n0tspam'
     Company: Praetorian
