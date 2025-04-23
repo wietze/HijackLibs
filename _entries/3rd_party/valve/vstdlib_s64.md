@@ -25,6 +25,5 @@ Resources:
 Acknowledgements:
   - Name: Unit 42
     Twitter: '@Unit42_Intel'
-  
 ---
 
