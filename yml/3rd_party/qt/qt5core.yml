@@ -2,7 +2,7 @@
 Name: qt5core.dll
 Author: Jai Minton - HuntressLabs
 Created: 2024-06-13
-Vendor: Electronic Arts
+Vendor: Qt
 ExpectedLocations:
   - '%PROGRAMFILES%\Electronic Arts\EA Desktop\EA Desktop'
 VulnerableExecutables:
