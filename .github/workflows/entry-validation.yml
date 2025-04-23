@@ -27,10 +27,9 @@ jobs:
           unset files
 
       - name: Run YAML linter
-        uses: ibiqlik/action-yamllint@v3.1.1
-        with:
-          config_file: .github/.yamllint
-          file_or_dir: yml/**/*.yml
+        run: |
+          python3 -m pip install yamllint
+          python3 -m yamllint -c ".github/config.yamllint" yaml/
 
       - name: Run Pydantic validator
         run: |
