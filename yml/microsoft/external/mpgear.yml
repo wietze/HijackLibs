@@ -5,6 +5,7 @@ Created: 2024-04-15
 Vendor: Microsoft
 ExpectedLocations:
   - '%PROGRAMFILES%\Windows Defender Advanced Threat Protection\Classification'
+  - '%SYSTEM32%\MRT\%VERSION%'
 VulnerableExecutables:
   - Path: '%PROGRAMFILES%\Windows Defender Advanced Threat Protection\Classification\SenseCE.exe'
     Type: Sideloading

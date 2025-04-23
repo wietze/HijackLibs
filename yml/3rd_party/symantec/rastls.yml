@@ -5,6 +5,7 @@ Created: 2023-02-26
 Vendor: Symantec
 ExpectedLocations:
 - '%PROGRAMFILES%\Symantec\Network Connected Devices Auto Setup'
+- '%SYSTEM32%'
 VulnerableExecutables:
 - Path: '%PROGRAMFILES%\Symantec\Network Connected Devices Auto Setup\rastlsc.exe'
   Type: Sideloading

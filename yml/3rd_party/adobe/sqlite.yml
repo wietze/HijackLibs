@@ -5,6 +5,7 @@ Created: 2024-04-15
 Vendor: Adobe
 ExpectedLocations:
   - '%PROGRAMFILES%\Adobe\Acrobat Reader DC\Reader'
+  - '%PROGRAMFILES%\Adobe\Acrobat DC\Acrobat'
 VulnerableExecutables:
   - Path: '%PROGRAMFILES%\Adobe\Acrobat Reader DC\Reader\AcroBroker.exe'
     Type: Sideloading

@@ -5,6 +5,7 @@ Created: 2024-05-26
 Vendor: curl
 ExpectedLocations:
 - '%PROGRAMFILES%\Notepad++\updater'
+- '%PROGRAMFILES%\WindowsApps\MSTeams_%VERSION%'
 VulnerableExecutables:
 - Path: '%PROGRAMFILES%\Notepad++\updater\GUP.exe'
   Type: Sideloading
