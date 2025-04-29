@@ -20,8 +20,10 @@ Resources:
   - https://www.virustotal.com/gui/file/e770be8fba337cc01e24c7f059368526a804d2af64136a39bb84adeebcf9cfbc
   - https://bazaar.abuse.ch/sample/d99d382868e2e1191c2ac403d9985569d18e534883b3c64606d08847d68a96b6/
   - https://www.anyviewer.com/download.html
-
 Acknowledgements:
-  - Name: Jose Oregon, Austin Worline
+  - Name: Jose Oregon
     Company: Huntress
-    Twitter: '@amprage_, @0xffaraday'
+    Twitter: '@amprage_'
+  - Name: Austin Worline
+    Company: Huntress
+    Twitter: '@0xffaraday'
