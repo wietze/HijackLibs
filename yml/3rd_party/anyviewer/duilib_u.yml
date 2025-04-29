@@ -1,13 +1,13 @@
 ---
-Name: DuiLib_u.dll
+Name: duilib_u.dll
 Author: Jose Oregon
 Created: 2025-04-29
 Vendor: AnyViewer
 ExpectedLocations:
   - '%PROGRAMFILES%\AnyViewer'
 ExpectedVersionInformation:
-  - OriginalFilename: DuiLib_u.dll
-    InternalName: DuiLib_u.dll
+  - OriginalFilename: duilib_u.dll
+    InternalName: duilib_u.dll
 VulnerableExecutables:
   - Path: SplashWin.exe
     Type: Sideloading
