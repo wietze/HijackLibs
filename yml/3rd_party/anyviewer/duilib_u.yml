@@ -1,0 +1,30 @@
+---
+Name: duilib_u.dll
+Author: Jose Oregon
+Created: 2025-04-29
+Vendor: AnyViewer
+ExpectedLocations:
+  - '%PROGRAMFILES%\AnyViewer'
+ExpectedVersionInformation:
+  - OriginalFilename: duilib_u.dll
+    InternalName: duilib_u.dll
+VulnerableExecutables:
+  - Path: SplashWin.exe
+    Type: Sideloading
+    ExpectedVersionInformation:
+      - OriginalFilename: AnyViewer
+        InternalName: AnyViewer Client
+        FileDescription: Splash Window
+    SHA256:
+      - c5e650b331fa5292872fdaede3a75c8167a0f1280ce0cd3d58b880d23854bdb1
+Resources:
+  - https://www.virustotal.com/gui/file/e770be8fba337cc01e24c7f059368526a804d2af64136a39bb84adeebcf9cfbc
+  - https://bazaar.abuse.ch/sample/d99d382868e2e1191c2ac403d9985569d18e534883b3c64606d08847d68a96b6/
+  - https://www.anyviewer.com/download.html
+Acknowledgements:
+  - Name: Jose Oregon
+    Company: Huntress
+    Twitter: '@amprage_'
+  - Name: Austin Worline
+    Company: Huntress
+    Twitter: '@0xffaraday'
