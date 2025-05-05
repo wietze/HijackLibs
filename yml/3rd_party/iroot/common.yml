@@ -21,16 +21,16 @@ ExpectedSignatureInformation:
 VulnerableExecutables:
   - Path: '%PROGRAMFILES%\iroot\romasterconnection.exe'
     Type: 'Sideloading'
-    SHA256: 
+    SHA256:
       - 12cbaa57e3241d9f997c41a171ff40cf37ee8ab421fa1f35d2354891bf51815c
     ExpectedSignatureInformation:
       - Type: Authenticode
         Subject: CN=WoSign Time Stamping Signer,O=WoSign CA Limited,C=CN
         Issuer: CN=Certification Authority of WoSign,O=WoSign CA Limited,C=CN
-Resources: 
+Resources:
   - 'https://www.herdprotect.com/romasterconnection.exe-61602b5ec9ff4f651e87c9c4a15a7e4cc7c733aa.aspx'
   - 'https://www.virustotal.com/gui/file/5aef5d7e917612b6390904f6468c3d0dbcf30345277b3ad0fe79e62fa8003c5b'
-Acknowledgements: 
+Acknowledgements:
   - Name: 'Jai Minton'
     Company: 'HuntressLabs'
     Twitter: '@CyberRaiju'
