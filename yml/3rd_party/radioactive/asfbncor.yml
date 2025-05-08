@@ -1,0 +1,34 @@
+---
+Name: asfbncor.dll
+Author: Jai Minton
+Created: 2025-05-06
+Vendor: Radioactive
+ExpectedLocations:
+  - '%PROGRAMFILES%\Replay Media Splitter'
+ExpectedVersionInformation:
+  - CompanyName: 'Radioactive'
+    FileDescription: 'asfbin'
+    FileVersion: '1, 8, 0, 876'
+    InternalName: 'asfbin'
+    LegalCopyright: 'Copyright © 2001-2010'
+    OriginalFilename: 'asfbin'
+    ProductName: 'asfbin by Radioactive'
+    ProductVersion: '1, 8, 0, 876'
+VulnerableExecutables:
+  - Path: '%PROGRAMFILES%\Replay Media Splitter\ReplayMediaSplitter.exe'
+    Type: 'Sideloading'
+    SHA256:
+      - 74b86605a3a2100a9c80bfabc84d22f69b2123ae0a942a1b9a3c4ed050186e0c
+    ExpectedVersionInformation:
+      - FileDescription: 'Replay Media Splitter'
+        FileVersion: '5.0.2402.6'
+        InternalName: 'ReplayMediaSplitter'
+        OriginalFilename: 'ReplayMediaSplitter.exe'
+        ProductName: 'Replay Media Splitter'
+        ProductVersion: '5.0.2402.6'
+Resources:
+  - https://www.virustotal.com/gui/file/d1d824fc5f3354f68324a319026d089926655b6ce25538279e26c0986374026b/relations
+Acknowledgements:
+  - Name: 'Jai Minton'
+    Company: 'Huntress'
+    Twitter: '@CyberRaiju'
