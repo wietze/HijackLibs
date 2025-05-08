@@ -19,8 +19,8 @@ VulnerableExecutables:
       - Subject: CN="Notepad++", O="Notepad++", L=Saint Cloud, S=Ile-de-France, C=FR
         Issuer: CN=DigiCert Trusted G4 Code Signing RSA4096 SHA384 2021 CA1, O="DigiCert, Inc.", C=US
         Type: Authenticode
-        SHA256:
-          - e5bbbf34414426f63e6cd1354c306405e54bf31279829c7542dccfb7d85af0ec
+    SHA256:
+      - e5bbbf34414426f63e6cd1354c306405e54bf31279829c7542dccfb7d85af0ec
   - Path: '%PROGRAMFILES%\Coolmuster\Coolmuster PDF Creator Pro\%VERSION%\Bin\Coolmuster PDF Creator Pro.exe'
     Type: 'Sideloading'
     SHA256:
