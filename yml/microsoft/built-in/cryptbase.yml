@@ -232,8 +232,8 @@ VulnerableExecutables:
 - Path: 'winbox64.exe'
   Type: Sideloading
   ExpectedSignatureInformation:
-  - Subject: CN = SIA "Mikrotīkls" O = SIA "Mikrotīkls" L = Riga C = LV
-    Issuer: CN=DigiCert Trusted G4 Code Signing RSA4096 SHA384 2021 CA1 O = DigiCert, Inc. C = US
+  - Subject: CN=SIA "Mikrotīkls" O=SIA "Mikrotīkls" L=Riga C=LV
+    Issuer: CN=DigiCert Trusted G4 Code Signing RSA4096 SHA384 2021 CA1 O=DigiCert, Inc. C=US
     Type: Catalog
   SHA256:
   - 8BC3ECF1F35952600ECB1A380C38C88E9D63C081A32204FD094D588230070BF6
