@@ -229,12 +229,22 @@ VulnerableExecutables:
   - Subject: CN=Microsoft Windows, O=Microsoft Corporation, L=Redmond, S=Washington, C=US
     Issuer: CN=Microsoft Windows Production PCA 2011, O=Microsoft Corporation, L=Redmond, S=Washington, C=US
     Type: Catalog
+- Path: 'winbox64.exe'
+  Type: Sideloading
+  ExpectedSignatureInformation:
+  - Subject: CN = SIA "Mikrotīkls" O = SIA "Mikrotīkls" L = Riga C = LV 
+    Issuer: CN=DigiCert Trusted G4 Code Signing RSA4096 SHA384 2021 CA1 O = DigiCert, Inc. C = US
+    Type: Catalog
+  SHA256:
+  - 8BC3ECF1F35952600ECB1A380C38C88E9D63C081A32204FD094D588230070BF6
+
 Resources:
 - https://wietze.github.io/blog/hijacking-dlls-in-windows
 - https://securityintelligence.com/posts/windows-features-dll-sideloading/
 - https://github.com/xforcered/WFH
 - https://twitter.com/AndrewOliveau/status/1682185200862625792
 - https://twitter.com/BSummerz/status/1860045985919205645
+- https://ice-wzl.medium.com/mikrotik-winbox-dll-side-loading-vulnerability-x2-413d371ff5f0
 Acknowledgements:
 - Name: Wietze
   Twitter: '@wietze'
@@ -244,3 +254,5 @@ Acknowledgements:
   Twitter: '@AndrewOliveau'
 - Name: Will Summerhill
   Twitter: '@BSummerz'
+- Name: ice-wzl
+  Twitter: '@ice_wzl_cyber'
