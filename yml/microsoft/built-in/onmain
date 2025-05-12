@@ -1,0 +1,22 @@
+---
+Name: onmain.dll
+Author: Ben Folland
+Created: 2025-05-12
+Vendor: Microsoft
+ExpectedLocations:
+  - '%PROGRAMFILES%\Microsoft Office\Office16'
+VulnerableExecutables:
+  - Path: '%PROGRAMFILES%\Microsoft Office\Office16\OneNote.exe'
+    Type: Sideloading
+    SHA256:
+      - '97597a20a5f03bc1dc0d4a4b75d0026dfad79291e33ea72103abf85d0e2c6f19'
+Resources:
+  - OneNote.exe (seen in the wild renamed) https://www.virustotal.com/gui/file/73670defa750d0a09470356279494a0c947245229d283c42e7ef0f2b8427b847
+  - ONMain.dll https://www.virustotal.com/gui/file/5678aa39bf8e3ce94b8a9c47623ae0900794ba9950c02d23e251099a3811bac7
+Acknowledgements:
+  - Name: Ben Folland
+    Twitter: '@polygonben'
+    Company: Huntress
+  - Name: Amelica Casley
+    Twitter: '@pe4Chscreeching'
+    Company: Huntress
