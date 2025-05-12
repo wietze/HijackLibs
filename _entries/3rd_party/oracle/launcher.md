@@ -1,0 +1,25 @@
+---
+Name: launcher.dll
+Author: Jai Minton
+Created: 2025-05-07
+Vendor: Oracle
+ExpectedLocations:
+  - '%PROGRAMFILES%\SQL Developer\ide\bin'
+VulnerableExecutables:
+  - Path: '%PROGRAMFILES%\SQL Developer\sqldeveloper.exe'
+    Type: 'Search Order'
+    SHA256:
+      - 8ceb437a7a38f035587d2e67a2e9d231552680ac34822f9d9e61b7b978160741
+    ExpectedVersionInformation:
+      - CompanyName: 'Oracle'
+        FileVersion: '22.2.1.234.1810'
+        ProductName: ' Oracle SQL Developer'
+        ProductVersion: '22.2.1'
+Resources:
+  - https://www.virustotal.com/gui/file/c3b48c62b34510e2328b790f9fabed994a91998f36c0c40bcf628b93f40d8ae5/relations
+Acknowledgements:
+  - Name: 'Jai Minton'
+    Company: 'Huntress'
+    Twitter: '@CyberRaiju'
+---
+

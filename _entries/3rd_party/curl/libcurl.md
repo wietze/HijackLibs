@@ -4,26 +4,43 @@ Author: Still Hsu
 Created: 2024-05-26
 Vendor: curl
 ExpectedLocations:
-- '%PROGRAMFILES%\Notepad++\updater'
-- '%PROGRAMFILES%\WindowsApps\MSTeams_%VERSION%'
+  - '%PROGRAMFILES%\Notepad++\updater'
+  - '%PROGRAMFILES%\WindowsApps\MSTeams_%VERSION%'
+  - '%PROGRAMFILES%\Coolmuster\Coolmuster PDF Creator Pro\%VERSION%\Bin'
 VulnerableExecutables:
-- Path: '%PROGRAMFILES%\Notepad++\updater\GUP.exe'
-  Type: Sideloading
-  ExpectedVersionInformation:
-  - FileDescription: WinGup for Notepad++
-    InternalName: gup.exe
-    OriginalFilename: gup.exe
-    ProductName: WinGup for Notepad++
-  ExpectedSignatureInformation:
-  - Subject: CN="Notepad++", O="Notepad++", L=Saint Cloud, S=Ile-de-France, C=FR
-    Issuer: CN=DigiCert Trusted G4 Code Signing RSA4096 SHA384 2021 CA1, O="DigiCert, Inc.", C=US
-    Type: Authenticode
-  SHA256:
-  - e5bbbf34414426f63e6cd1354c306405e54bf31279829c7542dccfb7d85af0ec
+  - Path: '%PROGRAMFILES%\Notepad++\updater\GUP.exe'
+    Type: Sideloading
+    ExpectedVersionInformation:
+      - FileDescription: WinGup for Notepad++
+        InternalName: gup.exe
+        OriginalFilename: gup.exe
+        ProductName: WinGup for Notepad++
+    ExpectedSignatureInformation:
+      - Subject: CN="Notepad++", O="Notepad++", L=Saint Cloud, S=Ile-de-France, C=FR
+        Issuer: CN=DigiCert Trusted G4 Code Signing RSA4096 SHA384 2021 CA1, O="DigiCert, Inc.", C=US
+        Type: Authenticode
+    SHA256:
+      - e5bbbf34414426f63e6cd1354c306405e54bf31279829c7542dccfb7d85af0ec
+  - Path: '%PROGRAMFILES%\Coolmuster\Coolmuster PDF Creator Pro\%VERSION%\Bin\Coolmuster PDF Creator Pro.exe'
+    Type: 'Sideloading'
+    SHA256:
+      - 777989570e14510d504debc657a24ccd995abb88fe30c5fa71911789b9a47f50
+    ExpectedVersionInformation:
+      - FileDescription: 'FileProcessManager Module'
+        FileVersion: '1.0.2.1'
+        InternalName: 'FileProcessManager'
+        LegalCopyright: 'Copyright 2023'
+        OriginalFilename: 'FileProcessManager.exe'
+        ProductName: 'FileProcessManager Module'
+        ProductVersion: '1.0.2.1'
 Resources:
   - https://www.virustotal.com/gui/file/d1e44e4224899cb160a92f4c7f4f042b10ae0ee3fc16bbe457ad32e8b1527ed5
+  - https://www.virustotal.com/gui/file/dd0c2d79fef0cf5e2d32dcdd661d6ba0a6e9901ffe047fad2d081bbc28daad2c
 Acknowledgements:
   - Name: Still Hsu
     Twitter: '@AzakaSekai_'
+  - Name: 'Jai Minton'
+    Company: 'Huntress'
+    Twitter: '@CyberRaiju'
 ---
 

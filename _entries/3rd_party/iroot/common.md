@@ -1,0 +1,38 @@
+---
+Name: common.dll
+Author: Jai Minton
+Created: 2025-05-05
+Vendor: iroot
+ExpectedLocations:
+  - '%PROGRAMFILES%\iroot'
+ExpectedVersionInformation:
+  - CompanyName: '深圳信壹网络有限公司'
+    FileDescription: 'Common 动态链接库'
+    FileVersion: '1.0.6.6'
+    InternalName: 'Common'
+    LegalCopyright: '© 2011-2017 SING Inc. All rights reserved.'
+    OriginalFilename: 'Common.dll'
+    ProductName: 'Common 动态链接库'
+    ProductVersion: '1.0.6.21143'
+ExpectedSignatureInformation:
+  - Type: Authenticode
+    Subject: CN=WoSign Time Stamping Signer,O=WoSign CA Limited,C=CN
+    Issuer: CN=Certification Authority of WoSign,O=WoSign CA Limited,C=CN
+VulnerableExecutables:
+  - Path: '%PROGRAMFILES%\iroot\romasterconnection.exe'
+    Type: 'Sideloading'
+    SHA256:
+      - 12cbaa57e3241d9f997c41a171ff40cf37ee8ab421fa1f35d2354891bf51815c
+    ExpectedSignatureInformation:
+      - Type: Authenticode
+        Subject: CN=WoSign Time Stamping Signer,O=WoSign CA Limited,C=CN
+        Issuer: CN=Certification Authority of WoSign,O=WoSign CA Limited,C=CN
+Resources:
+  - 'https://www.herdprotect.com/romasterconnection.exe-61602b5ec9ff4f651e87c9c4a15a7e4cc7c733aa.aspx'
+  - 'https://www.virustotal.com/gui/file/5aef5d7e917612b6390904f6468c3d0dbcf30345277b3ad0fe79e62fa8003c5b'
+Acknowledgements:
+  - Name: 'Jai Minton'
+    Company: 'Huntress'
+    Twitter: '@CyberRaiju'
+---
+
