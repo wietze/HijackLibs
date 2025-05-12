@@ -3,7 +3,7 @@ Name: onmain.dll
 Author: Ben Folland
 Created: 2025-05-12
 Vendor: Microsoft
-ExpectedLocations:  
+ExpectedLocations:
   - '%PROGRAMFILES%\Microsoft Office\Office%VERSION%'
   - '%PROGRAMFILES%\Microsoft Office\Root\Office%VERSION%'
   - '%PROGRAMFILES%\Microsoft Office %VERSION%\ClientX86\Root\Office%VERSION'
