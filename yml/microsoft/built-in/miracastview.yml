@@ -4,7 +4,7 @@ Author: Wietze Beukema
 Created: 2025-05-24
 Vendor: Microsoft
 ExpectedLocations:
-  - '%WINDOWS%\Miracast'
+  - '%WINDIR%\Miracast'
 ExpectedVersionInformation:
   - CompanyName: 'Microsoft Corporation'
     FileDescription: 'MiracastView'
@@ -13,7 +13,7 @@ ExpectedVersionInformation:
     OriginalFilename: 'MiracastView.dll'
     ProductName: 'Microsoft® Windows® Operating System'
 VulnerableExecutables:
-  - Path: '%WINDOWS%\MiraCast\MiracastView.exe'
+  - Path: '%WINDIR%\MiraCast\MiracastView.exe'
     Type: 'Sideloading'
 Resources:
   - https://news.sophos.com/en-us/2025/04/29/finding-minhook-in-a-sideloading-attack-and-sweden-too/
