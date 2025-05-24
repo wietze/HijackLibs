@@ -43,7 +43,7 @@ class SignatureInformation(BaseModel):
 class VulnerableExecutables(BaseModel):
     model_config = ConfigDict(extra='forbid')
 
-    Path: constr(pattern=r"^[ a-zA-Z0-9&_\-\+\\%\.\(\):]+$")
+    Path: constr(pattern=r"^[ a-zA-Z0-9&_\-\+\\%\.\(\):@]+$")
     Type: constr(pattern=r"^(Sideloading|Phantom|Search Order|Environment Variable)$")
     AutoElevate: bool = None
     PrivilegeEscalation: bool = None
