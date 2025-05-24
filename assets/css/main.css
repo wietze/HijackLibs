@@ -575,6 +575,8 @@ table tr:nth-child(odd) {
 .external-favicon {
     width: 16px;
     vertical-align: middle;
+    font-size: 0;
+    display: inline-flex;
 }
 
 #contributors {

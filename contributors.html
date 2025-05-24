@@ -52,10 +52,10 @@ title: Contributors
                 </thead>
                 <tbody>
                     {%- assign resources_url_all = '' | split: ',' %}
-                    {%- assign sites_expand = 'twitter.com,github.com,medium.com' | split: ',' %}
+                    {%- assign sites_expand = 'twitter.com,github.com,gist.github.com,medium.com' | split: ',' %}
                     {%- for file in site.entries %}
                     {%- for resource in file.Resources %}
-                    {% assign base_url_ = resource | downcase | replace: "www.","" | split: '//' | last | split: '/' %}
+                    {% assign base_url_ = resource | downcase | replace: "www.","" | replace:'//x.com/','//twitter.com/' | split: '//' | last | split: '/'  %}
                     {% assign base_url = base_url_[0] %}
                     {% if sites_expand contains base_url %}
                     {% assign base_url = base_url_[0] | append: '/' | append: base_url_[1] %}
