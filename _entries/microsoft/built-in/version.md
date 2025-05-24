@@ -226,10 +226,29 @@ VulnerableExecutables:
 - Path: '%APPDATA%\Zoom\bin\Zoom.exe'
   Condition: Zoom for Windows <= 5.11.1 (6602)
   Type: Sideloading
+- Path: '%SYSTEM32%\icardagt.exe'
+  Type: 'Sideloading'
+  SHA256:
+    - 473d17e571d6947ce93103454f1e9fe27136403125152b97acb6cad5cc2a9ac7
+  ExpectedVersionInformation:
+    - CompanyName: 'Microsoft Corporation'
+      FileDescription: 'Windows CardSpace User Interface Agent'
+      FileVersion: '3.0.4506.4926 (NetFXw7.030729-4900)'
+      InternalName: 'icardagt.exe'
+      LegalCopyright: '© Microsoft Corporation.  All rights reserved.'
+      OriginalFilename: 'icardagt.exe'
+      ProductName: 'Microsoft® .NET Framework'
+      ProductVersion: '3.0.4506.4926'
+  ExpectedSignatureInformation:
+    - Type: Authenticode
+      Subject: CN=Microsoft Windows,O=Microsoft Corporation,L=Redmond,ST=Washington,C=US
+      Issuer: CN=Microsoft Windows Production PCA 2011,O=Microsoft Corporation,L=Redmond,ST=Washington,C=US
 Resources:
 - https://securityintelligence.com/posts/windows-features-dll-sideloading/
 - https://github.com/xforcered/WFH
 - https://twitter.com/an0n_r0/status/1544472352657915904
+- https://www.cyjax.com/resources/blog/a-sting-on-bing-bumblebee-delivered-through-bing-seo-poisoning-campaign/
+- https://www.virustotal.com/gui/file/96480ef5ccfa8fcb0646538c440103d97ab741ed83f4c2bcb7b4717569f88770/community
 Acknowledgements:
 - Name: Chris Spehn
   Twitter: '@ConsciousHacker'
