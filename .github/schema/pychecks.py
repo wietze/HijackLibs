@@ -3,20 +3,29 @@ import sys
 import os
 import re
 from datetime import date
-from typing import List, Optional
+from typing import List, Optional, Annotated
 
 import yaml
-from pydantic import BaseModel, HttpUrl, ValidationError, conlist, constr, ConfigDict, model_validator
+from pydantic import BaseModel, HttpUrl, ValidationError, ConfigDict, model_validator, StringConstraints, AfterValidator
 
-str_non_empty = constr(strip_whitespace=True, min_length=1, pattern=r"[^ ]+", strict=True)
+str_non_empty = Annotated[str, StringConstraints(strip_whitespace=True, min_length=1, pattern=r"[^ ]+", strict=True)]
+
+
+def valid_variables(value: str) -> str:
+    for variable in re.findall(r'%([^%]+)%', value):
+        if not variable in ['SYSTEM32', 'SYSWOW64', 'WINDIR', 'PROGRAMFILES', 'PROGRAMDATA', 'APPDATA', 'LOCALAPPDATA', 'VERSION', 'USERPROFILE']:
+            if variable and variable.lower() == 'programfiles(x86)':
+                raise AssertionError(f"Unexpected variable %{variable}%, please use %PROGRAMFILES% instead")
+            raise AssertionError(f"Unexpected variable %{variable}%")
+    return value
 
 
 class Acknowledgement(BaseModel):
     model_config = ConfigDict(extra='forbid')
 
-    Name: constr(pattern=r"^\w[\w\s\-'']+\w$")
+    Name: Annotated[str, StringConstraints(pattern=r"^\w[\w\s\-'']+\w$")]
     Company: str_non_empty = None
-    Twitter: Optional[constr(pattern=r"^@(\w){1,15}$")] = None
+    Twitter: Optional[Annotated[str, StringConstraints(pattern=r"^@(\w){1,15}$")]] = None
 
 
 class VersionInformation(BaseModel):
@@ -35,23 +44,23 @@ class VersionInformation(BaseModel):
 class SignatureInformation(BaseModel):
     model_config = ConfigDict(extra='forbid')
 
-    Subject: constr(pattern=r'^(?i)((CN|C|O|L|C|OU|S|ST|STREET|PostalCode|SERIALNUMBER|OID(\.\d+)+)=(".+?"|''.+?''|([^,]|\\,)+?)(,\s*|$))+$') = None
-    Issuer: constr(pattern=r'^(?i)((CN|C|O|L|C|OU|S|ST|STREET|PostalCode|SERIALNUMBER|OID(\.\d+)+)=(".+?"|''.+?''|([^,]|\\,)+?)(,\s*|$))+$') = None
-    Type: constr(pattern=r"^(Authenticode|Catalog)$")
+    Subject: Annotated[str, StringConstraints(pattern=r'^(?i)((CN|C|O|L|C|OU|S|ST|STREET|PostalCode|SERIALNUMBER|OID(\.\\d+)+)=(".+?"|''.+?''|([^,]|\\,)+?)(,\\s*|$))+$')] = None
+    Issuer: Annotated[str, StringConstraints(pattern=r'^(?i)((CN|C|O|L|C|OU|S|ST|STREET|PostalCode|SERIALNUMBER|OID(\.\\d+)+)=(".+?"|''.+?''|([^,]|\\,)+?)(,\\s*|$))+$')] = None
+    Type: Annotated[str, StringConstraints(pattern=r"^(Authenticode|Catalog)$")]
 
 
 class VulnerableExecutables(BaseModel):
     model_config = ConfigDict(extra='forbid')
-
-    Path: constr(pattern=r"^[ a-zA-Z0-9&_\-\+\\%\.\(\):@]+$")
-    Type: constr(pattern=r"^(Sideloading|Phantom|Search Order|Environment Variable)$")
+    
+    Path: Annotated[str, StringConstraints(pattern=r"^[ a-zA-Z0-9&_\-\+\\%\.\(\):@]+$"), AfterValidator(valid_variables)]
+    Type: Annotated[str, StringConstraints(pattern=r"^(Sideloading|Phantom|Search Order|Environment Variable)$")]
     AutoElevate: bool = None
     PrivilegeEscalation: bool = None
     Condition: str_non_empty = None
-    SHA256: conlist(constr(pattern=r"^[a-zA-Z0-9]{64}$")) = None
+    SHA256: list[Annotated[str, StringConstraints(pattern=r"^[a-zA-Z0-9]{64}$")]] = None
     Variable: str_non_empty = None
-    ExpectedVersionInformation: Optional[conlist(VersionInformation)] = None
-    ExpectedSignatureInformation: conlist(SignatureInformation) = None
+    ExpectedVersionInformation: Optional[list[VersionInformation]] = None
+    ExpectedSignatureInformation: list[SignatureInformation] = None
 
     @model_validator(mode='after')
     def environment_variable_fields(self) -> "VulnerableExecutables":
@@ -67,24 +76,24 @@ class VulnerableExecutables(BaseModel):
 class Entry(BaseModel):
     model_config = ConfigDict(extra='forbid')
 
-    Name: constr(pattern=r"^[a-z0-9_\-\.]+\.(dll|ocx|cpl)$")
-    Author: constr(pattern=r"^\w[\w\s\-'',]+\w$")
+    Name: Annotated[str, StringConstraints(pattern=r"^[a-z0-9_\-\.]+\.(dll|ocx|cpl)$")]
+    Author: Annotated[str, StringConstraints(pattern=r"^\w[\w\s\-'',]+\w$")]
     Created: date
-    Vendor: constr(pattern=r"^\w[\w|\s|\-|\+]*[\w|\+]$")
-    CVE: Optional[constr(pattern=r"^CVE-\d{4}-\d{3,}$")] = None
+    Vendor: Annotated[str, StringConstraints(pattern=r"^\w[\w|\s|\-|\+]*[\w|\+]$")]
+    CVE: Optional[Annotated[str, StringConstraints(pattern=r"^CVE-\d{4}-\d{3,}$")]] = None
 
-    ExpectedVersionInformation: Optional[conlist(VersionInformation)] = None
-    ExpectedSignatureInformation: conlist(SignatureInformation) = None
+    ExpectedVersionInformation: Optional[list[VersionInformation]] = None
+    ExpectedSignatureInformation: list[SignatureInformation] = None
 
-    ExpectedLocations: Optional[conlist(constr(pattern=r"^[%cC][ a-zA-Z0-9&_\-\+\\%\.\(\):@]+$"))] = None
+    ExpectedLocations: Optional[list[Annotated[str, StringConstraints(pattern=r"^[%cC][ a-zA-Z0-9&_\-\+\\%\.\(\):@]+$"), AfterValidator(valid_variables)]]] = None
 
-    VulnerableExecutables: conlist(VulnerableExecutables)
+    VulnerableExecutables: list[VulnerableExecutables]
 
     Resources: Optional[List[HttpUrl]] = None
     Acknowledgements: Optional[List[Acknowledgement]] = None
 
     @model_validator(mode='after')
-    def vt_redundancy(self) -> "VulnerableExecutables":
+    def vt_redundancy(self) -> "Entry":
         if self.Resources and any(x.SHA256 for x in self.VulnerableExecutables):
             hashes = [file_hash for exe in self.VulnerableExecutables if exe.SHA256 for file_hash in exe.SHA256 ]
             vt_urls = [str(resource) for resource in self.Resources if 'virustotal.com' in str(resource)]

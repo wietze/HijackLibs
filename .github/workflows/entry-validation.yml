@@ -26,14 +26,12 @@ jobs:
           fi
           unset files
 
+      - name: Install dependencies
+        run: |
+          python3 -m pip install --upgrade pip -r ".github/schema/requirements.txt"
+
       - name: Run YAML linter
-        uses: ibiqlik/action-yamllint@v3.1.1
-        with:
-          config_file: .github/.yamllint
-          file_or_dir: yml/**/*.yml
+        run: python3 -m yamllint -c ".github/config.yamllint" yml/
 
       - name: Run Pydantic validator
-        run: |
-          python3 -m pip install --upgrade pip
-          python3 -m pip install -r .github/schema/requirements.txt
-          python3 .github/schema/pychecks.py "yml/**/*.yml"
+        run: python3 .github/schema/pychecks.py "yml/**/*.yml"

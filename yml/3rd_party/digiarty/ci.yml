@@ -5,6 +5,7 @@ Created: 2024-05-06
 Vendor: Digiarty
 ExpectedLocations:
   - '%PROGRAMFILES%\Digiarty\WinX Blu-ray Decrypter'
+  - '%SYSTEM32%'
 VulnerableExecutables:
   - Path: '%PROGRAMFILES%\Digiarty\WinX Blu-ray Decrypter\WinX Blu-ray Decrypter.exe'
     Type: Sideloading

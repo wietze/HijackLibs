@@ -12,10 +12,24 @@ VulnerableExecutables:
       - FileDescription: InstallShield Activation Wizard
     SHA256:
       - 'b5f9377bd27fcf48fb3d81d0196021681739f42a198e8340c27d55192d4bd3ac'
+  - Path: '%PROGRAMFILES%\InstallShield\%VERSION%\System\ISDbg.exe'
+    Type: Sideloading
+    ExpectedVersionInformation:
+      - FileDescription: InstallShield (R) Script Debugger
+    SHA256:
+      - '40c88a5620a651b6af283dff83c4da997782784da7f85b94fc9b6c02a28862e7'
+    ExpectedSignatureInformation:
+      - Subject: CN="Flexera Software LLC", O="Flexera Software LLC", L=Unknown, C=Unknown
+        Issuer: CN=DigiCert Trusted G4 Code Signing RSA4096 SHA384 2021 CA1, O=DigiCert Inc, C=US
+        Type: Authenticode
 Resources:
   - https://asec.ahnlab.com/en/58319/
   - https://www.virustotal.com/gui/file/e7b69768215453b2c648d7060161ce9b9eaf1ace631eb2ac11b60a7195e2263e
+  - https://app.any.run/tasks/faf0d668-7e06-4b1c-922b-2bb3a9d81dae
 Acknowledgements:
   - Name: Jai Minton
     Company: Huntress
     Twitter: '@cyberrraiju'
+  - Name: Josh Allman
+    Company: Huntress
+    Twitter: '@xorjosh'
