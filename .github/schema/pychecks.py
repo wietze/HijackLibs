@@ -76,7 +76,7 @@ class Entry(BaseModel):
     ExpectedVersionInformation: Optional[conlist(VersionInformation)] = None
     ExpectedSignatureInformation: conlist(SignatureInformation) = None
 
-    ExpectedLocations: Optional[conlist(constr(pattern=r"^[%cC][ a-zA-Z0-9&_\-\+\\%\.\(\):]+$"))] = None
+    ExpectedLocations: Optional[conlist(constr(pattern=r"^[%cC][ a-zA-Z0-9&_\-\+\\%\.\(\):@]+$"))] = None
 
     VulnerableExecutables: conlist(VulnerableExecutables)
 
