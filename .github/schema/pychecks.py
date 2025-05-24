@@ -51,7 +51,7 @@ class SignatureInformation(BaseModel):
 
 class VulnerableExecutables(BaseModel):
     model_config = ConfigDict(extra='forbid')
-    
+
     Path: Annotated[str, StringConstraints(pattern=r"^[ a-zA-Z0-9&_\-\+\\%\.\(\):@]+$"), AfterValidator(valid_variables)]
     Type: Annotated[str, StringConstraints(pattern=r"^(Sideloading|Phantom|Search Order|Environment Variable)$")]
     AutoElevate: bool = None
