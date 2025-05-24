@@ -52,7 +52,7 @@ class SignatureInformation(BaseModel):
 class VulnerableExecutables(BaseModel):
     model_config = ConfigDict(extra='forbid')
 
-    Path: Annotated[str, StringConstraints(pattern=r"^[ a-zA-Z0-9&_\-\+\\%\.\(\):]+$"), AfterValidator(valid_variables)]
+    Path: Annotated[str, StringConstraints(pattern=r"^[ a-zA-Z0-9&_\-\+\\%\.\(\):@]+$"), AfterValidator(valid_variables)]
     Type: Annotated[str, StringConstraints(pattern=r"^(Sideloading|Phantom|Search Order|Environment Variable)$")]
     AutoElevate: bool = None
     PrivilegeEscalation: bool = None
@@ -85,7 +85,7 @@ class Entry(BaseModel):
     ExpectedVersionInformation: Optional[list[VersionInformation]] = None
     ExpectedSignatureInformation: list[SignatureInformation] = None
 
-    ExpectedLocations: Optional[list[Annotated[str, StringConstraints(pattern=r"^[%cC][ a-zA-Z0-9&_\-\+\\%\.\(\):]+$"), AfterValidator(valid_variables)]]] = None
+    ExpectedLocations: Optional[list[Annotated[str, StringConstraints(pattern=r"^[%cC][ a-zA-Z0-9&_\-\+\\%\.\(\):@]+$"), AfterValidator(valid_variables)]]] = None
 
     VulnerableExecutables: list[VulnerableExecutables]
 
