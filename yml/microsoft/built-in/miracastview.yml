@@ -1,0 +1,20 @@
+---
+Name: miracastview.dll
+Author: Wietze Beukema
+Created: 2025-05-24
+Vendor: Microsoft
+ExpectedLocations:
+  - '%WINDIR%\Miracast'
+ExpectedVersionInformation:
+  - CompanyName: 'Microsoft Corporation'
+    FileDescription: 'MiracastView'
+    InternalName: 'MiracastView'
+    LegalCopyright: '© Microsoft Corporation. All rights reserved.'
+    OriginalFilename: 'MiracastView.dll'
+    ProductName: 'Microsoft® Windows® Operating System'
+VulnerableExecutables:
+  - Path: '%WINDIR%\MiraCast\MiracastView.exe'
+    Type: 'Sideloading'
+Resources:
+  - https://news.sophos.com/en-us/2025/04/29/finding-minhook-in-a-sideloading-attack-and-sweden-too/
+  - https://x.com/fromCharCode/status/1030107346230423554
