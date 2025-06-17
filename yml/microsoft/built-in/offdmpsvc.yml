@@ -19,6 +19,5 @@ VulnerableExecutables:
 Resources:
   - https://www.hexacorn.com/blog/2025/06/14/wermgr-exe-boot-offdmpsvc-dll-lolbin/
 Acknowledgements:
-  - Name: 'Adam'
-    Company: 'HexaCorn'
-    Twitter: '@HexaCorn'
+  - Name: 'Hexacorn'
+    Twitter: '@Hexacorn'
