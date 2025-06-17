@@ -5,8 +5,9 @@ Created: 2025-06-17
 Vendor: Microsoft
 ExpectedLocations:
   - 'C:\Windows\System32'
+  - '%SYSTEM32%'
 VulnerableExecutables:
-  - Path: '%systemroot%\system32\wermgr.exe'
+  - Path: '%SYSTEM32%\wermgr.exe'
     Type: 'Phantom'
     Condition: wermgr -boot
     ExpectedVersionInformation:
