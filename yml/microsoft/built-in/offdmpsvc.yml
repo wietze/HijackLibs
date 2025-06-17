@@ -3,7 +3,7 @@ Name: offdmpsvc.dll
 Author: Swachchhanda Shrawan Poudel
 Created: 2025-06-17
 Vendor: Microsoft
-ExpectedLocations:  
+ExpectedLocations:
   - '%SYSTEM32%'
 VulnerableExecutables:
   - Path: '%SYSTEM32%\wermgr.exe'
