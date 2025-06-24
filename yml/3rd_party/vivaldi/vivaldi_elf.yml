@@ -6,6 +6,7 @@ Vendor: Vivaldi
 ExpectedLocations:
   - '%LOCALAPPDATA%\Vivaldi\Application'
   - '%LOCALAPPDATA%\Vivaldi\Application\%VERSION%'
+  - '%LOCALAPPDATA%\Programs\Vivaldi\Application\%VERSION%'
 ExpectedSignatureInformation:
   - Subject: serialNumber=912 309 975, C=NO, ST=Oslo, L=Oslo, street=Mølleparken 6, O=Vivaldi Technologies AS, CN=Vivaldi Technologies AS
     Issuer: C=BE, O=GlobalSign nv-sa, CN=GlobalSign GCC R45 EV CodeSigning CA 2020

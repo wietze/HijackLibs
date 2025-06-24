@@ -10,7 +10,7 @@ VulnerableExecutables:
   Type: Sideloading
   ExpectedVersionInformation:
   - FileDescription: DS Clock
-    LegalCopyright: Copyright ©️ 2001-2023 Duality Software. All rights reserved. Developed by Vladimir Kulemin.
+    LegalCopyright: Copyright 2001-2023 Duality Software. All rights reserved. Developed by Vladimir Kulemin.
     InternalName: dsclock.exe
     OriginalFilename: dsclock.exe
     ProductName: DS Clock
