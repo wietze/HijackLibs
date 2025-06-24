@@ -1,0 +1,26 @@
+---
+Name: tbb.dll
+Author: Jai Minton
+Created: 2025-06-24
+Vendor: Intel
+ExpectedLocations:
+  - '%PROGRAMFILES%\Adobe\Adobe Photoshop CC %VERSION%'
+ExpectedVersionInformation:
+  - CompanyName: 'Intel Corporation'
+    FileDescription: 'Intel(R) Threading Building Blocks library'
+    FileVersion: '2017, 0, 2017, 0118'
+    LegalCopyright: 'Copyright 2005-2017 Intel Corporation.  All Rights Reserved.'
+    OriginalFilename: 'tbb.dll'
+    ProductName: 'Intel(R) Threading Building Blocks for Windows'
+    ProductVersion: '2017, 0, 2017, 0118'
+VulnerableExecutables:
+  - Path: '%PROGRAMFILES%\Adobe\Adobe Photoshop CC %VERSION%\AGF3DPrinterDriver.exe'
+    Type: 'Sideloading'
+    SHA256:
+      - 6a7a23891816196fa6a6966886bc14edf6cd1f1cc9d865e8dbed8b59adc7c7c2
+Resources:
+  - https://www.virustotal.com/gui/file/d6ca9b88d5eb884a761a068700b8bbb509b01bba322ce6086e500e4e6f332adf/detection
+Acknowledgements:
+  - Name: 'Jai minton'
+    Company: 'Huntress'
+    Twitter: '@CyberRaiju'
