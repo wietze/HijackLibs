@@ -4,7 +4,9 @@ Author: Wietze Beukema
 Created: 2023-07-28
 Vendor: Opera
 ExpectedLocations:
-  - '%LOCALAPPDATA%\programs\opera\%VERSION%'
+  - '%LOCALAPPDATA%\Programs\Opera\%VERSION%'
+  - '%LOCALAPPDATA%\Programs\Opera GX\%VERSION%'
+  - '%PROGRAMFILES%\Opera\%VERSION%'
 ExpectedSignatureInformation:
 - Subject: CN=Opera Norway AS, O=Opera Norway AS, L=Oslo, S=Oslo, C=NO, SERIALNUMBER=916 368 127
   Issuer: CN=DigiCert Trusted G4 Code Signing RSA4096 SHA384 2021 CA1, O="DigiCert, Inc.", C=US

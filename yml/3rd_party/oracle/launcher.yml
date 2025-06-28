@@ -5,6 +5,7 @@ Created: 2025-05-07
 Vendor: Oracle
 ExpectedLocations:
   - '%PROGRAMFILES%\SQL Developer\ide\bin'
+  - '%PROGRAMFILES%\sqldeveloper\ide\bin'
 VulnerableExecutables:
   - Path: '%PROGRAMFILES%\SQL Developer\sqldeveloper.exe'
     Type: 'Search Order'

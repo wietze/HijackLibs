@@ -5,6 +5,7 @@ Created: 2025-02-15
 Vendor: Rustdesk
 ExpectedLocations:
   - '%LOCALAPPDATA%\rustdesk'
+  - '%PROGRAMFILES%\RustDesk'
 ExpectedSignatureInformation:
   - Subject: CN=PURSLANE, O=PURSLANE, S=North West, C=SG, SERIALNUMBER=53481265A
     Issuer: CN=Sectigo Public Code Signing CA EV R36, O=Sectigo Limited, C=GB
