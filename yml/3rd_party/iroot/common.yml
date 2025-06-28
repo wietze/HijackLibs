@@ -6,13 +6,13 @@ Vendor: iroot
 ExpectedLocations:
   - '%PROGRAMFILES%\iroot'
 ExpectedVersionInformation:
-  - CompanyName: '深圳信壹网络有限公司'
-    FileDescription: 'Common 动态链接库'
+  - CompanyName: 'Shenzhen Xinyi Network Co., Ltd.'
+    FileDescription: 'Common Dynamic Link Library'
     FileVersion: '1.0.6.6'
     InternalName: 'Common'
     LegalCopyright: '© 2011-2017 SING Inc. All rights reserved.'
     OriginalFilename: 'Common.dll'
-    ProductName: 'Common 动态链接库'
+    ProductName: 'Common Dynamic Link Library'
     ProductVersion: '1.0.6.21143'
 ExpectedSignatureInformation:
   - Type: Authenticode

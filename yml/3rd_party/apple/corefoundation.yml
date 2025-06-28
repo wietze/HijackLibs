@@ -5,6 +5,7 @@ Created: 2024-04-13
 Vendor: Apple
 ExpectedLocations:
   - '%PROGRAMFILES%\Common Files\Apple\Apple Application Support'
+  - '%PROGRAMFILES%\iTunes'
   - '%SYSTEM32%'
 VulnerableExecutables:
   - Path: '%PROGRAMFILES%\iTunes\ituneshelper.exe'

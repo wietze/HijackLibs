@@ -5,6 +5,8 @@ Created: 2022-08-15
 Vendor: Avast
 ExpectedLocations:
   - '%PROGRAMFILES%\AVAST Software\Avast'
+  - '%PROGRAMFILES%\Norton\Suite'
+  - '%PROGRAMFILES%\AVG\Antivirus'
 ExpectedVersionInformation:
   - OriginalFilename: wsc.dll
     InternalName: wsc
