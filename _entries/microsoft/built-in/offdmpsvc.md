@@ -3,12 +3,10 @@ Name: offdmpsvc.dll
 Author: Swachchhanda Shrawan Poudel
 Created: 2025-06-17
 Vendor: Microsoft
-ExpectedLocations:
-  - '%SYSTEM32%'
 VulnerableExecutables:
   - Path: '%SYSTEM32%\wermgr.exe'
     Type: 'Phantom'
-    Condition: Triggers via `wermgr -boot`
+    Condition: 'Triggers via `wermgr -boot`; malicious DLL should be present in C:\Windows\System32'
     ExpectedVersionInformation:
       - CompanyName: 'Microsoft Corporation'
         FileDescription: 'Windows Problem Reporting'
