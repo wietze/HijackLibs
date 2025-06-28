@@ -21,6 +21,6 @@ VulnerableExecutables:
 Resources:
   - https://www.virustotal.com/gui/file/d6ca9b88d5eb884a761a068700b8bbb509b01bba322ce6086e500e4e6f332adf/detection
 Acknowledgements:
-  - Name: 'Jai minton'
-    Company: 'Huntress'
+  - Name: Jai Minton
+    Company: Huntress
     Twitter: '@CyberRaiju'
