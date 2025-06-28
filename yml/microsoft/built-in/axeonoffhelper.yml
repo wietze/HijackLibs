@@ -3,12 +3,10 @@ Name: axeonoffhelper.dll
 Author: Swachchhanda Shrawan Poudel
 Created: 2025-06-18
 Vendor: Microsoft
-ExpectedLocations:
-  - '%SYSTEM32%'
 VulnerableExecutables:
   - Path: '%SYSTEM32%\wpr.exe'
     Type: Phantom
-    Condition: Triggers via `wpr -boottrace -stopboot foo`
+    Condition: 'Triggers via `wpr -boottrace -stopboot foo`; put malicious DLL in C:\Windows\System32'
     ExpectedVersionInformation:
       - CompanyName: 'Microsoft Corporation'
         FileDescription: 'Microsoft Windows Performance Recorder'
