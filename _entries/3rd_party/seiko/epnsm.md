@@ -5,6 +5,7 @@ Created: 2025-05-06
 Vendor: seiko
 ExpectedLocations:
   - '%PROGRAMFILES%\Epson Software\Document Capture Server'
+  - '%PROGRAMFILES%\Epson Software\Event Manager'
 ExpectedVersionInformation:
   - CompanyName: 'SEIKO EPSON CORPORATION'
     FileDescription: 'Epson Net Scan Monitor'
