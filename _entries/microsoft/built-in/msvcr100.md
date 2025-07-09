@@ -13,6 +13,14 @@ VulnerableExecutables:
   SHA256:
   - 16f099aaff99f981741e299be6aff43f2e53b189481a08582e3b2a04e934aa0a
   Type: Sideloading
+- Path: 'cleanospp_64.exe'
+  SHA256:
+  - edf85f4e2ef1a427b34265a22f261d664ec78de90c3b5da4174ef28558c8522a
+  ExpectedSignatureInformation:
+  - Type: Authenticode
+    Subject: CN=Microsoft Code Signing PCA,O=Microsoft Corporation,L=Redmond,ST=Washington,C=US
+    Issuer: CN=Microsoft Root Authority,OU=Microsoft Corporation,OU=Copyright (c) 1997 Microsoft Corp.
+  Type: Search Order
 Resources:
 - https://twitter.com/SBousseaden/status/1530595156055011330
 - https://twitter.com/sbousseaden/status/1604934564614381571
@@ -20,5 +28,7 @@ Resources:
 Acknowledgements:
 - Name: Samir
   Twitter: '@sbousseaden'
+- Name: kinako
+  Twitter: '@kinako_software'
 ---
 
