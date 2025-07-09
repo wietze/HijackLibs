@@ -19,7 +19,7 @@ VulnerableExecutables:
   ExpectedSignatureInformation:
   - Type: Authenticode
     Subject: CN=Microsoft Code Signing PCA,O=Microsoft Corporation,L=Redmond,ST=Washington,C=US
-    Issuer: CN=Microsoft Root Authority,OU=Microsoft Corporation,OU=Copyright (c) 1997 Microsoft Corp.  
+    Issuer: CN=Microsoft Root Authority,OU=Microsoft Corporation,OU=Copyright (c) 1997 Microsoft Corp.
   Type: Search Order
 Resources:
 - https://twitter.com/SBousseaden/status/1530595156055011330
