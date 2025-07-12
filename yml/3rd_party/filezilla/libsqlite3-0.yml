@@ -10,7 +10,6 @@ VulnerableExecutables:
   Type: Sideloading
   SHA256:
     - 'ab3a652984d875269b7e7487d38852cd8301d5d4c57030b9640f097549fd6d8b'
-  Type: Sideloading
   ExpectedVersionInformation:
     - FileDescription: 'FileZilla FTP Client'
       FileVersion: '3, 68, 1, 0'
