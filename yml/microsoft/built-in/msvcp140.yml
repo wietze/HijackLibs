@@ -1,0 +1,19 @@
+---
+Name: msvcp140.dll
+Author: Swachchhanda Shrawan Poudel
+Created: 2025-07-12
+Vendor: Microsoft
+ExpectedLocations:
+- '%SYSTEM32%'
+- '%SYSWOW64%'
+- '%PROGRAMFILES%'
+- '%LOCALAPPDATA%\Temp\'
+VulnerableExecutables:
+- Path: '%PROGRAMFILES%\Java\%VERSION%\bin\jp2launcher.exe'
+  Type: Sideloading
+Resources:
+- https://unit42.paloaltonetworks.com/preventing-clickfix-attack-vector/
+Acknowledgements:
+- Name: 'Swachchhanda Shrawan Poudel'
+  Company: 'Nextron Systems'
+  Twitter: '@_swachchhanda_'
