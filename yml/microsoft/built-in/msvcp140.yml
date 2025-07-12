@@ -7,7 +7,6 @@ ExpectedLocations:
 - '%SYSTEM32%'
 - '%SYSWOW64%'
 - '%PROGRAMFILES%'
-- '%LOCALAPPDATA%\Temp\'
 VulnerableExecutables:
 - Path: '%PROGRAMFILES%\Java\%VERSION%\bin\jp2launcher.exe'
   Type: Sideloading
