@@ -1,0 +1,26 @@
+---
+Name: libsqlite3-0.dll
+Author: Swachchhanda Shrawan Poudel
+Created: 2025-07-12
+Vendor: FileZilla
+ExpectedLocations:
+- '%PROGRAMFILES%'
+VulnerableExecutables:
+- Path: '%PROGRAMFILES%\FileZilla FTP Client\filezilla.exe'
+  Type: Sideloading
+  SHA256:
+    - 'ab3a652984d875269b7e7487d38852cd8301d5d4c57030b9640f097549fd6d8b'
+  Type: Sideloading
+  ExpectedVersionInformation:
+    - FileDescription: 'FileZilla FTP Client'
+      FileVersion: '3, 68, 1, 0'
+      InternalName: 'FileZilla 3'
+      OriginalFilename: 'filezilla.exe'
+      ProductName: 'FileZilla'
+Resources:
+- https://unit42.paloaltonetworks.com/preventing-clickfix-attack-vector/
+- https://www.virustotal.com/gui/file/506ab08d0a71610793ae2a5c4c26b1eb35fd9e3c8749cd63877b03c205feb48a/details
+Acknowledgements:
+- Name: 'Swachchhanda Shrawan Poudel'
+  Company: 'Nextron Systems'
+  Twitter: '@_swachchhanda_'
