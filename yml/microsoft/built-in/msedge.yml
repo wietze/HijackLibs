@@ -15,8 +15,8 @@ VulnerableExecutables:
       Issuer: CN=Microsoft Code Signing PCA 2011, O=Microsoft Corporation, L=Redmond, S=Washington, C=US
       Type: Authenticode
     ExpectedVersionInformation:
-      - OriginalFilename: 'cookie_exporter.exe'
-        FileDescription: 'Microsoft Edge''
+    - OriginalFilename: 'cookie_exporter.exe'
+      FileDescription: 'Microsoft Edge''
 Resources:
   - https://securelist.com/apt41-in-africa/116986/
 Acknowledgements:

@@ -14,8 +14,8 @@ VulnerableExecutables:
   - OriginalFilename: 'convert-moftoprovider.exe'
     FileDescription: 'WMI V2 provider code generation tool'
 Resources:
-  - https://securelist.com/apt41-in-africa/116986/
+- https://securelist.com/apt41-in-africa/116986/
 Acknowledgements:
-  - Name: Swachchhanda Shrawan Poudel
-    Company: Nextron Systems
-    Twitter: '@_swachchhanda_'
+- Name: Swachchhanda Shrawan Poudel
+  Company: Nextron Systems
+  Twitter: '@_swachchhanda_'
