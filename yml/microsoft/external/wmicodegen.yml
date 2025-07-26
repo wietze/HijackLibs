@@ -1,0 +1,21 @@
+---
+Name: wmicodegen.dll
+Author: Swachchhanda Shrawan Poudel
+Created: 2024-07-25
+Vendor: Microsoft
+ExpectedLocations:
+- '%PROGRAMFILES%\windows kits\%VERSION%\bin\%VERSION%'
+VulnerableExecutables:
+- Path: '%PROGRAMFILES%\windows kits\%VERSION%\bin\%VERSION%\convert-moftoprovider.exe'
+  Type: Sideloading
+  ExpectedVersionInformation:
+  - OriginalFilename: 'convert-moftoprovider.exe'
+    FileDescription: 'WMI V2 provider code generation tool'
+  SHA256:
+  - '0C14A5E99C861E3A393A78E23D85DA1AACD43AB29FE017EB56BABD3BF447DBFA'
+Resources:
+- https://securelist.com/apt41-in-africa/116986/
+Acknowledgements:
+- Name: Swachchhanda Shrawan Poudel
+  Company: Nextron Systems
+  Twitter: '@_swachchhanda_'
