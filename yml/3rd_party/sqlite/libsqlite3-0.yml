@@ -2,7 +2,7 @@
 Name: libsqlite3-0.dll
 Author: Swachchhanda Shrawan Poudel
 Created: 2025-07-12
-Vendor: FileZilla
+Vendor: SQLite
 ExpectedLocations:
 - '%PROGRAMFILES%'
 VulnerableExecutables:
