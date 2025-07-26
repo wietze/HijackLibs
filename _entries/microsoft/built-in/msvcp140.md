@@ -1,0 +1,28 @@
+---
+Name: msvcp140.dll
+Author: Swachchhanda Shrawan Poudel
+Created: 2025-07-12
+Vendor: Microsoft
+ExpectedLocations:
+- '%SYSTEM32%'
+- '%SYSWOW64%'
+- '%PROGRAMFILES%'
+VulnerableExecutables:
+- Path: '%PROGRAMFILES%\Java\%VERSION%\bin\jp2launcher.exe'
+  Type: Sideloading
+  SHA256:
+    - 1fc684c5adf02b5a96cc407932429f1c2d3d2e78e3104cfbcf535a9de1ee4921
+  ExpectedVersionInformation:
+    - FileVersion: '11.451.0.10'
+      ProductName: 'Java(TM) Platform SE 8 U451'
+      InternalName: 'Java(TM) Web Launcher'
+      OriginalFilename: 'jp2launcher.exe'
+Resources:
+- https://unit42.paloaltonetworks.com/preventing-clickfix-attack-vector/
+- https://www.virustotal.com/gui/file/cbaf513e7fd4322b14adcc34b34d793d79076ad310925981548e8d3cff886527
+Acknowledgements:
+- Name: 'Swachchhanda Shrawan Poudel'
+  Company: 'Nextron Systems'
+  Twitter: '@_swachchhanda_'
+---
+
