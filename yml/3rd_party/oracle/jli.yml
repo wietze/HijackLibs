@@ -16,9 +16,15 @@ VulnerableExecutables:
       - FileVersion: '8.0.2910.9 '
         ProductName: 'Java(TM) Platform SE 8'
         InternalName: 'jsadebugd'
+  - Path: '%PROGRAMFILES%\Java\%VERSION%\bin\java.exe'
+    Type: 'Sideloading'
+  - Path: '%PROGRAMFILES%\Java\%VERSION%\bin\javaw.exe'
+    Type: 'Sideloading'
 Resources:
   - https://lab52.io/blog/snake-keylogger-in-geopolitical-affairs-abuse-of-trusted-java-utilities-in-cybercrime-operations/
   - https://www.virustotal.com/gui/file/18e3d1542d9d375f2e1d4631e03e9874fca9a1655ee6d01121d0c94e138be174
+  - https://securelist.com/apt41-in-africa/116986/
+  - https://www.proofpoint.com/us/blog/threat-insight/phish-china-aligned-espionage-actors-ramp-up-taiwan-semiconductor-targeting
 Acknowledgements:
   - Name: 'Swachchhanda Shrawan Poudel'
     Company: 'Nextron Systems'
