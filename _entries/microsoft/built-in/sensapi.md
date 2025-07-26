@@ -19,8 +19,14 @@ VulnerableExecutables:
     Type: Authenticode
   SHA256:
   - 6511ef24c41cf20f707119dd40971420f1cd6f97f0e888b7d24b5e0dec9d5495
+- Path: 'usysdiag.exe'
+  Type: Sideloading
+  SHA256:
+  - 90040340ee101cac7831d7035230ac8ad4224d432e5636f34f13aa1c4a0c2041
+
 Resources:
 - https://twitter.com/AndrewOliveau/status/1682185200862625792
+- https://www.fortinet.com/blog/threat-research/nailaolocker-ransomware-cheese
 Acknowledgements:
 - Name: Andrew Oliveau
   Twitter: '@AndrewOliveau'
