@@ -1,7 +1,7 @@
 Name: sentinelagentcore.dll
 Author: Amelia Casley
 Created: 2025-08-13
-Vendor: 
+Vendor: SentinelOne
 VulnerableExecutables:
   - Path: 'C:\Users\*\Downloads\SentinelBrowserNativeHost.exe'
     Type: 'Sideloading'
