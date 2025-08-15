@@ -1,0 +1,29 @@
+---
+Name: sentinelagentcore.dll
+Author: Amelia Casley
+Created: 2025-08-13
+Vendor: SentinelOne
+ExpectedLocations:
+  - '%PROGRAMFILES%\SentinelOne\Sentinel Agent %VERSION%'
+VulnerableExecutables:
+  - Path: '%PROGRAMFILES%\SentinelOne\Sentinel Agent %VERSION%\SentinelBrowserNativeHost.exe'
+    Type: 'Sideloading'
+    SHA256:
+      - 0d9dfc113712054d8595b50975efd9c68f4cb8960eca010076b46d2fba3d2754
+    ExpectedVersionInformation:
+      - CompanyName: 'SentinelOne, Inc.'
+        FileDescription: 'SentinelBrowserNativeHost'
+        FileVersion: '24.1.5.277'
+        InternalName: 'SentinelBrowserNativeHost'
+        LegalCopyright: 'SentinelOne, Inc.'
+        OriginalFilename: 'SentinelBrowserNativeHost.exe'
+        ProductName: 'Sentinel Agent'
+        ProductVersion: '24.1.5.277'
+Resources:
+- https://twitter.com/pe4Chscreeching/status/1955624714241810488
+Acknowledgements:
+  - Name: Amelia Casley
+    Company: Huntress Labs
+    Twitter: '@pe4Chscreeching'
+---
+
