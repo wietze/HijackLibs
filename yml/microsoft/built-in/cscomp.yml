@@ -12,13 +12,13 @@ VulnerableExecutables:
     SHA256:
       - e7bcbad88b3728333967bf59722459a6bb99b11548f83f3860eedc1cbfc57caa
     ExpectedVersionInformation:
-      - CompanyName: ' Microsoft Corporation'
-        FileDescription: ' Visual C# Command Line Compiler'
-        FileVersion: ' 8.0.50727.8745 (WinRel.050727-8700)'
-        InternalName: ' csc.exe'
+      - CompanyName: 'Microsoft Corporation'
+        FileDescription: 'Visual C# Command Line Compiler'
+        FileVersion: '8.0.50727.8745 (WinRel.050727-8700)'
+        InternalName: 'csc.exe'
         LegalCopyright: '© Microsoft Corporation. All rights reserved.'
-        OriginalFilename: ' csc.exe'
-        ProductName: ' Microsoft® Visual Studio® 2005'
+        OriginalFilename: 'csc.exe'
+        ProductName: 'Microsoft® Visual Studio® 2005'
 Acknowledgements:
   - Name: 'Ben'
     Company: 'Huntress'
