@@ -6,6 +6,7 @@ Vendor: Microsoft
 ExpectedLocations:
   - '%PROGRAMFILES%\Microsoft\EdgeUpdate\%VERSION%'
   - '%PROGRAMFILES%\Microsoft\Temp\%VERSION%'
+  - '%LOCALAPPDATA%\Microsoft\EdgeUpdate\%VERSION%'
 VulnerableExecutables:
   - Path: '%PROGRAMFILES%\Microsoft\EdgeUpdate\MicrosoftEdgeUpdate.exe'
     Type: Sideloading

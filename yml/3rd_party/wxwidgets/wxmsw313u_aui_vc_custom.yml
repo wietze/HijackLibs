@@ -1,0 +1,44 @@
+---
+Name: wxmsw313u_aui_vc_custom.dll
+Author: Jai Minton
+Created: 2025-05-06
+Vendor: wxWidgets
+ExpectedLocations:
+  - '%PROGRAMFILES%\Audacity'
+ExpectedVersionInformation:
+  - CompanyName: 'wxWidgets development team'
+    FileDescription: 'wxWidgets AUI library'
+    FileVersion: '3.1.3 (Audacity)'
+    InternalName: 'wxmsw313u_aui_vc_custom'
+    LegalCopyright: 'Copyright © 1993-2019 wxWidgets development team'
+    OriginalFilename: 'wxmsw313u_aui_vc_custom.dll'
+    ProductName: 'wxWidgets'
+    ProductVersion: '3.1.3 (Audacity)'
+ExpectedSignatureInformation:
+  - Type: Authenticode
+    Subject: CN=Musecy SM ltd.,O=Musecy SM ltd.,S=Lemesos, C=CY
+    Issuer: CN=Sectigo Public Code Signing CA R36,O=Sectico Limited,C=GB
+VulnerableExecutables:
+  - Path: '%PROGRAMFILES%\Audacity\audacity.exe'
+    Type: 'Sideloading'
+    SHA256:
+      - 7677111340eea8915dd609236febf14f9a4d4416a2a33fd11daf505ab5bc7867
+    ExpectedVersionInformation:
+      - CompanyName: 'Audacity Team'
+        FileDescription: 'Audacity'
+        FileVersion: '3,7,3,0'
+        InternalName: 'Audacity'
+        LegalCopyright: 'Copyright © 2024. All rights reserved.'
+        OriginalFilename: 'Audacity.exe'
+        ProductName: 'Audacity'
+        ProductVersion: '3,7,3,0'
+    ExpectedSignatureInformation:
+      - Type: Authenticode
+        Subject: CN=Musecy SM ltd.,O=Musecy SM ltd.,S=Lemesos, C=CY
+        Issuer: CN=Sectigo Public Code Signing CA R36,O=Sectico Limited,C=GB
+Resources:
+  - https://x.com/CyberRaiju/status/1914454438116540702
+Acknowledgements:
+  - Name: 'Jai Minton'
+    Company: 'Huntress'
+    Twitter: '@CyberRaiju'

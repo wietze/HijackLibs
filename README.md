@@ -13,3 +13,4 @@ You can find the web version of this repository on https://www.hijacklibs.net.
 * [**Contribution guide**](/docs/CONTRIBUTING.md)
 * [**YAML Schema**](/docs/SCHEMA.md) used by the project
 * [**Sample YAML template**](/template.yml)
+* [**HijackLibs Helper**](https://www.jaiminton.com/tools/hijacklibs-helper/) developed by [@JPMinty](https://github.com/JPMinty)

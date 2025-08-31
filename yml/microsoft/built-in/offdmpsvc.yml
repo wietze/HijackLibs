@@ -1,0 +1,21 @@
+---
+Name: offdmpsvc.dll
+Author: Swachchhanda Shrawan Poudel
+Created: 2025-06-17
+Vendor: Microsoft
+VulnerableExecutables:
+  - Path: '%SYSTEM32%\wermgr.exe'
+    Type: 'Phantom'
+    Condition: 'Triggers via `wermgr -boot`; malicious DLL should be present in C:\Windows\System32'
+    ExpectedVersionInformation:
+      - CompanyName: 'Microsoft Corporation'
+        FileDescription: 'Windows Problem Reporting'
+        InternalName: 'WerMgr'
+        LegalCopyright: '© Microsoft Corporation. All rights reserved.'
+        OriginalFilename: 'WerMgr'
+        ProductName: 'Microsoft® Windows® Operating System'
+Resources:
+  - https://www.hexacorn.com/blog/2025/06/14/wermgr-exe-boot-offdmpsvc-dll-lolbin/
+Acknowledgements:
+  - Name: 'Hexacorn'
+    Twitter: '@Hexacorn'
