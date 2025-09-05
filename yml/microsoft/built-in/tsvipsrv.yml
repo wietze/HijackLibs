@@ -5,7 +5,7 @@ Created: 2025-09-05
 Vendor: Microsoft
 VulnerableExecutables:
 - Path: '%SYSTEM32%\svchost.exe'
-  Condition: Service Binary of SessionEnv service
+  Condition: Execution of "SessionEnv" Service
   Type: Phantom
 Resources:
 - https://blog.fox-it.com/2025/09/01/three-lazarus-rats-coming-for-your-cheese/
