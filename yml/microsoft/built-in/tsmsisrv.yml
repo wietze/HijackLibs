@@ -1,5 +1,5 @@
 ---
-Name: tsvipsrv.dll
+Name: tsmsisrv.dll
 Author: Swachchhanda Shrawan Poudel
 Created: 2025-09-05
 Vendor: Microsoft
@@ -8,7 +8,6 @@ VulnerableExecutables:
   Condition: Execution of "SessionEnv" Service
   Type: Phantom
 Resources:
-- https://blog.fox-it.com/2025/09/01/three-lazarus-rats-coming-for-your-cheese/
 - https://www.gendigital.com/blog/insights/research/png-steganography-hides-backdoor
 Acknowledgements:
 - Name: Swachchhanda Shrawan Poudel
