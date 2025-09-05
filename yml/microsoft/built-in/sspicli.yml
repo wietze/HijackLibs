@@ -355,7 +355,7 @@ VulnerableExecutables:
   - Subject: CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US
     Issuer: CN=Microsoft Windows Code Signing PCA 2024, O=Microsoft Corporation, C=US
     Type: Authenticode
-- Path: '%ProgramFiles%\Microsoft OneDrive\OneDrive.exe'
+- Path: '%PROGRAMFILES%\Microsoft OneDrive\OneDrive.exe'
   Type: Sideloading
   ExpectedSignatureInformation:
   - Subject: CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US
