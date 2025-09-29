@@ -1,0 +1,17 @@
+---
+Name: tsmsisrv.dll
+Author: Swachchhanda Shrawan Poudel
+Created: 2025-09-05
+Vendor: Microsoft
+VulnerableExecutables:
+- Path: '%SYSTEM32%\svchost.exe'
+  Condition: 'DLL has to be placed in %SystemRoot%\System32; loading can be triggered by execution of "SessionEnv" service'
+  Type: Phantom
+Resources:
+- https://www.gendigital.com/blog/insights/research/png-steganography-hides-backdoor
+Acknowledgements:
+- Name: Swachchhanda Shrawan Poudel
+  Twitter: '@_swachchhanda_'
+  Company: Nextron Systems
+---
+
