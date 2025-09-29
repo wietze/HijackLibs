@@ -349,13 +349,29 @@ VulnerableExecutables:
   - Subject: CN=Microsoft Windows, O=Microsoft Corporation, L=Redmond, S=Washington, C=US
     Issuer: CN=Microsoft Windows Production PCA 2011, O=Microsoft Corporation, L=Redmond, S=Washington, C=US
     Type: Catalog
+- Path: '%LOCALAPPDATA%\Microsoft\OneDrive\OneDrive.exe'
+  Type: Sideloading
+  ExpectedSignatureInformation:
+  - Subject: CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US
+    Issuer: CN=Microsoft Windows Code Signing PCA 2024, O=Microsoft Corporation, C=US
+    Type: Authenticode
+- Path: '%PROGRAMFILES%\Microsoft OneDrive\OneDrive.exe'
+  Type: Sideloading
+  ExpectedSignatureInformation:
+  - Subject: CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US
+    Issuer: CN=Microsoft Windows Code Signing PCA 2024, O=Microsoft Corporation, C=US
+    Type: Authenticode
 Resources:
 - https://wietze.github.io/blog/hijacking-dlls-in-windows
 - https://wietze.github.io/blog/save-the-environment-variables
 - https://securityintelligence.com/posts/windows-features-dll-sideloading/
 - https://github.com/xforcered/WFH
+- https://lab52.io/blog/analyzing-notdoor-inside-apt28s-expanding-arsenal/
+- https://www.legit4n6.com/OneDrive-SSPICLI-dll-Side-Loading-Proof-of-Concept-264d60e66daf80caa347f437baf5edf3
 Acknowledgements:
 - Name: Wietze
   Twitter: '@wietze'
 - Name: Chris Spehn
   Twitter: '@ConsciousHacker'
+- Name: Terry Liggett
+  Twitter: '@legit4n6'
