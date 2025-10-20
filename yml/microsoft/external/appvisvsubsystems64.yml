@@ -1,0 +1,22 @@
+---
+Name: appvisvsubsystems64.dll
+Author: Still Hsu
+Created: 2025-10-20
+Vendor: Microsoft
+ExpectedLocations:
+  - '%PROGRAMFILES%\Common Files\microsoft shared\ClickToRun'
+  - '%PROGRAMFILES%\Common Files\microsoft shared\ClickToRun\Updates\%VERSION%'
+  - '%PROGRAMFILES%\Microsoft Office\root\Client'
+  - '%PROGRAMFILES%\Microsoft Office\root\Office%VERSION%'
+  - '%PROGRAMFILES%\Microsoft Office\root\vfs\ProgramFilesCommonX64\Microsoft Shared\Office%VERSION%'
+VulnerableExecutables:
+  - Path: '%PROGRAMFILES%\Microsoft Office\root\Office%VERSION%\winword.exe'
+    Type: Environment Variable
+    Variable: SYSTEMROOT
+    SHA256:
+      - 341ba8a556f4ac503ab23d9e5d2114261afd24aed332f2e404705b522afd5998
+Resources:
+  - https://www.virustotal.com/gui/file/b0ecfe94a829ef82819a5bec168d313a55e07544c3e20e252239679b2e0f46c9
+Acknowledgements:
+  - Name: Still Hsu
+    Twitter: '@AzakaSekai_'
