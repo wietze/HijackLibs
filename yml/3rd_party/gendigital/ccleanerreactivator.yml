@@ -2,7 +2,7 @@
 Name: ccleanerreactivator.dll
 Author: Still Hsu
 Created: 2025-10-20
-Vendor: Gen Digital Inc.
+Vendor: Gen Digital
 ExpectedLocations:
   - '%PROGRAMFILES%\CCleaner'
 ExpectedVersionInformation:
