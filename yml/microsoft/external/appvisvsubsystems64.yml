@@ -11,10 +11,21 @@ ExpectedLocations:
   - '%PROGRAMFILES%\Microsoft Office\root\vfs\ProgramFilesCommonX64\Microsoft Shared\Office%VERSION%'
 VulnerableExecutables:
   - Path: '%PROGRAMFILES%\Microsoft Office\root\Office%VERSION%\winword.exe'
-    Type: Environment Variable
-    Variable: SYSTEMROOT
+    Type: 'Sideloading'
     SHA256:
       - 341ba8a556f4ac503ab23d9e5d2114261afd24aed332f2e404705b522afd5998
+    ExpectedVersionInformation:
+      - CompanyName: 'Microsoft Corporation'
+        FileDescription: 'Microsoft Word'
+        FileVersion: '16.0.18730.20168'
+        InternalName: 'WinWord'
+        OriginalFilename: 'WinWord.exe'
+        ProductName: 'Microsoft Office'
+        ProductVersion: '16.0.18730.20168'
+    ExpectedSignatureInformation:
+      - Type: Authenticode
+        Subject: CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US
+        Issuer: CN=Microsoft Code Signing PCA 2010, O=Microsoft Corporation, L=Redmond, S=Washington, C=US
 Resources:
   - https://www.virustotal.com/gui/file/b0ecfe94a829ef82819a5bec168d313a55e07544c3e20e252239679b2e0f46c9
 Acknowledgements:
