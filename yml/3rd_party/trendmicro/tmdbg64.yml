@@ -2,7 +2,7 @@
 Name: tmdbg64.dll
 Author: Still Hsu
 Created: 2025-11-05
-Vendor: Trend
+Vendor: Trend Micro
 ExpectedLocations:
   - '%LOCALAPPDATA%\Temp\ClnExtor\PCCNT'
   - '%PROGRAMFILES%\Trend Micro\Security Agent'
