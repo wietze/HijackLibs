@@ -5,7 +5,6 @@ Created: 2025-09-08
 Vendor: Canon
 ExpectedLocations:
   - '%PROGRAMFILES%\Canon\Canon IJ Printer Assistant Tool\'
-  - '%USERPROFILE%\AppData\Roaming\SamsungDriver\'
 VulnerableExecutables:
   - Path: 'cnmpaui.exe'
     Type: Sideloading
