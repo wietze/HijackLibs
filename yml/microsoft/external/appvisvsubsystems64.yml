@@ -1,0 +1,50 @@
+---
+Name: appvisvsubsystems64.dll
+Author: Still Hsu
+Created: 2025-10-20
+Vendor: Microsoft
+ExpectedLocations:
+  - '%PROGRAMFILES%\Common Files\microsoft shared\ClickToRun'
+  - '%PROGRAMFILES%\Common Files\microsoft shared\ClickToRun\Updates\%VERSION%'
+  - '%PROGRAMFILES%\Microsoft Office\root\Client'
+  - '%PROGRAMFILES%\Microsoft Office\root\Office%VERSION%'
+  - '%PROGRAMFILES%\Microsoft Office\root\vfs\ProgramFilesCommonX64\Microsoft Shared\Office%VERSION%'
+VulnerableExecutables:
+  - Path: '%PROGRAMFILES%\Microsoft Office\root\Office%VERSION%\winword.exe'
+    Type: 'Sideloading'
+    SHA256:
+      - 341ba8a556f4ac503ab23d9e5d2114261afd24aed332f2e404705b522afd5998
+      - 6c55195f025fb895f9d0ec3edbf58bc0aa46c43eeb246cfb88eef1ae051171b3
+    ExpectedVersionInformation:
+      - CompanyName: 'Microsoft Corporation'
+        FileDescription: 'Microsoft Word'
+        FileVersion: '16.0.18730.20168'
+        InternalName: 'WinWord'
+        OriginalFilename: 'WinWord.exe'
+        ProductName: 'Microsoft Office'
+        ProductVersion: '16.0.18730.20168'
+    ExpectedSignatureInformation:
+      - Type: Authenticode
+        Subject: CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US
+        Issuer: CN=Microsoft Code Signing PCA 2010, O=Microsoft Corporation, L=Redmond, S=Washington, C=US
+  - Path: '%PROGRAMFILES%\Microsoft Office\root\Office%VERSION%\powerpnt.exe'
+    Type: 'Sideloading'
+    SHA256:
+      - 420d20cddfaada4e96824a9184ac695800764961bad7654a6a6c3fe9b1b74b9a
+    ExpectedVersionInformation:
+      - FileDescription: 'Microsoft PowerPoint'
+        FileVersion: '16.0.14430.20306'
+        InternalName: 'POWERPNT'
+        OriginalFilename: 'POWERPNT.EXE'
+        ProductName: 'Microsoft Office'
+    ExpectedSignatureInformation:
+      - Type: Authenticode
+        Subject: CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US
+        Issuer: CN=Microsoft Code Signing PCA 2010, O=Microsoft Corporation, L=Redmond, S=Washington, C=US
+Resources:
+  - https://research.checkpoint.com/2025/apt29-phishing-campaign/
+  - https://lab52.io/blog/2162-2/
+  - https://www.virustotal.com/gui/file/b0ecfe94a829ef82819a5bec168d313a55e07544c3e20e252239679b2e0f46c9
+Acknowledgements:
+  - Name: Still Hsu
+    Twitter: '@AzakaSekai_'
