@@ -38,7 +38,7 @@ VulnerableExecutables:
         Subject: CN=Symantec Time Stamping Services CA - G2,O=Symantec Corporation,C=US
         Issuer: CN=Thawte Timestamping CA,OU=Thawte Certification,O=Thawte,L=Durbanville,ST=Western Cape,C=ZA
 Resources:
-  - https://www.virustotal.com/gui/file/9ba0b14e6fe5ed5147a3441c1ff7b7138ae854f97652a43895fcc4b7c91021e4
+  - https://www.virustotal.com/gui/file/5ee36bf41e2604db18a46515139d0c7bee9a6665e968d4b281cac329e26163d0
 Acknowledgements:
   - Name: 'Still Hsu'
     Twitter: '@AzakaSekai_'
