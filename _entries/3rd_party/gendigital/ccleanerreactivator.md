@@ -1,0 +1,41 @@
+---
+Name: ccleanerreactivator.dll
+Author: Still Hsu
+Created: 2025-10-20
+Vendor: Gen Digital
+ExpectedLocations:
+  - '%PROGRAMFILES%\CCleaner'
+ExpectedVersionInformation:
+  - CompanyName: 'Gen Digital Inc.'
+    FileDescription: 'CCleaner CCleaner Performance Optimizer'
+    InternalName: 'CCleanerReactivator'
+    OriginalFilename: 'CCleanerReactivator.dll'
+    ProductName: 'CCleaner'
+ExpectedSignatureInformation:
+  - Type: Authenticode
+    Subject: CN=Sectigo Public Code Signing Root R46,O=Sectigo Limited,C=GB
+    Issuer: CN=AAA Certificate Services,O=Comodo CA Limited,L=Salford,ST=Greater Manchester,C=GB
+VulnerableExecutables:
+  - Path: '%PROGRAMFILES%\CCleaner\CCleanerReactivator.exe'
+    Type: 'Sideloading'
+    SHA256:
+      - f87381d6c1ba5c8dd3c0fbe113357aea2104938f7a7516f5be120c30a78dab6b
+      - 59e5b2a7a3903e4fb9a23174b655adb75eb490625ddb126ef29446e47de4099f
+    ExpectedVersionInformation:
+      - CompanyName: 'Gen Digital Inc.'
+        FileDescription: 'CCleaner Reactivator'
+        InternalName: 'CCleanerReactivator'
+        OriginalFilename: 'CCleanerReactivator.exe'
+        ProductName: 'CCleanerReactivator.exe'
+    ExpectedSignatureInformation:
+      - Type: Authenticode
+        Subject: CN=Sectigo Public Code Signing Root R46,O=Sectigo Limited,C=GB
+        Issuer: CN=AAA Certificate Services,O=Comodo CA Limited,L=Salford,ST=Greater Manchester,C=GB
+Resources:
+  - https://www.virustotal.com/gui/file/d665f55555f87b515cb8ef1adce9592a83662a8c4efa34f6ffdd022475bd176a
+  - https://lab52.io/blog/2344-2/
+Acknowledgements:
+  - Name: 'Still Hsu'
+    Twitter: '@AzakaSekai_'
+---
+
