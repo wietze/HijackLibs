@@ -40,7 +40,7 @@ VulnerableExecutables:
     ExpectedSignatureInformation:
       - Type: Authenticode
         Subject: CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US
-        Issuer: CN=Microsoft Code Signing PCA 2010, O=Microsoft Corporation, L=Redmond, S=Washington, C=US        
+        Issuer: CN=Microsoft Code Signing PCA 2010, O=Microsoft Corporation, L=Redmond, S=Washington, C=US
 Resources:
   - https://research.checkpoint.com/2025/apt29-phishing-campaign/
   - https://lab52.io/blog/2162-2/
