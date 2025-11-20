@@ -4,7 +4,7 @@ Author: Still Hsu
 Created: 2025-11-20
 Vendor: Valve
 ExpectedLocations:
-  - '%programfiles%\Steam'
+  - '%PROGRAMFILES%\Steam'
 ExpectedVersionInformation:
   - CompanyName: 'Valve Corporation'
     FileDescription: 'Steam Crash Handler Library'
@@ -19,7 +19,7 @@ ExpectedSignatureInformation:
     Subject: CN=DigiCert Trusted Root G4,OU=www.digicert.com,O=DigiCert Inc,C=US
     Issuer: CN=DigiCert Assured ID Root CA,OU=www.digicert.com,O=DigiCert Inc,C=US
 VulnerableExecutables:
-  - Path: '%programfiles%\Steam\bin\steam_monitor.exe'
+  - Path: '%PROGRAMFILES%\Steam\bin\steam_monitor.exe'
     Type: 'Search Order'
     SHA256:
       - 8c0051a83b3611ff2b669b670aa005633f3d9e844454a112b31d2a4bc944a234
