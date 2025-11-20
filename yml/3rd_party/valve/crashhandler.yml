@@ -38,7 +38,7 @@ VulnerableExecutables:
         Issuer: CN=DigiCert Assured ID Root CA,OU=www.digicert.com,O=DigiCert Inc,C=US
 Resources:
   - https://x.com/AzakaSekai_/status/1991358486912069774
-  - https://www.virustotal.com/gui/file/8c0051a83b3611ff2b669b670aa005633f3d9e844454a112b31d2a4bc944a234/relations
+  - https://www.virustotal.com/gui/file/c4e3c29367426fe4ed718ab448fbdf2cf8690c81ea539805569cdff88317db9f
 Acknowledgements:
   - Name: 'Still Hsu'
     Twitter: '@AzakaSekai_'
