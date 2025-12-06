@@ -2,7 +2,7 @@
 Name: libcef.dll
 Author: Matt Anderson - HuntressLabs
 Created: 2024-04-13
-Vendor: Nvidia
+Vendor: Google
 ExpectedLocations:
   - '%PROGRAMFILES%\NVIDIA Corporation\NVIDIA GeForce Experience'
 VulnerableExecutables:
