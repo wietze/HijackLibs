@@ -20,7 +20,7 @@ ExpectedSignatureInformation:
     Issuer: CN=DigiCert Assured ID Root CA,OU=www.digicert.com,O=DigiCert Inc,C=US
 VulnerableExecutables:
   - Path: '%PROGRAMFILES%\Steam\bin\steam_monitor.exe'
-    Type: 'Search Order'
+    Type: 'Sideloading'
     SHA256:
       - 8c0051a83b3611ff2b669b670aa005633f3d9e844454a112b31d2a4bc944a234
     ExpectedVersionInformation:
