@@ -19,11 +19,25 @@ VulnerableExecutables:
         OriginalFilename: 'SentinelBrowserNativeHost.exe'
         ProductName: 'Sentinel Agent'
         ProductVersion: '24.1.5.277'
+  - Path: '%PROGRAMFILES%\SentinelOne\Sentinel Agent %VERSION%\SentinelAgentWorker.exe'
+    Type: 'Sideloading'
+    SHA256:
+      - be754c0950c015d5136029e05db65aca19952c51101554391b04ace47d2c82df
+    ExpectedVersionInformation:
+      - CompanyName: 'SentinelOne, Inc.'
+        FileDescription: 'Sentinel Agent Worker'
+        InternalName: 'SentinelAgentWorker'
+        LegalCopyright: 'SentinelOne, Inc.'
+        OriginalFilename: 'SentinelAgentWorker.exe'
+        ProductName: 'Sentinel Agent'
 Resources:
 - https://twitter.com/pe4Chscreeching/status/1955624714241810488
 Acknowledgements:
   - Name: Amelia Casley
     Company: Huntress Labs
     Twitter: '@pe4Chscreeching'
+  - Name: Tanner Filip
+    Company: Huntress Labs
+    Twitter: '@wbmmfq'
 ---
 
