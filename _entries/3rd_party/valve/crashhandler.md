@@ -1,0 +1,46 @@
+---
+Name: crashhandler.dll
+Author: Still Hsu
+Created: 2025-11-20
+Vendor: Valve
+ExpectedLocations:
+  - '%PROGRAMFILES%\Steam'
+ExpectedVersionInformation:
+  - CompanyName: 'Valve Corporation'
+    FileDescription: 'Steam Crash Handler Library'
+    FileVersion: '09.86.62.31'
+    InternalName: 'crashhandler (buildbot_steam-relclient-w32.build.valve.org_steam_rel_client_win32@steam-relclient-w32)'
+    LegalCopyright: 'Copyright (C) 2010'
+    OriginalFilename: 'crashhandler.dll'
+    ProductName: 'Steam Crash Handler Library'
+    ProductVersion: '01.00.00.01'
+ExpectedSignatureInformation:
+  - Type: Authenticode
+    Subject: CN=DigiCert Trusted Root G4,OU=www.digicert.com,O=DigiCert Inc,C=US
+    Issuer: CN=DigiCert Assured ID Root CA,OU=www.digicert.com,O=DigiCert Inc,C=US
+VulnerableExecutables:
+  - Path: '%PROGRAMFILES%\Steam\bin\steam_monitor.exe'
+    Type: 'Sideloading'
+    SHA256:
+      - 8c0051a83b3611ff2b669b670aa005633f3d9e844454a112b31d2a4bc944a234
+    ExpectedVersionInformation:
+      - CompanyName: 'Valve Corporation'
+        FileDescription: 'steam_monitor.exe'
+        FileVersion: '09.86.62.31'
+        InternalName: 'steam_monitor.exe (buildbot_steam-relclient-w32.build.valve.org_steam_rel_client_win32@steam-relclient-w32)'
+        LegalCopyright: 'Copyright (C) 2016 Valve Corporation'
+        OriginalFilename: 'steam_monitor.exe'
+        ProductName: 'Steam'
+        ProductVersion: '01.00.00.01'
+    ExpectedSignatureInformation:
+      - Type: Authenticode
+        Subject: CN=DigiCert Trusted Root G4,OU=www.digicert.com,O=DigiCert Inc,C=US
+        Issuer: CN=DigiCert Assured ID Root CA,OU=www.digicert.com,O=DigiCert Inc,C=US
+Resources:
+  - https://x.com/AzakaSekai_/status/1991358486912069774
+  - https://www.virustotal.com/gui/file/c4e3c29367426fe4ed718ab448fbdf2cf8690c81ea539805569cdff88317db9f
+Acknowledgements:
+  - Name: 'Still Hsu'
+    Twitter: '@AzakaSekai_'
+---
+
