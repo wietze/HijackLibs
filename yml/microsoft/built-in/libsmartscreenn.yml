@@ -4,7 +4,7 @@ Author: Still Hsu
 Created: 2025-12-12
 Vendor: Microsoft
 ExpectedLocations:
-  - '%PROGRAMFILES%\WindowsApps\Microsoft.DesktopAppInstaller_%VERISON%_x64__8wekyb3d8bbwe'
+  - '%PROGRAMFILES%\WindowsApps\Microsoft.DesktopAppInstaller_%VERSION%_x64__8wekyb3d8bbwe'
 ExpectedVersionInformation:
   - CompanyName: 'Microsoft Corporation'
     FileDescription: 'SmartScreen Dynamic Link Library'
