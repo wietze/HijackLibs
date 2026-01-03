@@ -37,6 +37,7 @@ VulnerableExecutables:
         Subject: CN=Microsoft Corporation,O=Microsoft Corporation,L=Redmond,ST=Washington,C=US
         Issuer: CN=Microsoft Code Signing PCA 2011,O=Microsoft Corporation,L=Redmond,ST=Washington,C=US
 Resources:
+  - https://www.virustotal.com/gui/file/ead3b69fb1c4a8a7db7d89af55c75820ef76fce0d2fd341d5b2ea61b320f8821
   - https://www.virustotal.com/gui/file/ab89866a6c74eaee542e28b9401aa674ff2e7f73547cfa98eb685830d8b94887/relations
 Acknowledgements:
   - Name: 'Still Hsu'
