@@ -1,0 +1,44 @@
+---
+Name: libsmartscreenn.dll
+Author: Still Hsu
+Created: 2025-12-12
+Vendor: Microsoft
+ExpectedLocations:
+  - '%PROGRAMFILES%\WindowsApps\Microsoft.DesktopAppInstaller_%VERSION%_x64__8wekyb3d8bbwe'
+ExpectedVersionInformation:
+  - CompanyName: 'Microsoft Corporation'
+    FileDescription: 'SmartScreen Dynamic Link Library'
+    FileVersion: '1.2.2410.2'
+    InternalName: 'libsmartscreenn'
+    LegalCopyright: 'Copyright (C) Microsoft Corporation. All rights reserved.'
+    OriginalFilename: 'libsmartscreenn.dll'
+    ProductName: 'Microsoft Phishing Protection'
+    ProductVersion: '1.2.2410.2'
+ExpectedSignatureInformation:
+  - Type: Authenticode
+    Subject: CN=Microsoft Corporation,O=Microsoft Corporation,L=Redmond,ST=Washington,C=US
+    Issuer: CN=Microsoft Code Signing PCA 2011,O=Microsoft Corporation,L=Redmond,ST=Washington,C=US
+VulnerableExecutables:
+  - Path: '%PROGRAMFILES%\WindowsApps\Microsoft.DesktopAppInstaller_%VERSION%_x64__8wekyb3d8bbwe\AppInstaller.exe'
+    Type: 'Sideloading'
+    SHA256:
+      - e67659cec3aaac0edc4fb12ac80da5bfb0ab8a104f6cdfd96c62db475bc96e6b
+    ExpectedVersionInformation:
+      - CompanyName: 'Microsoft Corporation'
+        FileDescription: 'AppInstaller.exe'
+        FileVersion: '1.27.350.00000'
+        InternalName: 'AppInstaller'
+        LegalCopyright: '©Microsoft Corporation.  All rights reserved.'
+        OriginalFilename: 'AppInstaller.exe'
+        ProductName: 'Microsoft Desktop App Installer'
+        ProductVersion: '1.27.350.0'
+    ExpectedSignatureInformation:
+      - Type: Authenticode
+        Subject: CN=Microsoft Corporation,O=Microsoft Corporation,L=Redmond,ST=Washington,C=US
+        Issuer: CN=Microsoft Code Signing PCA 2011,O=Microsoft Corporation,L=Redmond,ST=Washington,C=US
+Resources:
+  - https://www.virustotal.com/gui/file/ead3b69fb1c4a8a7db7d89af55c75820ef76fce0d2fd341d5b2ea61b320f8821
+  - https://www.virustotal.com/gui/file/ab89866a6c74eaee542e28b9401aa674ff2e7f73547cfa98eb685830d8b94887/relations
+Acknowledgements:
+  - Name: 'Still Hsu'
+    Twitter: '@AzakaSekai_'
