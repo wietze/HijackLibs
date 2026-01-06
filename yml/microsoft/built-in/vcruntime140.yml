@@ -1,0 +1,23 @@
+---
+Name: vcruntime140.dll
+Author: Swachchhanda Shrawan Poudel
+Created: 2026-01-06
+Vendor: Microsoft
+ExpectedLocations:
+- '%SYSTEM32%'
+VulnerableExecutables:
+- Path: '%PROGRAMFILES%\Microsoft SQL Server\%VERSION%\Shared\sqlwriter.exe'
+  Type: Sideloading
+  Sha256:
+    - 8d1d449a0bd5b2085c52e4662e5999d2163f8e2b7a73874329fb4f01a397d7ab
+- Path: '%PROGRAMFILES%\Microsoft SQL Server\%VERSION%\Shared\SqlDumper.exe'
+  Type: Sideloading
+  Sha256:
+    - 116866708b5c22d643427203e7b0b023ccee8effeec8801638421bf96e569813 
+Resources:
+- https://www.zscaler.com/blogs/security-research/european-diplomats-targeted-apt29-cozy-bear-wineloader
+- https://cloud.google.com/blog/topics/threat-intelligence/apt29-wineloader-german-political-parties
+Acknowledgements:
+- Name: Swachchhanda Shrawan Poudel
+  Twitter: '@_swachchhanda_'
+  Company: Nextron Systems
