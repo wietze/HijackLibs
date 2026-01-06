@@ -2,7 +2,7 @@
 Name: dsp_bridge_x64.dll
 Author: Zhangir Ospanov
 Created: 2026-01-06
-Vendor: Guangzhou Kugou Technology Co Ltd
+Vendor: KuGou
 VulnerableExecutables:
 - Path: bridge_plugin_host_x64.exe
   Type: Sideloading
