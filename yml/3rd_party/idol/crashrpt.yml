@@ -4,7 +4,7 @@ Author: Still Hsu
 Created: 2026-01-09
 Vendor: Idol
 ExpectedLocations:
-  - '%programfiles%\MPC-HC\CrashReporter'
+  - '%PROGRAMFILES%\MPC-HC\CrashReporter'
 ExpectedVersionInformation:
   - CompanyName: 'Idol Software'
     FileDescription: 'Crash reporting library'
