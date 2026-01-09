@@ -33,7 +33,7 @@ VulnerableExecutables:
       - CompanyName: 'MPC-HC Team'
         FileDescription: 'MPC-HC'
         InternalName: 'mpc-hc'
-        OriginalFilename: 'mpc-hc.exe'
+        OriginalFilename: 'mpc-hc64.exe'
         ProductName: 'MPC-HC'
 Resources:
   - https://www.virustotal.com/gui/file/db35155d33b616d4f7c268e78c8179eb84378778a4b195df09a8c36f2e5eb38b
