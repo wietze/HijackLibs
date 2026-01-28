@@ -2,7 +2,7 @@
 Name: libngs.dll
 Author: Swachchhanda Shrawan Poudel
 Created: 2026-01-28
-Vendor: Sangfor Technologies Inc.
+Vendor: Sangfor
 ExpectedLocations:
   - '%PROGRAMFILES%\Sangfor\SSL\RemoteAppClient\'
 VulnerableExecutables:
