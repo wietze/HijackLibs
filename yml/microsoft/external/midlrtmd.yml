@@ -4,11 +4,11 @@ Author: Rick Gatenby
 Created: 2026-02-03
 Vendor: Microsoft
 ExpectedLocations:
-  - '%PROGRAMFILES%\Windows Kits\%VERSION%\bin\%VERSION%\x86'
-  - '%PROGRAMFILES%\Windows Kits\%VERSION%\bin\%VERSION%\x64'
+  - '%PROGRAMFILES%\Windows Kits\%VERSION%\bin\%VERSION%\x64\mdmerge.exe'
+  - '%PROGRAMFILES%\Windows Kits\%VERSION%\bin\%VERSION%\x86\mdmerge.exe'
 VulnerableExecutables:
   # yamllint disable-line rule:line-length
-  - Path: '%PROGRAMFILES%\Windows Kits\%VERSION%\bin\%VERSION%\%ARCH%\mdmerge.exe'
+  - Path: 'mdmerge.exe'
     Type: Sideloading
     ExpectedVersionInformation:
       - OriginalFilename: 'mdmerge.exe'
