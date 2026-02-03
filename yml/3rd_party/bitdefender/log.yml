@@ -26,7 +26,7 @@ VulnerableExecutables:
       - Issuer: CN=VeriSign Class 3 Code Signing 2009-2 CA, OU=Terms of use at https://www.verisign.com/rpa (c)09, OU=VeriSign Trust Network, O="VeriSign, Inc.", C=US
         Subject: CN=BitDefender SRL, OU=Digital ID Class 3 - Microsoft Software Validation v2, O=BitDefender SRL, L=Bucharest, S=Bucharest, C=RO
         Type: Authenticode
-   - Path: '%PROGRAMFILES%\Bitdefender Agent\%VERSION%\x64\BDReinit.exe'
+  - Path: '%PROGRAMFILES%\Bitdefender Agent\%VERSION%\x64\BDReinit.exe'
     Type: Sideloading
     SHA256:
       - 386EB7AA33C76CE671D6685F79512597F1FAB28EA46C8EC7D89E58340081E2BD
