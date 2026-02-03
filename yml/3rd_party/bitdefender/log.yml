@@ -25,3 +25,9 @@ Resources:
   - https://www.secureworks.com/research/shadowpad-malware-analysis
   - https://www.hexacorn.com/blog/2023/02/25/beyond-good-ol-run-key-part-141/
   - https://www.rapid7.com/blog/post/tr-chrysalis-backdoor-dive-into-lotus-blossoms-toolkit/
+Acknowledgements:
+- Name: Daniel Koifman
+  Company: CardinalOps
+  Twitter: '@KoifSec'
+- Name: Wietze
+  Twitter: '@wietze'
