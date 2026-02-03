@@ -3,16 +3,17 @@ Name: midlrtmd.dll
 Author: Rick Gatenby
 Created: 2026-02-03
 Vendor: Microsoft
-ExpectedLocations: 
+ExpectedLocations:
   - '%PROGRAMFILES(x86)%\Windows Kits\%VERSION%\bin\%VERSION%\x86'
   - '%PROGRAMFILES(x86)%\Windows Kits\%VERSION%\bin\%VERSION%\x64'
 VulnerableExecutables:
+  # yamllint disable-line rule:line-length
   - Path: '%ProgramFiles(x86)%\Windows Kits\%VERSION%\bin\%VERSION%\%ARCH%\mdmerge.exe'
     Type: Sideloading
     ExpectedVersionInformation:
-    - OriginalFilename: 'mdmerge.exe'
-      FileDescription: 'Microsoft MDMERGE Utility'
-    SHA256: 
+      - OriginalFilename: 'mdmerge.exe'
+        FileDescription: 'Microsoft MDMERGE Utility'
+    SHA256:
       - ac9f2ae9de5126691b9391c990f9d4f1c25afa912fbfda2d4abfe9f9057bdd8c
 Resources:
   - https://www.crowdstrike.com/en-us/blog/new-supply-chain-attack-leverages-comm100-chat-installer

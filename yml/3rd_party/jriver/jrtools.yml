@@ -3,12 +3,12 @@ Name: jrtools.dll
 Author: Rick Gatenby
 Created: 2026-02-03
 Vendor: JRiver
-ExpectedLocations: 
+ExpectedLocations:
   - '%PROGRAMFILES%\J River\Media Center %VERSION%'
 VulnerableExecutables:
   - Path: '%PROGRAMFILES%\J River\Media Center %VERSION%\JRService.exe'
     Type: Sideloading
-    SHA256: 
+    SHA256:
       - 2965b9b76bd62fc7ca9e977b09793f37241bf2bf27fe6ced55a3bc569d345038
 Resources:
   - https://ventdrop.github.io/posts/jriver/
