@@ -5,6 +5,10 @@ Created: 2022-06-13
 Vendor: BitDefender
 ExpectedLocations:
   - '%PROGRAMFILES%\Bitdefender Antivirus Free'
+  - '%PROGRAMFILES%\Bitdefender Agent\%VERSION%'
+  - '%PROGRAMFILES%\Bitdefender Agent\%VERSION%\x64'
+  - '%PROGRAMFILES%\Bitdefender\Bitdefender Security'
+  - '%PROGRAMFILES%\Bitdefender\Bitdefender Security App'
 VulnerableExecutables:
   - Path: '%PROGRAMFILES%\Bitdefender Antivirus Free\BDReinit.exe'
     Type: Sideloading
@@ -14,8 +18,67 @@ VulnerableExecutables:
       - Issuer: CN=VeriSign Class 3 Code Signing 2009-2 CA, OU=Terms of use at https://www.verisign.com/rpa (c)09, OU=VeriSign Trust Network, O="VeriSign, Inc.", C=US
         Subject: CN=BitDefender SRL, OU=Digital ID Class 3 - Microsoft Software Validation v2, O=BitDefender SRL, L=Bucharest, S=Bucharest, C=RO
         Type: Authenticode
+  - Path: '%PROGRAMFILES%\Bitdefender Agent\%VERSION%\BDReinit.exe'
+    Type: Sideloading
+    SHA256:
+      - 386EB7AA33C76CE671D6685F79512597F1FAB28EA46C8EC7D89E58340081E2BD
+    ExpectedSignatureInformation:
+      - Issuer: CN=VeriSign Class 3 Code Signing 2009-2 CA, OU=Terms of use at https://www.verisign.com/rpa (c)09, OU=VeriSign Trust Network, O="VeriSign, Inc.", C=US
+        Subject: CN=BitDefender SRL, OU=Digital ID Class 3 - Microsoft Software Validation v2, O=BitDefender SRL, L=Bucharest, S=Bucharest, C=RO
+        Type: Authenticode
+  - Path: '%PROGRAMFILES%\Bitdefender Agent\%VERSION%\x64\BDReinit.exe'
+    Type: Sideloading
+    SHA256:
+      - 386EB7AA33C76CE671D6685F79512597F1FAB28EA46C8EC7D89E58340081E2BD
+    ExpectedSignatureInformation:
+      - Issuer: CN=VeriSign Class 3 Code Signing 2009-2 CA, OU=Terms of use at https://www.verisign.com/rpa (c)09, OU=VeriSign Trust Network, O="VeriSign, Inc.", C=US
+        Subject: CN=BitDefender SRL, OU=Digital ID Class 3 - Microsoft Software Validation v2, O=BitDefender SRL, L=Bucharest, S=Bucharest, C=RO
+        Type: Authenticode
+  - Path: '%PROGRAMFILES%\Bitdefender\Bitdefender Security\BDReinit.exe'
+    Type: Sideloading
+    SHA256:
+      - 386EB7AA33C76CE671D6685F79512597F1FAB28EA46C8EC7D89E58340081E2BD
+    ExpectedSignatureInformation:
+      - Issuer: CN=VeriSign Class 3 Code Signing 2009-2 CA, OU=Terms of use at https://www.verisign.com/rpa (c)09, OU=VeriSign Trust Network, O="VeriSign, Inc.", C=US
+        Subject: CN=BitDefender SRL, OU=Digital ID Class 3 - Microsoft Software Validation v2, O=BitDefender SRL, L=Bucharest, S=Bucharest, C=RO
+        Type: Authenticode
+  - Path: '%PROGRAMFILES%\Bitdefender\Bitdefender Security App\BDReinit.exe'
+    Type: Sideloading
+    SHA256:
+      - 386EB7AA33C76CE671D6685F79512597F1FAB28EA46C8EC7D89E58340081E2BD
+    ExpectedSignatureInformation:
+      - Issuer: CN=VeriSign Class 3 Code Signing 2009-2 CA, OU=Terms of use at https://www.verisign.com/rpa (c)09, OU=VeriSign Trust Network, O="VeriSign, Inc.", C=US
+        Subject: CN=BitDefender SRL, OU=Digital ID Class 3 - Microsoft Software Validation v2, O=BitDefender SRL, L=Bucharest, S=Bucharest, C=RO
+        Type: Authenticode
+  - Path: '%PROGRAMFILES%\Bitdefender Antivirus Free\BDSubWiz.exe'
+    Type: Sideloading
+    SHA256:
+      - 2DA00DE67720F5F13B17E9D985FE70F10F153DA60C9AB1086FE58F069A156924
+  - Path: '%PROGRAMFILES%\Bitdefender Agent\%VERSION%\BDSubWiz.exe'
+    Type: Sideloading
+    SHA256:
+      - 2DA00DE67720F5F13B17E9D985FE70F10F153DA60C9AB1086FE58F069A156924
+  - Path: '%PROGRAMFILES%\Bitdefender Agent\%VERSION%\x64\BDSubWiz.exe'
+    Type: Sideloading
+    SHA256:
+      - 2DA00DE67720F5F13B17E9D985FE70F10F153DA60C9AB1086FE58F069A156924
+  - Path: '%PROGRAMFILES%\Bitdefender\Bitdefender Security\BDSubWiz.exe'
+    Type: Sideloading
+    SHA256:
+      - 2DA00DE67720F5F13B17E9D985FE70F10F153DA60C9AB1086FE58F069A156924
+  - Path: '%PROGRAMFILES%\Bitdefender\Bitdefender Security App\BDSubWiz.exe'
+    Type: Sideloading
+    SHA256:
+      - 2DA00DE67720F5F13B17E9D985FE70F10F153DA60C9AB1086FE58F069A156924
 Resources:
   - https://www.secureworks.com/research/shadowpad-malware-analysis
   - https://www.hexacorn.com/blog/2023/02/25/beyond-good-ol-run-key-part-141/
+  - https://www.rapid7.com/blog/post/tr-chrysalis-backdoor-dive-into-lotus-blossoms-toolkit/
+Acknowledgements:
+- Name: Daniel Koifman
+  Company: CardinalOps
+  Twitter: '@KoifSec'
+- Name: Wietze
+  Twitter: '@wietze'
 ---
 
