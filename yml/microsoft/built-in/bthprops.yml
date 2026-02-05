@@ -13,7 +13,7 @@ ExpectedVersionInformation:
   OriginalFilename: bluetooth.cpl
   ProductName: Microsoft® Windows® Operating System
 VulnerableExecutables:
-- Path: 
+- Path:
     - '%SYSTEM32%\fsquirt.exe'
     - '%SYSWOW64%\fsquirt.exe'
   Type: Sideloading
