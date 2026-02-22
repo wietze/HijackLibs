@@ -27,7 +27,7 @@ title: HijackLibs
     <link rel="stylesheet" href="{{'/assets/css/code.css' | relative_url}}">
     <link rel="stylesheet" href="{{'/assets/css/main.css' | relative_url}}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer">
-
+    <link rel="preload" href="{{'assets/font/SourceSans3-Regular.woff2' | relative_url}}" as="font" type="font/woff2" crossorigin>
 
     <script src="{{'/assets/js/main.js' | relative_url}}"></script>
     <script src="{{'/assets/js/search.js' | relative_url}}"></script>
@@ -67,7 +67,7 @@ title: HijackLibs
 
 
             <h2>What is this project about?</h2>
-            <p>This project provides an curated list of DLL Hijacking candidates. A mapping between DLLs and vulnerable executables is kept and can be searched via this website. Additionally, further metadata such as resources provide more context.</p><p>For defenders, this project can provide valuable information when trying to detect DLL Hijacking attempts. Although detecting DLL Hijacking isn't always without challenge, it is certainly possible to monitor for behaviour that may be indicative of abuse. To further support defenders, out-of-the-box Sigma rules are provided through this website. A <strong class="sigma">&sigma;</strong><a href="{{'/api/sigma_feed_image.yml' | relative_url}}">Sigma feed</a> containing detection rules for all entries part of this project is available too. </p><p>For red teamers, this project can help identify DLLs that can be used to achieve DLL Hijacking. The aim of this project is not to make it easy to abuse the recorded vulnerabilities; as such, PoCs, code templates or tutorials are not provided.</p>
+            <p>This project provides an curated list of DLL Hijacking candidates. A mapping between DLLs and vulnerable executables is kept and can be searched via this website. Additionally, further metadata such as resources provide more context.</p><p>For defenders, this project can provide valuable information when trying to detect DLL Hijacking attempts. Although detecting DLL Hijacking isn't always without challenge, it is certainly possible to monitor for behaviour that may be indicative of abuse. To further support defenders, out-of-the-box Sigma rules are provided through this website. Several <strong class="sigma">&sigma;</strong><a href="{{'/api/#detection-content' | relative_url}}">Sigma feeds</a> containing detection rules for all entries part of this project is available too. </p><p>For red teamers, this project can help identify DLLs that can be used to achieve DLL Hijacking. The aim of this project is not to make it easy to abuse the recorded vulnerabilities; as such, PoCs, code templates or tutorials are not provided.</p>
             <h2>How can I use this project's data?</h2>
             <p>This project offers a number of generated files, including JSON and CSV, containing all of the project's data. Because they are automatically updated to the latest version, they can be used in automated processes. More information can be found on the <a href="{{'/api/' | relative_url}}">API page</a>.
             <h2>How do I get involved?</h2>

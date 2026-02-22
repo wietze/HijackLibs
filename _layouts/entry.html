@@ -1,3 +1,7 @@
+---
+
+---
+{%- assign logo = '/assets/img/logo.svg' | relative_url %}
 {% assign types = page.VulnerableExecutables | group_by:"Type" -%}
 {% assign type_names = '' | split:',' -%}{% for type in types %}{% assign type_names = type_names | push:site.mapping[type.name]['title'] %}{%endfor%}
 {%- assign exes = page.VulnerableExecutables | group_by:"Path" | size -%}
@@ -38,9 +42,18 @@
 
 <body data-github-repo="{{site.repo}}">{% capture DLL %}<code>{{page.Name | escape}}</code>{% endcapture %}
     <article>
-        <header><div class="back"><i class="fa-solid fa-arrow-left" id="back-button"></i></div><h1>{{ page.Name | escape}}</h1><p class="subtitle">Part of the <img alt="DLL icon" src="/assets/img/dll.png" class="logo-inline"><a href="/">{{site.title}}</a> project.</p></header>
+        <div class="search-banner entry">
+            <header>
+                <div class="back"><i class="fa-solid fa-arrow-left light" id="back-button"></i></div>
+                <div class="logo entry">
+                    <a href="{{ '/' | relative_url }}"><img src="{{ logo }}" class="site-logo" alt="Logo"></a>
+                    <h1><a href="{{ '/' | relative_url }}">{{ site.title }}</a></h1>
+                </div>
+            </header>
+        </div>
+        <section><h1>{{ page.Name | escape}}</h1></section>
         <div class="description_wrapper">
-        <div class="section description">{% if page.Description %}
+        <div class="section description">{{DLL}} is vulnerable to DLL hijacking:{% if page.Description %}
             <div class="metadata"><div class="key">Description</div><div>{{page.Description | escape}}</div></div>{% endif %}
             <div class="metadata">
                 <div class="key" title="Type(s) of DLL Hijacking that applies.">DLL Hijacking type{%if types.size > 1%}s{%endif%}</div>
@@ -106,8 +119,8 @@
             {% if types.size > 1 %}<h3>{{site.mapping[type.name]['title']}}</h3>{% endif %}
             <ul class="files">{% for loc in type.items %}
                 <li><div class="vulnerable_exe"><div><a href="{{'/' | relative_url}}#app:{{loc.Path | url_encode | replace: "+", "%20"}}" title="Click to search for other DLL Hijacking candidates for {{loc.Path | split: "\" | last | escape}}."><code class="full-name">{{loc.Path | escape}}</code></a>{% if loc.Variable %} by changing <code>%{{loc.Variable}}%</code>{% endif %}</div>
-                        <div class="pills">{% if loc.AutoElevate %}
-                            <div class="pill uac" title="{{loc.Path | split: "\" | last | escape}} will automatically increase its integrity level from medium to high, granting itself wider system access, without showing a User Account Control (UAC) prompt (assuming default settings). Under specific cirumstances, this would allow an attacker to run malicious code with elevated privileges without the user being notified." ><img alt="UAC logo" src="{{'/assets/img/uac.png' | relative_url}}"> <strong>Auto Elevation</strong></div>{% endif %}{% if loc.PrivilegeEscalation == true %}
+                        <div class="pills small">{% if loc.AutoElevate %}
+                            <div class="pill  uac" title="{{loc.Path | split: "\" | last | escape}} will automatically increase its integrity level from medium to high, granting itself wider system access, without showing a User Account Control (UAC) prompt (assuming default settings). Under specific cirumstances, this would allow an attacker to run malicious code with elevated privileges without the user being notified." ><img alt="UAC logo" src="{{'/assets/img/uac.png' | relative_url}}"> <strong>Auto Elevation</strong></div>{% endif %}{% if loc.PrivilegeEscalation == true %}
                             <div class="pill privesc" title="{{loc.Path | split: "\" | last | escape}} runs or can run under a high integrity level (meaning it has wider system access). Under specific circumstances, this would allow an attacker to run malicious code from this elevated process."><i class="fa-solid fa-lock-open"></i> <strong>Privilege Escalation</strong></div>{% endif %}{% if loc.Condition %}
                             <div class="pill condition" title="The following is assumed:&#010;{{loc.Condition | escape}}"><i class="fa-solid fa-info-circle"></i> <strong>Preconditions</strong></div>{% endif %}
                             {% if loc.SHA256 %}

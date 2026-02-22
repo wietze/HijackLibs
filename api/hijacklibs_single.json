@@ -1,0 +1,34 @@
+---
+Note: Please use the rendered version of this file.
+---
+{"last-updated":"{{"now" | date: "%Y-%m-%d"}}", "items":[
+{%- assign x = site.entries | sort: "ExpectedLocations" | where_exp:"entry", "entry.ExpectedLocations" | group_by_exp: "entry","entry.ExpectedLocations | join: '¶' | downcase " %}
+{%- assign i = 0 %}
+{%- for group in x %}
+{%- assign filenames = group.name | split:'¶' %}
+{% if forloop.index > 1 %},{% endif %}{"expectedFolders": [
+        {%- for loc in filenames %}{% if forloop.index > 1 %},{% endif %}
+          {%- if loc contains '%programfiles%' -%}
+          "{{ loc   | replace: "%programfiles%", "c:\program files"
+                    | replace: "%version%", "*"
+                    | replace: '\', '\\\\'
+                }}\\*","{{ loc   | replace: "%programfiles%", "c:\program files (x86)"
+                      | replace: "%version%", "*"
+                      | replace: '\', '\\\\'
+                }}\\*"
+          {%- else -%}
+          "{{ loc   | replace: "%system32%", "c:\windows\system32"
+                    | replace: "%syswow64%", "c:\windows\syswow64"
+                    | replace: "%windir%", "c:\windows"
+                    | replace: "%programdata%", "c:\programdata"
+                    | replace: "%userprofile%", "c:\users\*"
+                    | replace: "%appdata%", "c:\users\*\appdata\roaming"
+                    | replace: "%localappdata%", "c:\users\*\appdata\local"
+                    | replace: "%version%", "*"
+                    | replace: '\', '\\\\'
+             }}\\*"
+          {%- endif %}
+        {%- endfor %}],
+  "files": ["{{ group.items | map:"Name" | join:'","' }}"]}
+{% endfor %}
+]}

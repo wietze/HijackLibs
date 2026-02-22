@@ -1,0 +1,56 @@
+---
+Note: Please use the rendered version of this file.
+---
+title: Possible DLL Hijacking
+id: f63cc1b6-356a-4d57-95d3-8af7db36741d
+status: experimental
+description: Detects possible DLL hijacking by looking for suspicious file writes of known DLL hijacking candidates to unexpected locations.
+references:
+    - http://hijacklibs.net
+author: "Wietze Beukema"
+date: {{"now" | date: "%Y-%m-%d"}}
+tags:
+    - attack.defense_evasion
+    - attack.T1574.001
+logsource:
+    product: windows
+    category: file_event
+detection:
+{%- assign x = site.entries | sort: "ExpectedLocations" | where_exp:"entry", "entry.ExpectedLocations" | group_by_exp: "entry","entry.ExpectedLocations| join: '|' | downcase " %}
+{%- assign i = 0 %}
+{%- for group in x %}
+{%- assign filenames = group.name | split:'|' %}
+    filter_{{i}}:
+        TargetFileName:
+        {%- for loc in filenames %}
+          {%- if loc contains '%programfiles%' %}
+          - '{{ loc   | replace: "%programfiles%", "c:\program files"
+                      | replace: "%version%", "*"
+                      | replace: "\*","\\\\*"
+                }}\*'
+          - '{{ loc   | replace: "%programfiles%", "c:\program files (x86)"
+                      | replace: "%version%", "*"
+                      | replace: "\*","\\\\*"
+                }}\*'
+          {%- else %}
+          - '{{ loc   | replace: "%system32%", "c:\windows\system32"
+                      | replace: "%syswow64%", "c:\windows\syswow64"
+                      | replace: "%windir%", "c:\windows"
+                      | replace: "%programdata%", "c:\programdata"
+                      | replace: "%appdata%", "c:\users\*\appdata\roaming"
+                      | replace: "%localappdata%", "c:\users\*\appdata\local"
+                      | replace: "%version%", "*"
+                      | replace: "\*","\\\\*"
+             }}\\*'
+          {%- endif %}
+        {%- endfor %}
+    selection_{{i}}:
+        TargetFileName:
+        {%- for item in group.items %}
+          - '*\{{item.Name}}'
+        {%- endfor %}
+{%- assign i = i | plus: 1 %}
+{% endfor %}
+    condition: {%assign range=i | minus: 1%}{%for j in (0..range)%}{% if forloop.index > 1 %} or {% endif %}(selection_{{j}} and not filter_{{j}}){%endfor%}
+falsepositives:
+    - False positives are likely. This rule is more suitable for hunting than for generating detections.

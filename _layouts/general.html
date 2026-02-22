@@ -1,0 +1,51 @@
+---
+title:
+description:
+---
+{%- assign logo = '/assets/img/logo.svg' | relative_url -%}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>{% if page.title %}{{ page.title }} | {{ site.title }}{% else %}{% else %}{{ site.title }}{% endif %}</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="{{page.description|replace:'__SITE__',site.title}}">
+    <meta http-equiv="Content-Security-Policy" content="{{ page.csp | default: "default-src 'self' https://cdnjs.cloudflare.com/ https://visit.hijacklibs.net/ ; img-src 'self' https://visit.hijacklibs.net/"}}">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="HijackLibs.net">
+    <meta property="og:image" content="{{'/assets/img/screenshot.png' | absolute_url}}">
+    <meta property="og:image:type" content="image/png">
+    <meta property="og:image:width" content="1920">
+    <meta property="og:image:height" content="1080">
+    <meta property="og:site_name" content="HijackLibs.net">
+
+    <link rel="canonical" href="{{ page.url | absolute_url }}">
+    <link rel="icon" type="image/x-icon" href="{{ site.favicon_location }}">
+    <link rel="sitemap" type="application/xml" title="Sitemap" href="{{ '/sitemap.xml' | absolute_url }}">
+    <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link rel="preload" href="{{'assets/font/SourceSans3-Regular.woff2' | relative_url}}" as="font" type="font/woff2" crossorigin>
+
+    <script src="{{ '/assets/js/main.js' | relative_url }}"></script>
+    <script src="{{ '/assets/js/visit.js' | relative_url }}" async></script>
+</head>
+
+<body data-github-repo="{{site.repo}}">
+    <article>
+        <div class="search-banner entry">
+            <header>
+                <div class="back"><i class="fa-solid fa-arrow-left light" id="back-button"></i></div>
+                <div class="logo entry">
+                    <a href="{{ '/' | relative_url }}"><img src="{{ logo }}" class="site-logo" alt="Logo"></a>
+                    <h1><a href="{{ '/' | relative_url }}">{{ site.title }}</a></h1>
+                </div>
+            </header>
+        </div>
+        <section>
+            {{ content }}
+        </section>
+    </article>
+</body>
+
+</html>

@@ -309,29 +309,26 @@ function generateHome() {
     // Show latest entries by default
     let latestItemsWrapper = document.createElement("div");
     latestItemsWrapper.classList.add('latest-items-wrapper');
-    let d = document.createElement("div")
+    let d = document.createElement("span")
     d.classList.add("headline")
-    d.innerText = "Latest entries:";
-    latestItemsWrapper.insertAdjacentElement('beforeend', d)
+    d.innerText = "Latest entries";
 
     let latestItems = document.createElement("div");
     latestItems.classList.add('latest-items');
     latestItemsWrapper.appendChild(latestItems);
+    latestItems.insertAdjacentElement('beforeend', d)
 
-    let vendorWrapper = document.createElement("div");
-    vendorWrapper.classList.add('latest-items-wrapper');
-    let d2 = document.createElement("div")
+    let d2 = document.createElement("span")
     d2.classList.add("headline")
-    d2.innerText = "By vendor:";
-    vendorWrapper.insertAdjacentElement('beforeend', d2)
+    d2.innerText = "By vendor";
 
-    let vendorItems = document.createElement("div");
-    vendorItems.classList.add('latest-items');
-    vendorWrapper.appendChild(vendorItems);
+    let vendorItems = document.createElement("div")
+    vendorItems.classList.add('latest-items')
+    latestItemsWrapper.appendChild(vendorItems)
+    vendorItems.insertAdjacentElement('beforeend', d2)
 
     // Update status bar
     document.getElementById('status').appendChild(latestItemsWrapper);
-    document.getElementById('status').appendChild(vendorWrapper);
     items = Object.keys(data).sort(function (a, b) { return data[a].date - data[b].date }).reverse()
     addLatestEntryPills(latestItems, items.slice(0, 10));
     addVendorPills(vendorItems, stats_vendor);

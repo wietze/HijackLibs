@@ -1,4 +1,4 @@
-title: Possible preparation for {{ include.page.Name }} DLL Hijacking
+                      | replace: "\*","\\\\*"title: Possible preparation for {{ include.page.Name }} DLL Hijacking
 id: {% include generate_uuid.yml page=include.page type=2 -%}
 status: experimental
 description: Detects possible DLL hijacking of {{ include.page.Name }} by looking for suspicious file writes of this DLL, to unexpected locations.
@@ -21,17 +21,20 @@ detection:
         TargetFileName:
 {% for loc in include.page.ExpectedLocations %}{% if loc contains '%PROGRAMFILES%' %}            - '{{ loc   | replace: "%PROGRAMFILES%", "c:\program files"
                         | replace: "%VERSION%", "*"
-                }}\*'
+                        | replace: "\*","\\\\*"
+                }}\\*'
             - '{{ loc   | replace: "%PROGRAMFILES%", "c:\program files (x86)"
                         | replace: "%VERSION%", "*"
-                }}\*'{% else %}            - '{{ loc    | replace: "%SYSTEM32%", "c:\windows\system32"
+                        | replace: "\*","\\\\*"
+                }}\\*'{% else %}            - '{{ loc    | replace: "%SYSTEM32%", "c:\windows\system32"
                          | replace: "%SYSWOW64%", "c:\windows\syswow64"
                          | replace: "%WINDIR%", "c:\windows"
                          | replace: "%PROGRAMDATA%", "c:\programdata"
                          | replace: "%APPDATA%", "c:\users\*\appdata\roaming"
                          | replace: "%LOCALAPPDATA%", "c:\users\*\appdata\local"
                          | replace: "%VERSION%", "*"
-                }}\*'{% endif %}
+                         | replace: "\*","\\\\*"
+                }}\\*'{% endif %}
 {% endfor %}{% endif %}
 {%- assign concat = include.page.ExpectedLocations | join "-" -%}
 {% if concat contains "SYSWOW" or concat contains "SYSTEM32" %}            - 'c:\windows\winsxs\*'

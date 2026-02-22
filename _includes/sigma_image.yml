@@ -21,17 +21,20 @@ detection:
         ImageLoaded:
 {% for loc in include.page.ExpectedLocations %}{% if loc contains '%PROGRAMFILES%' %}            - '{{ loc   | replace: "%PROGRAMFILES%", "c:\program files"
                         | replace: "%VERSION%", "*"
-                }}\*'
+                        | replace: "\*","\\\\*"
+                }}\\*'
             - '{{ loc   | replace: "%PROGRAMFILES%", "c:\program files (x86)"
                         | replace: "%VERSION%", "*"
-                }}\*'{% else %}            - '{{ loc    | replace: "%SYSTEM32%", "c:\windows\system32"
+                        | replace: "\*","\\\\*"
+                }}\\*'{% else %}            - '{{ loc    | replace: "%SYSTEM32%", "c:\windows\system32"
                          | replace: "%SYSWOW64%", "c:\windows\syswow64"
                          | replace: "%WINDIR%", "c:\windows"
                          | replace: "%PROGRAMDATA%", "c:\programdata"
                          | replace: "%APPDATA%", "c:\users\*\appdata\roaming"
                          | replace: "%LOCALAPPDATA%", "c:\users\*\appdata\local"
                          | replace: "%VERSION%", "*"
-                }}\*'{% endif %}
+                         | replace: "\*","\\\\*"
+                }}\\*'{% endif %}
 {% endfor %}{% endif %}
     condition: selection {% if include.page.ExpectedLocations %}and not filter{% endif %}
 falsepositives:
