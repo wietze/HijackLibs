@@ -631,6 +631,7 @@ div.search-banner input[type=text] {
     width: 100%;
     padding: 0.5em;
     font-size: medium;
+    box-sizing: border-box;
 }
 
 section,
