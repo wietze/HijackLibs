@@ -53,7 +53,7 @@
         </div>
         <section><h1>{{ page.Name | escape}}</h1></section>
         <div class="description_wrapper">
-        <div class="section description">{{DLL}} is vulnerable to DLL hijacking:{% if page.Description %}
+        <div class="section description">{{DLL}} can be used for DLL hijacking:{% if page.Description %}
             <div class="metadata"><div class="key">Description</div><div>{{page.Description | escape}}</div></div>{% endif %}
             <div class="metadata">
                 <div class="key" title="Type(s) of DLL Hijacking that applies.">DLL Hijacking type{%if types.size > 1%}s{%endif%}</div>
@@ -157,7 +157,7 @@
                 <div class="download-buttons">
                     <button class="button" data-filename="susp_dll_hijacking_{{page.Name | replace: '.', '-' | escape}}.yml" id="yaml-download" data-visit-click="YAML-Download" aria-pressed="false" tabindex="2"><i class="fa fa-file-download" aria-hidden="true"></i> Download YAML</button>
                 </div>
-                <div class="feed-note">Note that this rule is also included in the <a href="{{'/api/sigma_feed_image.yml' | relative_url}}" id="yaml-feed-url" data-visit-click="SIGMA-Download-feed">Sigma feed</a> that comprises all DLL Hijacking entries part of this project.</div>
+                <div class="feed-note">Note that this rule is also included in the <a href="{{'/api/#detection-content' | relative_url}}">Detection Content Feeds</a> that comprise all DLL Hijacking entries part of {{site.title}}.</div>
             </div>
 
         </section>

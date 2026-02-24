@@ -16,10 +16,11 @@ logsource:
     product: windows
     category: file_event
 detection:
-{%- assign x = site.entries | sort: "ExpectedLocations" | where_exp:"entry", "entry.ExpectedLocations" | group_by_exp: "entry","entry.ExpectedLocations| join: '|' | downcase " %}
+{%- assign x = site.entries | sort: "ExpectedLocations" | group_by_exp: "entry","entry.ExpectedLocations | default: [] | join: '|' | downcase " %}
 {%- assign i = 0 %}
 {%- for group in x %}
 {%- assign filenames = group.name | split:'|' %}
+{%- if filenames.size > 0%}
     filter_{{i}}:
         TargetFileName:
         {%- for loc in filenames %}
@@ -44,6 +45,7 @@ detection:
              }}\\*'
           {%- endif %}
         {%- endfor %}
+{%- endif %}
     selection_{{i}}:
         TargetFileName:
         {%- for item in group.items %}
@@ -51,6 +53,6 @@ detection:
         {%- endfor %}
 {%- assign i = i | plus: 1 %}
 {% endfor %}
-    condition: {%assign range=i | minus: 1%}{%for j in (0..range)%}{% if forloop.index > 1 %} or {% endif %}(selection_{{j}} and not filter_{{j}}){%endfor%}
+    condition: {%assign range=i | minus: 1%}{%for j in (0..range)%}{% if forloop.index > 1 %} or {% endif %}(selection_{{j}}{%if x[j].name.size > 0 %} and not filter_{{j}}{%endif%}){%endfor%}
 falsepositives:
     - False positives are likely. This rule is more suitable for hunting than for generating detections.

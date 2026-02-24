@@ -2,11 +2,11 @@
 Note: Please use the rendered version of this file.
 ---
 {"last-updated":"{{"now" | date: "%Y-%m-%d"}}", "items":[
-{%- assign x = site.entries | sort: "ExpectedLocations" | where_exp:"entry", "entry.ExpectedLocations" | group_by_exp: "entry","entry.ExpectedLocations | join: '¶' | downcase " %}
+{%- assign x = site.entries | sort: "ExpectedLocations"  | group_by_exp: "entry","entry.ExpectedLocations | default: [] | join: '¶' | downcase " %}
 {%- assign i = 0 %}
 {%- for group in x %}
 {%- assign filenames = group.name | split:'¶' %}
-{% if forloop.index > 1 %},{% endif %}{"expectedFolders": [
+  {% if forloop.index > 1 %},{%else%} {% endif %}{"expectedFolders": [
         {%- for loc in filenames %}{% if forloop.index > 1 %},{% endif %}
           {%- if loc contains '%programfiles%' -%}
           "{{ loc   | replace: "%programfiles%", "c:\program files"
@@ -30,5 +30,5 @@ Note: Please use the rendered version of this file.
           {%- endif %}
         {%- endfor %}],
   "files": ["{{ group.items | map:"Name" | join:'","' }}"]}
-{% endfor %}
+{%- endfor %}
 ]}

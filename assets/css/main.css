@@ -223,10 +223,16 @@ div.dll-types>div>span:not(.type) {
 }
 
 @media only screen and (max-width: 600px) {
+    body {
+        padding-top: 0;
+    }
 
     div.metadata,
     div.latest-items-wrapper {
         flex-wrap: wrap;
+    }
+    div.latest-items-wrapper {
+        flex-direction: column;
     }
 
     div.metadata>div {
@@ -439,10 +445,12 @@ header {
     margin-bottom: 0;
 }
 
-header>h1, header .logo.entry>h1 {
+header>h1,
+header .logo.entry>h1 {
     display: inline;
     margin: 0;
 }
+
 header .logo.entry {
     font-size: 0.9em;
 }
@@ -780,13 +788,13 @@ table tr:nth-child(odd) {
 .latest-items-wrapper {
     display: flex;
     flex-direction: row;
-    gap: 3px 0;
+    gap: 3px 3px;
 }
 
 .latest-items-wrapper>* {
     flex: 1;
     max-height: 10em;
-    overflow-y: scroll;
+    overflow-y: auto;
 }
 
 .latest-items {
@@ -1005,5 +1013,10 @@ a.clickable {
 
     ul.files li::before {
         color: white;
+    }
+
+    table .subheader {
+        color: black;
+        background-color: #bd945d;
     }
 }
