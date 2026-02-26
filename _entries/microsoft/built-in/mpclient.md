@@ -11,6 +11,8 @@ VulnerableExecutables:
   Type: Sideloading
 - Path: '%PROGRAMFILES%\Windows Defender\nissrv.exe'
   Type: Sideloading
+- Path: '%PROGRAMFILES%\Windows Defender\dlpuseragent.exe'
+  Type: Sideloading
 Resources:
 - https://www.sentinelone.com/blog/living-off-windows-defender-lockbit-ransomware-sideloads-cobalt-strike-through-microsoft-security-tool/
 - https://twitter.com/Sh0ckFR/status/1554021948967079936
