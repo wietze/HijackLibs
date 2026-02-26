@@ -1,0 +1,26 @@
+---
+Name: bthprops.cpl
+Author: Swachchhanda Shrawan Poudel
+Created: 2026-02-05
+Vendor: Microsoft
+ExpectedLocations:
+- '%SYSTEM32%'
+- '%SYSWOW64%'
+- '%WINDIR%\Prefetch'
+ExpectedVersionInformation:
+- CompanyName: Microsoft Corporation
+  FileDescription: Bluetooth Control Panel Applet
+  OriginalFilename: bluetooth.cpl
+  ProductName: Microsoft® Windows® Operating System
+VulnerableExecutables:
+- Path: '%SYSTEM32%\fsquirt.exe'
+  Type: Sideloading
+  SHA256:
+    - 7B9FD75D899E115FFB258E5FC92E99D5A0860153C1E4C9AFD6A406DD6B42345E
+Resources:
+- https://github.com/mhaskar/FsquirtCPLPoC
+- https://securelist.com/sidewinder-apt/114089/
+Acknowledgements:
+- Name: Swachchhanda Shrawan Poudel
+  Company: 'Nextron Systems'
+  Twitter: '@_swachchhanda_'
