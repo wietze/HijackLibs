@@ -1,0 +1,20 @@
+---
+Name: roboform-x64.dll
+Author: Rick Gatenby
+Created: 2026-02-03
+Vendor: Siber Systems
+ExpectedLocations:
+  - '%PROGRAMFILES%\Siber Systems\AI RoboForm\%VERSION%'
+VulnerableExecutables:
+  - Path: '%PROGRAMFILES%\Siber Systems\AI RoboForm\%VERSION%\robotaskbaricon-x64.exe'
+    Type: Sideloading
+    SHA256:
+      - 4f0d9b837001893dc083bcc77c709ea07ad1d0a48657c154760f996d16155f08
+Resources:
+  - https://www.trendmicro.com/en_us/research/25/b/updated-shadowpad-malware-leads-to-ransomware-deployment.html
+  - https://github.com/SigmaHQ/sigma/blob/master/rules/windows/image_load/image_load_side_load_robform.yml
+Acknowledgements:
+  - Name: Rick Gatenby
+    Company: CyberCX
+---
+
