@@ -1,0 +1,39 @@
+---
+Name: crashrpt.dll
+Author: Still Hsu
+Created: 2026-01-09
+Vendor: Idol
+ExpectedLocations:
+  - '%PROGRAMFILES%\MPC-HC\CrashReporter'
+ExpectedVersionInformation:
+  - CompanyName: 'Idol Software'
+    FileDescription: 'Crash reporting library'
+    FileVersion: '2.0.20.0'
+    InternalName: 'crashrpt'
+    LegalCopyright: 'Copyright (C) Idol Software 2018'
+    OriginalFilename: 'crashrpt.exe'
+    ProductName: 'Doctor Dump'
+    ProductVersion: '2.0.20.0'
+VulnerableExecutables:
+  - Path: '%PROGRAMFILES%\MPC-HC\mpc-hc.exe'
+    Type: 'Sideloading'
+    SHA256:
+      - a61260a5fae6e2cf0c103956df895359ab92f201f5b039cf09b5f8f6260d1fa5
+    ExpectedVersionInformation:
+      - CompanyName: 'MPC-HC Team'
+        FileDescription: 'MPC-HC'
+        InternalName: 'mpc-hc'
+        OriginalFilename: 'mpc-hc.exe'
+        ProductName: 'MPC-HC'
+  - Path: '%PROGRAMFILES%\MPC-HC\mpc-hc64.exe'
+    Type: 'Sideloading'
+    SHA256:
+      - f45eeaad935066a5a7f9a105e7464bf198d323cbf21b4ff5ccab3edb8b28c36d
+    ExpectedVersionInformation:
+      - CompanyName: 'MPC-HC Team'
+        FileDescription: 'MPC-HC'
+        InternalName: 'mpc-hc'
+        OriginalFilename: 'mpc-hc64.exe'
+        ProductName: 'MPC-HC'
+Resources:
+  - https://www.virustotal.com/gui/file/db35155d33b616d4f7c268e78c8179eb84378778a4b195df09a8c36f2e5eb38b
