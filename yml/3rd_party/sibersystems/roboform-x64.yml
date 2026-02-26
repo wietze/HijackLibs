@@ -4,7 +4,7 @@ Author: Rick Gatenby
 Created: 2026-02-03
 Vendor: Siber Systems
 ExpectedLocations:
-  - '%PROGRAMFILES%Siber Systems\AI RoboForm\%VERSION%'
+  - '%PROGRAMFILES%\Siber Systems\AI RoboForm\%VERSION%'
 VulnerableExecutables:
   - Path: '%PROGRAMFILES%\Siber Systems\AI RoboForm\%VERSION%\robotaskbaricon-x64.exe'
     Type: Sideloading
