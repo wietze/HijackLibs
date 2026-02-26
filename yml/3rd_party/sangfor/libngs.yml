@@ -1,0 +1,18 @@
+---
+Name: libngs.dll
+Author: Swachchhanda Shrawan Poudel
+Created: 2026-01-28
+Vendor: Sangfor
+ExpectedLocations:
+  - '%PROGRAMFILES%\Sangfor\SSL\RemoteAppClient\'
+VulnerableExecutables:
+  - Path: '%PROGRAMFILES%\Sangfor\SSL\RemoteAppClient\SRAPSession.exe'
+    Type: Sideloading
+    SHA256:
+      - 7b89e772d2c2ba49faa113ea1431a08103c8cec06015e141f2422c1a82690c15
+Resources:
+  - https://securelist.com/honeymyte-updates-coolclient-uses-browser-stealers-and-scripts/118664/
+Acknowledgements:
+  - Name: 'Swachchhanda Shrawan Poudel'
+    Company: 'Nextron Systems'
+    Twitter: '@_swachchhanda_'
