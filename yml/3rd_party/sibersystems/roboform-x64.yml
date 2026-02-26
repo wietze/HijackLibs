@@ -6,7 +6,6 @@ Vendor: Siber Systems
 ExpectedLocations:
   - '%PROGRAMFILES%Siber Systems\AI RoboForm\%VERSION%'
 VulnerableExecutables:
-  # yamllint disable-line rule:line-length
   - Path: '%PROGRAMFILES%\Siber Systems\AI RoboForm\%VERSION%\robotaskbaricon-x64.exe'
     Type: Sideloading
     SHA256:
