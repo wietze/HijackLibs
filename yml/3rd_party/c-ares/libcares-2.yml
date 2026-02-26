@@ -1,0 +1,15 @@
+---
+Name: libcares-2.dll
+Author: Wietze Beukema
+Created: 2026-02-26
+Vendor: Siber Systems
+ExpectedLocations:
+  - '%LOCALAPPDATA%\GitKraken\app-%VERSION%'
+VulnerableExecutables:
+  - Path: 'ahost.exe'
+    Type: Sideloading
+    SHA256:
+      - a52e245dd7937094711b10c479274a2cccea2dfb89f7d4c9f22879214718f92b
+Resources:
+  - https://www.trellix.com/en-us/blogs/research/hiding-in-plain-sight-multi-actor-ahost-exe-attacks/
+  - https://www.virustotal.com/gui/file/7c41ac7b5bf15e34d50d6abbe28254e94e6c21e0ccab9fa68aca05049a515758
