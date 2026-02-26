@@ -7,7 +7,6 @@ ExpectedLocations:
   - '%PROGRAMFILES%\Windows Kits\%VERSION%\bin\%VERSION%\x64\mdmerge.exe'
   - '%PROGRAMFILES%\Windows Kits\%VERSION%\bin\%VERSION%\x86\mdmerge.exe'
 VulnerableExecutables:
-  # yamllint disable-line rule:line-length
   - Path: 'mdmerge.exe'
     Type: Sideloading
     ExpectedVersionInformation:
