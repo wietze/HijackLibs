@@ -1,0 +1,25 @@
+---
+Name: ntprint.dll
+Author: SanSan
+Created: 2026-03-06
+Vendor: Microsoft
+ExpectedLocations:
+- '%SYSTEM32%'
+- '%SYSWOW64%'
+ExpectedSignatureInformation:
+- Subject: CN=Microsoft Windows, O=Microsoft Corporation, L=Redmond, S=Washington, C=US
+  Issuer: CN=Microsoft Windows Production PCA 2011, O=Microsoft Corporation, L=Redmond, S=Washington, C=US
+  Type: Catalog
+VulnerableExecutables:
+- Path: '%SYSTEM32%\ntprint.exe'
+  Type: Search Order
+  Condition: "Trigger via `ntprint.exe PSetupElevatedLegacyPrintDriverInstallW {}`"
+  ExpectedSignatureInformation:
+  - Subject: CN=Microsoft Windows, O=Microsoft Corporation, L=Redmond, S=Washington, C=US
+    Issuer: CN=Microsoft Windows Production PCA 2011, O=Microsoft Corporation, L=Redmond, S=Washington, C=US
+    Type: Catalog
+Resources:
+- https://www.hexacorn.com/blog/2025/10/06/ntprint-exe-lolbin/
+Acknowledgements:
+- Name: Adam
+  Twitter: '@hexacorn'
