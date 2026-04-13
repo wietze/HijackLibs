@@ -8,10 +8,12 @@ ExpectedLocations:
 VulnerableExecutables:
   - Path: PtWatchDog.exe
     SHA256:
-      - 75f2e752983a9f46082e7b35820f23db577a5aff9ad946b05b0d3871a9df686b
+      - 4ae061506627e7e7416d8f1e59161188106abe345606108143e773e9a82c8eef
     Type: Sideloading
 Resources:
   - https://www.ptsecurity.com/ww-en/analytics/pt-esc-threat-intelligence/space-pirates-tools-and-connections/
 Acknowledgements:
   - Name: Christiaan Beek
     Twitter: '@ChristiaanBeek'
+  - Name: Claudio Teixeira
+    Twitter: '@0xBOOODEAD'
