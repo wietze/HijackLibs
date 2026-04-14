@@ -4,7 +4,7 @@ Author: Austin Worline
 Created: 2026-04-14
 Vendor: N/A
 VulnerableExecutables:
-  - Path: '%PROGRAMFILES(x86)%\Volume2\Volume2.exe'
+  - Path: '%PROGRAMFILES%\Volume2\Volume2.exe'
     Type: 'Search Order'
     SHA256:
       - 80d715453068f16efe5a67f065307c385417d6b3c9142fc397c46f1851ede316
