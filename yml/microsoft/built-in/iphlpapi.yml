@@ -222,6 +222,40 @@ VulnerableExecutables:
   - Subject: CN=Microsoft Windows, O=Microsoft Corporation, L=Redmond, S=Washington, C=US
     Issuer: CN=Microsoft Windows Production PCA 2011, O=Microsoft Corporation, L=Redmond, S=Washington, C=US
     Type: Catalog
+- Path: '%LOCALAPPDATA%\Microsoft\OneDrive\Update\OneDriveSetup.exe'
+  Type: Sideloading
+  SHA256:
+  - d044df0e67952c40201d70abd676f9b4ce4b168d85ab538d269b6e55b08205a3
+  ExpectedSignatureInformation:
+  - Subject: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft Corporation
+    Issuer: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft Code Signing PCA 2010
+    Type: Authenticode
+  ExpectedVersionInformation:
+  - CompanyName: Microsoft Corporation
+    FileDescription: Microsoft OneDrive (64 bit) Setup
+    FileVersion: 24.015.0121.0003
+    InternalName: OneDriveSetup.exe
+    OriginalFilename: OneDriveSetup.exe
+    ProductName: Microsoft OneDrive
+    ProductVersion: 24.015.0121.0003
+  Condition: OneDriveSetup.exe statically imports iphlpapi.dll GetAdaptersInfo. Observed in 7 FUDCrypt side-load packages with unique malicious iphlpapi.dll payloads.
+- Path: '%PROGRAMFILES%\WindowsApps\Microsoft.MicrosoftOfficeHub_%VERSION%\WebViewHost\WebViewHost.exe'
+  Type: Sideloading
+  SHA256:
+  - 49a87a2d7ca47a0ebef027a9030d5cf2f7bb963e74bccfd3f79e86536277a5d8
+  ExpectedSignatureInformation:
+  - Subject: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft Corporation
+    Issuer: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft Code Signing PCA 2011
+    Type: Authenticode
+  ExpectedVersionInformation:
+  - CompanyName: Microsoft Corporation
+    FileDescription: Microsoft 365 (Office) App
+    FileVersion: 18.2311.1071.0
+    InternalName: WebViewHost.exe
+    OriginalFilename: WebViewHost.exe
+    ProductName: Microsoft 365 (Office)
+    ProductVersion: 18.2311.1071.0
+  Condition: WebViewHost.exe statically imports iphlpapi.dll GetAdaptersInfo. Observed in 5 FUDCrypt side-load packages with unique malicious iphlpapi.dll payloads.
 Resources:
 - https://wietze.github.io/blog/hijacking-dlls-in-windows
 - https://wietze.github.io/blog/save-the-environment-variables
@@ -231,6 +265,8 @@ Resources:
 - https://twitter.com/AndrewOliveau/status/1682185200862625792
 - https://x00.zip/playing-with-process-handles/
 - https://twitter.com/BSummerz/status/1860045985919205645
+- https://ctrlaltintel.com/research/FudCrypt-analysis-1/
+- https://learn.microsoft.com/en-us/answers/questions/f46df9f8-a9bb-4d1d-a11c-c0f6d02454b6/onedrivesetupexe-is-a-malware-autoupdate-without
 Acknowledgements:
 - Name: Wietze
   Twitter: '@wietze'
@@ -244,3 +280,5 @@ Acknowledgements:
   Twitter: '@B0bby_Tablez'
 - Name: Will Summerhill
   Twitter: '@BSummerz'
+- Name: Josh Allman
+  Twitter: '@xorjosh'
