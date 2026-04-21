@@ -61,8 +61,8 @@ VulnerableExecutables:
   SHA256:
   - 9783cdd475c54ec21a035b5035c80329fa14be830c71c7c133de06ed98ad86d8
   ExpectedSignatureInformation:
-  - Subject: jurisdictionC=US/jurisdictionST=Delaware/businessCategory=Private Organization/serialNumber=4969967, C=US, ST=California, L=San Jose, O=Zoom Video Communications, Inc., CN=Zoom Video Communications, Inc.
-    Issuer: C=US, O=DigiCert, Inc., CN=DigiCert Trusted G4 Code Signing RSA4096 SHA256 2021 CA1
+  - Subject: CN="Zoom Video Communications, Inc.", O="Zoom Video Communications, Inc.", L=San Jose, ST=California, C=US, SERIALNUMBER=4969967
+    Issuer: CN=DigiCert Trusted G4 Code Signing RSA4096 SHA256 2021 CA1, O="DigiCert, Inc.", C=US
     Type: Authenticode
   ExpectedVersionInformation:
   - CompanyName: Zoom Video Communications, Inc.
