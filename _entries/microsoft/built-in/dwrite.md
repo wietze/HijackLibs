@@ -29,10 +29,130 @@ VulnerableExecutables:
   - Subject: CN=Microsoft Windows, O=Microsoft Corporation, L=Redmond, S=Washington, C=US
     Issuer: CN=Microsoft Windows Production PCA 2011, O=Microsoft Corporation, L=Redmond, S=Washington, C=US
     Type: Catalog
+- Path: '%LOCALAPPDATA%\Discord\app-%VERSION%\Discord.exe'
+  Type: Sideloading
+  SHA256:
+  - 9ad6d3dd940f376a2da712137845c9da74ebae0f2d96e6d56f91d40b62e9e685
+  ExpectedSignatureInformation:
+  - Subject: C=US, ST=California, L=San Francisco, O=Discord Inc., CN=Discord Inc.
+    Issuer: C=US, O=DigiCert, Inc., CN=DigiCert Trusted G4 Code Signing RSA4096 SHA384 2021 CA1
+    Type: Authenticode
+  ExpectedVersionInformation:
+  - CompanyName: Discord Inc.
+    FileDescription: Discord
+    FileVersion: 1.0.9169
+    InternalName: Discord.exe
+    OriginalFilename: Discord.exe
+    ProductName: Discord
+    ProductVersion: 1.0.9169
+  Condition: Discord.exe statically imports dwrite.dll DWriteCreateFactory. Observed in 1 FUDCrypt side-load package.
+- Path: '%LOCALAPPDATA%\Framer\app-%VERSION%\Framer.exe'
+  Type: Sideloading
+  SHA256:
+  - d0b1bd3840030d2080ad62eef3a50f47a46fbeebbda51d5672be370690014ef8
+  ExpectedSignatureInformation:
+  - Subject: C=NL, ST=Noord-Holland, L=Amsterdam, O=Framer B.V., CN=Framer B.V.
+    Issuer: C=BE, O=GlobalSign nv-sa, CN=GlobalSign GCC R45 EV CodeSigning CA 2020
+    Type: Authenticode
+  ExpectedVersionInformation:
+  - CompanyName: Framer B.V.
+    FileDescription: Framer
+    FileVersion: 2024.45.0
+    InternalName: Framer
+    ProductName: Framer
+    ProductVersion: 2024.45.0
+  Condition: Framer.exe statically imports dwrite.dll DWriteCreateFactory. Observed in 4 FUDCrypt side-load packages.
+- Path: '%LOCALAPPDATA%\slack\app-%VERSION%\slack.exe'
+  Type: Sideloading
+  SHA256:
+  - 843f24b6155c6bf363cf16ffa28d26484a4486cdb1658c71c7d2a449d4f3ad23
+  ExpectedSignatureInformation:
+  - Subject: C=US, ST=California, L=San Francisco, O=Slack Technologies, LLC, CN=Slack Technologies, LLC
+    Issuer: C=US, O=DigiCert, Inc., CN=DigiCert Trusted G4 Code Signing RSA4096 SHA384 2021 CA1
+    Type: Authenticode
+  ExpectedVersionInformation:
+  - CompanyName: Slack Technologies Inc.
+    FileDescription: Slack
+    FileVersion: 4.41.97
+    InternalName: Slack
+    OriginalFilename: Slack.exe
+    ProductName: Slack
+    ProductVersion: 4.41.97
+  Condition: slack.exe statically imports dwrite.dll DWriteCreateFactory. Observed in 1 FUDCrypt side-load package.
+- Path: '%LOCALAPPDATA%\Programs\Evernote\Evernote.exe'
+  Type: Sideloading
+  SHA256:
+  - f3e92fc9b1d1a14e24656660b839fc37c0d53af8a73dadc6698751f096f8c89b
+  ExpectedSignatureInformation:
+  - Subject: C=US, ST=California, L=San Diego, O=Evernote Corporation, CN=Evernote Corporation
+    Issuer: C=US, O=Entrust, Inc., CN=Entrust Extended Validation Code Signing CA - EVCS2
+    Type: Authenticode
+  ExpectedVersionInformation:
+  - CompanyName: Evernote Corporation
+    FileDescription: Evernote
+    FileVersion: 10.116.3.20241119164157
+    InternalName: Evernote
+    ProductName: Evernote
+    ProductVersion: 10.116.3.20241119164157
+  Condition: Evernote.exe statically imports dwrite.dll DWriteCreateFactory. Observed in 1 FUDCrypt side-load package.
+- Path: '%LOCALAPPDATA%\Programs\Canva\Canva.exe'
+  Type: Sideloading
+  SHA256:
+  - 8c2d451098e847fa5498e3bffc8ddf93cdbc150355a7b6568e0984568eed4faa
+  ExpectedSignatureInformation:
+  - Subject: C=AU, ST=New South Wales, O=Canva, CN=Canva
+    Issuer: C=GB, O=Sectigo Limited, CN=Sectigo Public Code Signing CA R36
+    Type: Authenticode
+  ExpectedVersionInformation:
+  - CompanyName: Canva Pty Ltd
+    FileDescription: Canva
+    FileVersion: 1.97.0
+    InternalName: Canva
+    ProductName: Canva
+    ProductVersion: 1.97.0.0
+  Condition: Canva.exe statically imports dwrite.dll DWriteCreateFactory. Observed in 1 FUDCrypt side-load package.
+- Path: '%LOCALAPPDATA%\Programs\Session\Session.exe'
+  Type: Sideloading
+  SHA256:
+  - ea54242618c2307e24722d47a4ef5a9fe84c7025a2e7dd3fbaa76e057bf7c5a0
+  ExpectedVersionInformation:
+  - CompanyName: Oxen Labs
+    FileDescription: Session
+    FileVersion: 1.14.2
+    InternalName: Session
+    ProductName: Session
+    ProductVersion: 1.14.2.0
+  Condition: Session.exe statically imports dwrite.dll DWriteCreateFactory. Observed in 1 FUDCrypt side-load package.
+- Path: '%LOCALAPPDATA%\Programs\Microsoft VS Code\Code.exe'
+  Type: Sideloading
+  SHA256:
+  - 0fd1395782bdfafc903563f0c4c9a06b289348f2f01bf8d448cea941dce68da9
+  ExpectedSignatureInformation:
+  - Subject: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft Corporation
+    Issuer: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft Code Signing PCA 2011
+    Type: Authenticode
+  ExpectedVersionInformation:
+  - CompanyName: Microsoft Corporation
+    FileDescription: Visual Studio Code
+    FileVersion: 1.74.2
+    InternalName: electron.exe
+    OriginalFilename: electron.exe
+    ProductName: Visual Studio Code
+    ProductVersion: 1.74.2
+  Condition: Code.exe statically imports dwrite.dll DWriteCreateFactory. Observed in 1 FUDCrypt side-load package.
 Resources:
 - https://wietze.github.io/blog/hijacking-dlls-in-windows
+- https://ctrlaltintel.com/research/FudCrypt-analysis-1/
+- https://code.visualstudio.com/docs/setup/windows
+- https://slack.com/help/articles/212475728-Deploy-Slack-via-Microsoft-Installer
+- https://www.framer.com/downloads/
+- https://dev.evernote.com/documentation/local/chapters/windows.php
+- https://docs.getsession.org/session-messenger/installing-session
+- https://www.canva.com/download/windows/
 Acknowledgements:
 - Name: Wietze
   Twitter: '@wietze'
+- Name: Josh Allman
+  Twitter: '@xorjosh'
 ---
 

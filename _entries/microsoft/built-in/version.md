@@ -243,16 +243,70 @@ VulnerableExecutables:
     - Type: Authenticode
       Subject: CN=Microsoft Windows,O=Microsoft Corporation,L=Redmond,ST=Washington,C=US
       Issuer: CN=Microsoft Windows Production PCA 2011,O=Microsoft Corporation,L=Redmond,ST=Washington,C=US
+- Path: '%LOCALAPPDATA%\Microsoft\OneDrive\%VERSION%\Microsoft.SharePoint.exe'
+  Type: Sideloading
+  SHA256:
+  - a382e94c77e0c29a1e36b816d68030966446ea154026731d576a93c80caa0420
+  ExpectedSignatureInformation:
+  - Subject: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft Corporation
+    Issuer: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft Code Signing PCA 2010
+    Type: Authenticode
+  ExpectedVersionInformation:
+  - CompanyName: Microsoft Corporation
+    FileDescription: Microsoft SharePoint
+    FileVersion: 24.015.0121.0003
+    InternalName: Client Application
+    OriginalFilename: Microsoft.SharePoint.exe
+    ProductName: Microsoft SharePoint
+    ProductVersion: 24.015.0121.0003
+  Condition: Microsoft.SharePoint.exe statically imports version.dll. Observed in 21 FUDCrypt side-load packages with unique malicious version.dll payloads.
+- Path: '%PROGRAMFILES%\IObit\IObit Unlocker\IObitUnlocker.exe'
+  Type: Sideloading
+  SHA256:
+  - eaa9dc1c9dc8620549fee54d81399488292349d2c8767b58b7d0396564fb43e7
+  ExpectedSignatureInformation:
+  - Subject: C=CN, ST=Sichuan, L=Chengdu, O=IObit CO., LTD, CN=IObit CO., LTD
+    Issuer: C=US, O="DigiCert, Inc.", CN=DigiCert Trusted G4 Code Signing RSA4096 SHA384 2021 CA1
+    Type: Authenticode
+  ExpectedVersionInformation:
+  - CompanyName: IObit CO., LTD
+    FileDescription: IObit Unlocker
+    InternalName: IObitUnlocker
+    OriginalFilename: IObitUnlocker.exe
+    ProductName: IObit Unlocker
+  Condition: IObitUnlocker.exe statically imports version.dll VerQueryValueA, VerQueryValueW, GetFileVersionInfoSizeA, GetFileVersionInfoSizeW, GetFileVersionInfoA, and GetFileVersionInfoW.
+- Path: '%PROGRAMFILES%\CCleaner\CCleanerBugReport.exe'
+  Type: Sideloading
+  SHA256:
+  - f1db698c68543c49d9a19e5725e72a96535a06e787915076d55dfe960a770f8a
+  ExpectedSignatureInformation:
+  - Subject: C=GB, L=London, O=PIRIFORM SOFTWARE LIMITED, CN=PIRIFORM SOFTWARE LIMITED
+    Issuer: C=US, O=DigiCert, Inc., CN=DigiCert Trusted G4 Code Signing RSA4096 SHA384 2021 CA1
+    Type: Authenticode
+  ExpectedVersionInformation:
+  - CompanyName: Gen Digital Inc. All rights reserved.
+    FileDescription: CCleaner Bug Report
+    FileVersion: 1.0.0.1
+    InternalName: CCleanerBugReport
+    OriginalFilename: CCleanerBugReport.exe
+    ProductVersion: 1.0.0.1
+  Condition: Executable metadata identifies OriginalFilename as CCleanerBugReport.exe and it statically imports version.dll. Observed in 68 FUDCrypt side-load packages with unique malicious version.dll payloads.
 Resources:
 - https://securityintelligence.com/posts/windows-features-dll-sideloading/
 - https://github.com/xforcered/WFH
 - https://twitter.com/an0n_r0/status/1544472352657915904
 - https://www.cyjax.com/resources/blog/a-sting-on-bing-bumblebee-delivered-through-bing-seo-poisoning-campaign/
 - https://www.virustotal.com/gui/file/96480ef5ccfa8fcb0646538c440103d97ab741ed83f4c2bcb7b4717569f88770/community
+- https://ctrlaltintel.com/research/FudCrypt-analysis-1/
+- https://www.iobit.com/en/iobit-unlocker
+- https://www.iobit.com/product-manuals/unlocker-help
+- https://community.ccleaner.com/t/c-program-files-ccleaner-ccleanerbugreport-exe-as-part-of-v6-04-pro/77580
 Acknowledgements:
 - Name: Chris Spehn
   Twitter: '@ConsciousHacker'
 - Name: an0n
   Twitter: '@an0n_r0'
+- Name: Josh Allman
+  Twitter: '@xorjosh'
 ---
 
