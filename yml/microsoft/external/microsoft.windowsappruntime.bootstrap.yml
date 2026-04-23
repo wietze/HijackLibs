@@ -21,6 +21,7 @@ VulnerableExecutables:
     Condition: 'kwpswnsserver.exe loads microsoft.windowsappruntime.bootstrap.dll via the MddBootstrapInitialize2 export.'
 Resources:
   - https://www.acronis.com/en/tru/posts/same-packet-different-magic-mustang-panda-hits-indias-banking-sector-and-korea-geopolitics/
+  - https://www.virustotal.com/gui/file/6cd52ea299e99e3cf4a175b83a35b5a2516ce44a2c3c43b9d7a152753258998c
 Acknowledgements:
   - Name: Swachchhanda Shrawan Poudel
     Company: Nextron Systems
