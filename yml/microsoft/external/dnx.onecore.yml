@@ -7,7 +7,7 @@ ExpectedLocations:
   - '%PROGRAMFILES%\Microsoft Web Tools\DNX\'
   - 'C:\Users\%VERSION%\.dnx\runtimes\%VERSION%\bin\'
 VulnerableExecutables:
-  - Path: 
+  - Path:
       - 'C:\Users\%VERSION%\.dnx\runtimes\%VERSION%\bin\dnx.exe'
       - 'C:\Program Files\Microsoft Web Tools\DNX\\%VERSION%\bin\dnx.exe'
     Type: Sideloading
