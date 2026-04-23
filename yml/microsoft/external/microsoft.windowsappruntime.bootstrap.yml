@@ -1,0 +1,19 @@
+---
+Name: microsoft.windowsappruntime.bootstrap.dll
+Author: Swachchhanda Shrawan Poudel
+Created: 2026-04-23
+Vendor: Microsoft
+ExpectedLocations:
+  - '%PROGRAMFILES%\WindowsApps\Microsoft.WindowsAppRuntime.%VERSION%'
+  - '%SYSTEM32%'
+VulnerableExecutables:
+  - Path: 'C:\Users\Public\Documents\kwpswnsserver.exe'
+    Type: Sideloading
+    SHA256:
+      - 'cc0ff7e25ea686171919575916e2d9ebaeb5800a063f370a6980ea791f8851b8'
+    Condition: 'kwpswnsserver.exe (a renamed Microsoft-signed binary) loads microsoft.windowsappruntime.bootstrap.dll via the MddBootstrapInitialize2 export. Observed in Mustang Panda (LOTUSLITE) campaigns targeting India and South Korea using lure filenames matching geopolitical themes.'
+Resources:
+  - https://www.acronis.com/en/tru/posts/same-packet-different-magic-mustang-panda-hits-indias-banking-sector-and-korea-geopolitics/
+Acknowledgements:
+  - Name: Swachchhanda Shrawan Poudel
+    Company: Nextron Systems
