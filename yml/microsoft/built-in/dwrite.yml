@@ -140,6 +140,21 @@ VulnerableExecutables:
     ProductName: Visual Studio Code
     ProductVersion: 1.74.2
   Condition: Code.exe statically imports dwrite.dll DWriteCreateFactory. Observed in 1 FUDCrypt side-load package.
+- Path: '%LOCALAPPDATA%\element-desktop\app-%VERSION%\Element.exe'
+  Type: Sideloading
+  Condition: Element.exe statically imports dwrite.dll DWriteCreateFactory. Observed in 2 FUDCrypt side-load packages.
+- Path: '%LOCALAPPDATA%\GitHubDesktop\app-%VERSION%\GitHubDesktop.exe'
+  Type: Sideloading
+  Condition: GitHubDesktop.exe statically imports dwrite.dll DWriteCreateFactory. Observed in 1 FUDCrypt side-load package.
+- Path: '%LOCALAPPDATA%\Programs\GoLogin\GoLogin.exe'
+  Type: Sideloading
+  Condition: GoLogin.exe statically imports dwrite.dll DWriteCreateFactory. Observed in 1 FUDCrypt side-load package.
+- Path: '%LOCALAPPDATA%\Programs\Notion\Notion.exe'
+  Type: Sideloading
+  Condition: Notion.exe statically imports dwrite.dll DWriteCreateFactory. Observed in FUDCrypt side-load packaging.
+- Path: '%PROGRAMFILES%\Obsidian\Obsidian.exe'
+  Type: Sideloading
+  Condition: Obsidian.exe statically imports dwrite.dll DWriteCreateFactory. Observed in FUDCrypt side-load packaging.
 Resources:
 - https://wietze.github.io/blog/hijacking-dlls-in-windows
 - https://ctrlaltintel.com/research/FudCrypt-analysis-1/
@@ -149,6 +164,11 @@ Resources:
 - https://dev.evernote.com/documentation/local/chapters/windows.php
 - https://docs.getsession.org/session-messenger/installing-session
 - https://www.canva.com/download/windows/
+- https://docs.element.io/latest/element-server-suite-classic/administration/configuring-element-desktop/
+- https://docs.github.com/en/desktop/installing-and-configuring-github-desktop/installing-github-desktop
+- https://gologin.com/docs/getting-started/setup/
+- https://www.notion.com/help/deploy-notion-for-windows
+- https://help.obsidian.md/install
 Acknowledgements:
 - Name: Wietze
   Twitter: '@wietze'
