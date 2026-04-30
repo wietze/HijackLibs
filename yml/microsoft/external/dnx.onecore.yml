@@ -1,0 +1,24 @@
+---
+Name: dnx.onecore.dll
+Author: Swachchhanda Shrawan Poudel
+Created: 2026-04-23
+Vendor: Microsoft
+ExpectedLocations:
+  - '%PROGRAMFILES%\Microsoft Web Tools\DNX\'
+  - 'C:\Users\%VERSION%\.dnx\runtimes\%VERSION%\bin\'
+VulnerableExecutables:
+  - Path: 'dnx.exe'
+    Type: Sideloading
+    SHA256:
+      - 'af31ebe9085df408bedcf8f027fb60389897e5c8d3b0e9695fea29774f9d3aec'
+    ExpectedVersionInformation:
+      - CompanyName: 'Microsoft Corporation'
+        FileVersion: '1.0.0.11009'
+        InternalName: 'dnx.exe'
+        OriginalFilename: 'dnx.exe'
+    Condition: 'dnx.exe uses LoadLibraryExW and GetProcAddress to dynamically load dnx.onecore.dll via the DnxMain export.'
+Resources:
+  - https://www.acronis.com/en/tru/posts/same-packet-different-magic-mustang-panda-hits-indias-banking-sector-and-korea-geopolitics/
+Acknowledgements:
+  - Name: Swachchhanda Shrawan Poudel
+    Company: Nextron Systems
