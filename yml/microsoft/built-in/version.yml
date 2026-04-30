@@ -291,6 +291,9 @@ VulnerableExecutables:
     OriginalFilename: CCleanerBugReport.exe
     ProductVersion: 1.0.0.1
   Condition: Executable metadata identifies OriginalFilename as CCleanerBugReport.exe and it statically imports version.dll. Observed in 68 FUDCrypt side-load packages with unique malicious version.dll payloads.
+- Path: '%PROGRAMFILES%\Cisco Spark\CiscoCollabHost.exe'
+  Type: Sideloading
+  Condition: CiscoCollabHost.exe (Webex App) statically imports version.dll. Observed in FUDCrypt side-load packaging.
 Resources:
 - https://securityintelligence.com/posts/windows-features-dll-sideloading/
 - https://github.com/xforcered/WFH
@@ -301,6 +304,7 @@ Resources:
 - https://www.iobit.com/en/iobit-unlocker
 - https://www.iobit.com/product-manuals/unlocker-help
 - https://community.ccleaner.com/t/c-program-files-ccleaner-ccleanerbugreport-exe-as-part-of-v6-04-pro/77580
+- https://help.webex.com/article/dluqwo/Executable-files-used-by-Webex-App-on-Windows
 Acknowledgements:
 - Name: Chris Spehn
   Twitter: '@ConsciousHacker'
