@@ -8,6 +8,13 @@ ExpectedLocations:
 VulnerableExecutables:
   - Path: 'hpbprndi.exe'
     Type: Sideloading
+    ExpectedVersionInformation:
+      - LegalCopyright: '2006 - 2008 (c) Hewlett-Packard. All rights reserved.'
+        FileDescription: Print Driver Installer
+        InternalName: hpbprndi.exe
+        OriginalFilename: DeviceInstallApp.exe
+        ProductName: Print Driver Installer
+        FileVersion: '7.4.0.2'
     SHA256:
       - '34b7df7919dbbe031b5d802accb566ce6e91df4155b1858c3c81e4c003f1168c'
 Resources:
