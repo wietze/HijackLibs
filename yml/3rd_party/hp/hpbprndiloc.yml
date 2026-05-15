@@ -4,7 +4,7 @@ Author: Swachchhanda Shrawan Poudel
 Created: 2026-05-15
 Vendor: HP
 ExpectedLocations:
-  - '%LOCALAPPDATA%\Programs\HP\Printer\Driver'
+  - '%PROGRAMFILES%\Hewlett-Packard\%VERSION%'
 VulnerableExecutables:
   - Path: 'hpbprndi.exe'
     Type: Sideloading
