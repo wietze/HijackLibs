@@ -1,0 +1,18 @@
+---
+Name: hpbprndiLOC.dll
+Author: Swachchhanda Shrawan Poudel
+Created: 2026-05-15
+Vendor: HP
+ExpectedLocations:
+  - '%LOCALAPPDATA%\Programs\HP\Printer\Driver'
+VulnerableExecutables:
+  - Path: 'hpbprndi.exe'
+    Type: Sideloading
+    SHA256:
+      - '34b7df7919dbbe031b5d802accb566ce6e91df4155b1858c3c81e4c003f1168c'
+Resources:
+  - https://r136a1.dev/2026/01/14/command-and-evade-turlas-kazuar-v3-loader/
+  - https://github.com/TheEnergyStory/LoadLibraryControlFlowRedirection
+Acknowledgements:
+  - Name: Swachchhanda Shrawan Poudel
+    Company: Nextron Systems
