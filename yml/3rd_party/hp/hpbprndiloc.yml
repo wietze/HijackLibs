@@ -1,0 +1,25 @@
+---
+Name: hpbprndiloc.dll  # hpbprndiLOC.dll is the real name of the DLL
+Author: Swachchhanda Shrawan Poudel
+Created: 2026-05-15
+Vendor: HP
+ExpectedLocations:
+  - '%PROGRAMFILES%\Hewlett-Packard\%VERSION%'
+VulnerableExecutables:
+  - Path: 'hpbprndi.exe'
+    Type: Sideloading
+    ExpectedVersionInformation:
+      - LegalCopyright: '2006 - 2008 (c) Hewlett-Packard. All rights reserved.'
+        FileDescription: Print Driver Installer
+        InternalName: hpbprndi.exe
+        OriginalFilename: DeviceInstallApp.exe
+        ProductName: Print Driver Installer
+        FileVersion: '7.4.0.2'
+    SHA256:
+      - '34b7df7919dbbe031b5d802accb566ce6e91df4155b1858c3c81e4c003f1168c'
+Resources:
+  - https://r136a1.dev/2026/01/14/command-and-evade-turlas-kazuar-v3-loader/
+  - https://github.com/TheEnergyStory/LoadLibraryControlFlowRedirection
+Acknowledgements:
+  - Name: Swachchhanda Shrawan Poudel
+    Company: Nextron Systems
