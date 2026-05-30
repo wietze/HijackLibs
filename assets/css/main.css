@@ -293,7 +293,7 @@ div.dll-types>div>span:not(.type) {
 
     @media (prefers-color-scheme: dark) {
         body {
-            background-color: #333 !important;
+            background-color: #212121 !important;
         }
     }
 }
@@ -660,7 +660,7 @@ button {
 }
 
 .yaml-button {
-    background: #333 !important;
+    background: #212121 !important;
     padding: 5px 20px;
     color: white;
     margin-bottom: 0;
@@ -1001,7 +1001,7 @@ a.clickable {
 
 @media (prefers-color-scheme: dark) {
     :root {
-        --card-border-colour: color-mix(in srgb, var(--theme-colour) 49%, rgb(0, 0, 0));
+        --card-border-colour: color-mix(in srgb, var(--theme-colour) 40%, rgb(0, 0, 0));
     }
 
     body {
@@ -1108,7 +1108,7 @@ a.clickable {
     }
 
     .card, .metadata-box {
-       background-color: #333 !important;
+       background-color: #212121 !important;
     }
 }
 
