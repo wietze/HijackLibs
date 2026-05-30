@@ -171,6 +171,8 @@ body {
     line-height: 1.1em;
     margin: 0;
     overflow-y: scroll;
+    background-color: #efefef;
+    background-color: color-mix(in srgb, var(--theme-colour) 1%, rgb(250, 250, 250));
     /* padding-top: 1em; */
 }
 
@@ -192,7 +194,7 @@ p {
 }
 
 mark {
-    background: #fac013;
+    background: #fffb00;
     color: inherit;
 }
 
@@ -240,9 +242,6 @@ div.dll-types>div>span:not(.type) {
     div.latest-items-wrapper {
         flex-wrap: wrap;
     }
-    div.latest-items-wrapper {
-        flex-direction: column;
-    }
 
     div.metadata {
         padding: 0 !important;
@@ -259,7 +258,11 @@ div.dll-types>div>span:not(.type) {
         gap: 0 10px;
     }
 
-    div.cards-flex, div.yaml-controls {
+    div.cards-flex {
+        flex-direction: column-reverse;
+    }
+
+    .metadata-box , div.yaml-controls, div.latest-items-wrapper {
         flex-direction: column;
     }
 
@@ -273,8 +276,8 @@ div.dll-types>div>span:not(.type) {
         height: 0px !important;
     }
 
-    .metadata-box {
-        flex-direction: column;
+    .card h2 > i {
+        display: none;
     }
 
     .description > .metadata {
@@ -282,6 +285,16 @@ div.dll-types>div>span:not(.type) {
     }
     .card > hr {
         margin: 0.5em 0 !important;
+    }
+
+    body {
+        background-color: #fff !important;
+    }
+
+    @media (prefers-color-scheme: dark) {
+        body {
+            background-color: #333 !important;
+        }
     }
 }
 
@@ -295,8 +308,8 @@ div.key {
     /* font-size: x-small; */
     background: var(--theme-colour);
     color: white;
-    padding: 4px 10px;
-    border-radius: 3px;
+    padding: 1px 8px;
+    border-radius: var(--radius);
     display: flex;
     flex-direction: row;
     gap: 0 2px;
@@ -550,7 +563,6 @@ ul.files {
 
 ul.dirs>li,
 ul.files>li {
-    padding-left: 5px;
     margin: 2px 0;
 }
 
@@ -566,7 +578,7 @@ ul.files li::before {
 
 ul.dirs li::before {
     content: "\0f07c";
-    color: orange;
+    color: #e6b967;
 }
 
 ul.files li::before {
@@ -600,7 +612,8 @@ button.button {
 
 button.button:hover {
     background: var(--text-colour);
-    color: var(--background-colour);
+    color: var(--background-colour);/* fallback for older browser */
+    color: contrast-color(var(--text-colour));
     transition: all .2s ease-in;
 }
 
@@ -647,7 +660,7 @@ button {
 }
 
 .yaml-button {
-    background: #333;
+    background: #333 !important;
     padding: 5px 20px;
     color: white;
     margin-bottom: 0;
@@ -766,9 +779,12 @@ table tr:nth-child(odd) {
 .result-row {
     display: flex;
     flex-wrap: wrap;
-    margin-bottom: 3px;
-    padding: 0 5px;
+    margin: 0px;
+    padding: 0px;
     flex: 1;
+    gap: 1px 3px;
+    align-items: anchor-center;
+    justify-content: end;
 }
 
 .result-row-exe {
@@ -787,26 +803,27 @@ table tr:nth-child(odd) {
 }
 
 #results li:hover {
-    background-color: rgba(225, 105, 50, 0.1) !important;
+    background-color: var(--card-border-colour) !important;
 }
 
 #results li:nth-child(odd) {
     background-color: #f7f7f7;
 }
 
-#results li::before {
+#results li>div>a::before {
     content: '';
     display: inline-block;
     height: 20px;
     width: 20px;
     background-size: contain;
+    vertical-align: center;
 }
 
 .exe-file::before {
     background-image: url(../img/exe.png);
 }
 
-.dll-file::before,
+.dll-file>div>a::before,
 .pill.results-dll>a::before {
     background-image: url(../img/dll.png);
 }
@@ -816,8 +833,9 @@ table tr:nth-child(odd) {
 }
 
 .result-row .exe {
-    background: #ff9d46;
-    color: black;
+    background-color: var(--theme-colour);
+    color: black; /* fallback for older browser */
+    color: contrast-color(var(--theme-colour));
 }
 
 .external-favicon {
@@ -840,7 +858,7 @@ table tr:nth-child(odd) {
 #contributors>div {
     padding: 6px;
     border: 1px solid var(--theme-colour);
-    border-radius: 2px;
+    border-radius: var(--radius);
 }
 
 .latest-items-wrapper {
@@ -977,6 +995,7 @@ a.clickable {
 
 .site-logo {
     height: calc(min(max(1.0vh, 0.8em), 1.5em) * 3);
+    width: 2em;
     filter: drop-shadow(1px 0px 0px #888) drop-shadow(-1px 0px 0px #888) drop-shadow(0px 1px 0px #888) drop-shadow(0px -1px 0px #888) drop-shadow(5px 5px 4px rgba(68, 68, 68, 0.46));
 }
 
@@ -1013,7 +1032,7 @@ a.clickable {
     }
 
     a {
-        color: rgb(225, 95, 0);
+        color: var(--theme-colour);
     }
 
     #results li:nth-child(odd) {
@@ -1029,13 +1048,14 @@ a.clickable {
     }
 
     mark {
-        background: rgba(226, 186, 4, 0.932);
+        background: #fffb00;
         color: black !important;
     }
 
     .result-row .exe {
-        background: rgba(156, 70, 0, 0.932);
-        color: white;
+        background: var(--theme-colour);
+        color: white;/* fallback for older browser */
+        color: contrast-color(var(--theme-colour));
     }
 
     /* div.description_wrapper {
@@ -1050,7 +1070,8 @@ a.clickable {
     button.button {
         --background-colour: var(--theme-colour);
         --border-colour: #555;
-        --text-colour: "inherit";
+        --text-colour: "inherit";/* fallback for older browser */
+        --text-colour: contrast-color(var(--theme-colour));
     }
 
     table {
@@ -1087,7 +1108,7 @@ a.clickable {
     }
 
     .card, .metadata-box {
-       background-color: #333;
+       background-color: #333 !important;
     }
 }
 
@@ -1102,6 +1123,7 @@ div.cards-flex {
     padding: 0.75em;
     overflow: hidden;
     margin: 0;
+    background-color: #fff;
 }
 .card h2 {
     margin: 0 0 0.75em 0;
@@ -1168,6 +1190,7 @@ article.homepage {
 }
 .description-wrapper h1 {
     margin-bottom: 0.25em;
+    line-height: 0.75em;
 }
 .disclaimer {
     align-self: flex-start;
@@ -1187,4 +1210,8 @@ article.homepage {
 
 p:last-child {
     margin-bottom: 0;
+}
+
+.card h2 > i {
+    display: none;
 }

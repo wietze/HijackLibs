@@ -57,6 +57,7 @@ function handleSearch() {
         generateHome();
     } else {
         document.getElementById('intro').style.display = "none";
+        document.getElementById('window').classList.add("card");
         Array.from(document.querySelectorAll('.back')).map(item => { item.style.visibility = 'visible'; });
 
         if (searchValue.length <= 2) {
@@ -257,6 +258,7 @@ function createCommaAnd(array, result) {
 function generateHome() {
     // Display intro
     document.getElementById('intro').style.display = 'flex';
+    document.getElementById('window').classList.remove("card");
     Array.from(document.querySelectorAll('.back')).map(item => { item.style.visibility = 'hidden'; });
 
     // Create a mapping with type => number of entries
