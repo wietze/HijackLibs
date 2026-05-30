@@ -478,6 +478,7 @@ div.key {
     align-items: center;
     width: calc(100% - 1.6em);
     gap: 5px;
+    text-indent: initial;
 }
 
 .latest-items-wrapper .pill {
