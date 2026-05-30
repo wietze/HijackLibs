@@ -328,9 +328,10 @@ div.key {
     border-radius: 4px;
 }
 
-.pill>img {
+.pill > img, .pill > i {
     height: 1em;
     vertical-align: middle;
+    align-self: anchor-center;
 }
 
 .pill.type {
@@ -467,6 +468,7 @@ div.key {
 
 .pills.small {
     font-size: small;
+    height: 1.5em;
 }
 
 .vulnerable_exe {
