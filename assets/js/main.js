@@ -10,19 +10,19 @@ function parseUrls(url) {
         if (/^.*\.pdf/g.test(url.href)) {
             i.classList.add("fa-solid", "fa-file-pdf", "fa-fw"); i.title = "PDF file";
             url.insertAdjacentElement('beforeBegin', i)
-            url.innerText = url.hostname
+            url.innerText = url.href
         } else
             if (result = url.href.match(/^https?:\/\/(?:www\.)?github.com\/([a-zA-Z0-9_-]+(\/[a-zA-Z0-9_-]+)?)(\/|$)/)) {
-                i.classList.add("fab", "fa-github", "fa-fw"); i.title = "GitHub repo";
+                i.classList.add("fab", "fa-github", "fa-fw");
+                i.title = "GitHub repo";
                 url.insertAdjacentElement('beforeBegin', i)
-                url.innerText = result[1]
+                url.insertAdjacentText('beforeBegin', i.title + " ");
+                url.innerText = `${result[1]}`
             } else
                 if (url.hostname.endsWith("youtube.com")) {
                     i.classList.add("fab", "fa-youtube", "fa-fw"); i.title = "YouTube URL";
-                    let span = document.createElement("span");
-                    span.innerText = "Video on ";
                     url.insertAdjacentElement('beforeBegin', i);
-                    url.insertAdjacentElement('beforeBegin', span);
+                    url.insertAdjacentText('beforeBegin', "Video on ");
                     url.innerText = "YouTube"
                 } else
                     if (result = url.href.match(/^https?:\/\/(?:www\.)?virustotal.com\/gui\/file\/([a-zA-Z0-9]+)(?:\/([a-zA-Z0-9_-]+))?$/)) {
@@ -39,7 +39,7 @@ function parseUrls(url) {
                     } else {
                         i.classList.add("fa-solid", "fa-external-link-alt", "fa-fw"); i.title = "Web page";
                         url.insertAdjacentElement('beforeBegin', i)
-                        url.innerText = url.hostname
+                        url.innerText = url.href.substring(url.protocol.length+2)
                     }
 
 }
