@@ -469,14 +469,15 @@ div.key {
 .pills.small {
     font-size: small;
     height: 1.5em;
+    align-self: baseline;
 }
 
 .vulnerable_exe {
     display: inline-flex;
     justify-content: space-between;
-    flex-wrap: wrap;
     align-items: center;
     width: calc(100% - 1.6em);
+    gap: 5px;
 }
 
 .latest-items-wrapper .pill {

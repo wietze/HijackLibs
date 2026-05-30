@@ -161,13 +161,15 @@
             <div class="right"></div>
             <ul class="files">{% for loc in type.items %}
                 <li><div class="vulnerable_exe"><div><a href="{{'/' | relative_url}}#app:{{loc.Path | url_encode | replace: "+", "%20"}}" title="Click to search for other DLL Hijacking candidates for {{loc.Path | split: "\" | last | escape}}."><code class="full-name">{{loc.Path | escape}}</code></a>{% if loc.Variable %} by changing <code>%{{loc.Variable}}%</code>{% endif %}</div>
-                        <div class="pills small">{% if loc.AutoElevate %}
-                            <div class="pill  uac" title="Auto-elevation: {{loc.Path | split: "\" | last | escape}} will automatically increase its integrity level from medium to high, granting itself wider system access, without showing a User Account Control (UAC) prompt (assuming default settings). Under specific cirumstances, this would allow an attacker to run malicious code with elevated privileges without the user being notified." ><img alt="UAC logo" src="{{'/assets/img/uac.png' | relative_url}}"></div>{% endif %}{% if loc.PrivilegeEscalation == true %}
+                    {%- capture pills %}{%- if loc.AutoElevate %}
+                            <div class="pill uac" title="Auto-elevation: {{loc.Path | split: "\" | last | escape}} will automatically increase its integrity level from medium to high, granting itself wider system access, without showing a User Account Control (UAC) prompt (assuming default settings). Under specific cirumstances, this would allow an attacker to run malicious code with elevated privileges without the user being notified." ><img alt="UAC logo" src="{{'/assets/img/uac.png' | relative_url}}"></div>{% endif %}{% if loc.PrivilegeEscalation == true -%}
                             <div class="pill privesc" title="Privilege Escalation: {{loc.Path | split: "\" | last | escape}} runs or can run under a high integrity level (meaning it has wider system access). Under specific circumstances, this would allow an attacker to run malicious code from this elevated process."><i class="fa-solid fa-lock-open"></i></div>{% endif %}{% if loc.Condition %}
-                            <div class="pill condition" title="The following is assumed:&#010;{{loc.Condition | escape}}"><i class="fa-solid fa-info-circle"></i></div>{% endif %}
-                            {% if loc.SHA256 %}
-                            <div class="pill hash"><a href="https://www.virustotal.com/gui/file/{{loc.SHA256[0]}}" title="Click to view the VirusTotal entry of this hash." target="_blank"><i class="fa-solid fa-font-awesome fa-flip-horizontal"></i> </a></div>{% endif %}
-                        </div>
+                            <div class="pill condition" title="The following is assumed:&#010;{{loc.Condition | escape}}"><i class="fa-solid fa-info-circle"></i></div>{% endif -%}
+                            {%- if loc.SHA256 -%}
+                            <div class="pill hash"><a href="https://www.virustotal.com/gui/file/{{loc.SHA256[0]}}" title="Click to view the VirusTotal entry of this hash." target="_blank"><i class="fa-solid fa-font-awesome fa-flip-horizontal"></i> </a></div>{% endif -%}{% endcapture-%}
+                        {%- if pills.size > 0 -%}
+                        <div class="pills small">{{ pills }}</div>
+                        {%- endif -%}
                     </div>
                 </li>{% endfor %}
             </ul>
