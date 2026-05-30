@@ -6,9 +6,14 @@ csp: "default-src 'self' https://cdnjs.cloudflare.com/ https://visit.hijacklibs.
 ---
 <script src="{{ '/assets/js/contributors.js' | relative_url }}"></script>
 
-            <h2>{{ page.title }}</h2>
-            <p>{{ site.title }} thanks everyone who has added entries to this project:</p>
+            <section><h1>{{ page.title }}</h1></section>
+            <section class="card">
+            <h2>Contributors to this project</h2>
+            <p>{{ site.title }} thanks everyone who has added entries to or updated entries on this project:</p>
             <div id="contributors"></div>
+            </section>
+            <section class="card">
+            <h2>Research and other resources</h2>
             <p>{{ site.title }} is grateful to all cyber security researchers who provided resources that enabled the
                 creation of new entries for this project:</p>
             <table class="contributors">

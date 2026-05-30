@@ -4,97 +4,100 @@ title: APIs
 description: This page shows all data sources provided by HijackLibs that can be used for automated pulling of the entries on this website. This may be useful for e.g. automation purposes.
 ---
 
-            <h2>APIs</h2>
+            <section><h1>{{ page.title }}</h1></section>
 
-            <h3>Datasets</h3>
-            <p>Datasets of the {{ site.title }} project are available in the following formats:</p>
-            <p>
-            <table class="apis">
-                <thead>
-                    <tr>
-                        <th>Format</th>
-                        <th>Type</th>
-                        <th>Structure</th>
-                        <th>URL</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td><i class="fa-solid fa-fw fa-file-code"></i> JSON</td>
-                        <td>All entries</td>
-                        <td>Same as original YAML files</td>
-                        <td class="wrap-anywhere"><a href="{{'/api/hijacklibs.json' | relative_url }}" data-visit-click="API-JSON">{{'/api/hijacklibs.json' |
-                                relative_url}}</a></td>
-                    </tr>
-                    <tr>
-                        <td><i class="fa-solid fa-fw fa-file-csv"></i> CSV</td>
-                        <td>All entries</td>
-                        <td>One line for each (DLL, EXE) combination</td>
-                        <td class="wrap-anywhere"><a href="{{'/api/hijacklibs.csv' | relative_url }}" data-visit-click="API-CSV">{{'/api/hijacklibs.csv' |
-                                relative_url}}</a></td>
-                    </tr>
-                    <tr>
-                        <td><i class="fa-solid fa-fw fa-file-lines"></i> YAML</td>
-                        <td>Individual entries</td>
-                        <td>The 'source' YAML files</td>
-                        <td class="wrap-anywhere"><a
-                                href="https://raw.githubusercontent.com/{{site.repo}}/main/yml" data-visit-click="API-GH">https://raw.githubusercontent.com/{{site.repo}}/main/yml</a>
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
-            </p>
-
-            <h3 id="detection-content">Detection content</h3>
-            <p>Furthermore, there are also datasets for detection content:</p>
-            <p>
-            <table class="apis">
-                <thead>
-                    <tr>
-                        <th>Format</th>
-                        <th>Type</th>
-                        <th>Content</th>
-                        <th>URL</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr><td colspan=4 class="subheader">Individual Detections</td></tr>
-                    <tr>
-                        <td><strong class="fa-solid sigma fa-fw">&sigma;</strong>Sigma (YAML)</td>
-                        <td>One rule for each DLL</td>
-                        <td>Auto-generated detection content for image loads</td>
-                        <td class="wrap-anywhere"><a href="{{'/api/sigma_feed_image.yml' | relative_url }}" data-visit-click="API-SIGMA-IMAGE">{{'/api/sigma_feed_image.yml' |
-                                relative_url}}</a></td>
-                    </tr>
-                    <tr>
-                        <td><strong class="fa-solid sigma fa-fw">&sigma;</strong>Sigma (YAML)</td>
-                        <td>One rule for each DLL</td>
-                        <td>Auto-generated detection content for file writes</td>
-                        <td class="wrap-anywhere"><a href="{{'/api/sigma_feed_file.yml' | relative_url }}" data-visit-click="API-SIGMA-FILE">{{'/api/sigma_feed_file.yml' |
-                                relative_url}}</a></td>
-                    </tr>
-                    <tr>
-                        <td><strong class="fa-solid sigma fa-fw">&sigma;</strong>Sigma (YAML)</td>
-                        <td>One rule for each DLL</td>
-                        <td>Auto-generated detection content for (unsigned) image loads</td>
-                        <td class="wrap-anywhere"><a href="{{'/api/sigma_feed_signature.yml' | relative_url }}" data-visit-click="API-SIGMA-FILE">{{'/api/sigma_feed_signature.yml' |
-                                relative_url}}</a></td>
-                    </tr>
-                    <tr><td colspan=4 class="subheader">Single Detections</td></tr>
-                    <tr>
-                        <td><strong class="fa-solid sigma fa-fw">&sigma;</strong>Sigma (YAML)</td>
-                        <td>A single rule for all</td>
-                        <td>Auto-generated detection content for file writes</td>
-                        <td class="wrap-anywhere"><a href="{{'/api/sigma_feed_file_single.yml' | relative_url }}" data-visit-click="API-SIGMA-FILE-SINGLE">{{'/api/sigma_feed_file_single.yml' |
-                                relative_url}}</a></td>
-                    </tr>
-                    <tr>
-                        <td><i class="fa-solid fa-fw fa-file-code"></i> JSON</td>
-                        <td>A single file for all</td>
-                        <td>Auto-generated mapping between DLLs and their expected locations</td>
-                        <td class="wrap-anywhere"><a href="{{'/api/hijacklibs_single.json' | relative_url }}" data-visit-click="API-JSON-SINGLE">{{'/api/hijacklibs_single.json' |
-                                relative_url}}</a></td>
-                    </tr>
-                </tbody>
-            </table>
-            </p>
+            <section class="card">
+                <h2>Datasets</h2>
+                <p>Datasets of the {{ site.title }} project are available in the following formats:</p>
+                <p>
+                <table class="apis">
+                    <thead>
+                        <tr>
+                            <th>Format</th>
+                            <th>Type</th>
+                            <th>Structure</th>
+                            <th>URL</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><i class="fa-solid fa-fw fa-file-code"></i> JSON</td>
+                            <td>All entries</td>
+                            <td>Same as original YAML files</td>
+                            <td class="wrap-anywhere"><a href="{{'/api/hijacklibs.json' | relative_url }}" data-visit-click="API-JSON">{{'/api/hijacklibs.json' |
+                                    relative_url}}</a></td>
+                        </tr>
+                        <tr>
+                            <td><i class="fa-solid fa-fw fa-file-csv"></i> CSV</td>
+                            <td>All entries</td>
+                            <td>One line for each (DLL, EXE) combination</td>
+                            <td class="wrap-anywhere"><a href="{{'/api/hijacklibs.csv' | relative_url }}" data-visit-click="API-CSV">{{'/api/hijacklibs.csv' |
+                                    relative_url}}</a></td>
+                        </tr>
+                        <tr>
+                            <td><i class="fa-solid fa-fw fa-file-lines"></i> YAML</td>
+                            <td>Individual entries</td>
+                            <td>The 'source' YAML files</td>
+                            <td class="wrap-anywhere"><a
+                                    href="https://raw.githubusercontent.com/{{site.repo}}/main/yml" data-visit-click="API-GH">https://raw.githubusercontent.com/{{site.repo}}/main/yml</a>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                </p>
+            </section>
+            <section class="card">
+                <h2 id="detection-content">Detection content</h2>
+                <p>Furthermore, there are also datasets for detection content:</p>
+                <p>
+                <table class="apis">
+                    <thead>
+                        <tr>
+                            <th>Format</th>
+                            <th>Type</th>
+                            <th>Content</th>
+                            <th>URL</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td colspan=4 class="subheader">Individual Detections</td></tr>
+                        <tr>
+                            <td><strong class="fa-solid sigma fa-fw">&sigma;</strong>Sigma (YAML)</td>
+                            <td>One rule for each DLL</td>
+                            <td>Auto-generated detection content for image loads</td>
+                            <td class="wrap-anywhere"><a href="{{'/api/sigma_feed_image.yml' | relative_url }}" data-visit-click="API-SIGMA-IMAGE">{{'/api/sigma_feed_image.yml' |
+                                    relative_url}}</a></td>
+                        </tr>
+                        <tr>
+                            <td><strong class="fa-solid sigma fa-fw">&sigma;</strong>Sigma (YAML)</td>
+                            <td>One rule for each DLL</td>
+                            <td>Auto-generated detection content for file writes</td>
+                            <td class="wrap-anywhere"><a href="{{'/api/sigma_feed_file.yml' | relative_url }}" data-visit-click="API-SIGMA-FILE">{{'/api/sigma_feed_file.yml' |
+                                    relative_url}}</a></td>
+                        </tr>
+                        <tr>
+                            <td><strong class="fa-solid sigma fa-fw">&sigma;</strong>Sigma (YAML)</td>
+                            <td>One rule for each DLL</td>
+                            <td>Auto-generated detection content for (unsigned) image loads</td>
+                            <td class="wrap-anywhere"><a href="{{'/api/sigma_feed_signature.yml' | relative_url }}" data-visit-click="API-SIGMA-FILE">{{'/api/sigma_feed_signature.yml' |
+                                    relative_url}}</a></td>
+                        </tr>
+                        <tr><td colspan=4 class="subheader">Single Detections</td></tr>
+                        <tr>
+                            <td><strong class="fa-solid sigma fa-fw">&sigma;</strong>Sigma (YAML)</td>
+                            <td>A single rule for all</td>
+                            <td>Auto-generated detection content for file writes</td>
+                            <td class="wrap-anywhere"><a href="{{'/api/sigma_feed_file_single.yml' | relative_url }}" data-visit-click="API-SIGMA-FILE-SINGLE">{{'/api/sigma_feed_file_single.yml' |
+                                    relative_url}}</a></td>
+                        </tr>
+                        <tr>
+                            <td><i class="fa-solid fa-fw fa-file-code"></i> JSON</td>
+                            <td>A single file for all</td>
+                            <td>Auto-generated mapping between DLLs and their expected locations</td>
+                            <td class="wrap-anywhere"><a href="{{'/api/hijacklibs_single.json' | relative_url }}" data-visit-click="API-JSON-SINGLE">{{'/api/hijacklibs_single.json' |
+                                    relative_url}}</a></td>
+                        </tr>
+                    </tbody>
+                </table>
+                </p>
+            </section>

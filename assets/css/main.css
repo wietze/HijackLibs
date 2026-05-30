@@ -1,5 +1,7 @@
 :root {
     --theme-colour: rgb(225, 105, 50);
+    --card-border-colour: color-mix(in srgb, var(--theme-colour) 20%, rgb(255, 255, 255));
+    --radius: 0.5em;
 }
 
 @font-face {
@@ -169,7 +171,7 @@ body {
     line-height: 1.1em;
     margin: 0;
     overflow-y: scroll;
-    padding-top: 1em;
+    /* padding-top: 1em; */
 }
 
 h1 {
@@ -207,9 +209,17 @@ figure {
 
 div.metadata {
     display: flex;
-    margin: 10px 0px;
+    /* margin: 0px 0.75em; */
     word-break: break-word;
-    gap: 3px;
+    gap: 0.5em;
+    flex-direction: column;
+    padding: 0.5em;
+    flex-direction: row;
+}
+div.metadata > .icon {
+    align-content: center;
+    font-size: 1.5em;
+    width: 1.5em
 }
 
 div.dll-types {
@@ -223,11 +233,10 @@ div.dll-types>div>span:not(.type) {
 }
 
 @media only screen and (max-width: 600px) {
-    body {
-        padding-top: 0;
+    article {
+        gap: 1em !important;
     }
 
-    div.metadata,
     div.latest-items-wrapper {
         flex-wrap: wrap;
     }
@@ -235,8 +244,8 @@ div.dll-types>div>span:not(.type) {
         flex-direction: column;
     }
 
-    div.metadata>div {
-        flex: 0 0 100%;
+    div.metadata {
+        padding: 0 !important;
     }
 
     div.dll-types>div>span:not(.type) {
@@ -249,11 +258,36 @@ div.dll-types>div>span:not(.type) {
         grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
         gap: 0 10px;
     }
+
+    div.cards-flex, div.yaml-controls {
+        flex-direction: column;
+    }
+
+    .card {
+        border-width: 0 !important;
+        padding: 0 !important;
+        border-radius: 0 !important;
+    }
+
+    .card > hr {
+        height: 0px !important;
+    }
+
+    .metadata-box {
+        flex-direction: column;
+    }
+
+    .description > .metadata {
+        justify-content: left !important;
+    }
+    .card > hr {
+        margin: 0.5em 0 !important;
+    }
 }
 
 div.key {
     font-weight: bold;
-    flex-basis: 160px;
+    /* flex-basis: 160px; */
     flex-shrink: 0;
 }
 
@@ -266,6 +300,7 @@ div.key {
     display: flex;
     flex-direction: row;
     gap: 0 2px;
+    margin: 0;
 }
 
 .pill a {
@@ -323,7 +358,7 @@ div.key {
 .pill.results-dll {
     --background-colour: white;
     --foreground-colour: var(--theme-colour);
-    --border-colour: var(--foreground-colour);
+    --border-colour: var(--card-border-colour);
 
     background: var(--background-colour);
     border: 1px solid var(--border-colour);
@@ -364,7 +399,7 @@ div.key {
 .pill.home-vendor {
     --background-colour: white;
     --foreground-colour: rgb(37, 37, 37);
-    --border-colour: var(--foreground-colour);
+    --border-colour: rgb(237, 237, 237);
     display: flex;
     background: var(--background-colour);
     border: 1px solid var(--border-colour);
@@ -389,14 +424,27 @@ div.key {
     transition: all .05s ease-in;
 }
 
-div.description_wrapper {
-    background: #EEE;
+.description {
+    /* padding-top: 10px !important;
+    padding-bottom: 10px !important; */
+    line-height: 1.3em;
+    display: flex;
+    gap: 5px;
 }
 
-.description {
-    padding-top: 10px !important;
-    padding-bottom: 10px !important;
-    line-height: 1.3em;
+.description > .metadata {
+    /* border: 1px solid var(--theme-colour); */
+    flex: 1;
+    gap: 0.5em;
+    justify-content: center;
+}
+
+.description > .metadata:first-child {
+    justify-content: left;
+}
+
+.description > .metadata:last-child {
+    justify-content: right;
 }
 
 .pills {
@@ -476,16 +524,28 @@ ul.resources {
     margin: 0;
     padding: 0;
     list-style-type: none;
+    max-width:100%
+
 }
 
 ul.resources .fa-fw {
-    margin-right: 3px;
+    margin-right: 1em;
+}
+
+ul.resources>li {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 ul.dirs,
 ul.files {
     list-style: none;
-    padding: 0;
+    background: color-mix(in srgb, var(--theme-colour) 10%, rgb(255, 255, 255));
+    padding: 0.5em;
+    border-radius: var(--radius);
+    margin: 0.2em 0;
+    text-indent: 2em hanging;
 }
 
 ul.dirs>li,
@@ -535,6 +595,7 @@ button.button {
     cursor: pointer;
     background: var(--background-colour);
     color: var(--text-colour);
+    border-radius: var(--radius);
 }
 
 button.button:hover {
@@ -616,8 +677,8 @@ div.search-banner {
 }
 
 div.search-banner.entry {
-    padding-bottom: 5px;
-    padding-top: 5px;
+    padding-bottom: 10px;
+    padding-top: 10px;
 }
 
 @keyframes gradient {
@@ -639,16 +700,15 @@ div.search-banner input[type=text] {
     width: 100%;
     padding: 0.5em;
     font-size: medium;
-    box-sizing: border-box;
 }
 
-section,
+article > section,
 div.section,
 header {
     min-width: 300px;
     max-width: 800px;
-    padding: 0 20px;
-    margin: 5px auto;
+    margin: 0px auto;
+    width: 100%;
 }
 
 section:first-of-type {
@@ -692,8 +752,6 @@ table tr:nth-child(odd) {
 }
 
 #status {
-    margin-bottom: 20px;
-    margin-top: 5px;
     display: flex;
     flex-direction: column;
     gap: 3px 0;
@@ -793,7 +851,7 @@ table tr:nth-child(odd) {
 
 .latest-items-wrapper>* {
     flex: 1;
-    max-height: 10em;
+    max-height: 11em;
     overflow-y: auto;
 }
 
@@ -802,6 +860,7 @@ table tr:nth-child(odd) {
     flex-wrap: wrap;
     align-content: baseline;
     gap: 2px 3px;
+    overflow-y: scroll !important;
 }
 
 .mitre-text {
@@ -811,18 +870,18 @@ table tr:nth-child(odd) {
 }
 
 .exe-count {
-    color: #ffd4d4;
+    color: var(--theme-colour);
     font-size: x-small;
 }
 
 code.full-name {
     display: contents;
-    word-break: break-all;
+    word-break: break-word;
 }
 
 .feed-note {
     font-size: small;
-    margin: auto 5px;
+    align-self: anchor-center;
     line-height: 1em;
     font-style: italic
 }
@@ -832,7 +891,8 @@ code.full-name {
 }
 
 .yaml-controls {
-    display: flex
+    display: flex;
+    gap: 5px;
 }
 
 .nowrap {
@@ -922,7 +982,7 @@ a.clickable {
 
 @media (prefers-color-scheme: dark) {
     :root {
-        --theme-colour: color-mix(in srgb, rgb(225, 105, 50) 85%, rgb(0, 0, 0))
+        --card-border-colour: color-mix(in srgb, var(--theme-colour) 49%, rgb(0, 0, 0));
     }
 
     body {
@@ -978,10 +1038,10 @@ a.clickable {
         color: white;
     }
 
-    div.description_wrapper {
+    /* div.description_wrapper {
         background:
             #3c3c3c;
-    }
+    } */
 
     footer {
         background-color: #555;
@@ -1014,9 +1074,117 @@ a.clickable {
     ul.files li::before {
         color: white;
     }
+    ul.dirs,ul.files {
+        background-color: color-mix(in srgb, var(--theme-colour) 30%, rgb(85,85,85))
+    }
+    ul.dirs,ul.files a {
+        color: #efefef;
+    }
 
     table .subheader {
         color: black;
         background-color: #bd945d;
     }
+
+    .card, .metadata-box {
+       background-color: #333;
+    }
+}
+
+div.cards-flex {
+    display: flex; gap: inherit
+}
+
+.card {
+    border: 1px solid var(--card-border-colour);
+    border-radius: var(--radius);
+    flex: 1;
+    padding: 0.75em;
+    overflow: hidden;
+    margin: 0;
+}
+.card h2 {
+    margin: 0 0 0.75em 0;
+    color: var(--theme-colour);
+    font-size: 1.2em;
+}
+.card h2 i {
+    margin-right: 0.25em;
+}
+.card h3 {
+    margin-bottom: 0.25em;
+}
+
+.card > hr {
+    margin: 1.1em 0;
+    border: none;
+    height: 1px;
+    background-color: var(--card-border-colour);
+}
+
+article {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+    align-items: center;
+}
+
+article, .search-banner {
+    padding: 0 10px;
+}
+
+article.homepage {
+    margin-top: 1em;
+}
+
+.metadata-container {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25em;
+    justify-content: center;
+}
+
+.metadata-box {
+  border: 1px solid var(--card-border-colour);
+  border-radius: var(--radius);
+  padding: 0 !important;
+  justify-content: space-around;
+}
+
+.overview {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
+/* .metadata-container:after {
+  content: "";
+  border: 1px solid #d3d3d3;
+  align-self: stretch;
+} */
+
+.description-wrapper {
+    margin: 1em 0;
+}
+.description-wrapper h1 {
+    margin-bottom: 0.25em;
+}
+.disclaimer {
+    align-self: flex-start;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+#yaml-definitions * {
+    box-sizing: unset;
+}
+
+#intro {
+    flex-direction: column;
+}
+
+p:last-child {
+    margin-bottom: 0;
 }

@@ -6,6 +6,7 @@ pre > code {
     max-width: 100%;
     word-break: break-word;
     white-space: break-spaces;
+    border-radius: var(--radius);
 }
 
 pre>code { width: calc(100% - 20px); }

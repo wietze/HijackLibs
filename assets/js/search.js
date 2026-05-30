@@ -256,7 +256,7 @@ function createCommaAnd(array, result) {
 
 function generateHome() {
     // Display intro
-    document.getElementById('intro').style.display = 'block';
+    document.getElementById('intro').style.display = 'flex';
     Array.from(document.querySelectorAll('.back')).map(item => { item.style.visibility = 'hidden'; });
 
     // Create a mapping with type => number of entries
@@ -314,7 +314,7 @@ function generateHome() {
     d.innerText = "Latest entries";
 
     let latestItems = document.createElement("div");
-    latestItems.classList.add('latest-items');
+    latestItems.classList.add('latest-items', 'card');
     latestItemsWrapper.appendChild(latestItems);
     latestItems.insertAdjacentElement('beforeend', d)
 
@@ -323,7 +323,7 @@ function generateHome() {
     d2.innerText = "By vendor";
 
     let vendorItems = document.createElement("div")
-    vendorItems.classList.add('latest-items')
+    vendorItems.classList.add('latest-items', 'card')
     latestItemsWrapper.appendChild(vendorItems)
     vendorItems.insertAdjacentElement('beforeend', d2)
 

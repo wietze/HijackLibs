@@ -32,19 +32,17 @@ description:
 </head>
 
 <body data-github-repo="{{site.repo}}">
+    <div class="search-banner entry">
+        <header>
+            <div class="back"><i class="fa-solid fa-arrow-left light" id="back-button"></i></div>
+            <div class="logo entry">
+                <a href="{{ '/' | relative_url }}"><img src="{{ logo }}" class="site-logo" alt="Logo"></a>
+                <h1><a href="{{ '/' | relative_url }}">{{ site.title }}</a></h1>
+            </div>
+        </header>
+    </div>
     <article>
-        <div class="search-banner entry">
-            <header>
-                <div class="back"><i class="fa-solid fa-arrow-left light" id="back-button"></i></div>
-                <div class="logo entry">
-                    <a href="{{ '/' | relative_url }}"><img src="{{ logo }}" class="site-logo" alt="Logo"></a>
-                    <h1><a href="{{ '/' | relative_url }}">{{ site.title }}</a></h1>
-                </div>
-            </header>
-        </div>
-        <section>
-            {{ content }}
-        </section>
+        {{ content }}
     </article>
 </body>
 
