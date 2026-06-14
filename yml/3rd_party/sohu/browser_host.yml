@@ -1,0 +1,14 @@
+---
+Name: browser_host.dll
+Author: Wietze Beukema
+Created: 2026-06-14
+Vendor: Sohu
+ExpectedLocations:
+  - '%PROGRAMFILES%\SogouInput'
+VulnerableExecutables:
+  - Path: '%PROGRAMFILES%\SogouInput\biz_render.exe'
+    Type: 'Sideloading'
+    SHA256:
+      - 30248c6c16a41e555628921ea6678d1bd0fa9b99a4b9c695c0eaaaf230d8e1f1
+Resources:
+  - https://www.virustotal.com/gui/file/e4e68fdc71bd942514c7ecaf25a9482d7fe3e2940bcdd27916e9441ef614d0a1

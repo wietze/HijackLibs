@@ -1,0 +1,15 @@
+---
+Name: teamspeak_control.dll
+Author: Wietze Beukema
+Created: 2026-06-14
+Vendor: Overwolf
+ExpectedLocations:
+  - '%PROGRAMFILES%\Common Files\Overwolf\Teamspeak'
+VulnerableExecutables:
+  - Path: 'OverwolfTSHelper.exe'
+    Type: 'Sideloading'
+    SHA256:
+      - 2d2a251a88632f010fd9671789746908eeccaa5bc5c0a5d25e4649efe4f5b15d
+Resources:
+  - https://www.proofpoint.com/us/blog/threat-insight/ta4922-suspected-chinese-crime-group-going-global
+  - https://www.virustotal.com/gui/file/0857148fb0bc4aa7adf967ede2307bdb4fc427065d5b6a6db132688a5a8e1eb8

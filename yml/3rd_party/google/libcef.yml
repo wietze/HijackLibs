@@ -15,6 +15,7 @@ Resources:
   - https://analyze.intezer.com/analyses/93e92d7a-9a46-4c1c-8ac0-87b4453beeb8
   - https://www.virustotal.com/gui/file/64d0fc47fd77eb300942602a912ea9403960acd4f2ed33a8e325594bf700d65f
   - https://research.checkpoint.com/2023/beyond-the-horizon-traveling-the-world-on-camaro-dragons-usb-flash-drives/
+  - https://cybersecuritynews.com/proofpoint-warns-ta4922-deploys-atlas-rat/
 Acknowledgements:
   - Name: Matt Anderson
     Company: Huntress
