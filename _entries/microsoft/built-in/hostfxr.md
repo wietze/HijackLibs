@@ -1,0 +1,23 @@
+---
+Name: hostfxr.dll
+Author: Jose Oregon
+Created: 2026-05-28
+Vendor: Microsoft
+ExpectedLocations:
+  - '%PROGRAMFILES%\dotnet\host\fxr\%VERSION%'
+
+VulnerableExecutables:
+  - Path: '%PROGRAMFILES%\WindowsApps\Microsoft.Windows.CrossDevice\CrossDeviceService.exe'
+    Type: Sideloading
+    SHA256:
+      - '0a03fe00baf9381c31144ff6bc937036585b991e25e9c3ff4eb1581ddab84a4f'
+
+Resources:
+  - https://www.bluevoyant.com/blog/new-a0backdoor-linked-to-teams-impersonation-and-quick-assist-social-engineering
+  - https://www.virustotal.com/gui/file/26db06a2319c09918225e59c404448d92fe31262834d70090e941093e6bb650a/details
+
+Acknowledgements:
+  - Name: Jose Oregon
+    Twitter: '@amprage_'
+---
+
