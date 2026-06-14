@@ -37,9 +37,14 @@ VulnerableExecutables:
   - Subject: CN=Microsoft Windows, O=Microsoft Corporation, L=Redmond, S=Washington, C=US
     Issuer: CN=Microsoft Windows Production PCA 2011, O=Microsoft Corporation, L=Redmond, S=Washington, C=US
     Type: Catalog
+- Path: 'ADNotificationManager.exe'
+  Type: Sideloading
+  SHA256:
+    - 1539dab6099d860add8330bf2a008a4b6dc05c71f7b4439aebf431e034e5b6ff
 Resources:
 - https://securityintelligence.com/posts/windows-features-dll-sideloading/
 - https://github.com/xforcered/WFH
+- https://socprime.com/active-threats/when-malware-authors-troll-security-researchers/
 Acknowledgements:
 - Name: Chris Spehn
   Twitter: '@ConsciousHacker'

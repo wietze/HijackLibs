@@ -1,0 +1,14 @@
+---
+Name: dtlcrashcatch.dll
+Author: Wietze Beukema
+Created: 2026-06-14
+Vendor: OSToto
+ExpectedLocations:
+  - '%PROGRAMFILES%\dtlsoft\drivethelife'
+VulnerableExecutables:
+  - Path: '%PROGRAMFILES%\dtlsoft\drivethelife\dtlupdate.exe'
+    Type: 'Sideloading'
+Resources:
+  - https://www.welivesecurity.com/en/eset-research/oceanlotus-external-espionage-domestic-targeting/
+---
+
