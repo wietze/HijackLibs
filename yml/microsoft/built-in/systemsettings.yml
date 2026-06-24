@@ -4,8 +4,8 @@ Author: Daniel Koifman
 Created: 2026-06-24
 Vendor: Microsoft
 ExpectedLocations:
-  - 'C:\Windows\ImmversiveControlPanel'
-  - 'C:\Windows\WinSxS\*'
+  - 'C:\Windows\ImmersiveControlPanel\'
+  - 'C:\Windows\WinSxS\'
 VulnerableExecutables:
   - Path: 'C:\Windows\ImmversiveControlPanel\SystemSettings.exe'
     Type: Sideloading
