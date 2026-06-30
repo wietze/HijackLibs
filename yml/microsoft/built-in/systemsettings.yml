@@ -7,7 +7,7 @@ ExpectedLocations:
   - 'C:\Windows\ImmersiveControlPanel'
   - 'C:\Windows\WinSxS'
 VulnerableExecutables:
-  - Path: 'C:\Windows\ImmversiveControlPanel\SystemSettings.exe'
+  - Path: 'C:\Windows\ImmersiveControlPanel\SystemSettings.exe'
     Type: Sideloading
     SHA256:
       - E3E0B84EE14008C0DC45276457CC3023AFA96B6D41D997D234AA00F246E5CB7B
