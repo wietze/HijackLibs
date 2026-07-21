@@ -4,7 +4,7 @@ Author: Still Hsu
 Created: 2026-07-21
 Vendor: Foxit
 ExpectedLocations:
-  - '%appdata%\Foxit Software\Classic\Addon\Foxit PDF Editor\plugins'
+  - '%APPDATA%\Foxit Software\Classic\Addon\Foxit PDF Editor\plugins'
 ExpectedVersionInformation:
   - CompanyName: 'Foxit'
     FileDescription: 'Foxit PDF Library'
@@ -13,7 +13,7 @@ ExpectedVersionInformation:
     OriginalFilename: 'CheckLicense.rc'
     ProductName: 'Foxit PDF Library'
 VulnerableExecutables:
-  - Path: '%appdata%\Foxit Software\Classic\Addon\Foxit PDF Editor\FoxitPDFEditorUpdater.exe'
+  - Path: '%APPDATA%\Foxit Software\Classic\Addon\Foxit PDF Editor\FoxitPDFEditorUpdater.exe'
     Type: 'Sideloading'
     SHA256:
       - ae4acd809fd4f9fc45a83ffba51a2a6f4cdf0aacf684365c89486c3a4af6406d
