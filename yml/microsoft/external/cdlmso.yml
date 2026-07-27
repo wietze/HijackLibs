@@ -4,7 +4,7 @@ Author: Adam Mooney - HuntressLabs
 Created: 2026-07-14
 Vendor: Microsoft
 ExpectedLocations:
-  - '%PROGRAMFILES%\Microsoft Office\Office14\'
+  - '%PROGRAMFILES%\Microsoft Office\Office14'
 VulnerableExecutables:
   - Path: '%PROGRAMFILES%\Microsoft Office\Office14\INFOPATH.EXE'
     Type: Sideloading
