@@ -1,0 +1,35 @@
+---
+Name: phc.dll
+Author: Still Hsu
+Created: 2026-07-21
+Vendor: Foxit
+ExpectedLocations:
+  - '%APPDATA%\Foxit Software\Classic\Addon\Foxit PDF Editor\plugins'
+ExpectedVersionInformation:
+  - CompanyName: 'Foxit'
+    FileDescription: 'Foxit PDF Library'
+    InternalName: 'CheckLicense.rc'
+    LegalCopyright: 'Copyright © 2012-2024 Foxit Software Inc. All Rights Reserved.'
+    OriginalFilename: 'CheckLicense.rc'
+    ProductName: 'Foxit PDF Library'
+VulnerableExecutables:
+  - Path: '%APPDATA%\Foxit Software\Classic\Addon\Foxit PDF Editor\FoxitPDFEditorUpdater.exe'
+    Type: 'Sideloading'
+    SHA256:
+      - ae4acd809fd4f9fc45a83ffba51a2a6f4cdf0aacf684365c89486c3a4af6406d
+    ExpectedVersionInformation:
+      - CompanyName: 'Foxit Corporation'
+        FileDescription: 'Foxit Updater'
+        FileVersion: '2024.3.0.26795'
+        InternalName: 'Foxit Updater'
+        LegalCopyright: 'Copyright © 2004-2024 Foxit Software Inc. All Rights Reserved.'
+        OriginalFilename: 'Foxit Updater.EXE'
+        ProductName: 'Foxit Updater'
+        ProductVersion: '2024.3.0.26795'
+Resources:
+  - https://www.virustotal.com/gui/file/32391ce6eca836369cfd5b3948ba978b7982dd3a85b81bb33c973773adeaef01
+Acknowledgements:
+  - Name: 'Still Hsu'
+    Twitter: '@AzakaSekai_'
+---
+
