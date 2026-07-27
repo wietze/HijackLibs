@@ -1,0 +1,19 @@
+---
+Name: cdlmso.dll
+Author: Adam Mooney - HuntressLabs
+Created: 2026-07-14
+Vendor: Microsoft
+ExpectedLocations:
+  - '%PROGRAMFILES%\Microsoft Office\Office14'
+VulnerableExecutables:
+  - Path: '%PROGRAMFILES%\Microsoft Office\Office14\INFOPATH.EXE'
+    Type: Sideloading
+    SHA256:
+      - '343883df0625d9ab21c3de31c2c5fbcc24c6d0c151d2dcacd2ba1f04e6a40ad6'
+Resources:
+  - https://www.virustotal.com/gui/file/1b3cee775445bb6e290406ac361c6735ea0eca841bf63493e198a07a2b26f21a
+Acknowledgements:
+  - Name: Adam Mooney
+    Company: Huntress
+---
+
