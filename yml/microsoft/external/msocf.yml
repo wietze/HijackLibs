@@ -10,8 +10,13 @@ VulnerableExecutables:
     Type: Sideloading
     SHA256:
       - '343883df0625d9ab21c3de31c2c5fbcc24c6d0c151d2dcacd2ba1f04e6a40ad6'
+  - Path: 'C:\Program Files\Microsoft Office\Office14\ois.exe'
+    Type: Sideloading
+    SHA256:
+      - 'f230c9b7b05436d74997f9ec916e868a0f8e96041feb1c2b72c6dea409f54ce0'      
 Resources:
   - https://www.virustotal.com/gui/file/908b5342a8f643ede2af3b1d5f0bbab4182d3cbaa7b28431373d0c0e0fb1bb6b/details
+  - https://www.eset.com/fileadmin/ESET/CZ/Blog/2020/ESET_LATAM_financial_cybercrime.pdf  
 Acknowledgements:
   - Name: Adam Mooney
     Company: Huntress
