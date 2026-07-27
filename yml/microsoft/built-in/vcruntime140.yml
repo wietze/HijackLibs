@@ -14,10 +14,21 @@ VulnerableExecutables:
   Type: Sideloading
   SHA256:
     - 116866708b5c22d643427203e7b0b023ccee8effeec8801638421bf96e569813
+- Path: '%PROGRAMFILES%\Common Files\Microsoft Shared\OFFICE16\LICLUA.exe'
+  Type: Sideloading
+  SHA256:
+    - aa07502bc2118083b057996bdc8a026c3b2f0757fac326fc7d13b05b80504246
+  ExpectedVersionInformation:
+    - FileVersion: '16.0.17932.20842'
+      ProductName: 'Office Licensing Admin Access Provider'
+      InternalName: 'liclua.exe'
+      OriginalFilename: 'liclua.exe'
 Resources:
 - https://www.zscaler.com/blogs/security-research/european-diplomats-targeted-apt29-cozy-bear-wineloader
 - https://cloud.google.com/blog/topics/threat-intelligence/apt29-wineloader-german-political-parties
+- https://connar.github.io/posts/dll-hijacking-journey/
 Acknowledgements:
 - Name: Swachchhanda Shrawan Poudel
   Twitter: '@_swachchhanda_'
   Company: Nextron Systems
+- Name: connar
