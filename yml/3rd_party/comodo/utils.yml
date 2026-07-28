@@ -1,0 +1,36 @@
+---
+Name: utils.dll
+Author: Austin Worline
+Created: 2026-06-15
+Vendor: Comodo
+ExpectedVersionInformation:
+  - CompanyName: 'Comodo Security Solutions, Inc.'
+    FileDescription: 'Comodo System Utilities'
+    FileVersion: '1, 0, 0, 1'
+    InternalName: 'Utils.dll'
+    LegalCopyright: '(C) 2009 - 2010 Comodo Security Solutions, Inc.  All rights reserved.'
+    OriginalFilename: 'Utils.dll'
+    ProductName: 'Comodo System Utilities'
+    ProductVersion: '4.0'
+ExpectedSignatureInformation:
+  - Type: Authenticode
+    Subject: CN=COMODO Time Stamping Signer,O=COMODO CA Limited,L=Salford,ST=Greater Manchester,C=GB
+    Issuer: CN=UTN-USERFirst-Object,OU=http://www.usertrust.com,O=The USERTRUST Network,L=Salt Lake City,ST=UT,C=US
+VulnerableExecutables:
+  - Path: '%PROGRAMFILES%\COMODO\COMODO System\CSU.exe'
+    Type: 'Sideloading'
+    SHA256:
+      - 6f24d9a6a9dc29e580e10a524973f1d05276f66e0bbaa4b3b5df3d41d7c65cb7
+    ExpectedVersionInformation:
+      - CompanyName: 'Comodo Security Solutions, Inc.'
+        FileDescription: 'Comodo System Utilities'
+        FileVersion: '4.0.226743.26'
+        InternalName: 'Comodo System Utilities'
+        LegalCopyright: '(C) 2009 - 2010 Comodo Security Solutions, Inc.  All rights reserved.'
+        OriginalFilename: 'CFM.exe'
+        ProductName: 'Comodo System Utilities'
+        ProductVersion: '4.0.226743.26'
+    ExpectedSignatureInformation:
+      - Type: Authenticode
+        Subject: CN=COMODO Time Stamping Signer,O=COMODO CA Limited,L=Salford,ST=Greater Manchester,C=GB
+        Issuer: CN=UTN-USERFirst-Object,OU=http://www.usertrust.com,O=The USERTRUST Network,L=Salt Lake City,ST=UT,C=US
