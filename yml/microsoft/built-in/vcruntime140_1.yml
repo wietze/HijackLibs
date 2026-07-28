@@ -1,0 +1,42 @@
+---
+Name: vcruntime140_1.dll
+Author: connar
+Created: 2026-07-14
+Vendor: Microsoft
+ExpectedLocations:
+  - '%SYSTEM32%'
+  - '%SYSWOW64%'
+ExpectedVersionInformation:
+  - CompanyName: 'Microsoft Corporation'
+    FileDescription: 'Microsoft® C Runtime Library'
+    FileVersion: '14.44.35211.0'
+    InternalName: 'vcruntime140_1.dll'
+    LegalCopyright: '© Microsoft Corporation. All rights reserved.'
+    OriginalFilename: 'vcruntime140_1.dll'
+    ProductName: 'Microsoft® Visual Studio®'
+    ProductVersion: '14.44.35211.0'
+ExpectedSignatureInformation:
+  - Type: Authenticode
+    Subject: CN=Microsoft Windows Software Compatibility Publisher,O=Microsoft Corporation,L=Redmond,ST=Washington,C=US
+    Issuer: CN=Microsoft Windows Third Party Component CA 2013,O=Microsoft Corporation,L=Redmond,ST=Washington,C=US
+VulnerableExecutables:
+  - Path: '%PROGRAMFILES%\Common Files\Microsoft Shared\OFFICE16\LICLUA.exe'
+    Type: 'Sideloading'
+    SHA256:
+      - aa07502bc2118083b057996bdc8a026c3b2f0757fac326fc7d13b05b80504246
+    ExpectedVersionInformation:
+      - CompanyName: 'Microsoft Corporation'
+        FileDescription: 'Office Licensing Admin Access Provider'
+        FileVersion: '16.0.17932.20842'
+        InternalName: 'liclua.exe'
+        OriginalFilename: 'liclua.exe'
+        ProductName: 'Office Licensing Admin Access Provider'
+        ProductVersion: '16.0.17932.20842'
+    ExpectedSignatureInformation:
+      - Type: Authenticode
+        Subject: CN=Microsoft Windows Software Compatibility Publisher,O=Microsoft Corporation,L=Redmond,ST=Washington,C=US
+        Issuer: CN=Microsoft Windows Third Party Component CA 2013,O=Microsoft Corporation,L=Redmond,ST=Washington,C=US
+Resources:
+  - https://connar.github.io/posts/dll-hijacking-journey/
+Acknowledgements:
+  - Name: 'connar'

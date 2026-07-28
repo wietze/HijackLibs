@@ -1,0 +1,19 @@
+---
+Name: systemsettings.dll
+Author: Daniel Koifman
+Created: 2026-06-24
+Vendor: Microsoft
+ExpectedLocations:
+  - 'C:\Windows\ImmersiveControlPanel'
+  - 'C:\Windows\WinSxS'
+VulnerableExecutables:
+  - Path: 'C:\Windows\ImmersiveControlPanel\SystemSettings.exe'
+    Type: Sideloading
+    SHA256:
+      - E3E0B84EE14008C0DC45276457CC3023AFA96B6D41D997D234AA00F246E5CB7B
+Resources:
+  - https://securelist.com/strikeshark-campaign/120326/
+Acknowledgements:
+- Name: Daniel Koifman
+  Company: CardinalOps
+  Twitter: '@KoifSec'
