@@ -1,0 +1,22 @@
+---
+Name: wblindp2.dll
+Author: Harry Godridge - HuntressLabs
+Created: 2026-07-30
+Vendor: Stardock
+ExpectedLocations:
+  - '%PROGRAMFILES%\Stardock\WindowBlinds'
+VulnerableExecutables:
+  - Path: '%PROGRAMFILES%\Stardock\WindowBlinds\WB11Config.exe'
+    Type: Sideloading
+    ExpectedVersionInformation:
+      - OriginalFilename: WB11Config.exe
+        CompanyName: Stardock Systems, Inc.
+        ProductName: WindowBlinds
+    SHA256:
+      - '19d78cd26cbfeb0800508063359f149f271fd7904d1ee0983ec24ba9efcb11e5'
+Resources:
+  - https://www.virustotal.com/gui/file/46119283e93efcc926ab808fb711b64393caab9e5aab78ceae02aa7402e47373/relations
+Acknowledgements:
+  - Name: Harry Godridge
+    Company: Huntress
+    Twitter: '@InfoSecHarry'
