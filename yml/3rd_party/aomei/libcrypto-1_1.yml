@@ -1,0 +1,20 @@
+---
+Name: libcrypto-1_1.dll
+Author: Harry Godridge - HuntressLabs
+Created: 2026-08-09
+Vendor: AOMEI
+ExpectedLocations:
+  - '%PROGRAMFILES%\AOMEI Partition Assistant'
+VulnerableExecutables:
+  - Path: '%PROGRAMFILES%\AOMEI Partition Assistant\Defragger.exe'
+    Type: Sideloading
+    ExpectedVersionInformation:
+      - OriginalFilename: Defragger.exe
+        ProductName: AOMEI Partition Assistant
+        FileDescription: Disk Defrag
+    SHA256:
+      - 'c0f46a2a7d2f054527f80edc235051031f3b55e78ecbfd9aeaa77e1ff8b9411c'
+Acknowledgements:
+  - Name: Harry Godridge
+    Company: Huntress
+    Twitter: '@InfoSecHarry'
