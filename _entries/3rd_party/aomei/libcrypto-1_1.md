@@ -18,5 +18,7 @@ Acknowledgements:
   - Name: Harry Godridge
     Company: Huntress
     Twitter: '@InfoSecHarry'
+Resources:
+  - https://www.virustotal.com/gui/file/9cbc00d820fabc1ea680ed0f34193f6629112707d8845bb7c8e91a6aac5e7e8a
 ---
 
