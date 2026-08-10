@@ -1,0 +1,22 @@
+---
+Name: datastate.dll
+Author: Cristian Poenaru - HuntressLabs
+Created: 2026-08-10
+Vendor: IObit
+ExpectedLocations:
+  - 'C:\Program Files (x86)\IObit\AdvancedSystemCare\'
+VulnerableExecutables:
+  - Path: 'C:\Program Files (x86)\IObit\AdvancedSystemCare\BrowserCleaner.exe'
+    Type: Sideloading
+    ExpectedVersionInformation:
+      - OriginalFilename: BrowserCleaner.exe
+        InternalName: BrowserCleaner.exe
+        FileDescription: IObit BrowserCleaner
+    SHA256:
+      - 'c82d2de495350be0453d25cc9939eb0ab7dd51b10f1db290c709f224465f70c1'
+Resources:
+  - https://www.virustotal.com/gui/file/7623436ebbed5c00bc08683bb24978562f7452f24f35af314dbf950782f64eed
+Acknowledgements:
+  - Name: Cristian Poenaru
+    Company: Huntress
+    Twitter: '@IamCrisPoe'
