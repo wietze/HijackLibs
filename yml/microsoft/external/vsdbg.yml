@@ -6,7 +6,6 @@ Vendor: Microsoft
 VulnerableExecutables:
   - Path: vsdbg.exe
     Type: Sideloading
-    Condition: vsdbg.exe statically imports vsdbg.dll.
     SHA256:
       - 3be2a5198dc46686ac514b8c70ecb28a8aff4dd56d4d0c60f66ebf5518ec85c9
     ExpectedVersionInformation:
@@ -16,6 +15,7 @@ VulnerableExecutables:
         FileVersion: '18.5.10309.2'
 Resources:
   - https://aka.ms/getvsdbgps1
+  - https://www.virustotal.com/gui/file/1f4b37a605b4f84b750b98b9b34b3138f295ca86954022f53009e6f103db654c/relations
 Acknowledgements:
   - Name: Kostas
     Twitter: '@Kostastsale'
