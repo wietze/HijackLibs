@@ -1,0 +1,23 @@
+---
+Name: vsdbg.dll
+Author: Kostas
+Created: 2026-08-13
+Vendor: Microsoft
+VulnerableExecutables:
+  - Path: vsdbg.exe
+    Type: Sideloading
+    SHA256:
+      - 3be2a5198dc46686ac514b8c70ecb28a8aff4dd56d4d0c60f66ebf5518ec85c9
+    ExpectedVersionInformation:
+      - OriginalFilename: vsdbg.exe
+        InternalName: vsdbg.exe
+        FileDescription: Microsoft Visual Studio .NET/C/C++ Debugger (vsdbg)
+        FileVersion: '18.5.10309.2'
+Resources:
+  - https://aka.ms/getvsdbgps1
+  - https://www.virustotal.com/gui/file/1f4b37a605b4f84b750b98b9b34b3138f295ca86954022f53009e6f103db654c/relations
+Acknowledgements:
+  - Name: Kostas
+    Twitter: '@Kostastsale'
+---
+
