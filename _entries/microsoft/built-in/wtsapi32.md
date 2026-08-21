@@ -118,10 +118,13 @@ VulnerableExecutables:
   - Subject: CN=Microsoft Windows, O=Microsoft Corporation, L=Redmond, S=Washington, C=US
     Issuer: CN=Microsoft Windows Production PCA 2011, O=Microsoft Corporation, L=Redmond, S=Washington, C=US
     Type: Catalog
+- Path: '%LOCALAPPDATA%\Microsoft\OneDrive\OneDrive.exe'
+  Type: Search Order
 Resources:
 - https://wietze.github.io/blog/hijacking-dlls-in-windows
 - https://securityintelligence.com/posts/windows-features-dll-sideloading/
 - https://github.com/xforcered/WFH
+- https://www.zscaler.com/blogs/security-research/c2looper-new-backdoor-likely-tied-ransomware-github-c2
 Acknowledgements:
 - Name: Wietze
   Twitter: '@wietze'
@@ -130,5 +133,8 @@ Acknowledgements:
 - Name: Austin Worline
   Company: Huntress
   Twitter: '@0xffaraday'
+- Name: Daniel Koifman
+  Company: Cribl
+  Twitter: '@KoifSec'
 ---
 
