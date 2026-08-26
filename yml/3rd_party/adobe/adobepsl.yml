@@ -1,0 +1,47 @@
+---
+Name: adobepsl.dll
+Author: Nick Roddy
+Created: 2026-08-26
+Vendor: adobe
+ExpectedLocations:
+  - '%PROGRAMFILES%\Adobe\Adobe Photoshop %VERSION%\Support Files'
+  - '%PROGRAMFILES%\Common Files\Adobe'
+  - '%PROGRAMFILES%\Adobe\Adobe After Effects %VERSION%\Support Files'
+  - '%PROGRAMFILES%\Adobe\Adobe Illustrator %VERSION%\Support Files'
+ExpectedVersionInformation:
+  - CompanyName: 'Adobe Systems Incorporated'
+    FileDescription: 'AdobePSL'
+    FileVersion: '15.1.0.39261'
+    InternalName: 'AdobePSL'
+    LegalCopyright: '© 1984-2015 Adobe Systems Incorporated'
+    OriginalFilename: 'AdobePSL.dll'
+    ProductName: 'AdobePSL'
+    ProductVersion: '79.1137743_15.1113557'
+ExpectedSignatureInformation:
+  - Type: Authenticode
+    Subject: CN=Adobe Systems Incorporated,OU=Digital ID Class 3 - Microsoft Software Validation v2,OU=Information Systems,O=Adobe Systems Incorporated,L=San Jose,ST=California,C=US
+    Issuer: CN=VeriSign Class 3 Code Signing 2010 CA,OU=Terms of use at https://www.verisign.com/rpa (c)10,OU=VeriSign Trust Network,O=VeriSign\, Inc.,C=US
+VulnerableExecutables:
+  - Path: 'C:\Windows\Microsoft.NET\Framework\v4.0.30319\MSBuild.exe'
+    Type: 'Sideloading'
+    SHA256:
+      - 044e493f385dfcb5d5d65b0d36e07f7c76aada8d2b9ff2de0309cd277be9fb6b
+    ExpectedVersionInformation:
+      - CompanyName: 'Microsoft Corporation'
+        FileDescription: 'MSBuild.exe'
+        FileVersion: '4.8.9221.0 built by: NET481REL1LAST_25H2'
+        InternalName: 'MSBuild.exe'
+        LegalCopyright: 'Microsoft Corporation'
+        OriginalFilename: 'MSBuild.exe'
+        ProductName: 'Microsoft® .NET Framework'
+        ProductVersion: '4.8.9221.0'
+    ExpectedSignatureInformation:
+      - Type: Authenticode
+        Subject: CN=Microsoft Corporation,O=Microsoft Corporation,L=Redmond,ST=Washington,C=US
+        Issuer: CN=Microsoft Code Signing PCA 2011,O=Microsoft Corporation,L=Redmond,ST=Washington,C=US
+Resources:
+  - https://www.virustotal.com/gui/file/806e7339acd8e6c324db327a9795f9a0dd15b6d2e9a2fbd9e96333f6a0e6b00f/detection
+Acknowledgements:
+  - Name: 'Nick Roddy'
+    Company: 'HuntressLabs'
+    Twitter: '@RoddSec'
