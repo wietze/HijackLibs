@@ -6,15 +6,15 @@ Vendor: Google
 ExpectedLocations:
   - '%PROGRAMFILES%\NVIDIA Corporation\NVIDIA GeForce Experience'
 VulnerableExecutables:
-  - Path: '%Program Files (x86)\NVIDIA Corporation\NVIDIA GeForce Experience\NVIDA Share.exe'
+  - Path: '%PROGRAMFILES%\NVIDIA Corporation\NVIDIA GeForce Experience\NVIDA Share.exe'
     Type: Sideloading
     SHA256:
       - 'f1e2f82d5f21fb8169131fedee6704696451f9e28a8705fca5c0dd6dad151d64'
-  - Path: '\QnWallpaper.exe'
+  - Path: 'QnWallpaper.exe'
     Type: Sideloading
     SHA256:
       - '1c9381c675e083c80603e7cf5754275a50228b048e53b0b5c0ff5a2d8708dfdc'
-  - Path: '\QnwPlayer.exe'
+  - Path: 'QnwPlayer.exe'
     Type: Sideloading
     SHA256:
       - 'd9ed8c718d652d6996525eda7aba7ffaee46bac1d824614952cebf67f4ed9f81'
