@@ -4,7 +4,7 @@ Author: Cristian Poenaru - HuntressLabs
 Created: 2026-08-10
 Vendor: IObit
 ExpectedLocations:
-  - 'C:\Program Files (x86)\IObit\AdvancedSystemCare\'
+  - 'C:\Program Files (x86)\IObit\AdvancedSystemCare'
 VulnerableExecutables:
   - Path: 'C:\Program Files (x86)\IObit\AdvancedSystemCare\BrowserCleaner.exe'
     Type: Sideloading

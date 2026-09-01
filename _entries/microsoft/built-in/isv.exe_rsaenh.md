@@ -7,7 +7,7 @@ ExpectedLocations:
 - '%SYSTEM32%'
 - '%SYSWOW64%'
 VulnerableExecutables:
-- Path: '%SYSTEM32%\rmactivate'
+- Path: '%SYSTEM32%\rmactivate.exe'
   Type: Environment Variable
   Variable: SYSTEMROOT
 Resources:

@@ -4,7 +4,7 @@ Author: Swachchhanda Shrawan Poudel
 Created: 2025-09-08
 Vendor: Canon
 ExpectedLocations:
-  - '%PROGRAMFILES%\Canon\Canon IJ Printer Assistant Tool\'
+  - '%PROGRAMFILES%\Canon\Canon IJ Printer Assistant Tool'
 VulnerableExecutables:
   - Path: 'cnmpaui.exe'
     Type: Sideloading

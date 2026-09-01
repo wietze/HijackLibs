@@ -4,7 +4,7 @@ Author: Swachchhanda Shrawan Poudel
 Created: 2025-02-27
 Vendor: BugSplat
 ExpectedLocations:
-  - '%PROGRAMFILES%\Nitro\PDF Pro\'
+  - '%PROGRAMFILES%\Nitro\PDF Pro'
   - '%PROGRAMFILES%\Nitro\Pro'
 VulnerableExecutables:
   - Path: 'BugSplatHD64.exe'

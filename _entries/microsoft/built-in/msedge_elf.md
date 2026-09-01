@@ -8,7 +8,7 @@ ExpectedLocations:
   - '%PROGRAMFILES%\Microsoft\EdgeCore\%VERSION%'
   - '%PROGRAMFILES%\Microsoft\EdgeWebView\%VERSION%'
 VulnerableExecutables:
-  - Path: '%PROGRAMFILES%\Microsoft\Edge\Application\%VERSION%'
+  - Path: '%PROGRAMFILES%\Microsoft\Edge\Application\%VERSION%\identity_helper.exe'
     Type: Sideloading
     ExpectedSignatureInformation:
     - Subject: CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US

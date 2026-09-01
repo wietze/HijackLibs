@@ -4,8 +4,8 @@ Author: Swachchhanda Shrawan Poudel
 Created: 2026-04-23
 Vendor: Microsoft
 ExpectedLocations:
-  - '%PROGRAMFILES%\Microsoft Web Tools\DNX\'
-  - 'C:\Users\%VERSION%\.dnx\runtimes\%VERSION%\bin\'
+  - '%PROGRAMFILES%\Microsoft Web Tools\DNX'
+  - 'C:\Users\%VERSION%\.dnx\runtimes\%VERSION%\bin'
 VulnerableExecutables:
   - Path: 'dnx.exe'
     Type: Sideloading

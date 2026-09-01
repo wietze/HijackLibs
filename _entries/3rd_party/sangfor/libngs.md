@@ -4,7 +4,7 @@ Author: Swachchhanda Shrawan Poudel
 Created: 2026-01-28
 Vendor: Sangfor
 ExpectedLocations:
-  - '%PROGRAMFILES%\Sangfor\SSL\RemoteAppClient\'
+  - '%PROGRAMFILES%\Sangfor\SSL\RemoteAppClient'
 VulnerableExecutables:
   - Path: '%PROGRAMFILES%\Sangfor\SSL\RemoteAppClient\SRAPSession.exe'
     Type: Sideloading
