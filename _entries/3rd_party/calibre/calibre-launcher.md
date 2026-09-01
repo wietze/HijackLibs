@@ -14,7 +14,6 @@ VulnerableExecutables:
         FileDescription: The main calibre program
     SHA256:
       - 735e7b33b97bff3cf6416ed3b8ed7213d7258eec05202cbf8f8f8002c6435fd1
-VulnerableExecutables:
   - Path: 'ebook-edit.exe'
     Type: Sideloading
     ExpectedVersionInformation:
