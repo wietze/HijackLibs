@@ -1,0 +1,11 @@
+---
+Name: phoneinfo.dll
+Author: Daniel Koifman
+Created: 2026-09-03
+Vendor: Microsoft
+VulnerableExecutables:
+  - Path: '%SYSTEM32%\wermgr.exe'
+    Type: 'Phantom'
+    Condition: 'Requires the DLL to be planted in %SYSTEM32%; in the reported chain this is achieved by redirecting Windows Defender''s SYSTEM-context remediation write via a Cloud Files sync root and Object Manager symbolic links'
+Resources:
+  - https://www.levelblue.com/blogs/spiderlabs-blog/cloud-sync-root-registrationshieldbreak-hunting-windows-defender-remediation-abuse-and-cloud-files-hijacking
