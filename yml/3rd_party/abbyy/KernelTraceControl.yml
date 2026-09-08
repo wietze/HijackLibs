@@ -1,3 +1,4 @@
+---
 Name: KernelTraceControl.dll
 Author: Cristian Poenaru - 
 Created: 2026-09-08
@@ -10,7 +11,7 @@ VulnerableExecutables:
     ExpectedVersionInformation:
       - OriginalFilename: AbbyySti.exe
         InternalName: AbbyySti.exe
-        FileDescription:  ABBYY FineReader background component.
+        FileDescription:  ABBYY FineReader background component
     SHA256:
       - '916f8e392c49684ffd5ed97525c52682a6d19f6eefbe02dc4a10e01de25976ec'
 Resources:
