@@ -1,0 +1,22 @@
+Name: KernelTraceControl.dll
+Author: Cristian Poenaru - 
+Created: 2026-09-08
+Vendor: ABBYY Production LLC
+ExpectedLocations:
+  - 'C:\Program Files\ABBYY FineReader\'
+VulnerableExecutables:
+  - Path: 'C:\Program Files\ABBYY FineReader\AbbyySti.exe'
+    Type: Sideloading
+    ExpectedVersionInformation:
+      - OriginalFilename: AbbyySti.exe
+        InternalName: AbbyySti.exe
+        FileDescription:  ABBYY FineReader background component.
+    SHA256:
+      - '916f8e392c49684ffd5ed97525c52682a6d19f6eefbe02dc4a10e01de25976ec'
+Resources:
+  - https://www.virustotal.com/gui/file/916f8e392c49684ffd5ed97525c52682a6d19f6eefbe02dc4a10e01de25976ec/details
+  - https://www.virustotal.com/gui/file/28cf25c66c12fc1be1023d82faf2591b0496dee83a5ab986647dfd8bb2e05996/details
+Acknowledgements:
+  - Name: Cristian Poenaru
+    Company: HuntressLabs
+    Twitter: '@IamCrisPoe'
