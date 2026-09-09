@@ -2,7 +2,7 @@
 Name: kerneltracecontrol.dll
 Author: Cristian Poenaru - HuntressLabs
 Created: 2026-09-08
-Vendor: ABBYY Production LLC
+Vendor: ABBYY
 ExpectedLocations:
   - '%PROGRAMFILES%\ABBYY FineReader'
 VulnerableExecutables:
