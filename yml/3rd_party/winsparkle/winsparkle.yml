@@ -1,0 +1,17 @@
+---
+Name: winsparkle.dll
+Author: Daniel Koifman
+Created: 2026-09-29
+Vendor: WinSparkle
+ExpectedLocations:
+  - '%PROGRAMFILES%\Poedit'
+VulnerableExecutables:
+  - Path: '%PROGRAMFILES%\Poedit\Poedit.exe'
+    Type: Sideloading
+Resources:
+  - https://www.microsoft.com/en-us/security/blog/2026/09/28/needymantis-unpacking-a-post-compromise-malware-family-used-in-targeted-operations/
+  - https://winsparkle.org/
+Acknowledgements:
+  - Name: Daniel Koifman
+    Company: Cribl
+    Twitter: '@koifsec'
