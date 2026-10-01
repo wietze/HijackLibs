@@ -1,0 +1,17 @@
+---
+Name: ceiinfolog.dll
+Author: Liran Ravich
+Created: 2026-10-01
+Vendor: Canon
+VulnerableExecutables:
+  - Path: COTFileReadApp.exe
+    Type: Sideloading
+    Condition: Install directory is unconfirmed; observed attackers ran a copied binary from %LOCALAPPDATA%\Programs\Advanced Printer Configuration Reader\.
+    SHA256:
+      - 278e2f3e2f26c18666b89ef774b4af9ce954e36b2bf54a2392608619245d8c48
+Resources:
+  - https://www.huntress.com/blog/chatgpt-custom-gpts-clickfix-rat
+  - https://canon.jp/support/software/os/select/dr/CaptureOnTouch_Pro_V5510251217
+Acknowledgements:
+  - Name: Liran Ravich
+    Company: Cribl
