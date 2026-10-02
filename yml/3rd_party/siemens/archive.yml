@@ -1,0 +1,17 @@
+---
+Name: archive.dll
+Author: Jose Oregon
+Created: 2026-10-02
+Vendor: Siemens
+ExpectedLocations:
+  - '%PROGRAMFILES%\Siemens\SoftwareCenter'
+VulnerableExecutables:
+  - Path: '%PROGRAMFILES%\Siemens\SoftwareCenter\SiemensSoftwareCenter.exe'
+    Type: 'Sideloading'
+    ExpectedVersionInformation:
+      - CompanyName: 'Siemens'
+Resources:
+  - https://www.virustotal.com/gui/file/3fdcc7d7d049a89711fb31fb236940a1c5a09d899143ffd20c3c41fb1f2cf491/community
+Acknowledgements:
+  - Name: 'Jose Oregon'
+    Company: 'Huntress'
