@@ -25,14 +25,6 @@ VulnerableExecutables:
     Type: Sideloading
     SHA256:
       - '5c64583f0c163f1ae77678592ff167b9d9074c69b6832d3547117dc4f38ab3e1'
-  - Path: '%PROGRAMFILES%\Vim\vim%VERSION%\vim.exe'
-    Type: Sideloading
-    SHA256:
-      - 'cd9519a9ac2af911dd26eddf195be36849a130add7dabe16ef1d265702693724'
-  - Path: '%PROGRAMFILES%\Vim\vim%VERSION%\gvim.exe'
-    Type: Sideloading
-    SHA256:
-      - '5c64583f0c163f1ae77678592ff167b9d9074c69b6832d3547117dc4f38ab3e1'
 Resources:
   - https://www.microsoft.com/en-us/security/blog/2026/09/28/needymantis-unpacking-a-post-compromise-malware-family-used-in-targeted-operations/
   - https://www.vim.org/
