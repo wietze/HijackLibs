@@ -1,0 +1,16 @@
+---
+Name: windowspackagemanager.dll
+Author: Iván Cabrera
+Created: 2026-09-18
+Vendor: Microsoft
+ExpectedLocations:
+  - '%PROGRAMFILES%\WindowsApps\Microsoft.DesktopAppInstaller_%VERSION%_x64__8wekyb3d8bbwe'
+VulnerableExecutables:
+  - Path: '%PROGRAMFILES%\WindowsApps\Microsoft.DesktopAppInstaller_%VERSION%_x64__8wekyb3d8bbwe\winget.exe'
+    Type: Sideloading
+  - Path: '%PROGRAMFILES%\WindowsApps\Microsoft.DesktopAppInstaller_%VERSION%_x64__8wekyb3d8bbwe\WindowsPackageManagerServer.exe'
+    Type: Sideloading
+Resources:
+  - https://github.com/microsoft/winget-cli
+---
+

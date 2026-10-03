@@ -1,0 +1,17 @@
+---
+Name: dscorefull.dll
+Author: Ivan CF
+Created: 2026-09-18
+Vendor: Microsoft
+ExpectedLocations:
+  - '%PROGRAMDATA%\Microsoft\Windows Defender\Platform\%VERSION%'
+VulnerableExecutables:
+  - Path: '%PROGRAMDATA%\Microsoft\Windows Defender\Platform\%VERSION%\MpDefenderCoreService.exe'
+    Type: Sideloading
+    Condition: 'version >= 1.0.26070.9'
+Resources:
+  - https://learn.microsoft.com/en-us/defender-endpoint/microsoft-defender-antivirus-windows
+Acknowledgements:
+  - Name: Ivan CF
+---
+
