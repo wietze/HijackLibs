@@ -43,15 +43,15 @@ VulnerableExecutables:
     Type: Catalog
 - Path: 'gatherosstate.exe'
   Type: Sideloading
-  Condition: gatherosstate.exe is not installed by Windows; it ships on Windows 10/11
-    installation media and in the Windows ADK, so it is run from wherever it was copied to
-    and the application directory wins the search order. It resolves slc.dll's SLOpen export.
+  SHA256:
+  - 5e34dc5115ee4e63b75c8e193d863106780d6cf43f3ea39f4a0f608be10b0839
 Resources:
 - https://wietze.github.io/blog/hijacking-dlls-in-windows
 - https://securityintelligence.com/posts/windows-features-dll-sideloading/
 - https://github.com/xforcered/WFH
 - https://blog.talosintelligence.com/china-nexus-uat-11587-targets-government-and-policy-organizations-across-asia-with-antino-backdoor
 - https://massgrave.dev/hwid
+- https://www.virustotal.com/gui/file/09ef7c736bccfafefc44d9910d499173b88063b73b221fc0dc9e9105107e5cff
 Acknowledgements:
 - Name: Wietze
   Twitter: '@wietze'
