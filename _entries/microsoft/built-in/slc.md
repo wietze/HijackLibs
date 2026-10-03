@@ -41,14 +41,24 @@ VulnerableExecutables:
   - Subject: CN=Microsoft Windows, O=Microsoft Corporation, L=Redmond, S=Washington, C=US
     Issuer: CN=Microsoft Windows Production PCA 2011, O=Microsoft Corporation, L=Redmond, S=Washington, C=US
     Type: Catalog
+- Path: 'gatherosstate.exe'
+  Type: Sideloading
+  SHA256:
+  - 5e34dc5115ee4e63b75c8e193d863106780d6cf43f3ea39f4a0f608be10b0839
 Resources:
 - https://wietze.github.io/blog/hijacking-dlls-in-windows
 - https://securityintelligence.com/posts/windows-features-dll-sideloading/
 - https://github.com/xforcered/WFH
+- https://blog.talosintelligence.com/china-nexus-uat-11587-targets-government-and-policy-organizations-across-asia-with-antino-backdoor
+- https://massgrave.dev/hwid
+- https://www.virustotal.com/gui/file/09ef7c736bccfafefc44d9910d499173b88063b73b221fc0dc9e9105107e5cff
 Acknowledgements:
 - Name: Wietze
   Twitter: '@wietze'
 - Name: Chris Spehn
   Twitter: '@ConsciousHacker'
+- Name: Daniel Koifman
+  Company: Cribl
+  Twitter: '@KoifSec'
 ---
 
