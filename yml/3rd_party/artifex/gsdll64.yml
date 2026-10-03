@@ -1,0 +1,19 @@
+---
+Name: gsdll64.dll
+Author: Liran Ravich
+Created: 2026-10-04
+Vendor: Artifex
+ExpectedLocations:
+  - '%PROGRAMFILES%\gs\gs%VERSION%\bin'
+VulnerableExecutables:
+  - Path: '%PROGRAMFILES%\gs\gs%VERSION%\bin\gswin64c.exe'
+    Type: Sideloading
+  - Path: '%PROGRAMFILES%\gs\gs%VERSION%\bin\gswin64.exe'
+    Type: Sideloading
+Resources:
+  - https://ghostscript.readthedocs.io/en/gs10.04.0/Install.html
+  - https://github.com/ArtifexSoftware/ghostpdl/blob/157ff788cd29e0b0f6a02132e11a4bf10acfdb48/psi/dwdll.c#L36-L80
+  - https://www.security.com/threat-intelligence/warlock-ransomware-critical-infrastructure
+Acknowledgements:
+  - Name: Liran Ravich
+    Company: Cribl
