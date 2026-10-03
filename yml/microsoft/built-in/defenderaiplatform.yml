@@ -4,9 +4,9 @@ Author: Ivan CF
 Created: 2026-09-18
 Vendor: Microsoft
 ExpectedLocations:
-  - '%PROGRAMDATA%\Microsoft\Windows Defender\Platform'
+  - '%PROGRAMDATA%\Microsoft\Windows Defender\Platform\%VERSION%'
 VulnerableExecutables:
-  - Path: '%PROGRAMDATA%\Microsoft\Windows Defender\Platform\DefenderAiPlatformHost.exe'
+  - Path: '%PROGRAMDATA%\Microsoft\Windows Defender\Platform\%VERSION%\DefenderAiPlatformHost.exe'
     Type: Sideloading
     Condition: 'version >= 1.0.26070.9'
 Resources:
