@@ -14,6 +14,7 @@ Resources:
   - https://ghostscript.readthedocs.io/en/gs10.04.0/Install.html
   - https://github.com/ArtifexSoftware/ghostpdl/blob/157ff788cd29e0b0f6a02132e11a4bf10acfdb48/psi/dwdll.c#L36-L80
   - https://www.security.com/threat-intelligence/warlock-ransomware-critical-infrastructure
+  - https://www.f6.ru/blog/eastern-trail/
 Acknowledgements:
   - Name: Liran Ravich
     Company: Cribl
