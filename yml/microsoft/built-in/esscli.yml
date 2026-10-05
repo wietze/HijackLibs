@@ -1,0 +1,12 @@
+---
+Name: esscli.dll
+Author: Iván Cabrera
+Created: 2026-09-18
+Vendor: Microsoft
+ExpectedLocations:
+  - '%SYSTEM32%\wbem'
+VulnerableExecutables:
+  - Path: '%SYSTEM32%\wbem\scrcons.exe'
+    Type: Sideloading
+Resources:
+  - https://learn.microsoft.com/en-us/windows/win32/wmisdk/wmi-start-page
