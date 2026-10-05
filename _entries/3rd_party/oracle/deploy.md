@@ -1,0 +1,18 @@
+---
+Name: deploy.dll
+Author: Liran Ravich
+Created: 2026-10-01
+Vendor: Oracle
+ExpectedLocations:
+  - '%PROGRAMFILES%\Java\%VERSION%\bin'
+VulnerableExecutables:
+  - Path: '%PROGRAMFILES%\Java\%VERSION%\bin\javacpl.exe'
+    Type: Sideloading
+Resources:
+  - https://asec.ahnlab.com/en/95642
+  - https://asec.ahnlab.com/ko/95641/
+Acknowledgements:
+  - Name: Liran Ravich
+    Company: Cribl
+---
+
