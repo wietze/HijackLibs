@@ -1,0 +1,35 @@
+---
+Name: msimg32.dll
+Author: The DFIR Report
+Created: 2026-10-05
+Vendor: Microsoft
+ExpectedLocations:
+  - '%SYSTEM32%'
+  - '%SYSWOW64%'
+ExpectedVersionInformation:
+  - OriginalFilename: gdiext
+    InternalName: gdiext
+    FileDescription: GDIEXT Client DLL
+ExpectedSignatureInformation:
+  - Subject: CN=Microsoft Windows, O=Microsoft Corporation, L=Redmond, S=Washington, C=US
+    Issuer: CN=Microsoft Windows Production PCA 2011, O=Microsoft Corporation, L=Redmond, S=Washington, C=US
+    Type: Catalog
+VulnerableExecutables:
+  - Path: '%SYSTEM32%\consent.exe'
+    Type: Sideloading
+    ExpectedSignatureInformation:
+      - Subject: CN=Microsoft Windows, O=Microsoft Corporation, L=Redmond, S=Washington, C=US
+        Issuer: CN=Microsoft Windows Production PCA 2011, O=Microsoft Corporation, L=Redmond, S=Washington, C=US
+        Type: Catalog
+    SHA256:
+      - 'a6df0b49a5ef9ffd6513bfe061fb60f6d2941a440038e2de8a7aeb1914945331'
+      - '6ba5d96e52734cbb9246bcc3decf127f780d48fa11587a1a44880c1f04404d23'
+Resources:
+  - https://thedfirreport.com/2026/06/29/from-bing-search-to-ransomware-bumblebee-and-adaptixc2-deliver-akira-3/
+  - https://thedfirreport.com/2025/08/05/from-bing-search-to-ransomware-bumblebee-and-adaptixc2-deliver-akira-2/
+  - https://www.swisscom.ch/en/business/enterprise/themen/cybersecurity/blog/akira-ransomware-advanced-ip-scanner.html
+Acknowledgements:
+  - Name: The DFIR Report
+    Twitter: '@TheDFIRReport'
+  - Name: Swisscom B2B CSIRT
+    Twitter: '@CyberSecSwiss'
