@@ -11,6 +11,10 @@ ExpectedVersionInformation:
   - OriginalFilename: gdiext
     InternalName: gdiext
     FileDescription: GDIEXT Client DLL
+ExpectedSignatureInformation:
+  - Subject: CN=Microsoft Windows, O=Microsoft Corporation, L=Redmond, S=Washington, C=US
+    Issuer: CN=Microsoft Windows Production PCA 2011, O=Microsoft Corporation, L=Redmond, S=Washington, C=US
+    Type: Catalog
 VulnerableExecutables:
   - Path: '%PROGRAMFILES%\Haihaisoft PDF Reader\hpreader.exe'
     Type: Sideloading
@@ -25,9 +29,21 @@ VulnerableExecutables:
     SHA256:
       - '2f9be76319a2441d14e7e10239373f053f05f3c1ca2056babb58db50ebe8c5c7'
       - '08c7fb6067acc8ac207d28ab616c9ea5bc0d394956455d6a3eecb73f8010f7a2'
+  - Path: '%SYSTEM32%\consent.exe'
+    Type: Sideloading
+    ExpectedSignatureInformation:
+      - Subject: CN=Microsoft Windows, O=Microsoft Corporation, L=Redmond, S=Washington, C=US
+        Issuer: CN=Microsoft Windows Production PCA 2011, O=Microsoft Corporation, L=Redmond, S=Washington, C=US
+        Type: Catalog
 Resources:
   - https://www.virustotal.com/gui/file/2f08e2316a38da2d39d31131a0e3314024ab80756050624afafc1e17b0562d5e/details
+  - https://thedfirreport.com/2026/06/29/from-bing-search-to-ransomware-bumblebee-and-adaptixc2-deliver-akira-3/
+  - https://thedfirreport.com/2025/08/05/from-bing-search-to-ransomware-bumblebee-and-adaptixc2-deliver-akira-2/
 Acknowledgements:
   - Name: Jai Minton
     Company: Huntress
     Twitter: '@cyberrraiju'
+  - Name: The DFIR Report
+    Twitter: '@TheDFIRReport'
+  - Name: Swisscom B2B CSIRT
+    Twitter: '@CyberSecSwiss'
