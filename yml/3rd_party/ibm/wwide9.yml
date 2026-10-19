@@ -4,7 +4,7 @@ Author: Jose Enrique Hernandez
 Created: 2026-10-13
 Vendor: IBM
 ExpectedLocations:
-  - '%PROGRAMFILES%\IBM\SPSS\Statistics\%VERSION%' 
+  - '%PROGRAMFILES%\IBM\SPSS\Statistics\%VERSION%'
 VulnerableExecutables:
   - Path: '%PROGRAMFILES%\IBM\SPSS\Statistics\%VERSION%\WinWrapIDE.exe'
     Type: Sideloading
