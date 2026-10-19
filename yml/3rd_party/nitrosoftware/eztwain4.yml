@@ -1,0 +1,26 @@
+---
+Name: eztwain4.dll
+Author: Jose Enrique Hernandez
+Created: 2026-10-17
+Vendor: Nitro Software
+ExpectedLocations:
+  - '%LOCALAPPDATA%\Nitro Pro'
+VulnerableExecutables:
+  - Path: '%LOCALAPPDATA%\Nitro Pro\NitroPromotion.exe'
+    Type: Sideloading
+    SHA256:
+      - 14b31918075e6130b9123158743db0a81e2d7bfcf6d39731ee7d9200a98cd591
+    Condition: 'Masquerading executable used to sideload ADAPTAGENT for Adaptix C2'
+  - Path: '%LOCALAPPDATA%\Nitro Pro\Nitro_Scan2PDFApp.exe'
+    Type: Sideloading
+    SHA256:
+      - d71a119b4950ee88dd36205176d989a64df5248ac268591d4bbb78621a73acbd
+    ExpectedSignatureInformation:
+      - Subject: CN="Nitro Software, Inc.", O="Nitro Software, Inc.", L=Melbourne, S=Victoria, C=AU
+        Issuer: CN=DigiCert Trusted G4 Code Signing RSA4096 SHA384 2021 CA1, O="DigiCert, Inc.", C=US
+        Type: Authenticode
+Resources:
+  - https://cloud.google.com/blog/topics/threat-intelligence/investigating-ephemeral-supply-chain-tampering
+Acknowledgements:
+  - Name: Tyler McLellan
+    Company: Google Threat Intelligence Group
