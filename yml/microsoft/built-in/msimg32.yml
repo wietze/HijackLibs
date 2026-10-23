@@ -35,6 +35,21 @@ VulnerableExecutables:
       - Subject: CN=Microsoft Windows, O=Microsoft Corporation, L=Redmond, S=Washington, C=US
         Issuer: CN=Microsoft Windows Production PCA 2011, O=Microsoft Corporation, L=Redmond, S=Washington, C=US
         Type: Catalog
+  - Path: '%PROGRAMFILES%\SoftMaker Office NX\TextMaker.exe'
+    Type: Sideloading
+    ExpectedSignatureInformation:
+      - Subject: CN=SoftMaker Software GmbH, O=SoftMaker Software GmbH, S=Bayern, C=DE, SERIALNUMBER=HRB 8788
+        Issuer: CN=Sectigo Public Code Signing CA EV R36, O=Sectigo Limited, C=GB
+        Type: Authenticode
+    ExpectedVersionInformation:
+      - CompanyName: SoftMaker Software GmbH
+        OriginalFilename: TextMaker.exe
+        InternalName: TextMaker
+        FileDescription: TextMaker
+        ProductName: TextMaker
+    SHA256:
+      - '4fd03d7500ad255063241f0ff5e274f604ad900a0e9038ae0d45c903500add02'
+      - 'a02ac8c67ddffa29bfb11ade80c18dded864b3cf0c22f4ccd20d901f33e6230f'
 Resources:
   - https://www.virustotal.com/gui/file/2f08e2316a38da2d39d31131a0e3314024ab80756050624afafc1e17b0562d5e/details
   - https://thedfirreport.com/2026/06/29/from-bing-search-to-ransomware-bumblebee-and-adaptixc2-deliver-akira-3/
@@ -47,3 +62,5 @@ Acknowledgements:
     Twitter: '@TheDFIRReport'
   - Name: Swisscom B2B CSIRT
     Twitter: '@CyberSecSwiss'
+  - Name: Tim Sword
+    Company: Huntress
