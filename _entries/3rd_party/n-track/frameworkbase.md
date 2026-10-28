@@ -1,0 +1,23 @@
+---
+Name: frameworkbase.dll
+Author: Liran Ravich
+Created: 2026-10-22
+Vendor: n-Track
+ExpectedLocations:
+  - '%PROGRAMFILES%\n-Track\n-Track Studio %VERSION%'
+  - '%PROGRAMFILES%\n-Track\n-Track Studio %VERSION%\nBridge32'
+VulnerableExecutables:
+  - Path: '%PROGRAMFILES%\n-Track\n-Track Studio %VERSION%\ReportDump.exe'
+    Type: 'Sideloading'
+    SHA256:
+      - 2bad629d261ff5aba8f2f070ee506fc84812574dbf348817914e3fb16ff682ab
+    ExpectedSignatureInformation:
+      - Subject: 'CN=n-Track S.r.l., O=n-Track S.r.l., L=Rome, S=Roma, C=IT'
+        Type: 'Authenticode'
+Resources:
+  - https://www.fortinet.com/blog/threat-research/uncovering-a-sectoprat-variant-embedded-in-legitimate-software
+Acknowledgements:
+  - Name: 'Liran Ravich'
+    Company: 'Cribl'
+---
+
