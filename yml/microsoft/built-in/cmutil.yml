@@ -13,6 +13,10 @@ ExpectedSignatureInformation:
 VulnerableExecutables:
 - Path: '%SYSTEM32%\cmstp.exe'
   Type: Sideloading
+  ExpectedVersionInformation:
+  - OriginalFilename: CMSTP.EXE
+    InternalName: CMSTP
+    FileDescription: Microsoft Connection Manager Profile Installer
   ExpectedSignatureInformation:
   - Subject: CN=Microsoft Windows, O=Microsoft Corporation, L=Redmond, S=Washington, C=US
     Issuer: CN=Microsoft Windows Production PCA 2011, O=Microsoft Corporation, L=Redmond, S=Washington, C=US
@@ -23,3 +27,5 @@ Resources:
 Acknowledgements:
 - Name: Chris Spehn
   Twitter: '@ConsciousHacker'
+- Name: Tim Sword
+  Company: Huntress
