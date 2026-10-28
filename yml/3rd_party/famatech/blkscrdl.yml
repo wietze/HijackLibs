@@ -15,7 +15,6 @@ VulnerableExecutables:
       - Subject: CN=Famatech Corp., O=Famatech Corp., L=Petersburg, C=RU
         Issuer: CN=GlobalSign CodeSigning CA - SHA256 - G3, O=GlobalSign nv-sa, C=BE
         Type: Authenticode
-    SHA256:
   - Path: '%SYSTEM32%\rserver%VERSION%\FamItrf2.exe'
     Type: Sideloading
     ExpectedSignatureInformation:
