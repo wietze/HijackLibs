@@ -1,0 +1,15 @@
+---
+Name: opencv_flann453.dll
+Author: Jose Enrique Hernandez
+Created: 2026-10-13
+Vendor: ON1
+VulnerableExecutables:
+  - Path: 'ON1Photoshop.exe'
+    Type: Sideloading
+Resources:
+  - https://x.com/TheDFIRReport/status/2109671796068716861
+Acknowledgements:
+  - Name: The DFIR Report
+    Twitter: '@TheDFIRReport'
+---
+
