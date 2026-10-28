@@ -181,6 +181,13 @@ VulnerableExecutables:
   - Subject: CN=Microsoft Windows, O=Microsoft Corporation, L=Redmond, S=Washington, C=US
     Issuer: CN=Microsoft Windows Production PCA 2011, O=Microsoft Corporation, L=Redmond, S=Washington, C=US
     Type: Catalog
+- Path: '%LOCALAPPDATA%\Microsoft\WpcMon\wpcmon.exe'
+  Type: Sideloading
+  ExpectedSignatureInformation:
+  - Subject: CN=Microsoft Windows, O=Microsoft Corporation, L=Redmond, S=Washington, C=US
+    Issuer: CN=Microsoft Windows Production PCA 2011, O=Microsoft Corporation, L=Redmond, S=Washington, C=US
+    Type: Catalog
+  Condition: Legitimate wpcmon.exe copied to user-writable path and used to sideload malicious iphlpapi.dll. Observed in camera management software compromise campaign.
 - Path: '%LOCALAPPDATA%\microsoft\onedrive\onedrive.exe'
   Type: Search Order
 - Path: '%LOCALAPPDATA%\microsoft\onedrive\OneDriveStandaloneUpdater.exe'
@@ -267,6 +274,7 @@ Resources:
 - https://twitter.com/BSummerz/status/1860045985919205645
 - https://ctrlaltintel.com/research/FudCrypt-analysis-1/
 - https://learn.microsoft.com/en-us/answers/questions/f46df9f8-a9bb-4d1d-a11c-c0f6d02454b6/onedrivesetupexe-is-a-malware-autoupdate-without
+- https://www.huntress.com/blog/camera-management-software-compromise-malware
 Acknowledgements:
 - Name: Wietze
   Twitter: '@wietze'
@@ -282,3 +290,7 @@ Acknowledgements:
   Twitter: '@BSummerz'
 - Name: Josh Allman
   Twitter: '@xorjosh'
+- Name: Harlan Carvey
+  Company: Huntress
+- Name: Lindsey O'Donnell-Welch
+  Company: Huntress
