@@ -73,6 +73,24 @@ VulnerableExecutables:
     ProductName: Zoom
     ProductVersion: 6.2.10.50536
   Condition: Zoom.exe statically imports winmm.dll timeGetTime, timeBeginPeriod, and timeEndPeriod. Observed in 40 FUDCrypt side-load packages with unique malicious winmm.dll payloads.
+- Path: '%PROGRAMFILES%\WindowsApps\Claude_%VERSION%_x64__pzs8sxrjxfjjc\app\Claude.exe'
+  Type: Sideloading
+  SHA256:
+  - 2e0899727bd3c4a97431db139823b1cbf8f500ff804608c8a56a1f3136f08115
+  ExpectedSignatureInformation:
+  - Subject: CN="Anthropic, PBC", O="Anthropic, PBC", L=San Francisco, S=California, C=US, SERIALNUMBER=4860621, OID.2.5.4.15=Private Organization, OID.1.3.6.1.4.1.311.60.2.1.2=Delaware, OID.1.3.6.1.4.1.311.60.2.1.3=US
+    Issuer: C=US, O="DigiCert, Inc.", CN=DigiCert Trusted G4 Code Signing RSA4096 SHA384 2021 CA1
+    Type: Authenticode
+  ExpectedVersionInformation:
+  - CompanyName: Anthropic
+    FileDescription: Claude
+    FileVersion: 1.40609.0
+    InternalName: Claude
+    LegalCopyright: 2025 Anthropic PBC
+    OriginalFilename: claude.exe
+    ProductName: Claude
+    ProductVersion: 1.40609.0
+  Condition: Setup.exe is an attacker-renamed Anthropic Claude claude.exe. The exact version-matched MSIX binary has 31 ordinary winmm.dll imports and no winmm.dll delay imports, including timeBeginPeriod, timeEndPeriod, and timeGetTime. Observed in the Yoba Setup-Claude.zip side-load package.
 Resources:
 - https://wietze.github.io/blog/hijacking-dlls-in-windows
 - https://securelist.com/wastedlocker-technical-analysis/97944/
@@ -80,6 +98,7 @@ Resources:
 - https://github.com/xforcered/WFH
 - https://ctrlaltintel.com/research/FudCrypt-analysis-1/
 - https://support.zoom.com/hc/en/article?sysparm_article=KB0064484
+- https://research.checkpoint.com/2026/tricks-from-the-past-deployed-via-signed-chatgpt-and-claude-binaries/
 Acknowledgements:
 - Name: Wietze
   Twitter: '@wietze'
@@ -87,3 +106,5 @@ Acknowledgements:
   Twitter: '@ConsciousHacker'
 - Name: Josh Allman
   Twitter: '@xorjosh'
+- Name: Liran Ravich
+  Company: Cribl
