@@ -1,0 +1,35 @@
+---
+Name: cygwin1.dll
+Author: Liran Ravich
+Created: 2026-10-29
+Vendor: Cygwin
+ExpectedLocations:
+  - 'C:\cygwin\bin'
+VulnerableExecutables:
+  - Path: '%PROGRAMFILES%\JetBrains\%VERSION%\lib\pty4j\win\x86-64\cyglaunch.exe'
+    Type: 'Sideloading'
+    Condition: 'pty4j does not bundle cygwin1.dll; Windows normally resolves the legitimate runtime from a Cygwin bin directory on PATH.'
+    SHA256:
+      - 2025f9efd6e3166d7b69dd166a472f7fde21bc92dbef39c1f0e324ecd5088ea1
+      - 5d2d8da1066eb931bf86aa0895bb5cec3d7320faf258b7b20d722f16136cb3ca
+    ExpectedSignatureInformation:
+      - Subject: 'SERIALNUMBER=26502275,CN=JetBrains s.r.o.,O=JetBrains s.r.o.,L=Praha,C=CZ,OID.2.5.4.15=#131450726976617465204f7267616e697a6174696f6e,OID.1.3.6.1.4.1.311.60.2.1.3=#1302435a'
+        Issuer: 'CN=Entrust Extended Validation Code Signing CA - EVCS2,O=Entrust\, Inc.,C=US'
+        Type: 'Authenticode'
+      - Subject: 'C=CZ,L=Prague,O=JetBrains s.r.o.,SERIALNUMBER=C 86211,CN=JetBrains s.r.o.,OID.2.5.4.15=Private Organization,OID.1.3.6.1.4.1.311.60.2.1.2=Prague,OID.1.3.6.1.4.1.311.60.2.1.3=CZ'
+        Issuer: 'CN=SSL.com EV Code Signing Intermediate CA RSA R3,O=SSL Corp,L=Houston,ST=Texas,C=US'
+        Type: 'Authenticode'
+Resources:
+  - https://hybrid-analysis.blogspot.com/2026/10/seo-poisoning-campaign-targets-deepseek.html
+  - https://raw.githubusercontent.com/JetBrains/pty4j/7dd1378d167cb451fe6c50f4b73e129ec2925897/src/com/pty4j/util/PtyUtil.java
+  - https://raw.githubusercontent.com/JetBrains/pty4j/7dd1378d167cb451fe6c50f4b73e129ec2925897/src/com/pty4j/util/ExtractedNative.java
+  - https://raw.githubusercontent.com/JetBrains/pty4j/7dd1378d167cb451fe6c50f4b73e129ec2925897/src/com/pty4j/windows/cygwin/CygwinPtyProcess.java
+  - https://raw.githubusercontent.com/JetBrains/pty4j/7dd1378d167cb451fe6c50f4b73e129ec2925897/os/win/x86-64/cyglaunch.exe
+  - https://raw.githubusercontent.com/JetBrains/intellij-community/cbdc88d98504e099361f71417e5946bba12c392f/platform/build-scripts/src/org/jetbrains/intellij/build/impl/BuildContextImpl.kt
+  - https://cygwin.com/index.html
+  - https://cygwin.com/faq/faq.html
+  - https://cygwin.com/packages/x86_64/cygwin/cygwin-3.6.12-1
+  - https://learn.microsoft.com/en-us/windows/win32/dlls/dynamic-link-library-search-order
+Acknowledgements:
+  - Name: Liran Ravich
+    Company: Cribl
