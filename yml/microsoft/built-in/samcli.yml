@@ -148,8 +148,13 @@ Resources:
 - https://wietze.github.io/blog/hijacking-dlls-in-windows
 - https://securityintelligence.com/posts/windows-features-dll-sideloading/
 - https://github.com/xforcered/WFH
+- https://www.huntress.com/blog/camera-management-software-compromise-malware
 Acknowledgements:
 - Name: Wietze
   Twitter: '@wietze'
 - Name: Chris Spehn
   Twitter: '@ConsciousHacker'
+- Name: Harlan Carvey
+  Company: Huntress
+- Name: Lindsey O'Donnell-Welch
+  Company: Huntress
