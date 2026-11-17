@@ -6,7 +6,7 @@ Vendor: Cygwin
 ExpectedLocations:
   - 'C:\cygwin\bin'
 VulnerableExecutables:
-  - Path: '%PROGRAMFILES%\JetBrains\%VERSION%\lib\pty4j\win\x86-64\cyglaunch.exe'
+  - Path: '%PROGRAMFILES%\JetBrains\%VERSION%\lib\pty4j\win\%VERSION%\cyglaunch.exe'
     Type: 'Sideloading'
     Condition: 'pty4j does not bundle cygwin1.dll; Windows normally resolves the legitimate runtime from a Cygwin bin directory on PATH.'
     SHA256:
@@ -21,15 +21,8 @@ VulnerableExecutables:
         Type: 'Authenticode'
 Resources:
   - https://hybrid-analysis.blogspot.com/2026/10/seo-poisoning-campaign-targets-deepseek.html
-  - https://raw.githubusercontent.com/JetBrains/pty4j/7dd1378d167cb451fe6c50f4b73e129ec2925897/src/com/pty4j/util/PtyUtil.java
-  - https://raw.githubusercontent.com/JetBrains/pty4j/7dd1378d167cb451fe6c50f4b73e129ec2925897/src/com/pty4j/util/ExtractedNative.java
-  - https://raw.githubusercontent.com/JetBrains/pty4j/7dd1378d167cb451fe6c50f4b73e129ec2925897/src/com/pty4j/windows/cygwin/CygwinPtyProcess.java
-  - https://raw.githubusercontent.com/JetBrains/pty4j/7dd1378d167cb451fe6c50f4b73e129ec2925897/os/win/x86-64/cyglaunch.exe
-  - https://raw.githubusercontent.com/JetBrains/intellij-community/cbdc88d98504e099361f71417e5946bba12c392f/platform/build-scripts/src/org/jetbrains/intellij/build/impl/BuildContextImpl.kt
   - https://cygwin.com/index.html
-  - https://cygwin.com/faq/faq.html
-  - https://cygwin.com/packages/x86_64/cygwin/cygwin-3.6.12-1
-  - https://learn.microsoft.com/en-us/windows/win32/dlls/dynamic-link-library-search-order
+  - https://www.virustotal.com/gui/file/40650b0b1260d19d9979886c3ada8eb6cfa297c7a7e0f4c3d8612dc7ca43f129
 Acknowledgements:
   - Name: Liran Ravich
     Company: Cribl
