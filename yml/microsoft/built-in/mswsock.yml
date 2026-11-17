@@ -84,13 +84,12 @@ VulnerableExecutables:
   - Subject: CN=Microsoft Windows, O=Microsoft Corporation, L=Redmond, S=Washington, C=US
     Issuer: CN=Microsoft Windows Production PCA 2011, O=Microsoft Corporation, L=Redmond, S=Washington, C=US
     Type: Catalog
-- Path: '%APPDATA%\Microsaft Difendir\msdtc.exe'
+- Path: '%SYSTEM32%\msdtc.exe'
   Type: Sideloading
   ExpectedSignatureInformation:
   - Subject: CN=Microsoft Windows, O=Microsoft Corporation, L=Redmond, S=Washington, C=US
     Issuer: CN=Microsoft Windows Production PCA 2011, O=Microsoft Corporation, L=Redmond, S=Washington, C=US
-    Type: Catalog
-  Condition: Legitimate msdtc.exe copied to user-writable path with intentional misspelling. Observed in early Yoba campaign variant targeting Cursor AI Coding Agent.
+    Type: Catalog  
 - Path: '%PROGRAMFILES%\Google\Chrome\Application\chrome.exe'
   Type: Environment Variable
   Variable: SYSTEMROOT
