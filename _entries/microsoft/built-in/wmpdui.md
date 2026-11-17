@@ -18,8 +18,11 @@ VulnerableExecutables:
     Type: Catalog
 Resources:
 - https://wietze.github.io/blog/hijacking-dlls-in-windows
+- https://research.checkpoint.com/2026/tricks-from-the-past-deployed-via-signed-chatgpt-and-claude-binaries/
 Acknowledgements:
 - Name: Wietze
   Twitter: '@wietze'
+- Name: Check Point Research
+  Company: Check Point Software Technologies
 ---
 
