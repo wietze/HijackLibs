@@ -186,7 +186,7 @@ VulnerableExecutables:
   ExpectedSignatureInformation:
   - Subject: CN=Microsoft Windows, O=Microsoft Corporation, L=Redmond, S=Washington, C=US
     Issuer: CN=Microsoft Windows Production PCA 2011, O=Microsoft Corporation, L=Redmond, S=Washington, C=US
-    Type: Catalog  
+    Type: Catalog
 - Path: '%LOCALAPPDATA%\microsoft\onedrive\onedrive.exe'
   Type: Search Order
 - Path: '%LOCALAPPDATA%\microsoft\onedrive\OneDriveStandaloneUpdater.exe'
