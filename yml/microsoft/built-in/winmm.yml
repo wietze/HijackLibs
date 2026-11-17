@@ -90,7 +90,6 @@ VulnerableExecutables:
     OriginalFilename: claude.exe
     ProductName: Claude
     ProductVersion: 1.40609.0
-  Condition: Setup.exe is an attacker-renamed Anthropic Claude claude.exe. The exact version-matched MSIX binary has 31 ordinary winmm.dll imports and no winmm.dll delay imports, including timeBeginPeriod, timeEndPeriod, and timeGetTime. Observed in the Yoba Setup-Claude.zip side-load package.
 Resources:
 - https://wietze.github.io/blog/hijacking-dlls-in-windows
 - https://securelist.com/wastedlocker-technical-analysis/97944/
