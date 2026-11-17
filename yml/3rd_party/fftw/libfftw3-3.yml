@@ -1,0 +1,18 @@
+---
+Name: libfftw3-3.dll
+Author: Jose Enrique Hernandez
+Created: 2026-10-13
+Vendor: FFTW
+ExpectedLocations:
+  - '%PROGRAMFILES%\Blue Iris %VERSION%'
+  - '%PROGRAMFILES%\Blue Iris'
+  - 'C:\BlueIris'
+VulnerableExecutables:
+  - Path: 'BlueIris.exe'
+    Type: Sideloading
+Resources:
+  - https://x.com/TheDFIRReport/status/2109671796068716861
+  - https://www.fftw.org/index.html
+Acknowledgements:
+  - Name: The DFIR Report
+    Twitter: '@TheDFIRReport'
