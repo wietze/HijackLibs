@@ -181,13 +181,12 @@ VulnerableExecutables:
   - Subject: CN=Microsoft Windows, O=Microsoft Corporation, L=Redmond, S=Washington, C=US
     Issuer: CN=Microsoft Windows Production PCA 2011, O=Microsoft Corporation, L=Redmond, S=Washington, C=US
     Type: Catalog
-- Path: '%LOCALAPPDATA%\Microsoft\WpcMon\wpcmon.exe'
+- Path: '%SYSTEM32%\wpcmon.exe'
   Type: Sideloading
   ExpectedSignatureInformation:
   - Subject: CN=Microsoft Windows, O=Microsoft Corporation, L=Redmond, S=Washington, C=US
     Issuer: CN=Microsoft Windows Production PCA 2011, O=Microsoft Corporation, L=Redmond, S=Washington, C=US
-    Type: Catalog
-  Condition: Legitimate wpcmon.exe copied to user-writable path and used to sideload malicious iphlpapi.dll. Observed in camera management software compromise campaign.
+    Type: Catalog  
 - Path: '%LOCALAPPDATA%\microsoft\onedrive\onedrive.exe'
   Type: Search Order
 - Path: '%LOCALAPPDATA%\microsoft\onedrive\OneDriveStandaloneUpdater.exe'
